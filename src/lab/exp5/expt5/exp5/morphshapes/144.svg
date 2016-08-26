@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="50.55px" width="8.1px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1, 0, 0, 1, -712.3, -279.05)">
+    <path d="M712.7 287.65 Q714.3 295.7 714.7 305.85 715.05 315.95 715.6 322.95 L716.05 329.6 716.2 325.0 Q716.45 318.2 717.9 307.15 L720.25 287.35 Q721.2 278.6 716.15 279.1 711.05 279.55 712.7 287.65" fill="#ffff5b" fill-rule="evenodd" stroke="none">
+      <animate attributeName="fill" dur="2s" repeatCount="indefinite" values="#ffff5b;#ffff5c"/>
+      <animate attributeName="fill-opacity" dur="2s" repeatCount="indefinite" values="1.0;1.0"/>
+      <animate attributeName="d" dur="2s" repeatCount="indefinite" values="M712.7 287.65 Q714.3 295.7 714.7 305.85 715.05 315.95 715.6 322.95 L716.05 329.6 716.2 325.0 Q716.45 318.2 717.9 307.15 L720.25 287.35 Q721.2 278.6 716.15 279.1 711.05 279.55 712.7 287.65;M712.5 287.65 Q713.3 295.7 713.5 305.85 713.75 314.4 714.0 322.95 L714.2 329.6 714.3 325.0 Q714.4 318.2 715.15 307.15 L716.35 287.35 Q716.8 278.6 714.25 279.1 711.7 279.55 712.5 287.65"/>
+    </path>
+    <path d="M712.7 287.65 Q711.05 279.55 716.15 279.1 721.2 278.6 720.25 287.35 L717.9 307.15 Q716.45 318.2 716.2 325.0 L716.05 329.6 715.6 322.95 Q715.05 315.95 714.7 305.85 714.3 295.7 712.7 287.65" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.0" stroke-width="1.0">
+      <animate attributeName="stroke" dur="2s" repeatCount="indefinite" values="#000000;#000001"/>
+      <animate attributeName="stroke-width" dur="2s" repeatCount="indefinite" values="0.0;0.0"/>
+      <animate attributeName="fill-opacity" dur="2s" repeatCount="indefinite" values="0.0;0.0"/>
+      <animate attributeName="d" dur="2s" repeatCount="indefinite" values="M712.7 287.65 Q711.05 279.55 716.15 279.1 721.2 278.6 720.25 287.35 L717.9 307.15 Q716.45 318.2 716.2 325.0 L716.05 329.6 715.6 322.95 Q715.05 315.95 714.7 305.85 714.3 295.7 712.7 287.65;M712.5 287.65 Q711.7 279.55 714.25 279.1 716.8 278.6 716.35 287.35 L715.15 307.15 Q714.4 318.2 714.3 325.0 L714.2 329.6 714.0 322.95 Q713.75 314.4 713.5 305.85 713.3 295.7 712.5 287.65"/>
+    </path>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+| TEST STEPS                              | EXPECTED                                       | Status:Flash | Status:JavaScript     |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the slider, after choosing the | Volumetric Flask turns                         | Working Fine | Working Fine          |
+| solution                                | yellow.                                        |              |                       |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the yellow flask               | Volumetric flask moves down                    | Working Fine | Working Fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the quartz cuvette             | Cuvette moves down                             | Working Fine | Working Fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the pipette (First time)       | Pipette moves into flask                       | Working Fine | Working Fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the pipette (Second time)      | Pipette collects liquid                        | Working Fine | Working Fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the pipette (Third time)       | Pipette deposits liquid into cuvette           | Working Fine | Working Fine          |
+|                                         | and moves back to shelf. A popup appears       |              |                       |
+|                                         | prompting a measurement start/                 |              |                       |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the popup.                     | Popup image disappears and message changes     | Working Fine | Working Fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Turn on the spectrometer.               | Clock appears for 30 seconds and spectrometer  | Working Fine | Working Fine          |
+|                                         | lights start blinking.                         |              |                       |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the spectrometer lid.          | The lid opens.                                 | Working Fine | Working Fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the quartz cuvette.            | The cuvette goes into the spectrometer.        | Working Fine | Working Fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the spectrometer lid.          | The lid closes.                                | Working Fine | Working Fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the computer.                  | A wavelength prompt appears, with input fields | Working Fine | Working Fine          |
+|                                         | for wavelengths (start and stop).              |              |                       |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the start button               | Animated graphs appear, depending on the       | Working Fine | Not there due to lack |
+|                                         | selected solution.                             |              | of videos.            |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the manual button              | Manual is displayed.                           | Working fine | Working fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+| Click on the data button                | Corresponding graphs are displayed.            | Working Fine | Working Fine          |
+|-----------------------------------------+------------------------------------------------+--------------+-----------------------|
+
