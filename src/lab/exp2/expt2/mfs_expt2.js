@@ -20,6 +20,44 @@
     var solution=1;// Indicates type of solution being used.
     
 
+
+ function turnOn() {
+        // Get the image
+        img = document.getElementById('table_with_spec');
+        // Change the source of the image 
+        img.src = images[x];
+        //increment x;
+        x++;
+        if(x >= images.length){
+            x = 0;
+        }
+        // $("#solution").prop("disabled", true);
+        // document.getElementById("solution").style.opacity = "0.4";
+        // Call turnOn() method every 250ms 
+        setTimeout("turnOn()", 250);
+    }
+
+    // This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; when this method is called they are amde visible and the clock hand is made to rotate.  
+    function showClock(){
+        if(step_no==6){
+            // Get the images.
+            var context=document.getElementById('clockScreen');
+            var hand =document.getElementById('clockHand');
+            // Make the visiblility of the obtained images visible
+            context.style.visibility='visible';
+            hand.style.visibility="visible";
+            // Rotate 'clockHand' using jQueryRotate.js
+            var angle = 0;
+            setInterval(function(){
+                angle+=3;
+                $('#clockHand').rotate(angle);
+            },50);
+            step_no++;
+            //After 10 secs dispose clock
+            setTimeout("removeClock()",3000);
+        }
+    }
+
     // This method is called when the page is loaded. It helps in providing basic functionality to two buttons manual and data and also sets the first set of instructions
     function initial_function(){
 
@@ -44,7 +82,7 @@
             
         });
         // Intial intrsuction to be followed
-        document.getElementById("demo").innerHTML = "step1: prepare and click on flask.";
+        document.getElementById("demo").innerHTML = "Step1: Prepare a 4.1 × 10-6 M fluorescein solution in spectroscopy grade ethanol from a 8.2 × 10-4 M fluorescein stock solution. Click on the volumetric flask containing the fluorescein solution to take it onto the instrument table.";
 
         var modal = document.getElementById('manual');
 
