@@ -1,0 +1,779 @@
+<!-- This file needs to be edited by the lab developer to suit
+their lab rquirements. -->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>FLUORESCENCE VIRTUAL LAB</title>
+</head>
+
+<body>
+
+<div id="lab"> <!-- The Lab Document Container-->
+
+<!-- The lab Header contains the logo and the name of the lab, 
+	usually displayed on the top of the page-->
+
+	<header id="lab-header">
+
+	<div id="experiment-header-logo" class="logo">
+	<!-- Enclose the logo image of your lab or write it in 
+	text-->
+
+	<a href="http://virtual-labs.ac.in/"><div class="imagemap">
+	<img src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" alt="" usemap="#logos" />
+
+
+	<map name="logos">
+
+	<area shape="rect" coords="0,0,505,98" href="http://www.vlab.co.in/" title="Vlab" alt="Vlab" />
+	<area shape="rect" coords="734,0,1022,97" href="http://www.iiit.ac.in/" title="IIIT" alt="IIIT" />
+
+	<area shape="default" nohref="nohref" title="Default" alt="Default"/>
+	</map>
+
+	</div>
+
+	</a>
+	</div>
+
+	<div id="lab-header-heading" class="heading">
+	<!-- Write the name of your lab and link it to the home page
+	of your lab. -->
+	<a href="../index.html">FLUORESCENCE VIRTUAL LAB</a>	
+	</div>
+
+	<!-- Add any additional element or link you want to add to 
+	the lab header, For example : Help (Enclosing them with 
+			suitable div is recommended)-->
+
+	</header>
+
+
+	<!-- The lab article is the main content area where all the 
+	experiment content sits-->
+	<article id="lab-article">
+
+
+	<!-- The lab article has an header, optional navigational 
+	menu, number of sections, an optional sidebar and a closing 
+	footer-->
+	<header id="lab-article-header">
+
+	<!-- You can add a welcome message or title of the 
+	experiment enclosed in h1 tag here -->
+	<div id="lab-article-heading" class="heading">
+	Demonstration of Solvent Effects on Fluorescence Spectra of a Fluorophore
+	</div>
+
+	<!-- Add any additional element if required with proper 
+	enclosing-->
+	</header>
+
+
+	<!-- Navigation menu is useful to organize the view of 
+	multiple sections inside the article-->
+	<nav id="lab-article-navigation">
+	<ul id="lab-article-navigation-menu">
+	<!-- The menu will be dynamically generated to contain the 
+	headings of your sections or instead write the menu items 
+	of your choice individually enclosed in <li> tag as shown 
+	below-->
+	</ul>
+	</nav>
+
+
+	<!-- All the sections of your lab or experiment can be 
+	enclosed together with a div element as shown below-->
+	<div id="lab-article-sections">
+
+	<!-- First section of the article-->
+	<section id="lab-article-section-1">
+	<div id="lab-article-section-1-icon" class="icon">
+	<!-- Enclose the icon image for the section. -->
+	<img src="../images/introduction.jpg" />
+	</div>
+
+
+	<!-- The heading for the section can be enclosed in a 
+	div tag. -->
+	<div id="lab-article-section-1-heading" class="heading">
+	Introduction
+	</div>
+
+	<!-- Write the section content inside a paragraph 
+	element, You can also include images with <img> tag -->
+	<div id="lab-article-section-1-content" class="content">
+	<p>
+	Fluorescence measurements can be carried out on gaseous, liquid or solid samples. The fluorescence spectral characteristics of a fluorophore vary depending on its surrounding environment. Surrounding environment affects the processes of electronic transitions in various ways. The interactions with the solvent and other dissolved compounds, viscosity, pH, temperature, and the concentration of the fluorophore species, etc. are a few environmental factors that affect the fluorescence phenomena. These factors influence both the absorption and emission spectra as well as the quantum yields of the fluorophore. However, the effects on the fluorophore again vary depending on the nature of the fluorophore species.  
+	</p>
+	<p>
+	Solvents play important roles in determining the fluorescence behavior of a (fluorophore) solute molecule. The solvent effects are caused through the variation in solvent dielectric constants, refractive indices, polarities, viscosities, polarizabilities and/or induced dipoles. The solute-solvent interaction can affect the fluorescence spectra in many ways. For example, it can cause a shift in the fluorescence energy and can quench the fluorescence by intersystem crossing (ISC), formation of non-fluorescent complex or by ionization to non-fluorescent species. The Stokes shift, i.e., the wavelength difference between the absorption and fluorescence maxima, depends on the natures of both the solute and the solvent. Polar solutes in polar, hydrogen-bonding solvents give rise to large (viz., 20 to 50 nm)  Stokes shifts. A knowledge of environmental effects on the spectra and quantum yields of fluorescence is necessary for the utilization of fluorescence techniques to extract information regarding the immediate microenvironments (e.g., polarity, viscosity, etc.) of the fluorescent molecules. Such fluorescent probe studies find important applications in biological and polymer sciences.
+	</p>
+	</div>
+
+	</section>
+
+
+	<!-- Second section of the article-->
+	<section id="lab-article-section-2">
+
+	<div id="lab-article-section-2-icon" class="icon">
+	<!-- Enclose the icon image for the section. -->
+	<img src="../images/objective.jpg" />
+	</div>
+
+
+	<!-- The heading for the section can be enclosed in a 
+	div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-2-heading" class="heading">
+	Objective
+	</div>
+
+	<!-- Write the section content inside a paragraph 
+	element, You can also include images with <img> tag -->
+	<div id="lab-article-section-2-content" class="content">
+	<p>
+	<ul>
+	<li>To demonstrate the general solvent effects on fluorescence spectra with the help of a set of solvents with different polarities.</li>
+	<li>To determine the solvent-dependent stokes shifts. </li>
+	<li>To plot Lippert-Mataga equation</li>
+	</ul>
+	</p>	</div>
+
+	</section>
+
+
+	<!-- Second section of the article-->
+	<section id="lab-article-section-3">
+
+	<div id="lab-article-section-3-icon" class="icon">
+	<!-- Enclose the icon image for the section. -->
+	<img src="../images/theory.jpg" />
+	</div>
+
+
+	<!-- The heading for the section can be enclosed in a 
+	div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-3-heading" class="heading">
+	Theory
+	</div>
+
+	<!-- Write the section content inside a paragraph 
+	element, You can also include images with <img> tag -->
+	<div id="lab-article-section-3-content" class="content">
+	<p>
+	Fluorescence requires electron transition or electron redistribution, first after light absorption and then after the relaxation of the molecule from the excited singlet state to the ground singlet state with emission of light. Redistribution of electron density caused by an electron transition occurs on a much faster scale than the reorientation of the nuclei (Franck-Condon principle). This results in an altered dipole moment of the excited fluorophore (or a reorientation of the fluorophore dipole moment) upon excitation (of the molecule). This in turn leads to an energetically unfavorable Franck-Condon state of the excited molecule. This requires that the system relaxes (to a lower energy state) through reorientation of the solvent molecules (envelope) surrounding the fluorophore. The reorientation of the solvent envelope by reorganizing solvent molecules around the fluorophore is known as the 'solvent relaxation'. The fluorescence lifetime (1-10 ns) is longer than the solvent relaxation time (10-100 ps) for a liquid solvent at room temperature. Therefore, the emission spectra of the flourophores are often representative of the solvent relaxed state. The degree of reorientation of the solvent molecules is dependent on the physical and chemical properties of the solvent and the fluorophore. Electronic excitation of molecules such as substituted aromatic compounds typically results in an increase in the dipole moment of the molecules with respect to the ground state. Such molecules exhibit high sensitivity to the solvent polarity change. Non-polar fluorophores such as the unsubstituted aromatic hydrocarbons are much less sensitive to the solvent polarity.
+	</p>
+	<p>
+	The solvent relaxation introduces an additional red shift to the Stokes shift, the difference  between the absorption and emission energies (often expressed as difference in absorption and emission wave numbers). One should recall that the Stokes shifts caused due to the loss of energy result from 
+	several dynamic processes such as dissipation of vibrational energy as heat energy, reorientation of the solvent molecules around the excited state dipole, redistribution of electrons in the solvent molecules as a result of the altered dipole moment of the excited fluorophore, and fluorophore-solvent interactions. 
+	</p>
+	<p>
+	No single theory can quantitatively interpret the solvent dependent emission spectra. Solvent-dependent Stokes shifts have been described in terms of 'general and specific solvent effects'. 'Specific solvent effects' result from direct solvent-fluorophore interactions such as hydrogen bonding, acid-base chemistry, charge transfer interactions, and complex formation. On the other hand, 'general solvent effects' refer to the solvent dependent spectral shifts that originate from the interaction between the fluorophore and the entire set of surrounding solvent molecules and do not involve any chemical interactions or specific solvent-flurophore interactions. In such cases, the energy between the ground state and excited state is affected by the dipole interaction between the solvent and the fluorophore which is function of the solvent refractive index and  dielectric constant. The 'general solvent effects' on emission spectra is often interpreted in terms of dipole interaction theory of Lippert and Mataga. The Lippert-Mataga equation describes the Stokes shift in terms of the change in the dipole moment upon excitation and the energy of a dipole in in solvents of various dielectric constants (&#949;) or refractive indices (n). 
+	</p>
+	<p>
+	The Lippert-Mataga equation is given by:
+	\begin{equation}
+	\Delta v = v_{abs} - v_f = 2 \Delta f ( \Delta \nu )^2 / hca^3 + const.
+	\end{equation}
+	\begin{equation}
+	\Delta f = [( &#949; - 1) /(2 &#949; + 1)] - [(n^2 - 1)/(2n^2 + 1)] 
+	\end{equation}
+	</p>
+	<p>
+
+	where &#916;v is the Stokes shift (in wave-numbers), the difference in energy between the absorption and emission maxima; v<sub>abs</sub> and v<sub>f</sub> are the wave-numbers of absorption and emission peaks, respectively, h is Planck's constant, c is the speed of light, a is the Onsager cavity radius in which the chromophore resides, and &#924; = &#924;<sub>e</sub> - &#924;<sub>g</sub> is the difference between the fluorophore excited- and ground-state dipole moments, &#916;f is the orientational polarizability of solvent, &#949; is the dielectric constant, and n is the refractive index of the solvent.  The term "const." includes the Stokes shift that results from the dynamic processes like vibrational relaxation and internal conversion effects. 
+	</p>
+	<p>
+	The plot of &#916;v (= v<sub>abs</sub> - v<sub>f</sub> ) versus &#916;f should be a straight line. The slope is given by the following expression: 2(&#916;&#924;)<sup>2</sup>/hca<sup>3</sup>. Observations of Stokes shift is used to assess the environment polarity. Further, this method is used for determination of excited state dipole moments. To calculate &#916;&#924; one needs to know a, the Onsager cavity radius, of the solute (fluorophore). An approximate value of a (cavity radius) can be calculated from the following relationship: 
+	<p>
+	\begin{equation}
+	a (in A^o)= 10^8 (3M /4&#960;qN)^{1/3}
+	\end{equation}
+	where M is the molecular weight and q the density in g/cc of the solute and N Avogadro's constant. 
+	</p>
+	</p>
+	<p>
+	One should note that the effects of the refractive index differ from those of the dielectric constant. The refractive index is a property of the electrons of the solvent molecules, whereas the dielectric effects include both electronic and molecular orientation effects. Because, the refractive index (n) is dependent on the motion of electrons within the solvent molecules (which instantaneously occurs during light absorption), an increase in n results in decrease in energy loss and stabilization of the ground and excited state. Since the dielectric constant (&#949;) is dependent on both the electronic and the molecular motions, an increase in &#949; also will result in stabilization of the ground and the excited states. The decrease in energy of the excited state occurs only after the reorientation of the solvent dipoles and is time dependent. Therefore an increase in &#949; results in larger energy loss (larger energy loss between v<sub>abs</sub> and v<sub>f</sub>).
+	</p>
+	<p>
+	The Lippert-Mataga equation works fairly well for non-protic solvents whereas protic solvents (e.g., water, ethanol) tend to give greater than the predicted Stokes shifts, because of several assumptions made in the derivation of the Lippert-Mataga equation. For example, it assumes a fluorophore as a point dipole in a spherical cavity. This assumption does not seem to be a very obvious approximation for many fluorophore-solvent systems. Further, it takes only the continuum dielectric properties, such as the dielectric constant and the refractive index, as a measure of the solvation energy and ignores specific solvent interactions which is not completely satisfactory. 
+	</p>
+
+	<p>
+
+	<b>Table 1.</b> Refractive Indices and Dielectric Constants of the Solvents and Corresponding Absorption and Emission Spectra Wavelengths of Curcumin. 
+
+	<TABLE WIDTH=642 CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=97>
+	<COL WIDTH=72>
+	<COL WIDTH=83>
+	<COL WIDTH=48>
+	<COL WIDTH=57>
+	<COL WIDTH=76>
+	<COL WIDTH=150>
+	<TR VALIGN=TOP>
+	<TD WIDTH=97 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">Solvent</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=72 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000"> <FONT FACE="FreeSerif, serif"><I>Refractive
+	Index (n)</I></FONT></FONT></P>
+	</TD>
+	<TD WIDTH=83 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; margin-bottom: 0cm">
+	<FONT COLOR="#000000">   <FONT FACE="FreeSerif, serif"><I>Dielectric
+	</I></FONT></FONT>
+	</P>
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000">  <FONT FACE="FreeSerif, serif"><I>Constant
+	(&#949;)</I></FONT></FONT></P>
+	</TD>
+	<TD WIDTH=48 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000">&#916;<FONT FACE="FreeSerif, serif"><I>f</I></FONT></FONT></P>
+	</TD>
+	<TD WIDTH=57 STYLE="; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; margin-bottom: 0cm">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">&#955;<SUB>abs </SUB></FONT></FONT>
+	</P>
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">(in<SUB> </SUB>nm)</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=76 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; margin-bottom: 0cm">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">&#955;<SUB>f </SUB></FONT></FONT>
+	</P>
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">(in nm)</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=150 STYLE="; border: 1px solid #000000; padding: 0.1cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><I>Stokes
+	Shift (in wave-number unit, </I><SPAN STYLE="font-style: normal">cm</SPAN><SUP><SPAN STYLE="font-style: normal">-1</SPAN></SUP><I>)</I></FONT></FONT></P>
+	</TD>
+	</TR>
+	<TR VALIGN=TOP>
+	<TD WIDTH=97 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000">  <FONT FACE="FreeSerif, serif">Chloroform </FONT></FONT>
+	</P>
+	</TD>
+	<TD WIDTH=72 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">1.447</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=83 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">4.98</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=48 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=57 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=76 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=150 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	</TR>
+	<TR VALIGN=TOP>
+	<TD WIDTH=97 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">DMSO </FONT></FONT>
+	</P>
+	</TD>
+	<TD WIDTH=72 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">1.479</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=83 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">48.9</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=48 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=57 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=76 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=150 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	</TR>
+	<TR VALIGN=TOP>
+	<TD WIDTH=97 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">Acetone </FONT></FONT>
+	</P>
+	</TD>
+	<TD WIDTH=72 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">1.359</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=83 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">21.01</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=48 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=57 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=76 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=150 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	</TR>
+	<TR VALIGN=TOP>
+	<TD WIDTH=97 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">Methanol </FONT></FONT>
+	</P>
+	</TD>
+	<TD WIDTH=72 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">1.3288 </FONT></FONT>
+	</P>
+	</TD>
+	<TD WIDTH=83 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif">32.6</FONT></FONT></P>
+	</TD>
+	<TD WIDTH=48 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=57 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=76 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	<TD WIDTH=150 STYLE="; border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+	<P ALIGN=CENTER STYLE="margin-left: -0.31cm; margin-right: 0.01cm; font-style: normal">
+	<BR>
+	</P>
+	</TD>
+	</TR>
+	</TABLE>
+
+	</p>
+
+
+
+	</div>
+
+	</section>
+
+	<section id="lab-article-section-4">
+
+	<div id="lab-article-section-4-icon" class="icon">
+	<!-- Enclose the icon image for the section. -->
+	<img src="../images/procedure.jpg" />
+	</div>
+
+
+	<!-- The heading for the section can be enclosed in a 
+	div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-4-heading" class="heading">
+	Procedure
+	</div>
+
+	<!-- Write the section content inside a paragraph 
+	element, You can also include images with <img> tag -->
+	<div id="lab-article-section-4-content" class="content">
+	<ol>
+	<li>
+	Collect curcumin (a natural orange-yellow dye present in turmeric) and spectroscopy grade solvents: chloroform, dimethyl sulfoxide, acetone, and methanol. Quartz cuvette with 1 cm path length can be used for measuring absorption and emission spectra. Optical absorption measurements in different solvents are carried out with a spectrophotometer. Emission spectra of curcumin are recorded using a spectrofluorimeter. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. 
+	</li>
+	<li>
+	Prepare four 1 x 10-6 M curcumin solutions in four solvents, namely chloroform, DMSO (dimethyl sulfoxide), acetone, and methanol. Such dilute solutions can be prepared via multiple dilution steps from 1 x 10<sup>-3</sup> M stock solutions in respective solvents. Here solutions in different solvents are shown on a solvent selection bar. 
+	</li>
+	<li>
+	The Absorption and Emission measurements with all the solutions are carried out one after another as follows. 
+	</li>
+	<li>
+	To take a particular solution, click on the appropriate solvent on the solvent selection bar and then click on the volumetric flask containing the solution.
+	</li>
+	<li>
+	Click on the quartz cuvette (path length, 1 cm x1 cm) to take it to the instrument table. Quartz cuvettes for spectrophotometric measurements are transparent only on two opposite sides, unlike the all-side transparent quartz cuvettes used for fluorescence measurements.
+	</li>
+	<li>
+	Click on the 5 mL capacity pipette to collect 3 mL of the experimental solution which will be transferred into the quartz cuvette. In real operation, one has to set the volume to 3 mL in the  pipette and an appropriate tip should be attached prior to dipping it in the solution.
+	</li>
+	<li>
+	Click on the pipette to draw the solution into it.
+	</li>
+	<li>
+	Click on the pipette to take it out of the volumetric flask.
+	</li>
+	<li>
+	Click on the pipette again to transfer the solution into the cuvette.
+	</li>
+	<li>
+	To start the absorption spectral scan, click on the pop-up "Start Absorption Measurement".
+	</li>
+	<li>
+	Turn on the spectrophotometer clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.
+	</li>
+	<li>
+	Open the lid of the sample chamber of the spectrophotometer by clicking on the lid for placing the sample in the cell-holder. 
+	</li>
+	<li>
+	Click on the cuvette to place it in the sample holder. One has to use pure solvent as the sample blank or reference in this measurement. Here a double beam spectrophotometer is shown. 
+	</li>
+	<li>
+	Close the lid of the sample chamber by clicking on it.
+	</li>
+	<li>
+	Open the measurement set-up screen by clicking on the absorption measurement icon on the computer monitor. 
+	</li>
+	<li>
+	On the screen, enter the wavelength range. 	Start: 550 nm 		End: 300 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A) or transmittance (%T) mode. 
+	</li>
+	<li>
+	Click on the green Start button on the measurement set-up screen to run the wavelength scan. Observe the wavelength scan. 
+	</li>
+	<li>
+	Click on Close button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data. 
+	</li>
+	<li>
+	To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette.
+	</li>
+	<li>
+	Click on the lid of the sample chamber to close it.
+	</li>
+	<li>
+	Click on the pop-up: "Start Fluorescence Measurement".
+	</li>
+	<li>
+	Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.
+	</li>
+	<li>
+	Click on the spectrophotometric quartz cuvette to transfer its content into an all-side-transparent quartz cuvette of path length 1 cm x1 cm for the fluorescence measurement.
+	</li>
+	<li>
+	Run the Emission Spectral Scan of the sample on a spectrofluorimeter as follows.
+	</li>
+	<li>
+	Open the lid of the sample chamber of the spectrofluorimeter by clicking on the lid for placing the sample.
+	</li>
+	<li>
+	Click on the cuvette to place it in the sample holder.
+	</li>
+	<li>
+	Close the lid of the sample chamber by clicking on the lid.
+	</li>
+	<li>
+	Open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor. 
+	</li>
+	<li>
+	Select the Emission Scan Mode on the screen.
+	</li>
+	<li>
+	On the screen, enter the Excitation wavelength: 420 nm, Emission Start Wavelength: 430 nm and Emission End wavelength: 650 nm. One chooses the Excitation Slit(nm) and Emision Slit(nm) values (here 10 nm/10 nm) and the scan speed value (here "medium") also. 
+	</li>
+	<li>
+	To run the wavelength scan for emission spectrum, click on OK button on the set-up screen. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. 
+	</li>
+	<li>
+	Click on Close button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data. 
+	</li>
+	<li>
+	To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. 
+	</li>
+	<li>
+	Close the chamber lid by clicking on it.
+	</li>
+	<li>
+	Click on Reset button to start over the measurements.
+	</li>
+	<li>
+	Repeat the Absorption and Emission measurements with all the solvents by clicking on the solvent selection bar first and then on the volumetric flask containing the solution. 
+	</li>
+	<li>
+	Collect all data by clicking on the Data tab.
+	</li>
+	<li>
+	Find out the maximum absorption and emission wavelengths for all the solvents and tabulate them along with the solvent dielectric constants and refractive indices values. Determine the absorption and fluorescence maxima in wave-number/cm-1 unit for all the solvents. 
+	</li>
+	<li>
+	Calculate the solvent polarity function (&#916;f) from solvent dielectric constants and refractive indices values. 
+	</li>
+	<li>
+	Plot Stokes shifts (in wave-number unit, cm-1) as a function of the solvent polarity function (&#916;f). 
+	</li>
+	<li>
+	Discuss the characteristics of the plot.
+	</li>
+	<li>
+	Calculate the excited state dipole moment of curcumin. 
+	</li>
+	</ol>
+	</div>
+
+	</section>
+
+	<section id="lab-article-section-5">
+
+	<div id="lab-article-section-5-icon" class="icon">
+	<!-- Enclose the icon image for the section. -->
+	<img src="../images/experiment.jpg" />
+	</div>
+
+
+	<!-- The heading for the section can be enclosed in a 
+	div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-5-heading" class="heading">
+	Simulator
+	</div>
+
+	<!-- Write the section content inside a paragraph 
+	element, You can also include images with <img> tag -->
+	<div id="lab-article-section-5-content" class="content">
+	<p>
+		<a href="media/4.html" target="_blank">Click here to go to lab</a>
+	</p>
+	</div>
+
+	</section>
+
+	<section id="lab-article-section-6">
+
+	<div id="lab-article-section-6-icon" class="icon">
+	<!-- Enclose the icon image for the section. -->
+	<img src="../images/quiz.jpg" />
+	</div>
+
+
+	<!-- The heading for the section can be enclosed in a 
+	div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-6-heading" class="heading">
+	Quiz
+	</div>
+
+	<!-- Write the section content inside a paragraph 
+	element, You can also include images with <img> tag -->
+	<div id="lab-article-section-6-content" class="content">
+
+	<h3>
+	Pre-Experiment
+	</h3>
+
+	<ol>
+	<li>
+	In fluorescence, generally the state from which the system decays is independent of the excitation wavelength. Why?
+	</li>
+	<li>
+	What happen to the energy of the excited state and the emission spectrum when re-organization of solvent dipoles occurs around the excited fluorophore?
+	</li>
+	<li>
+	Compare the effects of increase in refractive index and dielectric constant on the ground and excited state energies.
+	</li>
+	<li>
+	The Lippert-Mataga equation tends to give greater than the predicted Stokes shifts for protic solvents like water and alcohols. Why?
+	</li>
+	<li>
+	When the solvent has no permanent dipole moment, how n is related to &#949; and what is the value of &#916;f? 
+	</li>
+
+	</ol>
+
+	<h3>
+	Post-Experiment
+	</h3>
+
+	<ol>
+	<li>
+	How many grams of curcumin should one dissolve in a given solvent to prepare a 100 mL 1x10<sup>-3</sup>M stock solution?
+	</li>
+	<li>
+	In Lippert-Mataga plots, groups of solvents with similar chemical nature often tend to cluster. Why?
+	</li>
+	<li>
+	If one obtains a positive slope in the Lippert-Mataga plot, is the excited state more polar or less polar than the ground state?
+	</li>
+	<li>
+	In the Lippert-Mataga plot, does the point corresponding to methanol lie above or below the straight line fit? What could be the possible reason for this?
+	</li>
+	<li>
+	What do the steady state spectral measurements of curcumin suggest about the polarity of the S1 state with respect to its S0 ground state? 
+	</li>
+	</ol>
+
+
+	</div>
+
+	</section>
+	<section id="lab-article-section-7">
+
+	<div id="lab-article-section-7-icon" class="icon">
+	<!-- Enclose the icon image for the section. -->
+	<img id="feedback" src="../images/references.jpg" />
+	</div>
+
+
+	<!-- The heading for the section can be enclosed in a 
+	div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-7-heading" class="heading">
+	References
+	</div>
+
+	<!-- ..............Modifications required change the references, PALLAV................................. -->
+
+
+	<!-- Write the section content inside a paragraph 
+	element, You can also include images with <img> tag -->
+	<div id="lab-article-section-7-content" class="content">
+	<ol>
+	<li>
+	J. R. Lakowicz, Principles of Fluorescence Spectroscopy, 3rd Printing; Plenum Press: New York, 1986.
+	</li>
+	<li>
+	J. A. Dean, Langes Handbook of Chemistry, McGraw-Hill, New York, 1987. 
+	</li>
+	<li>
+	A. Barik, N. K. Goel, K. I. Priyadarsini and H. Mohan, "Effect of Deuterated Solvents on the Excited State Photophysical Properties of Curcumin" Journal of Photoscience 2004, Vol. 11(3), pp. 95-99 .
+	</li>
+	<li>
+	S. A. Barghouthi, Jeannine Perrault and L. H. Holmes, Jr, "Effect of Solvents on the Fluorescence Emission Spectra of 1-Anilino-8-Naphthalene Sulfonic Acid: A Physical Chemistry Experiment" The Chemical Educator, Vol. 3, No. 5, 1998 Springer-Verlag New York, Inc. http://journals.springer-ny.com/chedr.
+	</li>
+	<li>
+	K. M. Solntsev, D. Huppert , and N. Agmon, "Solvatochromism of &#914;-Naphthol" J. Phys. Chem. A 1998, Vol. 102, pp. 9599-9606 .
+	</li>
+	<li>
+	M. M. Husaina, R. Sindhua, and H. C. Tandon, European Journal	of Chemistry 2012, 3, 87-93.
+	</li>
+	<li>
+	B. Valeur , Molecular Fluorescence : Principles and Applications , 2002, Wiley-VCH, Weinheim.
+	</li>
+	<li>
+	J. R. Albani , Principles and Applications of Fluorescence Spectroscopy, 2007, Blackwell Science Science Ltd, Oxford, UK.
+	</li>
+	<li>
+	P. Patnaik, Dean's Analytical Chemistry Handbook, 2nd Edition, McGraw-Hill Handbooks.
+	</li>
+	<li>
+	F. A. Settle, Handbook of Instrumental Techniques for Analytical Chemistry, 1st Edition, 1997, National Science Foundation, Arlington, Virginia. 
+	</li>
+	<li>
+	J. R. Lakowicz, Principles of Fluorescence Spectroscopy, 2nd Ed., Kluwer Academic/Plenum Publishers, New York, London, Moscow, Dordrecht, 1999.	 
+	</li>
+	</ol>      </div>
+
+	</section>
+
+	<section id="lab-article-section-99">
+
+	<div id="lab-article-section-99-icon" class="icon">
+	<!-- Enclose the icon image for the section. -->
+	<a href="../?q=experiments"><img src="../images/experiments.jpg" /><p></p>Experiments</a>
+	</div>
+
+
+	<!-- The heading for the section can be enclosed in a 
+	div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-99-heading" class="heading">
+	</div>
+
+	<!-- Write the section content inside a paragraph 
+	element, You can also include images with <img> tag -->
+	<div id="lab-article-section-99-content" class="content">
+	</div>
+	</section>
+
+	<section id="lab-article-section-100">
+
+	<div id="lab-article-section-100-icon" class="icon">
+	<!-- Enclose the icon image for the section. -->
+	<a href="http://virtual-labs.ac.in/feedback/?lab=ccnsb01"><img id="feedback" src="../images/feedback.jpg" /><p></p>Feedback</a>
+	</div>
+
+
+	<!-- The heading for the section can be enclosed in a 
+	div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-100-heading" class="heading">
+	</div>
+
+	<!-- Write the section content inside a paragraph 
+	element, You can also include images with <img> tag -->
+	<div id="lab-article-section-100-content" class="content">
+	</div>
+	</section>
+
+
+	</div>	
+
+	<!-- An article can have a sidebar that contain related 
+	links and additional material (it is optional at this 
+			moment)-->
+	<aside id="lab-article-sidebar" class="default">
+	<!-- put the content that you want to appear in the 
+	sidebar-->	
+	</aside>
+
+	<!-- Article footer can display related content and 
+	additional links -->						
+	<footer id="lab-article-footer" class="default">
+	<!-- Put the content that you want to appear here-->
+	</footer>
+
+	</article>
+
+	<!-- Links to other labs, about us page can be kept the lab 
+	footer-->
+	<footer id="lab-footer" class="default">
+	<!-- Put the content here-->
+	</footer>
+
+	</div>
+	</body>
+	</html>

@@ -1,0 +1,383 @@
+<!-- This file needs to be edited by the lab developer to suit
+their lab rquirements. -->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FLUORESCENCE VIRTUAL LAB</title>
+</head>
+
+<body>
+
+<div id="lab"> <!-- The Lab Document Container-->
+  
+  <!-- The lab Header contains the logo and the name of the lab, 
+  usually displayed on the top of the page-->
+
+  <header id="lab-header">
+    
+    <div id="experiment-header-logo" class="logo">
+	<!-- Enclose the logo image of your lab or write it in 
+	text-->
+
+		<a href="http://virtual-labs.ac.in/"><div class="imagemap">
+			<img src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" alt="" usemap="#logos" />
+
+	
+			<map name="logos">
+			
+				<area shape="rect" coords="0,0,505,98" href="http://www.vlab.co.in/" title="Vlab" alt="Vlab" />
+				<area shape="rect" coords="734,0,1022,97" href="http://www.iiit.ac.in/" title="IIIT" alt="IIIT" />
+			
+				<area shape="default" nohref="nohref" title="Default" alt="Default"/>
+			</map>
+
+			</div>
+	      
+	     </a>
+	</div>
+
+    <div id="lab-header-heading" class="heading">
+    <!-- Write the name of your lab and link it to the home page
+    of your lab. -->
+      <a href="../index.html">FLUORESCENCE VIRTUAL LAB</a>	
+    </div>
+
+    <!-- Add any additional element or link you want to add to 
+    the lab header, For example : Help (Enclosing them with 
+    suitable div is recommended)-->
+  
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="lab-article">
+
+
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    <header id="lab-article-header">
+      
+      <!-- You can add a welcome message or title of the 
+      experiment enclosed in h1 tag here -->
+      <div id="lab-article-heading" class="heading">
+      Introduction to the fluorescence spectroscopy principle
+      </div>
+
+      <!-- Add any additional element if required with proper 
+      enclosing-->
+    </header>
+
+
+    <!-- Navigation menu is useful to organize the view of 
+    multiple sections inside the article-->
+    <nav id="lab-article-navigation">
+    <ul id="lab-article-navigation-menu">
+      <!-- The menu will be dynamically generated to contain the 
+      headings of your sections or instead write the menu items 
+      of your choice individually enclosed in <li> tag as shown 
+      below-->
+    </ul>
+    </nav>
+
+    
+    <!-- All the sections of your lab or experiment can be 
+    enclosed together with a div element as shown below-->
+    <div id="lab-article-sections">
+			
+      <!-- First section of the article-->
+      <section id="lab-article-section-1">
+        <div id="lab-article-section-1-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/introduction.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+	<div id="lab-article-section-1-heading" class="heading">
+	Introduction
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+	<div id="lab-article-section-1-content" class="content">
+	 
+<p>
+A molecule upon interacting with incident light may scatter a part of the light ( elastically, e.g., Rayleigh scattering or inelastically, e.g., Raman scattering) and may absorb rest of the light. An absorption of light may occur when the photon energy is equal to the energy difference between two energy states of the molecule. The interaction of the oscillating electromagnetic field of the radiation with the charged particles (electrons) in the molecule causes absorption of light. The absorption of light energy places the molecule in one of its many possible higher energy (excited) rotational, vibrational or electronic states, depending on the amount of the absorbed energy. Thus the molecule undergoes a transition to an upper energy or excited state. This is known as excitation or absorption process. The absorption process is extremely fast (takes approx. 10<sup>-15</sup> s). All electronically excited states have a finite lifetime during which the excited state equilibrates with its surroundings. Therefore, after reaching the excited electronic state, the molecule returns to its ground state by losing the absorbed energy via various pathways that are either radiationless, in which no photons are emitted (energy converted into the disordered thermal motion of its surroundings), or radiative decay, which involves the emission of a photon. For example, the molecule can lose the energy by internal conversion (heat), quenching (external conversion), by emission of a photon (fluorescence), or by first intersystem crossing and then emission of a photon (phosphorescence). A schematic of the processes that occur following the electronic transition is given by ‘Jablonski diagram’ after Polish physicist, Aleksander Jablonski. 
+</p>
+
+
+
+	</div>
+	
+      </section>
+		
+
+      <!-- Second section of the article-->
+      <section id="lab-article-section-2">
+        
+        <div id="lab-article-section-2-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-2-heading" class="heading">
+	  Objective
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-2-content" class="content">
+
+
+<p>
+To be introduced to the principles of fluorescence (and phosphorescence) in a molecule
+</p>	</div>
+	
+      </section>
+
+
+	 <!-- Second section of the article-->
+      <section id="lab-article-section-3">
+        
+        <div id="lab-article-section-3-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-3-heading" class="heading">
+	 Theory
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-3-content" class="content">
+
+
+
+<h3>
+Singlet-Triplet States
+</h3>
+<p>
+In an electronic transition, the electronic configuration changes, i.e., one or more electron(s) in the molecule are rearranged in available higher energy orbitals. Depending on the spin orientations of the excited electron in the new orbital, the states are designated as singlet (S) or triplet (T). In the following we discuss about the singlet and triplet electronic states. 
+</p>
+<p>
+In polyatomic molecules, it is convenient to classify the electronic transitions by specifying the initial and final orbitals. For example, if an electronic transition occurs from a bonding pi (π) orbital to an antibonding pi orbital (π<sup>∗</sup>), we call it a π → π<sup>∗</sup> transition and similarly for a transition from a nonbonding orbital (n) to an antibonding pi orbital (π<sup>∗ </sup>) is known as n → π<sup>∗</sup> transition. Carbonyl group (>C=O) is one of the examples that has both the nonbonding (n) and pi electrons. In the ground state of C=O group, two sigma bonding electrons, two pi bonding electrons, and four nonbonding electrons are all spin-paired (their spins are in opposite directions). Because there is not any un(-spin)-paired electron, the ground state has a singlet (S) multiplicity (Multiplicity = number of un(-spin)-paired electrons + 1). The name 'singlet' originated from the fact that the spin-paired state (↑↓) of the singlet state can adopt only 'one'  orientation with respect to an external magnetic field. Molecules in their normal or ground states have all the electrons spin-paired (exception: oxygen). Therefore all molecules in their ground states are in singlet (S) state (exception: oxygen in triplet state). If energy is supplied, one of these spin-paired electrons (say, from n or π orbital) is excited to a higher energy orbital (say, π<sup>∗</sup>). Now what will be the spin state of the excited electron in this new orbital? One can think of the following two situations. Firstly, the excited electron may have the same spin orientation as it had in its originating (n or π) orbital (i.e., the spin is reserved). In this case, the electrons are still spin-paired (though in different energy orbitals). Since the electrons are spin-paired, the spin multiplicity of the state is one i.e., a ‘singlet’ state (S). This singlet state has higher energy than the ground singlet state. Secondly, the spin of the excited electron may flip under suitable circumstances (it undergoes intersystem crossing: singlet to triplet). In this case, the two electrons (one in the originating n or π orbital and the other in the new excited orbital) have the same spin orientation. Therefore the two electrons are no longer spin-paired (having parallel spin orientations). Because there are two un(-spin)-paired electrons, the multiplicity =2+1=3, a ‘triplet’. There are nonbonding as well as pi electrons available to be excited. Therefore, for these transitions there are more than one excited singlets and triplets states of different energies present. We designate the manifold of singlet states as S<sub>0</sub> (ground state), S<sub>1</sub>, S<sub>2</sub>,….. and the manifold of triplets as T<sub>1</sub>, T<sub>2</sub>,…. in order of increasing energy. Because triplets are generally formed by electronic excitation, the lowest energy triplet state is labeled as the first excited triplet, T<sub>1</sub>, state as opposed to T<sub>0</sub>. We should remember that manifold of vibrational states exists for each of these electronic states and similarly manifold of rotational states will exist for each vibrational level. 
+</p>
+<p>
+Upon light absorption, electronic transitions result from the interaction between electrons and the electric field component of the light. The magnetic contribution to the absorption is negligible compared to the electric contribution because of the speed of electron rotation on itself is very weak compared to the light velocity [Total energy, F = (eE) + (evH /c) , where e, c, v, E, and H are, respectively, the electron charge, light velocity, speed of rotation of the electron on itself, and electric and magnetic components of the light wave]. Thus, a displaced electron preserves the same spin orientation during absorption excitation. Therefore, if the ground state of a molecule is a singlet state then the transition of the electron occurs to an excited singlet state. In other words, singlet to triplet transitions are forbidden, unless it is assisted by some other mechanism (such as spin-orbit couplings). Similarly, the electronic transition from T → S is formally forbidden (from the selection rules point of view). The absorption of light can excite the molecules from lowest energy singlet state S<sub>0</sub> to higher energy singlet state S<sub>1</sub> and even to S<sub>2</sub> if the excitation energy is sufficient. 
+</p>
+
+<h3>
+Fluorescence and Phosphorescence
+</h3>
+
+<p>
+The Franck-Condon principle states that the heavier nuclei do not change their positions during the fast electronic excitation. This results in an initial geometry of the excited state which is usually not the energy minimum geometry. According to the Franck–Condon principle, the molecule will most probably be excited to one of the higher vibrational states of the excited electronic state. The molecule in an excited vibrational energy level loses energy rapidly (in 10<sup>–12</sup> s or less) and moves to a lower (and finally to the lowest) vibrational energy level in the same excited electronic state. Once the molecule is in the lowest vibrational level of the excited electronic state, S<sub>1</sub>, the molecule can return to one of the vibrational states of the ground singlet state, S<sub>0</sub> through an emission of photon radiation, called fluorescence, or via other relaxation path ways. In fluorescence, the acquired (absorbed) electronic energy is lost via the emission of a photon while transition occurs from lowest vibrational level of first excited singlet (i.e., v=0 of S<sub>1</sub>) to one of the vibrational states of the ground singlet state, S<sub>0</sub>. This radiative process takes about 10<sup>-9</sup> second. Most compounds decay by non-radiative processes (such as heat) and are therefore not fluorescent.
+</p>
+
+<p>
+If by some mechanisms, intersystem crossing (say, spin forbidden transition S<sub>1</sub> → T<sub>1</sub>) occurs, then a radiative transition T<sub>1</sub> to S<sub>0</sub>, called phosphorescence, may occur. In intersystem crossing, a molecule in the ground vibrational energy level of an excited electronic state passes into a high vibrational energy level of a lower energy electronic state with a different spin state (say, S<sub>1</sub> to T<sub>1</sub>). Iintersystem crossing requires a mechanism for converting the paired electron spins (↑↓) of the singlet state to unpaired electron spins (↑↑) of the triplet state. Spin–orbit coupling and vibronic coupling favor intersystem crossing. In spin-orbit coupling, the magnetic field arising from an electron's orbital motion around the nucleus interacts with the spin magnetic moment of the electron which helps in spin reversal or flipping of electron orientation (from ↑↓ to ↑↑). The strength of the orbitally generated magnetic field increases as the nuclear charge increases. The efficiency of this coupling varies with the fourth power of the atomic number. After intersystem crossing, the molecule as usual undergoes vibrational relaxation and moves down the vibrational energy levels of the T<sub>1</sub> state by loss of energy in collisions with surrounding molecules. Then the molecule may transit from T<sub>1</sub> to S<sub>0</sub> by the emission of a photon, called phosphorescence.  The forbidden transition of the molecule from T<sub>1</sub> to S<sub>0</sub> to occur requires a similar mechanism that permitted singlet to triplet intersystem crossing. Typical mean time for phosphorescence (1 millisecond to 10 second) is longer than that for fluorescence. 
+</p>
+
+      </section>
+
+	<section id="lab-article-section-4">
+        
+        <div id="lab-article-section-4-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/procedure.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-4-heading" class="heading">
+	 Procedure
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-4-content" class="content">
+	<ol>
+</ol>
+	</div>
+	
+      </section>
+      
+ <section id="lab-article-section-5">
+
+      <div id="lab-article-section-5-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/experiment.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-5-heading" class="heading">
+      Simulator
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-5-content" class="content">
+	<p>
+    		<a href="media/1.html" target="_blank">Click here to view the principle</a>
+      	</p>
+	
+
+      </div>
+
+      </section>
+
+ <section id="lab-article-section-6">
+
+      <div id="lab-article-section-6-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/quiz.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-6-heading" class="heading">
+      Quiz
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-6-content" class="content">
+<ol>
+	<li>How many possible orientations can two parallel spins adopt with respect to the external magnetic field? Show by schematic diagram.</li>
+	<li>What are the spin multiplicity and the spin of triplet state? </li>
+	<li>Why two electrons are always present in two different orbitals of the molecule in triplet state?</li>
+	<li>Internal conversion (takes place at a time scale of 10<sup>-12</sup> s) is faster than the fluorescence emission. Then how does radiative emission (fluorescence) compete with the non-radiative transition? (Hint: Significantly larger energy gap between S<sub>1</sub> and S<sub>0</sub> and longer lifetime of S<sub>1</sub>.)</li>
+	<li>Transitions between states of different multiplicity are formally forbidden. What are the mechanisms that make the intersystem crossing probable?</li>
+	<li>How can you justify that the relaxation to ground state occurs via “vertical” transition?</li>
+	<li>In most of the cases, the S<sub>1</sub> potential energy curve shifts to the right with respect to S<sub>0</sub> potential energy curve. Justify it. (Hint:  In the excited state, the electron is promoted to an anti-bonding orbital.</li>
+	<li>Why are absorption and fluorescence much faster than phosphorescence?
+	</li>
+</ol>
+
+</div>
+      </section>
+<section id="lab-article-section-7">
+
+      <div id="lab-article-section-7-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+<img id="feedback" src="../images/references.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-7-heading" class="heading">
+      References
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-7-content" class="content">
+    <ol>
+	<li>B. Valeur , Molecular Fluorescence : Principles and Applications , 2002, Wiley-VCH, Weinheim.
+	</li>
+	<li>J. R. Albani , Principles and Applications of Fluorescence Spectroscopy, 2007, Blackwell Science Science Ltd, Oxford, UK.
+	</li>
+	<li>P. Patnaik, Dean’s Analytical Chemistry Handbook, 2nd Edition, McGraw-Hill Handbooks.
+	</li>
+	<li>Frank A. Settle, Handbook of Instrumental Techniques for Analytical Chemistry, 1<sup>st</sup>. Edition, 1997, National Science Foundation, Arlington, Virginia. 
+	</li>
+	<li>J. R. Lakowicz, Principles of Fluorescence Spectroscopy, 2<sup>nd</sup> Ed., Kluwer Academic/Plenum Publishers, New York, London, Moscow, Dordrecht, 1999.
+	</li>
+	<li>D. M. Jameson et al. in Basic Concepts in Fluorescence, Fluorescence: Basic Concepts, Principles Aspects and some Anecdotes, <i>Methods Enzymol</i>. 2003, 360, 1.
+	</li>
+	<li>P. Atkins and J. D. Paula, Atkin's Physical Chemistry, 9<sup>th</sup> Edition, Oxford University Press.
+	</li>
+
+</ol>
+      </div>
+
+      </section>
+      
+      <section id="lab-article-section-99">
+
+      <div id="lab-article-section-99-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="../?q=experiments"><img src="../images/experiments.jpg" /><p></p>Experiments</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-99-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-99-content" class="content">
+      </div>
+      </section>
+      
+      <section id="lab-article-section-100">
+
+      <div id="lab-article-section-100-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="http://virtual-labs.ac.in/feedback/?lab=ccnsb01"><img id="feedback" src="../images/feedback.jpg" /><p></p>Feedback</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-100-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-100-content" class="content">
+      </div>
+      </section>
+
+
+      </div>	
+
+      <!-- An article can have a sidebar that contain related 
+      links and additional material (it is optional at this 
+      moment)-->
+      <aside id="lab-article-sidebar" class="default">
+	<!-- put the content that you want to appear in the 
+        sidebar-->	
+      </aside>
+		
+      <!-- Article footer can display related content and 
+      additional links -->						
+      <footer id="lab-article-footer" class="default">
+	<!-- Put the content that you want to appear here-->
+      </footer>
+
+    </article>
+	
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>
+</body>
+</html>

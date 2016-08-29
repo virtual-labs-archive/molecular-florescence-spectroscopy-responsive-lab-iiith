@@ -1,0 +1,506 @@
+<!-- This file needs to be edited by the lab developer to suit
+their lab rquirements. -->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FLUORESCENCE VIRTUAL LAB</title>
+</head>
+
+<body>
+
+<div id="lab"> <!-- The Lab Document Container-->
+  
+  <!-- The lab Header contains the logo and the name of the lab, 
+  usually displayed on the top of the page-->
+
+  <header id="lab-header">
+    
+    <div id="experiment-header-logo" class="logo">
+	<!-- Enclose the logo image of your lab or write it in 
+	text-->
+
+		<a href="http://virtual-labs.ac.in/"><div class="imagemap">
+			<img src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" alt="" usemap="#logos" />
+
+	
+			<map name="logos">
+			
+				<area shape="rect" coords="0,0,505,98" href="http://www.vlab.co.in/" title="Vlab" alt="Vlab" />
+				<area shape="rect" coords="734,0,1022,97" href="http://www.iiit.ac.in/" title="IIIT" alt="IIIT" />
+			
+				<area shape="default" nohref="nohref" title="Default" alt="Default"/>
+			</map>
+
+			</div>
+	      
+	     </a>
+	</div>
+
+    <div id="lab-header-heading" class="heading">
+    <!-- Write the name of your lab and link it to the home page
+    of your lab. -->
+      <a href="../index.html">FLUORESCENCE VIRTUAL LAB</a>	
+    </div>
+
+    <!-- Add any additional element or link you want to add to 
+    the lab header, For example : Help (Enclosing them with 
+    suitable div is recommended)-->
+  
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="lab-article">
+
+
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    <header id="lab-article-header">
+      
+      <!-- You can add a welcome message or title of the 
+      experiment enclosed in h1 tag here -->
+      <div id="lab-article-heading" class="heading">
+        Familiarization with the fluorescence Instrumentation
+      </div>
+
+      <!-- Add any additional element if required with proper 
+      enclosing-->
+    </header>
+
+
+    <!-- Navigation menu is useful to organize the view of 
+    multiple sections inside the article-->
+    <nav id="lab-article-navigation">
+    <ul id="lab-article-navigation-menu">
+      <!-- The menu will be dynamically generated to contain the 
+      headings of your sections or instead write the menu items 
+      of your choice individually enclosed in <li> tag as shown 
+      below-->
+    </ul>
+    </nav>
+
+    
+    <!-- All the sections of your lab or experiment can be 
+    enclosed together with a div element as shown below-->
+    <div id="lab-article-sections">
+			
+      <!-- First section of the article-->
+      <section id="lab-article-section-1">
+        <div id="lab-article-section-1-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/introduction.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+	<div id="lab-article-section-1-heading" class="heading">
+	Introduction
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+	<div id="lab-article-section-1-content" class="content">
+
+	<p>
+	In optical spectroscopy, photoluminescence involves first the excitation of a molecule by the absorption of ultraviolet or visible radiation and then the detection and analysis of the emitted photons (emission) from the electronically excited molecule. Depending on the spin multiplicities of the excited and ground states, fluorescence or phosphorescence phenomenon is observed. Fluorescence corresponds to the relaxation of the molecule from the singlet excited state to the singlet ground state with emission of photon. There are many kinds of fluorescence spectrometers (spectrofluorimeters) available depending on the use and applications of the fluorescence property. The following types of measurements are generally performed with a spectrofluorimeter: i) recording of <i>emission spectra</i> and ii) <i>excitation spectra</i>. From these measurements, one can obtain the fluorescence <i>quantum yield</i>, chemical composition of the examined specimens, and qualitative and quantitative analytical information.
+	</p>
+	 
+	</div>
+	
+      </section>
+		
+
+      <!-- Second section of the article-->
+      <section id="lab-article-section-2">
+        
+        <div id="lab-article-section-2-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-2-heading" class="heading">
+	  Objective
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-2-content" class="content">
+		<p>
+			Familiarization with the working principles of a spectrofluorimeter and  learning to use it.
+		</p>	
+	</div>
+	
+      </section>
+
+
+	 <!-- Second section of the article-->
+      <section id="lab-article-section-3">
+        
+        <div id="lab-article-section-3-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-3-heading" class="heading">
+	 Theory
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-3-content" class="content">
+	<h3><em>Instrumentation Principle</em></h3>
+	<p>
+	Like other spectrometers, major components of standard fluorescence lab instrument include (1) Radiation source (e.g., broadband Xe arc lamp, monochromatic LED, laser); (2) Excitation and emission wavelength selector (e.g., monochromator, spectrograph); (3) Sample compartment; and (4) Detector (e.g., Photo Multiplier Tube (PMT), CCD camera), (Figure 1) in addition to the data processing and display unit. Use of a laser instead of a lamp as an excitation source allows  one to work at low fluorophore concentrations, because a laser has higher intensity than that of a lamp. However, excitation with a laser could accelerate the rate of photo-bleaching in the cases of light-sensitive fluorophores. Two types of collection geometry in sample compartment are used avoiding the transmitted light (Figure 2). ‘Right angle’ collection geometry, in which emitted light is collected at a right angle (90<sup>o</sup>) to the incident light, is often used.  This geometry is appropriate for optically transparent sample like solution. In ‘front face’ collection geometry, emitted light is collected at an acute angle relative to the incident beam. This geometry is used for an optically absorbing/scattering sample. In right angle geometry, signal reaching detector will be significantly diminished for high absorbance (optical density) sample unlike the front face collection geometry where light is absorbed near the surface of the cuvette containing the absorber. More sophisticated instruments are used for the measurement of fluorescence life time (time-resolved spectra) and fluorescence polarization measurements.
+	</p>
+	<p>	
+	<img border="0" src="images/2_1.png" alt="Image not loaded" width="304" height="228" />
+	</p>
+	<h4 align="center">Figure 1. Schematic of a standard laboratory spectrofluorimeter.</h4>
+	<p>	
+	<img border="0" src="images/2_2.png" alt="Image not loaded" width="120" height="100" />
+	</p>
+	<h4 align="center">Figure 2: Schematic of collection geometry in fluorescence spectrometers.<br /> Top Row: Right- angle and off-center illuminations.<br /> Bottom Row: Front-face illumination with either triangular cuvettes or square cuvettes oriented at 30&deg; to 60&deg; relative to the incident beam. (Courtesy: Reference 5)</h4><br />
+	<p>
+	The following types of measurements are generally performed with a spectrofluorimeter: (i) recording of <i>emission spectra</i> and (ii) <i>excitation spectra</i>. In <i>emission spectra</i>, the emission intensity as a function of the emission wavelength is observed (the excitation wavelength is fixed and the different wavelengths of fluorescent light emitted by a sample are measured using a monochromator). An <i>excitation spectrum</i> is the opposite. In <i>excitation spectra</i>, where the emission intensity as a function of the excitation wavelength is observed (the detection wavelength is fixed and the excitation wavelength is scanned through many different wavelengths across a region of interest via a monochromator). In other words, the <i>emission spectrum</i> corresponds to the variations of fluorescence intensity IF as a function of emission wavelength λ<sub>em</sub> (the wavelength at which the fluorescence is observed), the excitation wavelength λ<sub>ex</sub> being fixed; whereas the <i>excitation spectrum</i> reflects the variations of IF as a function of λ<sub>ex</sub>, the observation wavelength λ<sub>em</sub> being fixed. 
+	</p>
+
+	<p>
+	It should be noted that fluorescence spectra can be presented on a wavelength scale (intensity vs. λ) or sometimes on a frequency (ν), or wavenumber (ṽ) scale (wavelengths and wavenumbers are reciprocal of each other). In most commercially available instruments, fluorescence spectra are recorded on the wavelength scale. Since corrected spectra are not needed on a routine basis, we are more familiar with the directly recorded uncorrected spectra on the wavelength scale and sometimes such spectra are easier to interpret visually. One should note that if two or more different substances are responsible for the observed fluorescence, then the excitation spectrum varies with the choice of emission wavelength. One should also be careful to distinguish the analyte molecule fluorescence from the Rayleigh and Raman scattering radiations generated by the sample. Here working of a spectrofluorimeter is demonstrated first schematically and then by running excitation-emission spectral scans of a common fluorophore, fluorescein, in ethanol.
+	</p>
+</div>
+	
+      </section>
+
+	<section id="lab-article-section-4">
+        
+        <div id="lab-article-section-4-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/procedure.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-4-heading" class="heading">
+	 Procedure
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-4-content" class="content">
+	<ol>
+<p>
+<li>
+Prepare a 4.1 × 10<sup>-6</sup> M fluorescein solution in spectroscopy grade ethanol from a 8.2 × 10<sup>-4</sup> M fluorescein stock solution. 
+</li>
+<li>
+Click on the volumetric flask containing the fluorescein solution to take it onto the instrument table. 
+</li>
+<li>
+Take an all-side-transparent quartz cuvette (path length, 1 cm ×1 cm) by clicking on it.
+</li>
+<li>
+Click on the 5 mL‑capacity pipette to collect 3 mL of the experimental solution which will be transferred into the quartz cuvette. In real operation, one has to set the volume to 3 mL in the  pipette and an appropriate tip should be attached prior to dipping it in the solution.
+</li>
+<li>
+Click on the pipette to draw the solution into it.
+</li>
+<li>
+Click on the pipette to take it out of the volumetric flask.
+</li>
+<li>
+Click on the pipette again to transfer the solution into the cuvette.
+</li>
+<li>
+Click on the pop-up “Start Fluorescence Measurement” to run the Excitation and Emission Spectral Scans of the sample on the spectrofluorimeter.
+</li>
+<li>
+Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.
+</li>
+<li>
+Click on the lid of sample chamber of the spectrofluorimeter to open it for placing the sample in the instrument.
+</li>
+<li>
+Click on the cuvette to place it in the sample holder of the chamber.
+</li>
+<li>
+Close the lid of the sample chamber by clicking on the lid.
+</li>
+<li>
+To run the Excitation Spectral Scan, open the measurement set-up screen by clicking on the fluorescence measurement icon on the computer monitor. 
+</li>
+<li>
+Select the Excitation Scan Mode on the screen.
+</li>
+<li>
+On the screen, enter the Emission wavelength: 515 nm, Excitation Start Wavelength: 300 nm and Excitation End wavelength: 600 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 2.5 nm/2.5 nm) and the scan speed value (here “medium” ) also.
+</li>
+<li>
+Click on the 'OK' button on the set-up screen to start the wavelength scan for excitation spectrum. 
+</li>
+<li>
+Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data. 
+</li>
+<li>
+To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor. 
+</li>
+<li>
+Select the Emission Scan Mode on the screen.
+</li>
+<li>
+On the screen, enter the Excitation wavelength: 425 nm, Emission Start Wavelength: 435 nm and Emission End wavelength: 700 nm. Emission Start Wavelength value should be larger than the excitation wavelength. Often the the maximum absorbance wavelength is chosen as the excitation wavelength. The Emission End Wavelength value depends on the sample, instrument, etc. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 2.5 nm/2.5 nm) and the scan speed value (here “medium” ) also.
+</li>
+<li>
+Click on the 'OK' button on the set-up screen to run the wavelength scan for emission spectrum. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. 
+</li>
+<li>
+Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data. 
+</li>
+<li>
+To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. 
+</li>
+<li>
+Close the lid of the sample chamber by clicking on the lid.
+</li>
+<li>
+Click on Reset button to start over the measurements.
+</li>
+<li>
+Collect all data by clicking on the Data tab.
+</li>
+<li>
+Find out the maximum excitation and emission wavelengths and intensities.
+</li>
+
+</p>
+	</ol>
+	</div>
+	
+      </section>
+      
+ <section id="lab-article-section-5">
+
+      <div id="lab-article-section-5-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/experiment.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-5-heading" class="heading">
+      Simulator
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-5-content" class="content">
+  	<p>
+		<a href="media/2_a.html" target="_blank">Click here to study the mirror image and stoke shift</a><br>
+		<a href="media/2_b.html" target="_blank">Click here to go to lab</a><br>
+	</p>
+      </div>
+
+      </section>
+
+ <section id="lab-article-section-6">
+
+      <div id="lab-article-section-6-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/quiz.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-6-heading" class="heading">
+      Quiz
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-6-content" class="content">
+
+      <h3>Pre-experiment Quiz</h3>
+<p>
+      <ol>
+
+      <li>
+      Why do we need a radiation source of high optical power (that is, a large number of photons per unit time) in spectrofluorimeter?
+      </li>
+      <li>
+      Why do we use xenon arc lamp as source in spectrofluorimeter?
+      </li>
+      <li>
+      Why is a detector more powerful preferred in spectrofluorimeter than that in spectrophotometer? 
+      </li>
+      <li>
+      Fluorescence spectra can be presented on either a wavelength scale or a wavenumber scale. Which scale is linear in energy?
+      </li>
+      <li>
+      What are the advantages and the disadvantages of using a laser instead of a lamp as an excitation source? 
+      </li>
+      <li>
+      All emission measurements must start far enough above the excitation wavelength. Why? (Hint. Near the excitation wavelength, reflectance, refraction and scattering are high.) 
+      </li>
+      <li>
+</p>
+</ol>
+
+	<h3>Post-experiment Quiz</h3>
+	<p>
+	<ol>
+	<li>
+	A quartz cuvette with all sides transparent are used in spectrofluorimetric measurements, unlike the ones for UV-visible spectrophotometric measurements where two opposite sides are transparent. Why? 
+	</li>
+	<li>
+	Why is the front face or right angle collection geometry used in fluorescence spectroscopy instead of 180&deg; collection geometry that is used in UV-visible absorption spectroscopy?
+	</li>
+	<li>
+	What collection geometry was used in the present experiment?
+	</li>
+	<li>
+	What happens to the emission spectrum when the chosen excitation wavelength lies far away from the actual maximum excitation wavelength?
+	</li>
+	<li>
+	“One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest.” Why?  
+	</li>
+	</p>
+	</ol>
+</div>
+
+      </section>
+<section id="lab-article-section-7">
+
+      <div id="lab-article-section-7-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+<img id="feedback" src="../images/references.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-7-heading" class="heading">
+      References
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-7-content" class="content">
+    <ol>
+    <p>
+    <li>
+    B. Valeur, Molecular Fluorescence: Principles and Applications, 2002, Wiley-VCH, Weinheim.
+    </li>
+    <li>
+    J. R. Albani, Principles and Applications of Fluorescence Spectroscopy, 2007, Blackwell Science Science Ltd, Oxford, UK.
+    </li>
+    <li>
+    P. Patnaik, Dean’s Analytical Chemistry Handbook, 2<sup>nd</sup> Edition, McGraw-Hill Handbooks.
+    </li>
+    <li>
+    F. A. Settle, Handbook of Instrumental Techniques for Analytical Chemistry, 1<sup>st</sup> Edition, 1997, National Science Foundation, Arlington, Virginia. 
+    </li>
+    <li>
+    J. R. Lakowicz, Principles of Fluorescence Spectroscopy, 2nd Ed., Kluwer Academic/Plenum Publishers, New York, London, Moscow, Dordrecht, 1999.
+    </li>
+    <li>
+    D. M. Jameson et al. in Basic Concepts in Fluorescence, Fluorescence: Basic Concepts, Principles Aspects and some Anecdotes, <i>Methods Enzymol</i>. 2003, 360, 1.
+    </li>
+    <li>
+    P. Atkins and J. D. Paula, Atkin's Physical Chemistry, 9<sup>th</sup> Edition, Oxford University Press.
+    </li>
+    <li>
+    A. Cook and A. Le , “The Effect of Solvent and pH on the Fluorescence Excitation and Emission Spectra of Solutions Containing Fluorescein”, <i>J. Phys. Chem. Lab</i> 2006, 10, 44.
+    </li>
+    <li>
+    http://omlc.ogi.edu/spectra/PhotochemCAD/index.html. 
+    </li>
+    </p>
+</ol>
+      </div>
+
+      </section>
+      
+      <section id="lab-article-section-99">
+
+      <div id="lab-article-section-99-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="../?q=experiments"><img src="../images/experiments.jpg" /><p></p>Experiments</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-99-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-99-content" class="content">
+      </div>
+      </section>
+      
+      <section id="lab-article-section-100">
+
+      <div id="lab-article-section-100-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="http://virtual-labs.ac.in/feedback/?lab=ccnsb01"><img id="feedback" src="../images/feedback.jpg" /><p></p>Feedback</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-100-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-100-content" class="content">
+      </div>
+      </section>
+
+
+      </div>	
+
+      <!-- An article can have a sidebar that contain related 
+      links and additional material (it is optional at this 
+      moment)-->
+      <aside id="lab-article-sidebar" class="default">
+	<!-- put the content that you want to appear in the 
+        sidebar-->	
+      </aside>
+		
+      <!-- Article footer can display related content and 
+      additional links -->						
+      <footer id="lab-article-footer" class="default">
+	<!-- Put the content that you want to appear here-->
+      </footer>
+
+    </article>
+	
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>
+</body>
+</html>
