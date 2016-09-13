@@ -1,0 +1,547 @@
+<!-- This file needs to be edited by the lab developer to suit
+their lab rquirements. -->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FLUORESCENCE VIRTUAL LAB</title>
+</head>
+
+<body>
+
+<div id="lab"> <!-- The Lab Document Container-->
+  
+  <!-- The lab Header contains the logo and the name of the lab, 
+  usually displayed on the top of the page-->
+
+  <header id="lab-header">
+    
+    <div id="experiment-header-logo" class="logo">
+	<!-- Enclose the logo image of your lab or write it in 
+	text-->
+
+		<a href="http://virtual-labs.ac.in/"><div class="imagemap">
+			<img src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" alt="" usemap="#logos" />
+
+	
+			<map name="logos">
+			
+				<area shape="rect" coords="0,0,505,98" href="http://www.vlab.co.in/" title="Vlab" alt="Vlab" />
+				<area shape="rect" coords="734,0,1022,97" href="http://www.iiit.ac.in/" title="IIIT" alt="IIIT" />
+			
+				<area shape="default" nohref="nohref" title="Default" alt="Default"/>
+			</map>
+
+			</div>
+	      
+	     </a>
+	</div>
+
+    <div id="lab-header-heading" class="heading">
+    <!-- Write the name of your lab and link it to the home page
+    of your lab. -->
+      <a href="../index.html">FLUORESCENCE VIRTUAL LAB</a>	
+    </div>
+
+    <!-- Add any additional element or link you want to add to 
+    the lab header, For example : Help (Enclosing them with 
+    suitable div is recommended)-->
+  
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="lab-article">
+
+
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    <header id="lab-article-header">
+      
+      <!-- You can add a welcome message or title of the 
+      experiment enclosed in h1 tag here -->
+      <div id="lab-article-heading" class="heading">
+      Familiarization with Excitation and Emission Spectra, Mirror Image Relation and Stokes Shift 
+      </div>
+
+      <!-- Add any additional element if required with proper 
+      enclosing-->
+    </header>
+
+
+    <!-- Navigation menu is useful to organize the view of 
+    multiple sections inside the article-->
+    <nav id="lab-article-navigation">
+    <ul id="lab-article-navigation-menu">
+      <!-- The menu will be dynamically generated to contain the 
+      headings of your sections or instead write the menu items 
+      of your choice individually enclosed in <li> tag as shown 
+      below-->
+    </ul>
+    </nav>
+
+    
+    <!-- All the sections of your lab or experiment can be 
+    enclosed together with a div element as shown below-->
+    <div id="lab-article-sections">
+			
+      <!-- First section of the article-->
+      <section id="lab-article-section-1">
+        <div id="lab-article-section-1-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/introduction.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+	<div id="lab-article-section-1-heading" class="heading">
+	Introduction
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+	<div id="lab-article-section-1-content" class="content">
+
+	<p>
+	In fluorescence, first the light (photon) absorption takes place leading to the electronic excitation and then part of the acquired (absorbed) electronic energy is lost via the emission of a new photon. Therefore, light absorption, excitation and emission are three important processes in fluorescence spectroscopy. These events are experimentally captured as absorption/excitation spectra and emission spectra and provide important information about the electronic distribution in ground and excited states of the molecules, any modification of the electronic distribution in these states due to charge transfer, solvent relaxation, etc. The absorption energy is higher than the emission energy and the emission energy is independent of the excitation one. In the following sections we shall discuss about the interrelationship among absorption, excitation and emission spectra.  
+	</p>
+	 
+	</div>
+	
+      </section>
+		
+
+      <!-- Second section of the article-->
+      <section id="lab-article-section-2">
+        
+        <div id="lab-article-section-2-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-2-heading" class="heading">
+	  Objective
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-2-content" class="content">
+
+
+<p>
+To understand the excitation and emission spectra, Mirror Image Relation and Stokes Shift in fluorescence spectroscopy
+</p>	</div>
+	
+      </section>
+
+
+	 <!-- Second section of the article-->
+      <section id="lab-article-section-3">
+        
+        <div id="lab-article-section-3-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-3-heading" class="heading">
+	 Theory
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-3-content" class="content">
+	<h3><em>Excitation-Emission Spectra: Mirror Image Rule</em></h3>
+	<p>
+	A fluorescence spectrum is generally a plot of the fluorescence intensity as a function of wavelength  (expressed in nm). In fluorescence spectra, when spectral distribution of emission as a function of wavelength is scanned by holding the excitation wavelength constant (at a wavelength at which the molecule absorbs), an emission spectrum is obtained. Similarly, scanning of the excitation spectral distribution by holding emission wavelength fixed gives excitation spectrum. In other words, the emission spectrum corresponds to the variations of, the fluorescence intensity, I<sub>F</sub>, as a function of emission wavelength, λ<sub>F</sub>, the excitation wavelength λ<sub>E</sub> being fixed, whereas the excitation spectrum describes the variations of I<sub>F</sub> as a function of λ<sub>E</sub>, the observation wavelength λ<sub>F</sub> being fixed. In principle, excitation is equivalent to absorption for a pure molecule. In other words, the fluorescence excitation spectrum of a single fluorophore species in dilute solution is often identical to its absorption spectrum. The absorption/excitation spectra originate from the ground state and therefore, these spectra provide information regarding the electronic distribution in this state. Emission originate from excited states, and so the emission spectra reflect the electronic distribution within the excited states. If any modification of the electronic distribution in these states occurs such as due to a charge transfer that will modify the corresponding  spectra. The width of a band in the absorption and emission spectra of a chromophore located in a solvent is a result of two effects: homogeneous and inhomogeneous broadenings. Homogeneous broadening arises due to the existence of a continuous set of vibrational sub-levels in each electronic state. Inhomogeneous broadening results from the fluctuations of the solvation-shell structure surrounding the chromophore. 
+	</p>	
+
+	<p>
+	Fluorescence emission spectrum is often the ‘mirror image’ of the excitation spectrum. This is known as the ‘mirror image rule’. The absorption of radiation promotes the molecule mainly from the v=0 level of the ground electronic state, S<sub>0</sub>, to different vibrational levels in upper electronic state, S<sub>1</sub>. The vertical transition has the highest transition probability and intensity and the transitions to other vibrational levels occur with lower intensity. Therefore, instead of an electronic absorption occurring at a single, sharp line, electronic absorption consists of many lines each corresponding to the stimulation of different vibrations in the upper state. This gives rise to vibrational structure (or progression) in an electronic transition. Therefore, the excitation (absorption) spectrum structure reflects the vibrational levels of the upper S<sub>1</sub> state. Because the fluorescence emission involves transition from v=0 of S<sub>1</sub> state to various vibrational levels of S<sub>0</sub> state, emission spectrum will also show a similar vibrational structure but reflecting the vibrational levels of the ground S<sub>0</sub> state. Since the vibrational levels in the excited states and the ground states are similar, the vibrational structures in the excitation and emission spectra appear as mirror image of one another. Mirror image rule typically applies for S<sub>0</sub>↔S<sub>1</sub> transitions. Though the vibrational structure are well resolved for small molecules in the gas-phase, in a liquid or solid, the electronic absorption spectrum is often a broad band with limited structure. The width of the band in the absorption or emission spectrum of a fluorophore depends on two effects: homogeneous and inhomogeneous broadening. Homogeneous broadening is the result of the existence of a continuous set of vibrational levels in each electronic state. However, if many of the vibrational modes are not active (e.g., pyrene, naphthalene), then a vibrational structure is observed. Inhomogeneous broadening of electronic spectra is caused due to the fluctuations in the structure of the solvent-shell surrounding the molecule undergoing electronic transition. The distribution of solute–solvent configurations and the consequent variation in the local electric field leads to a statistical distribution of the energies of the electronic transitions. These two effects cause the spectral lines to merge together leading to the formation of spectral band. In most cases, the extent of inhomogeneous broadening is greater than that of homogeneous broadening. When S<sub>0</sub> → S<sub>2</sub> or higher transitions take place, molecules reach the first excited singlet state, S<sub>1</sub>, via internal relaxation before emission which causes deviations from the mirror image rule as in the case of quinine sulfate. Further, it should be noted here that the mirror image relationship is generally observed when the interaction of the fluorophore excited state with the solvent is weak. 
+	</p>
+
+	<h3><em>Stokes Shift</em></h3>
+	<p>
+	The Franck-Condon principle states that the heavy atom nuclei do not change their positions during the fast electronic excitation. This results in an initial geometry of the excited state which is usually not the energy minimum geometry. We know from the Franck–Condon principle that the molecule will most probably be excited to one of the higher vibrational states of the excited electronic state. The molecule in an excited vibrational energy level loses energy rapidly (in 10<sup>–12</sup> s or less) and moves to a lower (and finally to the lowest) vibrational energy level in the same electronic state. This kind of vibrational relaxation occurs via the emission of infrared photons or via radiationless transitions by losing the vibrational energy as heat energy. Once the molecule is in the lowest vibrational level of the excited electronic state, S<sub>1</sub>, the molecule can return to the ground singlet state S<sub>0</sub> through (i) internal/external conversion, (ii) fluorescence, or (iii) intersystem crossing and phosphorescence. In internal conversion, a form of radiationless relaxation, a molecule in the lowest vibrational level of an excited electronic state passes directly into a high vibrational energy level of a lower energy electronic state of the same spin state by losing the energy as heat. (Why? ….because, with the increase in electronic energy, the energy levels grow more closely spaced. It is more likely that there will be overlap between the high vibrational energy levels of S<sub>n</sub> and low vibrational energy levels of S<sub>n+1</sub>, making the transition between states highly probable.) Internal conversion is a transition occurring between states of the same multiplicity and it takes place at a time scale of 10<sup>-12</sup> s (faster than that of fluorescence process) The external conversion involves the transfer of excess energy to the solvent or another component in the sample matrix. In fluorescence, the acquired electronic energy is lost via the emission of a photon while transition occurs from lowest vibrational level of first excited singlet (i.e., v=0 of S<sub>1</sub>) to one of the vibrational states of the ground singlet state, S<sub>0</sub>. This radiative process takes about 10<sup>-9</sup> second. Since prior to the fluorescence emission a part of the vibrational energy was lost (during vibrational relaxation), the emitted light in fluorescence will have lower energy than the excitation light. If the absorption energy is E<sub>a</sub> = hc/λ<sub>a</sub>  and emission energy is E<sub>em</sub> = hc/λ<sub>em</sub>, then E<sub>em</sub> < E<sub>a</sub> and λ<sub>em</sub>  λ<sub>a</sub> where λ<sub>a</sub> and λ<sub>em</sub> are absorption and emission spectra peak wavelengths. Thus, the emission spectrum peak wavelength shifted to longer wavelengths compared to the  absorption spectrum peak wavelength. The energy difference  between  the excited and emitted lights or the complete shift between the absorption and emission bands, (λ<sub>a</sub> - λ<sub>em</sub>) due to the radiation-less deactivation process is known as the "Stokes shift” (after Sir George Stokes who reported this shift for the first time in 1852). When two or more bands are present in the absorption and/or the emission spectra of a fluorophore, the Stokes shift is taken as the difference of the two most intense bands of the two spectra. We have noted above that the Stokes shift arises due to a variety of factors. Some of these factors are intrinsic to the fluorophore whereas some are due to interactions of the fluorophore with its environment. As a consequence the Stokes shift parameter can provide information on the excited states and its surrounding environment. For example, the Stokes shift increases with solvent polarity if the the dipole moment of a fluorescent molecule is higher in the excited state than in the ground state. This information can be used in the estimation of polarity using fluorescent polarity probe molecules. Here in order to demonstrate the Stokes shift and the mirror image transition relationship, two fluorophores, namely  anthracene (in cyclohexane) and quinine sulfate (in  aqueous 0.5 M H<sub>2</sub>SO<sub>4</sub>), have been chosen.
+	</p>
+</div>
+	
+      </section>
+
+	<section id="lab-article-section-4">
+        
+        <div id="lab-article-section-4-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/procedure.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-4-heading" class="heading">
+	 Procedure
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-4-content" class="content">
+	<ol>
+<!--<pre>-->
+	<p>
+	<li>
+	Prepare a 1.3×10<sup>-4</sup> M solution of anthracene in cyclohexane and a 2.3×10<sup>-4</sup> M solution of quinine sulfate in aqueous 0.5 M H<sub>2</sub>SO<sub>4</sub>. The solution concentrations are chosen such that optical densities are less than 0.1 at the excitation wavelength. Here the solutions are taken in two volumetric flasks.
+	</li>
+	<li>
+	Carry out the absorption and fluorescence measurements of the solutions as follows.
+	</li>
+	<li>
+	Click on the volumetric flask containing anthracene solution to take it to the instrument table. 
+	</li>
+	<li>
+	Click on the quartz cuvette (path length, 1 cm ×1 cm) to take it to the instrument table. Quartz cuvettes for spectrophotometric measurements are transparent only on two opposite sides, unlike the all-side transparent quartz cuvettes used for fluorescence measurements.
+	</li>
+	<li>
+	Click on the 5 mL‑capacity pipette to collect 3 mL of the experimental solution which will be transferred into the quartz cuvette. In real operation, one has to set the volume to 3 mL in the  pipette and an appropriate tip should be attached prior to dipping it in the solution.
+	</li>
+	<li>
+	Click on the pipette to draw the solution into it.
+	</li>
+	<li>
+	Click on the pipette to take it out of the volumetric flask.
+	</li>
+	<li>
+	Click on the pipette again to transfer the solution into the cuvette.
+	</li>
+	<li>
+	To start the absorption spectral scan, click on the pop-up “Start Absorption Measurement”.
+	</li>
+	<li>
+	Turn on the spectrophotometer by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.
+	</li>
+	<li>
+	 Open the lid of the sample chamber of the spectrophotometer by clicking on the lid for placing the sample in the cell-holder. 
+	</li>
+	<li>
+	Click on the cuvette to place it in the sample holder. One has to use pure solvent as the sample blank or reference in this measurement. Here a double beam spectrophotometer is shown. 
+	</li>
+	<li>
+	Close the chamber lid by clicking on it.
+	</li>
+	<li>
+	Open the measurement set-up screen by clicking on the absorption measurement icon on the computer monitor. 
+	</li>
+	<li>
+	On the screen, enter the wavelength range. 	Start: 620 nm 		End: 260 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A) or transmittance (%T) mode. 
+	</li>
+	<li>
+	Click on the green 'Start' button on the measurement set-up screen to run the wavelength scan. Observe the wavelength scan. 
+	</li>
+	<li>
+	Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data. 
+	</li>
+	<li>
+	To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. 
+	</li>
+	<li>
+	Close the sample chamber lid by clicking on it.
+	</li>
+	<li>
+	Click on the pop-up: “Start Fluorescence measurement”.
+	</li>
+	<li>
+	Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.
+	</li>
+	<li>
+	Click on the spectrophotometric quartz cuvette to transfer its content into an all-side-transparent quartz cuvette of path length 1 cm ×1 cm for the fluorescence measurement.
+	</li>
+	<li>
+	Run the Emission Spectral Scan of the sample on a spectrofluorimeter as follows.
+	</li>
+	<li>
+	For placing the sample in the instrument, open the lid of the sample chamber of the spectrofluorimeter by clicking on the lid.
+	</li>
+	<li>
+	To place the cuvette in the sample holder, click on the cuvette.
+	</li>
+	<li>
+	Close the lid of the sample chamber by clicking on the lid.
+	</li>
+	<li>
+	Open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor. 
+	</li>
+	<li>
+	Select the Emission Scan Mode on the screen.
+	</li>
+	<li>
+	On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 360 nm and Emission End wavelength: 650 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here “medium”) also.  
+	</li>
+	<li>
+	To run the wavelength scan for emission spectrum, click on 'OK' button on the set-up screen. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. 
+	</li>
+	<li>
+	Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data. 
+	</li>
+	<li>
+	To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. 
+	</li>
+	<li>
+	Close the lid of the sample chamber by clicking on the lid.
+	</li>
+	<li>
+	Click on 'Reset' button to start over the measurements.
+	</li>
+	<li>
+	Repeat the Absorption and Emission measurements with quinine sulfate solution by clicking on the volumetric flask containing the quinine sulfate solution.
+	</li>
+	<li>
+	For quinine sulfate: On the absorption measurement screen, enter the wavelength range: Start: 600 nm 		End: 260 nm. 
+	</li>
+	<li>
+	On the emission measurement screen, enter the Excitation wavelength: 310 nm, Emission Start Wavelength: 320 nm and Emission End wavelength: 600 nm. 
+	</li>
+	<li>
+	Collect all data by clicking on the Data tab.
+	</li>
+	<li>
+	Plot the absorption and emission spectra for each fluorophore side by side and normalize them. (i) Observe the mirror image relationship between the absorption-emission bands of the fluorophore. (ii) Shade the area of the overlapping region between the absorption and emission spectra for each fluorophore. Discuss your observations.
+	</li>
+	<li>
+	Find out the maximum absorption and emission wavelengths and intensities for each fluorophore. 
+	</li>
+	<li>
+	Calculate the Stokes shifts from the above plots. Is it a large or a small Stokes shift?
+	</li>
+	</p>
+
+<!--</pre>-->
+	</ol>
+	</div>
+	
+      </section>
+      
+ <section id="lab-article-section-5">
+
+      <div id="lab-article-section-5-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/experiment.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-5-heading" class="heading">
+      Simulator
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-5-content" class="content">
+  	<p>
+		<a href="media/3.html" target="_blank">Click here to go to lab</a><br>
+	</p>
+      </div>
+
+      </section>
+
+ <section id="lab-article-section-6">
+
+      <div id="lab-article-section-6-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/quiz.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-6-heading" class="heading">
+      Quiz
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-6-content" class="content">
+
+      <h3>Pre-experiment Quiz</h3>
+	<p>
+      <ol>
+      <li>
+      What are the spin multiplicity and the spin of triplet state? 
+      </li>
+      <li>
+      Why two electrons are always present in two different orbitals of the molecule in triplet state?
+      </li>
+      <li>
+      Internal conversion (takes place at a time scale of 10<sup>-12</sup> s) is faster than the fluorescence emission. Then how does radiative emission (fluorescence) compete with the non-radiative transition? (Hint: Significantly larger energy gap between S<sub>1</sub> and S<sub>0</sub> and longer lifetime of S<sub>1</sub>.)
+      </li>
+      <li>
+	Transitions between states of different multiplicity are formally forbidden. What are the mechanisms that make the intersystem crossing probable?
+      </li>
+      <li>
+	How can you justify that the relaxation to ground state occurs via “vertical” transition?
+      </li>
+      <li>
+	In most of the cases, the S<sub>1</sub> potential energy curve shifts to the right with respect to S<sub>0</sub> potential energy curve. Justify it. (Hint:  In the excited state, the electron is promoted to an anti-bonding orbital.)  
+      </li>
+</ol>
+	</p>
+
+	<h3>Post-experiment Quiz</h3>
+	<p>	
+	<ol>
+	<li>
+	What happens in Stokes shift: The fluorescence light is red-shifted (shifts to longer wavelength than the excitation light) or blue-shifted relative to the absorbed light?
+	</li>
+	<li>
+	How does the solvent effect affect the magnitude of the Stokes shift?
+	</li>
+	<li>
+	Why is the same fluorescence emission wavelength observed irrespective of the excitation wavelength?
+	</li>
+	<li>
+	Vibrational levels of which of the electronic states – electronic ground state or electronically excited state – are  reflected by an emission spectrum? 
+	</li>
+	<li>
+	“The detection of a fluorescent molecule becomes easier when the Stokes shift is larger. ” Why?
+	</li>
+	<li>
+	Do both the fluorophores obey the mirror image rule and why?
+	</li>
+	<li>
+	Which of the two fluorophores has larger area of overlapping region between the absorption and emission spectra? (Note: The overlapping region relates to the auto-absorption in inner filter effects.)
+	</li>
+
+	</ol>
+	</p>
+</div>
+
+      </section>
+<section id="lab-article-section-7">
+
+      <div id="lab-article-section-7-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+<img id="feedback" src="../images/references.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-7-heading" class="heading">
+      References
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-7-content" class="content">
+    <p>
+<ol>
+    <li>
+
+B. Valeur, Molecular Fluorescence: Principles and Applications, 2002, Wiley-VCH, Weinheim.
+</li>
+<li>
+J. R. Albani, Principles and Applications of Fluorescence Spectroscopy, 2007, Blackwell Science Science Ltd, Oxford, UK.
+</li>
+<li>
+P. Patnaik, Dean’s Analytical Chemistry Handbook, 2nd Edition, McGraw-Hill Handbooks.
+</li>
+<li>
+F. A. Settle, Handbook of Instrumental Techniques for Analytical Chemistry, 1<sup>st</sup> Edition, 1997, National Science Foundation, Arlington, Virginia. 
+</li>
+<li>
+J. R. Lakowicz, Principles of Fluorescence Spectroscopy, 2<sup>nd</sup> Ed., Kluwer Academic/Plenum Publishers, New York, London, Moscow, Dordrecht, 1999.
+</li>
+<li>
+D. M. Jameson et al. in Basic Concepts in Fluorescence, Fluorescence: Basic Concepts, Principles Aspects and some Anecdotes, Methods Enzymol. 2003, 360, 1.
+</li>
+<li>
+P. Atkins and J. D. Paula, Atkin's Physical Chemistry, 9<sup>th</sup> Edition, Oxford University Press.
+</li>
+<li>
+http://omlc.ogi.edu/spectra/PhotochemCAD/index.html.
+    </li>
+</ol>
+</p>
+      </div>
+
+      </section>
+      
+      <section id="lab-article-section-99">
+
+      <div id="lab-article-section-99-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="../?q=experiments"><img src="../images/experiments.jpg" /><p></p>Experiments</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-99-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-99-content" class="content">
+      </div>
+      </section>
+      
+      <section id="lab-article-section-100">
+
+      <div id="lab-article-section-100-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="http://virtual-labs.ac.in/feedback/?lab=ccnsb01"><img id="feedback" src="../images/feedback.jpg" /><p></p>Feedback</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-100-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-100-content" class="content">
+      </div>
+      </section>
+
+
+      </div>	
+
+      <!-- An article can have a sidebar that contain related 
+      links and additional material (it is optional at this 
+      moment)-->
+      <aside id="lab-article-sidebar" class="default">
+	<!-- put the content that you want to appear in the 
+        sidebar-->	
+      </aside>
+		
+      <!-- Article footer can display related content and 
+      additional links -->						
+      <footer id="lab-article-footer" class="default">
+	<!-- Put the content that you want to appear here-->
+      </footer>
+
+    </article>
+	
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>
+</body>
+</html>
