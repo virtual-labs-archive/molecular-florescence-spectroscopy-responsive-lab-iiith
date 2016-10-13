@@ -1,0 +1,137 @@
+1. Prepare six standard quinine sulfate solutions of following concentrations: 0.0001, 0.001, 0.01, 0.05, 0.1 and 1 
+--- RECORDSEPARATOR ---
+ppm (parts per million) quinine in 0.05 M H  SO  . These solutions are prepared via dilution from a 10 ppm quinine 
+--- RECORDSEPARATOR ---
+stock solution in 0.05 M H  SO  . To prepare the stock solution, first exactly 6 mg of quinine sulfate dihydrate is 
+--- RECORDSEPARATOR ---
+quantitatively transferred to a 500 mL volumetric flask, dissolved by adding 25 mL of 1 M H   SO   and finally made 
+--- RECORDSEPARATOR ---
+up to the mark with de-ionized water. Quinine sulfate decomposes under light. Therefore, the stock solution should 
+--- RECORDSEPARATOR ---
+be made fresh for measurements and stored in brown bottles in a cool place. 
+--- RECORDSEPARATOR ---
+Here all the solutions, including an unknown concentration solution, are shown on a concentration bar. Note that 
+--- RECORDSEPARATOR ---
+the supplied unknown sample was made as follows. A 1 mL of tonic water sample (containing an unknown 
+--- RECORDSEPARATOR ---
+concentration of quinine sulfate) was diluted to the mark with aq. 0.05 M H  SO   in a 100 mL volumetric flask.
+--- RECORDSEPARATOR ---
+2. Carry out the excitation and emission measurements of the solutions as follows.
+--- RECORDSEPARATOR ---
+3. To choose an appropriate concentration of the solution whose fluorescence has to be measured, click on the 
+--- RECORDSEPARATOR ---
+pointer below the concentration bar and drag it to the desired value. In real experimental measurements, one 
+--- RECORDSEPARATOR ---
+should start with the lowest concentration solution first and proceed to next higher concentration and so on. 
+--- RECORDSEPARATOR ---
+(Why?)  
+--- RECORDSEPARATOR ---
+4. Click on the volumetric flask containing the experimental solution to take it to the instrument table.
+--- RECORDSEPARATOR ---
+5. Take an all-side-transparent quartz cuvette (path length, 1 cm ×1 cm) by clicking on it.
+--- RECORDSEPARATOR ---
+6. Click on the 5 mL‑capacity pipette to collect 3 mL of the experimental solution which will be transferred into the 
+--- RECORDSEPARATOR ---
+quartz cuvette. In real operation, one has to set the volume to 3 mL in the  pipette and an appropriate tip should 
+--- RECORDSEPARATOR ---
+be attached prior to dipping it in the solution.
+--- RECORDSEPARATOR ---
+7. Click on the pipette to draw the solution into it.
+--- RECORDSEPARATOR ---
+8. Click on the pipette to take it out of the volumetric flask.
+--- RECORDSEPARATOR ---
+9. Click on the pipette again to transfer the solution into the cuvette.
+--- RECORDSEPARATOR ---
+10. Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for 
+--- RECORDSEPARATOR ---
+initialization of the instrument.
+--- RECORDSEPARATOR ---
+11. Click on the lid of the sample chamber of the spectrofluorimeter to open it for placing the sample in the 
+--- RECORDSEPARATOR ---
+instrument.
+--- RECORDSEPARATOR ---
+12. To place the cuvette in the sample holder in the chamber, click on the cuvette.
+--- RECORDSEPARATOR ---
+13. Click on the lid of the sample chamber to close it.
+--- RECORDSEPARATOR ---
+14. To run the Excitation Spectral Scan of the sample, open the instrument set-up screen by clicking on the 
+--- RECORDSEPARATOR ---
+fluorescence measurement icon on the computer monitor. 
+--- RECORDSEPARATOR ---
+15. Select the Excitation Scan Mode on the screen.
+--- RECORDSEPARATOR ---
+16. On the screen, enter the Emission wavelength: 450 nm, Excitation Start Wavelength: 270 nm and Excitation 
+--- RECORDSEPARATOR ---
+End wavelength: 500 nm. One chooses the Excitation Slit (nm) and Emission Slit (nm) values (here 5 nm/5 nm) 
+--- RECORDSEPARATOR ---
+and the scan speed value (here “medium”) also.
+--- RECORDSEPARATOR ---
+17. To run the wavelength scan for excitation spectrum, click on 'OK' button on the set-up screen. 
+--- RECORDSEPARATOR ---
+18. Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the 
+--- RECORDSEPARATOR ---
+computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to 
+--- RECORDSEPARATOR ---
+save the data. 
+--- RECORDSEPARATOR ---
+19. To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the 
+--- RECORDSEPARATOR ---
+fluorescence measurement icon on the computer monitor. 
+--- RECORDSEPARATOR ---
+20. Select the Emission Scan Mode on the screen.
+--- RECORDSEPARATOR ---
+21. On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 360 nm and Emission 
+--- RECORDSEPARATOR ---
+End wavelength: 600 nm. One chooses the Excitation Slit (nm) and Emission Slit (nm) values (here 5 nm/5 nm) 
+--- RECORDSEPARATOR ---
+and the scan speed value (here “medium”) also.
+--- RECORDSEPARATOR ---
+22. To run the wavelength scan for emission spectrum, click on 'OK' button on the set-up screen. One has to be 
+--- RECORDSEPARATOR ---
+sure that the solvent blank does not fluoresce in the wavelength range of interest. 
+--- RECORDSEPARATOR ---
+23. Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the 
+--- RECORDSEPARATOR ---
+computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to 
+--- RECORDSEPARATOR ---
+save the data. 
+--- RECORDSEPARATOR ---
+24. To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the 
+--- RECORDSEPARATOR ---
+cuvette. 
+--- RECORDSEPARATOR ---
+25. Click on the lid of the sample chamber to close it.
+--- RECORDSEPARATOR ---
+26. Click on 'Reset' button to start over the measurements.
+--- RECORDSEPARATOR ---
+27. Select the next higher concentration solution for measurement by clicking on the concentration selection bar 
+--- RECORDSEPARATOR ---
+and carry out the Emission scan. In real measurements, if one uses the same cuvette for all the measurements, 
+--- RECORDSEPARATOR ---
+every time one should rinse the cuvette by taking a small portion of the solution to be analyzed prior to filling up 
+--- RECORDSEPARATOR ---
+the cuvette with the solution.
+--- RECORDSEPARATOR ---
+28. Repeat the Emission scan measurements for the rest of the solutions including the unknown concentration 
+--- RECORDSEPARATOR ---
+solution.
+--- RECORDSEPARATOR ---
+29. Collect all data by clicking on the Data tab.
+--- RECORDSEPARATOR ---
+30. Tabulate the maximum emission wavelengths for all the concentrations. If the maximum emission wavelengths 
+--- RECORDSEPARATOR ---
+vary by a few nanometer from sample to sample, then one should note down the intensities at only one fixed 
+--- RECORDSEPARATOR ---
+wavelength which should be ideally very near to most of the maximum emission wavelengths.
+--- RECORDSEPARATOR ---
+31. Construct a calibration plot by plotting the fluorescence intensity values at a given wavelength against the 
+--- RECORDSEPARATOR ---
+corresponding standard concentrations. Check whether linearity relationship is valid or not. Compare the linear fits 
+--- RECORDSEPARATOR ---
+first taking only the lowest five concentrations and then taking all six concentrations of quinine sulfate. Choose the 
+--- RECORDSEPARATOR ---
+appropriate straight line as the calibration line. 
+--- RECORDSEPARATOR ---
+32. By using the calibration line, determine (both graphically and mathematically) the concentration of the 
+--- RECORDSEPARATOR ---
+unknown sample analyzed and then the concentration of the original tonic water sample. 

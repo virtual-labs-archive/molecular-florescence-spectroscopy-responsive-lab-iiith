@@ -1,0 +1,523 @@
+<!-- This file needs to be edited by the lab developer to suit
+their lab rquirements. -->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FLUORESCENCE VIRTUAL LAB</title>
+</head>
+
+<body>
+
+<div id="lab"> <!-- The Lab Document Container-->
+  
+  <!-- The lab Header contains the logo and the name of the lab, 
+  usually displayed on the top of the page-->
+
+  <header id="lab-header">
+    
+    <div id="experiment-header-logo" class="logo">
+	<!-- Enclose the logo image of your lab or write it in 
+	text-->
+
+		<a href="http://virtual-labs.ac.in/"><div class="imagemap">
+			<img src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" alt="" usemap="#logos" />
+
+	
+			<map name="logos">
+			
+				<area shape="rect" coords="0,0,505,98" href="http://www.vlab.co.in/" title="Vlab" alt="Vlab" />
+				<area shape="rect" coords="734,0,1022,97" href="http://www.iiit.ac.in/" title="IIIT" alt="IIIT" />
+			
+				<area shape="default" nohref="nohref" title="Default" alt="Default"/>
+			</map>
+
+			</div>
+	      
+	     </a>
+	</div>
+
+    <div id="lab-header-heading" class="heading">
+    <!-- Write the name of your lab and link it to the home page
+    of your lab. -->
+      <a href="../index.html">FLUORESCENCE VIRTUAL LAB</a>	
+    </div>
+
+    <!-- Add any additional element or link you want to add to 
+    the lab header, For example : Help (Enclosing them with 
+    suitable div is recommended)-->
+  
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="lab-article">
+
+
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    <header id="lab-article-header">
+      
+      <!-- You can add a welcome message or title of the 
+      experiment enclosed in h1 tag here -->
+      <div id="lab-article-heading" class="heading">
+      Effects of Fluorophore Concentration on Fluorescence Spectra: Inner Filter Effects
+      </div>
+
+      <!-- Add any additional element if required with proper 
+      enclosing-->
+    </header>
+
+
+    <!-- Navigation menu is useful to organize the view of 
+    multiple sections inside the article-->
+    <nav id="lab-article-navigation">
+    <ul id="lab-article-navigation-menu">
+      <!-- The menu will be dynamically generated to contain the 
+      headings of your sections or instead write the menu items 
+      of your choice individually enclosed in <li> tag as shown 
+      below-->
+    </ul>
+    </nav>
+
+    
+    <!-- All the sections of your lab or experiment can be 
+    enclosed together with a div element as shown below-->
+    <div id="lab-article-sections">
+			
+      <!-- First section of the article-->
+      <section id="lab-article-section-1">
+        <div id="lab-article-section-1-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/introduction.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+	<div id="lab-article-section-1-heading" class="heading">
+	Introduction
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+	<div id="lab-article-section-1-content" class="content">
+	 <p>
+	 The fluorescence spectral intensity as well as spectral distribution of a fluorophore depend on its concentration. Various kinds of effects and interactions come into play with the increasing fluorophore concentration which affect the fluorescence spectra in many ways, such as via self-absorption, concentration quenching, etc. In general, the fluorescence intensity first increases with the concentration of the fluorophore and then decreases after reaching a maximum. The fluorophore concentration effects vary depending on the precise geometry of the sample illumination versus emission beam recording. For analytical applications, a linear relationship between fluorescence intensity and concentration is desirable. It is therefore very important to study the fluorophore concentration effects on their fluorescence spectral characteristics.     
+    </p>
+	</div>
+	
+      </section>
+		
+
+      <!-- Second section of the article-->
+      <section id="lab-article-section-2">
+        
+        <div id="lab-article-section-2-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-2-heading" class="heading">
+	  Objective
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-2-content" class="content">
+<p>
+To demonstrate how the fluorescence spectrum of a fluorophore is affected by the fluorophore concentration.
+    </p>	</div>
+	
+      </section>
+
+
+	 <!-- Second section of the article-->
+      <section id="lab-article-section-3">
+        
+        <div id="lab-article-section-3-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-3-heading" class="heading">
+	 Theory
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-3-content" class="content">
+	<p>
+	In order to avoid the transmitted radiation, the emitted fluorescence is usually collected with  an right angle observation, i.e., the detection system collects the fluorescence emitted perpendicularly to the excitation beam in a fluorimeter. In such right angle observation, the detection system collects the fluorescence emitted only from the central part of the exciting beam (<b>Figure 1</b>) . The incident beam has to travel a certain path length through the cuvette before reaching the central part of the cuvette. Therefore, there is a possibility of a fraction of the incident beam being absorbed by the sample molecules while the beam travels through them. If the concentration of the solution is large (Absorbance, A, or optical density > ~0.1), a significant part of the incident light gets absorbed before reaching the central part of the cuvette. For instance, if the absorbance (A = log I<sub>0</sub>/I) at the excitation wavelength is 0.1, for a 1 x 1 cm cuvette, the light intensity at the center of the cuvette (I) will be 0.88 x I<sub>0</sub>, where I<sub>0</sub> is the intensity of the light incident to the cuvette. Since the observed fluorescence intensity is proportional to the intensity of the exciting light, the actual fluorescence intensity or quantum yield will be about 10% less than that observed for an infinitely dilute solution. The decrease in the observed fluorescence due to the absorption of the incident light is known as the primary inner filter effect or excitation inner filter effect. This effect results in decrease in the intensity of the excitation light at the point of observation. The fluorescence photons emitted may get absorbed, if the energies of the emitted photons fall in the region overlapping the absorption spectrum. The attenuation in the observed fluorescence due to absorption of the emitted light is known as the secondary inner filter effect or the emission inner filter effect (self-absorption). This effect distorts the shape of the fluorescence spectrum in the overlapping region. The larger the absorption-emission spectral overlap (i.e., the smaller the Stokes shift), the larger the distortion. The inner filter effects depend on the concentrations or optical densities of the samples. The effect of concentration on fluorescence can be dramatic with fluorophores that have small Stokes shifts like rhodamine 6G. The color of rhodamine 6G solution changes from green to orange (i.e., emission spectra shift to longer wavelengths) with the increasing rhodamine 6G concentration. This is due to re-absorption of the shorter wavelength part of the emission. Attenuation of the blue edge of the emission is most pronounced for fluorophores that have significant overlap of the absorption and emission bands. When right-angle observation is used, the short-wavelength emission bands of anthracene are  attenuated at high concentrations or large optical densities, because these shorter wavelengths are absorbed by anthracene. 
+</p>
+<p>
+	Further, at high fluorophore concentrations the fluorophore molecules remain close to each other that can result in fluorescence quenching due to other interactions, such as concentration quenching, excimer formation, etc. All these effects are difficult to correct. Therefore, it is advisory to work with as much as possible dilute solutions. The fluorescence intensity is linearly proportional to the fluorophore concentration and hence to the optical density over only a limited range, only to an optical density of ~0.05. When an use of high concentration or optically dense medium is required, off-center illumination or front-face illumination geometries can be used. These geometries reduce the effective light path length due to the light absorption near the surface of the cuvette.  
+
+	</p>
+	<p>
+	<img src="images/6_1.png" />
+	<!--<img src="../images/2.jpg" /> -->
+	<br/>
+	<b>Figure 1.</b> Geometries of the sample illumination versus emission beam recording: (A) conventional right-angle arrangement, and (B) front-face illumination. (Courtesey: B. Valeur, Molecular Fluorescence: Principles and Applications, 2002, Wiley-VCH, Weinheim.)
+
+	</p>
+	</div>
+	
+      </section>
+
+	<section id="lab-article-section-4">
+        
+        <div id="lab-article-section-4-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/procedure.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-4-heading" class="heading">
+	 Procedure
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-4-content" class="content">
+	<ol>
+	<li>
+Prepare 10<sup>-3</sup> M, 10<sup>-4</sup> M, 10<sup>-5</sup> M, and 10<sup>-6</sup> M solutions of anthracene in spectroscopic grade cyclohexane. Note that very dilute solutions are not prepared directly. Lower concentration solutions are prepared via dilution of higher concentration solutions.
+</li>
+<li>
+To take a particular solution, first click on the appropriate concentration on the concentration selection bar and then on the volumetric flask. For measurement, start with the most dilute solution first (here, 10<sup>-6</sup> M) and proceed to next higher concentration and so on. 
+</li>
+<li>
+Carry out absorption and emission measurements as follows.
+</li>
+<li>
+Take a quartz cuvette (path length, 1 cm x1 cm) by clicking on it for spectrophotometric measurement. Quartz cuvettes for spectrophotometric measurements are transparent only on two opposite sides, unlike the all-side transparent quartz cuvettes used for fluorescence measurements.
+</li>
+<li>
+Click on the 5 mL capacity pipette to collect 3 mL of the experimental solution which will be transferred into the quartz cuvette. In real operation, one has to set the volume to 3 mL in the  pipette and an appropriate tip should be attached prior to dipping it in the solution.
+</li>
+<li>
+Click on the pipette to draw the solution into it.
+</li>
+<li>
+Click on the pipette to take it out of the volumetric flask.
+</li>
+<li>
+Click on the pipette again to transfer the solution into the cuvette.
+</li>
+<li>
+To start the absorption spectral scan, click on the pop-up  Start Absorption Measurement .
+</li>
+<li>
+Turn on the spectrophotometer clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.
+</li>
+<li>
+Open the lid of the sample chamber of the spectrophotometer by clicking on the lid for placing the sample in the cell-holder. 
+</li>
+<li>
+Click on the cuvette to place it in the sample holder. One has to use pure solvent as the sample blank or reference in this measurement. Here a double beam spectrophotometer is shown. 
+</li>
+<li>
+Close the chamber lid by clicking on it.
+</li>
+<li>
+Open the measurement set-up screen by clicking on the absorption measurement icon on the computer monitor. 
+</li>
+<li>
+On the screen, enter the wavelength range: Start: 400 nm 	End: 260 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A) or transmittance (%T) mode. 
+</li>
+<li>
+Click on the green 'Start' button on the measurement set-up screen to run the wavelength scan. Observe the wavelength scan. 
+</li>
+<li>
+Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data. 
+</li>
+<li>
+To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. 
+</li>
+<li>
+Close the sample chamber lid by clicking on it.
+</li>
+<li>
+Click on the pop-up:  Start Fluorescence Measurement .
+</li>
+<li>
+Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.
+</li>
+<li>
+Click on the spectrophotometric quartz cuvette to transfer its content into an all-side-transparent quartz cuvette of path length 1 cm x1 cm for the fluorescence measurement.
+</li>
+<li>
+For placing the sample in the instrument, open the lid of the sample chamber of the spectrofluorimeter by clicking on the lid.
+</li>
+<li>
+To place the cuvette in the sample holder of the spectrofluorimeter, click on the cuvette.
+</li>
+<li>
+Close the lid of the sample chamber by clicking on the lid.
+</li>
+<li>
+Open the instrument set-up screen by clicking on the fluorescence icon on the computer monitor. 
+</li>
+<li>
+Select the Emission Scan Mode on the screen.
+</li>
+<li>
+On the screen, enter the Excitation wavelength: 360 nm, Emission Start Wavelength: 370 nm and Emission End wavelength: 460 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here  medium ) also.
+</li>
+<li>
+To run the wavelength scan for emission spectrum, click on the 'OK' button on the set-up screen. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. 
+</li>
+<li>
+Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample Filename. One enters a file name to save the data. 
+</li>
+<li>
+To take out the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. 
+</li>
+<li>
+Close the lid of the sample chamber by clicking on the lid.
+</li>
+<li>
+Click on 'Reset' button to start over the measurements.
+</li>
+<li>
+Select the next higher concentration solution (10<sup>-5</sup> M) for measurement by clicking on the  concentration selection bar and carry out the Emission scan. If one uses the same cuvette for all the measurements, the cuvette should be rinsed a few times with the experimental solution to be analyzed prior to filling it up with the solution.
+</li>
+<li>
+Repeat the Emission scan measurements for two other solutions (10<sup>-4</sup> M and 10<sup>-3</sup> M).
+</li>
+<li>
+Collect all data by clicking on the Data tab.
+</li>
+<li>
+Find out the absorption-emission overlapping region for 10<sup>-6</sup> M anthracene. Determine the Stokes Shift.
+</li>
+<li>
+Discuss how the maximum emission wavelengths and the intensities of the shortest wavelength emission bands of anthracene change with increasing concentration of anthracene.
+</li>
+    </ol>
+	</div>
+	
+      </section>
+      
+ <section id="lab-article-section-5">
+
+      <div id="lab-article-section-5-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/experiment.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-5-heading" class="heading">
+      Simulator
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-5-content" class="content">
+      	<p>
+		<a href="media/6.html" target="_blank">Click here to go to lab</a>
+	</p>
+      </div>
+
+      </section>
+
+ <section id="lab-article-section-6">
+
+      <div id="lab-article-section-6-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/quiz.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-6-heading" class="heading">
+      Quiz
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-6-content" class="content">
+
+<h3>
+Pre-Experiment
+</h3>
+
+<ol>
+<li>
+Mention three different ways by which the fluorophore concentration can affect the fluorescence spectral characteristics.
+</li>
+<li>
+Mention two ways by which one can avoid inner filter effects.
+</li>
+<li>
+Explain how fluorophores with large Stokes shifts are less sensitive to the inner filter effects.
+</li>
+<li>
+Mention the geometrical as well as the mathematical reason for which the fluorescence intensity of a fluorophore is proportional to the concentration over only a limited range of absorbances. (Hint: Mathematical: I<sub>F</sub> = k&#934;<sub>F</sub> I<sub>0</sub> (1  e<sup>-2.3&#949;cl</sup> ) and (1- e<sup>2.3A</sup>) = 2.3 A, when A << 1)
+</li>
+<li>
+	What kinds of illumination geometries are useful for fluorescence studies of optically dense samples or highly scattering solutions?
+</li>
+<li>
+	What kind of illumination geometry should one use to minimize the excitation inner filter effect?
+</li>
+
+    </ol>
+
+<h3>
+Post-Experiment
+</h3>
+
+<ol>
+<li>
+Why should one start the measurement with the lowest concentration first and go on to the next higher concentration while doing the measurement?
+</li>
+<li>
+
+Why should one always rinse the cuvette with the experimental solution prior to filling up of the cuvette with the experimental solution?
+</li>
+<li>
+What kind of illumination geometry was used in this experiment?
+</li>
+<li>
+Why does the shorter wavelength part of anthracene fluorescence get attenuated unlike its long wavelength part?
+</li>
+<li>
+Why does the fluorescence attenuation increase with the increasing anthracene concentration?
+</li>
+    </ol>
+
+
+      </div>
+
+      </section>
+<section id="lab-article-section-7">
+
+      <div id="lab-article-section-7-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+<img id="feedback" src="../images/references.jpg" />
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-7-heading" class="heading">
+      References
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-7-content" class="content">
+ <ol>
+ <li>
+ J. R. Lakowicz, Principles of Fluorescence Spectroscopy, 2nd Ed., Kluwer Academic/Plenum Publishers, New York, London, Moscow, Dordrecht, 1999.
+ </li>
+ <li>
+ B. Valeur, Molecular Fluorescence: Principles and Applications, 2002, Wiley-VCH, Weinheim.
+ </li>
+ <li>
+ J. R. Albani, Principles and Applications of Fluorescence Spectroscopy, 2007, Blackwell Science Science Ltd, Oxford, UK.
+ </li>
+ <li>
+ P. Patnaik, Dean s Analytical Chemistry Handbook, 2nd Edition, McGraw-Hill Handbooks.
+ </li>
+ <li>
+ F. A. Settle, Handbook of Instrumental Techniques for Analytical Chemistry, 1st Edition, 1997, National Science Foundation, Arlington, Virginia. 
+ </li>
+ <li>
+ D. M. Jameson et al. in Basic Concepts in Fluorescence, Fluorescence: Basic Concepts, Principles Aspects and some Anecdotes, <i>Methods Enzymol</i>. 2003, 360, 1.
+ </li>
+ <li>
+ P. Atkins and J. D. Paula, Atkin's Physical Chemistry, 9th Edition, Oxford University Press.
+
+ </li>
+        </ol>      </div>
+
+      </section>
+      
+      <section id="lab-article-section-99">
+
+      <div id="lab-article-section-99-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="../?q=experiments"><img src="../images/experiments.jpg" /><p></p>Experiments</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-99-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-99-content" class="content">
+      </div>
+      </section>
+      
+      <section id="lab-article-section-100">
+
+      <div id="lab-article-section-100-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="http://virtual-labs.ac.in/feedback/?lab=ccnsb01"><img id="feedback" src="../images/feedback.jpg" /><p></p>Feedback</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-100-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-100-content" class="content">
+      </div>
+      </section>
+
+
+      </div>	
+
+      <!-- An article can have a sidebar that contain related 
+      links and additional material (it is optional at this 
+      moment)-->
+      <aside id="lab-article-sidebar" class="default">
+	<!-- put the content that you want to appear in the 
+        sidebar-->	
+      </aside>
+		
+      <!-- Article footer can display related content and 
+      additional links -->						
+      <footer id="lab-article-footer" class="default">
+	<!-- Put the content that you want to appear here-->
+      </footer>
+
+    </article>
+	
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" height="189.0px" width="177.0px" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1, 0, 0, 1, -356.1, -99.9)">
+    <path d="M360.0 285.0 Q413.8 263.4 428.55 200.1 443.25 136.75 460.9 125.75 478.5 114.75 502.85 107.1 527.2 99.4 527.4 109.8" fill="none" stroke="#333333" stroke-linecap="square" stroke-linejoin="round" stroke-width="3.9000000000000004">
+      <animate attributeName="stroke" dur="2s" repeatCount="indefinite" values="#333333;#333334"/>
+      <animate attributeName="stroke-width" dur="2s" repeatCount="indefinite" values="3.9000000000000004;3.9000000000000004"/>
+      <animate attributeName="fill-opacity" dur="2s" repeatCount="indefinite" values="1.0;1.0"/>
+      <animate attributeName="d" dur="2s" repeatCount="indefinite" values="M360.0 285.0 Q413.8 263.4 428.55 200.1 443.25 136.75 460.9 125.75 478.5 114.75 502.85 107.1 527.2 99.4 527.4 109.8;M360.0 285.0 Q413.8 263.4 411.1 245.0 408.35 226.55 415.65 210.8 422.95 195.05 457.85 163.3 492.7 131.55 529.2 158.85"/>
+    </path>
+  </g>
+</svg>

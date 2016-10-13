@@ -1,0 +1,413 @@
+<!-- This file needs to be edited by the lab developer to suit
+their lab rquirements. -->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FLUORESCENCE SPECTROSCOPY VIRTUAL LAB</title>
+</head>
+
+<body>
+
+<div id="lab"> <!-- The Lab Document Container-->
+  
+  <!-- The lab Header contains the logo and the name of the lab, 
+  usually displayed on the top of the page-->
+
+  <header id="lab-header">
+    
+    <div id="experiment-header-logo" class="logo">
+	<!-- Enclose the logo image of your lab or write it in 
+	text-->
+
+		<a href="http://virtual-labs.ac.in/"><div class="imagemap">
+			<img src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" alt="" usemap="#logos" />
+
+	
+			<map name="logos">
+			
+				<area shape="rect" coords="0,0,505,98" href="http://www.vlab.co.in/" title="Vlab" alt="Vlab" />
+				<area shape="rect" coords="734,0,1022,97" href="http://www.iiit.ac.in/" title="IIIT" alt="IIIT" />
+			
+				<area shape="default" nohref="nohref" title="Default" alt="Default"/>
+			</map>
+
+			</div>
+	      
+	     </a>
+	</div>
+
+    <div id="lab-header-heading" class="heading">
+    <!-- Write the name of your lab and link it to the home page
+    of your lab. -->
+      <a href="index.html">FLUORESCENCE SPECTROSCOPY VIRTUAL LAB</a>	
+    </div>
+
+    <!-- Add any additional element or link you want to add to 
+    the lab header, For example : Help (Enclosing them with 
+    suitable div is recommended)-->
+  
+  </header>
+
+
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="lab-article">
+
+
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    <header id="lab-article-header">
+      
+      <!-- You can add a welcome message or title of the 
+      experiment enclosed in h1 tag here -->
+      <div id="lab-article-heading" class="heading">
+      (Molecular) Fluorescence Spectroscopy Virtual Lab
+      </div>
+
+      <!-- Add any additional element if required with proper 
+      enclosing-->
+    </header>
+
+
+    <!-- Navigation menu is useful to organize the view of 
+    multiple sections inside the article-->
+    <nav id="lab-article-navigation">
+    <ul id="lab-article-navigation-menu">
+      <!-- The menu will be dynamically generated to contain the 
+      headings of your sections or instead write the menu items 
+      of your choice individually enclosed in <li> tag as shown 
+      below-->
+    </ul>
+    </nav>
+
+    
+    <!-- All the sections of your lab or experiment can be 
+    enclosed together with a div element as shown below-->
+    <div id="lab-article-sections">
+			
+      <!-- First section of the article-->
+      <section id="lab-article-section-1">
+        <div id="lab-article-section-1-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="images/introduction.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+	<div id="lab-article-section-1-heading" class="heading">
+	Introduction
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+	<div id="lab-article-section-1-content" class="content">
+	  <p>
+	  This lab is about molecular fluorescence spectroscopy. In molecular fluorescence spectroscopy, a molecule is first irradiated with ultraviolet (UV) or visible radiation and then the emission of light of longer wavelengths is detected. Many common materials like certain minerals, human teeth, riboflavin (vitamin B2), etc. fluoresce, emitting visible light after absorbing ultraviolet light. Fluorescence spectroscopy is a technique of considerable practical importance. Measurements of fluorescence can provide important information regarding the molecule, its quantity and local environment, etc. Fluorescence spectroscopy finds widespread use in basic and applied researches of chemical and biological sciences fields of sensing, environmental monitoring, DNA sequencing, cell identification and sorting in flow cytometry, and so on. Analytical techniques based on fluorescence can yield low detection limits and are very sensitive (approach that of electrochemical methods), highly specific, often economical and relatively simple to perform. The high specificity arises from the fact that fluorophores exhibit specific excitation (absorption) and emission (fluorescence) wavelengths. In crime investigation, fingerprints can be revealed by their yellow fluorescence, when argon-ion lasers are used to flood an area with intense blue light. 
+
+	</p>
+<p>
+Excitation of all molecules does not produce fluorescence. Several factors affect the fluorescence. For example, molecules that are aromatic, polycyclic aromatic or contain multiple-conjugated double bonds with a high degree of resonance stability generally fluoresce. Substituents such as –NH<sub>2</sub>, –OH, –F, –OCH<sub>3</sub>, –NHCH<sub>3</sub>, and –N(CH<sub>3</sub>)<sub>2</sub> groups often enhance fluorescence whereas –Cl, –Br, –I, –NHCOCH<sub>3</sub>, –NO<sub>2</sub>, and –COOH groups decrease or quench fluorescence. Molecular rigidity or presence of fluorophore in glassy state or viscous solution enhances the fluorescence. Atoms are generally not fluorescent in condensed phases, except lanthanide elements. For example, europium and terbium ions are fluorescent. Fluorescence in these ions results from electronic transitions between f orbitals which are shielded from the solvent by higher field orbitals. These properties provide very useful information about the substance and may be exploited for many applications. 
+</p>
+<br>
+<p>
+When fluorescence and UV-visible absorption methods are compared, fluorescence is usually more sensitive and very low limit of detection is achievable in this case. Because fewer fluorescing species exist than absorbing species in the ultraviolet-visible region, interference is less in fluorescence techniques. Further, in the fluorescence spectroscopy, the emission signal is compared electronically with a reference emission of zero, whereas in the  the absorption spectroscopy, the comparison is made between the intensities of two quite high energy beams where a weakly absorbing signal may be lost in the instrument noise. In fluorescence techniques, a pair of wavelengths, excitation and emission, characterize the process instead of only one in the UV-Visible. Therefore, fluorescence is more selective also. However, UV-visible absorption spectroscopy is nearly universal and often more accurate.
+</p>
+<p>
+<b>RELEVANT TOPICS</b><br>
+Molecular energy levels; electronic transitions; molecular spectroscopy; Born-Oppenheimer approximation; fluorescence; Quantum yield; fluorescence quenching; Stern-Volmer plot; Beer-Lambert law.
+</p>
+	</div>
+	
+      </section>
+		
+
+      <!-- Second section of the article-->
+      <section id="lab-article-section-2">
+        
+        <div id="lab-article-section-2-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="images/experiments.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-2-heading" class="heading">
+	  Experiments
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-2-content" class="content">
+	 <ul class="experiment-list">
+				<li class="experiment-thumb">
+					<a href="exp1/index.html">
+						<strong>Introduction to the fluorescence spectroscopy principle</strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp2/index.html">
+						<strong>Familiarization with the fluorescence instrumentation</strong>
+					</a>
+				</li>
+				
+				<li class="experiment-thumb">
+					<a href="exp3/index.html">
+						<strong>Familiarization with excitation and emission spectra, Mirror Image relation and Stokes Shift </strong>
+					</a>
+				</li>
+				
+				<li class="experiment-thumb">
+					<a href="exp4/index.html">
+						<strong>Demonstration of solvent effects on fluorescence spectra</strong>
+					</a>
+				</li>
+			
+				<li class="experiment-thumb">
+					<a href="exp5/index.html">
+						<strong> Demonstration of pH effects on fluorescence spectra</strong>
+					</a>
+				</li>
+				
+				<li class="experiment-thumb">
+					<a href="exp6/index.html">
+						<strong>Effects of concentration (optical density) of a fluorophore on emission spectra</strong>
+					</a>
+				</li>
+				
+								
+				<li class="experiment-thumb">
+					<a href="exp7/index.html">
+						<strong>Relationship between the concentration of a fluorophore and its fluorescence intensity: Determination of unknown concentration of an analyte in solution</strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<a href="exp8/index.html">
+						<strong>Determination of fluorescence quantum yield of a fluorophore </strong>
+					</a>
+				</li>
+				
+				
+				<!--
+				<li class="experiment-thumb">
+					<strong>Determination of Isoelectric Points of:</strong>
+					<ul type="disc">
+					<li><a href="exp11/index.html">
+						<strong>Oxidic colloidal systems</strong>
+					</a></li>
+					<li><a href="exp12/index.html">
+						<strong>Polymeric colloidal systems</strong>
+					</a></li>
+					</ul>
+				</li>
+				-->
+				
+				<li class="experiment-thumb">
+					<a href="exp9/index.html">
+						<strong>Fluorescence Quenching and Stern-Volmer plot: Estimation of the quenching constant from Stern-Volmer plot</strong>
+					</a>
+				</li>
+				<!--<li class="experiment-thumb">
+					<a href="exp9/index.html">
+						<strong> Principles of Zeta Potential Measurements </strong>
+					</a>
+				</li>
+				<li class="experiment-thumb">
+					<strong>Determination of Zeta Potentials of:</strong>
+					<ul type="disc">
+					<li><a href="exp10/index.html">
+						<strong>Metallic colloidal systems</strong>
+					</a></li>
+					</ul>
+				</li>-->
+				
+				<li class="experiment-thumb">
+					<a href="exp10/index.html">
+						<strong> Effects of excimer and exciplex formations on fluorescence emission spectra </strong>
+					</a>
+				</li>
+				
+			</ul>
+	</div>
+	
+      </section>
+
+
+	 <!-- Second section of the article-->
+      <section id="lab-article-section-3">
+        
+        <div id="lab-article-section-3-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="images/target_audience.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-3-heading" class="heading">
+	 Target Audience
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-3-content" class="content">
+	  <ul>
+<li>UG</li>
+<ul>
+<li>-Engineering Chemistry 1st year B. Tech. in Chemical / Materials / IT / Civil / Mech. / Electrical / Textile / Agricultural Engg. ...</li>
+<li>-B. Pharm., Biotech., Biomed. Engg.</li>
+<li>-B. Sc. (Hons.) in Chemistry/Phys./Biol./Biophys.</li>
+</ul>
+
+<li>PG</li>
+<ul>
+<li>-Chemical/Materials Engg. & Pharm.</li>
+<li>-Chemistry, Chemical/Materials Engg. & Pharm.</li>
+<li>-Ph. D. Beginners</li>
+</ul>
+</ul>
+	</div>
+	
+      </section>
+
+	<section id="lab-article-section-4">
+        
+        <div id="lab-article-section-4-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="images/objective.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-4-heading" class="heading">
+	 Objective
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-4-content" class="content">
+	<p>
+	This lab aims to acquaint the user with the principles of the emission spectroscopic lab methods as well as introducing fluorescence (emission) spectroscopic methods as analytical tools.
+	</p>
+	</div>
+	
+         </section>
+
+<section id="lab-article-section-5">
+
+        <div id="lab-article-section-5-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+          <img src="images/procedure.jpg" />
+        </div>
+
+
+        <!-- The heading for the section can be enclosed in a
+        div tag and shown with a <h2> tag -->
+        <div id="lab-article-section-5-heading" class="heading">
+         Prerequisite S/W
+        </div>
+
+        <!-- Write the section content inside a paragraph
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-5-content" class="content">
+          <p>        
+                <a href = "../documents/installFlash.html">Click here for steps to install Flash plugin</a>
+        
+          </p>
+        </div>
+      </section>
+
+	<section id="lab-article-section-6">
+        
+        <div id="lab-article-section-6-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="images/acknowledgement.jpg" />
+	</div>
+
+
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
+	<div id="lab-article-section-6-heading" class="heading">
+	 Acknowledgement
+	</div>
+				
+	<!-- Write the section content inside a paragraph 
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-5-content" class="content">
+	<p>
+		<br>
+ 		We acknowledge the efforts of the members of the development team:
+		<b><ul>	
+		<li>Sourav Chatterjee</li>
+		<li>Rakesh Sengupta</li>
+		<li>Swarnabha Sen</li>
+		<li>Tushant Jha</li>
+		<li>Pallav Tinna</li>
+		</b>
+		</ul>
+		<br>
+		<p>Lab Developers: <b>Dr. Tapan Kumar Sau</b> 
+		<br>Click <a href="http://faculty.iiit.ac.in/~tapan.sau/">here</a> to visit the my webpage.</p>
+	</p>
+	</div>
+	
+      </section>
+
+      <section id="lab-article-section-100">
+
+      <div id="lab-article-section-100-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="http://virtual-labs.ac.in/feedback/?lab=ccnsb01"><img id="feedback" src="images/feedback.jpg" /><p></p>Feedback</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-100-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-2-content" class="content">
+      </div>
+
+      </section>
+
+
+      </div>	
+
+      <!-- An article can have a sidebar that contain related 
+      links and additional material (it is optional at this 
+      moment)-->
+      <aside id="lab-article-sidebar" class="default">
+	<!-- put the content that you want to appear in the 
+        sidebar-->	
+      </aside>
+		
+      <!-- Article footer can display related content and 
+      additional links -->						
+      <footer id="lab-article-footer" class="default">
+	<!-- Put the content that you want to appear here-->
+      </footer>
+
+    </article>
+	
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>
+</body>
+</html>

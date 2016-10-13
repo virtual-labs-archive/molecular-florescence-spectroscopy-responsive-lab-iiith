@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body style="background-color:black;">
+<br><br><br>
+
+<div class="w3-content" style="max-width:800px;position:relative">
+<img class="mySlides" src="image-specific/coumarin_ab_dioxane_graph.png" style="width:100%">
+<img class="mySlides" src="image-specific/coumarin_ab_cyclohexane_graph.png" style="width:100%">
+<img class="mySlides" src="image-specific/coumarin_ab_acetonitrile_graph.png" style="width:100%">
+<img class="mySlides" src="image-specific/coumarin_ab_ethanol_graph.png" style="width:100%">
+<img class="mySlides" src="image-specific/coumarin_ab_glycol_graph.png" style="width:100%">
+<img class="mySlides" src="image-specific/coumarin_em_cyclohexane_graph.png" style="width:100%">
+<img class="mySlides" src="image-specific/coumarin_em_dioxane_graph.png" style="width:100%">
+<img class="mySlides" src="image-specific/coumarin_em_acetonitrile_graph.png" style="width:100%">
+<img class="mySlides" src="image-specific/coumarin_em_ethanol_graph.png" style="width:100%">
+<img class="mySlides" src="image-specific/coumarin_em_glycol_graph.png" style="width:100%">
+
+
+<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)"> < </a>
+<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)"> > </a>
+<img id="img10" class="img-fluid" style="position:absolute; z-index:899; width:10%; left:89%; top:83%;cursor:pointer;" src="images/vertical_button.png" onclick="window.close();">
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html> 

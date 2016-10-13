@@ -1,0 +1,50 @@
+body {
+	width: 600px ; 
+	height : 600px; 
+	/*position: absolute;*/
+	/*align : center;*/
+}
+
+#heading{
+	align : center;
+	position: fixed;
+}
+
+#curve {
+	width: 700px;
+	height:550px;
+	position: absolute;
+}
+
+#absorp  {
+	width:150px; 
+	height:40px ; 
+	left: 500px ; 
+	top : 430px;
+	position: absolute;
+	cursor: pointer;
+}
+
+#fluor {
+	width:150px; 
+	height:40px ; 
+	left: 500px ; 
+	top : 475px;
+	position: absolute;
+	cursor: pointer;
+}
+
+#phos {
+	width:150px; 
+	height:40px ; 
+	left: 500px ; 
+	top : 520px; 
+	position: absolute;
+	cursor: pointer;	
+} 
+
+#reset {
+	top: 600px;
+	position: absolute;
+	align: center;
+}
