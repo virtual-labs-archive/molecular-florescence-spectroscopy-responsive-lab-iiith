@@ -1,1 +1,0 @@
-Select Scanmode,EXWL,EM Start WL &nbsp;&nbsp;and EM End WL Values
