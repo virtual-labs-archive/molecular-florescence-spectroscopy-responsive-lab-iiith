@@ -11,17 +11,13 @@ body{
     position: relative;
 }
 
-h4{   /*its not mandatory as the row is used*/
+h4{  
     text-align: center;
-
 }
 
 #manual_button, #data_button{
-    /*background-color: Transparent; 
-    border : none; */
     position:absolute; 
     left: 30px;
-    /*float: left;*/
     cursor: pointer;
 }
 
@@ -103,70 +99,40 @@ h4{   /*its not mandatory as the row is used*/
     float:right;
 }
 
-#solution{
-    position:absolute;
-    z-index:1099; 
-    left:8%; 
-    top:5%;
-}
-
 #round-bottom-flask{
     position:absolute;
-    z-index:999; 
+    z-index:2; 
     width:9%; 
     left:23%; 
     top:20%; 
     cursor:pointer;
 }
 
-#flask1 {
-    position:absolute;
-    z-index:999; 
-    width:9%; 
-    left:23%; 
-    top:20%; 
-    cursor:pointer;
-
-}
 #pipette{
     position:absolute;
-    z-index:990; 
-    width:9%; 
+    z-index:2; 
+    width:4.4%; 
     left:49%; 
-    top:5%;  
+    top:15%;  
     cursor:pointer;
 }
 
-
 #cuvette{
-    position: absolute;
-    z-index: 999;
+   position: absolute;
+    z-index: 2;
     width: 3%;
     left: 73%;
     top: 48%;
     cursor: pointer;
 }
 
-#table_with_spec{
-   /* display: block;
-    float:center;*/
-}
-
-#computerimage{
-    position: absolute; 
-    left: 48%; 
-    top: 8%; 
-    max-width: 50%; 
-    max-height: 50%; 
-}
-
 #comp_trans_button{
     position: absolute; 
-    z-index: 999; 
-    width: 12%;
+    z-index: 2; 
+    width: 13%;
     height: 26%; 
-    left: 49%;
-    top: 15%; 
+    left: 48%;
+    top: 10%; 
     cursor: pointer;
 }
 
@@ -174,9 +140,19 @@ h4{   /*its not mandatory as the row is used*/
     position: absolute; 
     z-index:2;
     width: 5%; 
+    height: 21%;
+    left: 36%; 
+    top: 14%;  
+    cursor: pointer;
+}
+
+#spectrolid_trans_button1{
+    position: absolute; 
+    z-index:3;
+    width: 4%; 
     height: 18%;
-    left: 35%; 
-    top: 20%;  
+    left: 36%; 
+    top: 2%;  
     cursor: pointer;
 }
 
@@ -200,60 +176,121 @@ h4{   /*its not mandatory as the row is used*/
 }
 
 #power_trans_button{
-    background-color: Transparent; 
-    background-repeat: no-repeat; 
-    border: none; 
-    cursor: pointer; 
-    overflow: hidden; 
     position: absolute; 
     z-index:2;
-    left: 17.5%; 
-    top: 45%;
-    width: 3%;
-    height: 6%;
+    left: 18%; 
+    top: 42%;
+    width: 2%;
+    height: 8%;
+    cursor: pointer; 
 }
 
 #demo{
     position: absolute;
-    top: 65%;
+    top: 74%;
     left: 22%;
     max-width: 60%;
     color: yellow;
+    text-align:left;
 }
 
 #clockScreen{
-    position:absolute; 
-    top:75px; 
-    left:0px;
-    visibility:hidden; 
-    z-index:1100;
+    position: absolute;
+    top: 8%;
+    left: 0%;
+    visibility: hidden;
+    z-index: 1100;
+    width:98%;
+    height: 94%;
 }
-
 #clockHand{
     position:absolute; 
-    top:314px;
-    left:50.75%; 
+    top:43.10%;
+    left:49.70%; 
     visibility:hidden; 
     z-index:1102;
 }
 
 #scan{
-    position:absolute;
-    z-index:1100; 
-    top:65px; 
-    left:15px;
+    position: absolute;
+    z-index: 1100;
+    top: 62px;
+    left: -15px;
+    width: 103%;
     visibility:hidden;
 }
 
-#graph1{
-    position:absolute;
-    z-index:1200;
-    top:30%;
-    left:20%;
+#scan_graph{
+    position: absolute;
+    z-index: 1200;
+    top: 9%;
+    left: 15%;
+    width: 71%;
     visibility : hidden;
 }
 
-#graph2{
+#ok_btn{
+    position: absolute;
+    z-index: 1200;
+    top: 76%;
+    left: 45%;
+    width: 9%;
+    height: 5%;
+    visibility : hidden;
+    cursor: pointer;
+}
+
+#input1{
+    position: absolute;
+    z-index: 1200;
+    top: 44%;
+    left: 30%;
+    width: 9%;
+    height: 6%;
+    visibility : hidden;
+}
+
+#input2{
+    position: absolute;
+    z-index: 1200;
+    top: 50%;
+    left: 30%;
+    width: 9%;
+    height: 5%;
+    visibility: hidden;
+}
+
+#input3{
+    position: absolute;
+    z-index: 1200;
+    top: 55%;
+    left: 30%;
+    width: 9%;
+    height: 6%;
+    visibility: hidden;
+}
+
+#instruction_bkgd{
+    position: absolute;
+    z-index: 1350;
+    top: 87%;
+    left: 7%;
+    width: 90%;
+    visibility: hidden;
+}
+
+#graph_instruction{
+    position: absolute;
+    z-index: 1351;
+    top: 87%;
+    left: 11%;
+    color: white;
+    max-width: 80%;
+    text-align: left;
+    font-size: 15px;
+}
+
+#video1{
     position:absolute;
     z-index:1200;
     top:30%;
