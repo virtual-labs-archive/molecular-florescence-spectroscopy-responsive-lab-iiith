@@ -1,0 +1,57 @@
+These are the test cases for experiment 9 in the MolecularAbsorptionSpectroscopy Lab.
+
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Test Steps                            | Expected Results                                    | Status:Flash | Status:JavaScript |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the spectrophotometer switch | The clock appears for 30 minutes. Lights            | Working Fine | Working Fine      |
+|                                       | start flashing on the spectrophotometer.            |              |                   |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the beaker                   | The beaker moves to the table                       | Working Fine | Working Fine      |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the flask                    | The flask moves to the table.                       | Working Fine | Working Fine      |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the flask                    | Liquid is shown to pour from the flask              | Working Fine | Working Fine      |
+|                                       | into the beaker. The beaker then returns            |              |                   |
+|                                       | to its position.                                    |              |                   |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the pipette                  | Pipette moves to methylorange solution and          | Working Fine | Working Fine      |
+|                                       | sucks liquid.                                       |              |                   |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the pipette                  | Pipette moves to beaker.                            | Working Fine | Working Fine      |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the pipette                  | Pipette releases solution, moves back to shelf,     | Working Fine | Working Fine      |
+|                                       | beaker contents become red.                         |              |                   |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the micropipette             | Pipette moves to beaker.                            | Working Fine | Working Fine      |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the micropipette             | Pipette sucks liquid from beaker.                   | Working Fine | Working Fine      |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the cuvette                  | Cuvette moves down to table.                        | Working Fine | Working Fine      |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the micropipette             | Micropipette moves to cuvette.                      | Working Fine | Working Fine      |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the micropipette             | Micropipette releases solution, micropipette moves  | Working Fine | Working Fine      |
+|                                       | to shelf.                                           |              |                   |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the spectrophotometer        | Spectrophotometer lid opens.                        | Working Fine | Working Fine      |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the cuvette                  | Cuvette moves to spectrophotometer, another cuvette | Working Fine | Working Fine      |
+|                                       | is displayed is spectrophotometer.                  |              |                   |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the spectrophotometer        | Spectrophotometer lid closes.                       | Working Fine | Working Fine      |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+| Click on the computer                 | Video is shown corresponding to the chosen slider   | Working Fine | Working Fine      |
+|                                       | value.                                              |              | 		         |
+|---------------------------------------+-----------------------------------------------------+--------------+-------------------|
+
+Additionally, the following buttons are always active. I was unable to replicate it exactly as it was, but what I have is just as functional.
+
+|-----------------------------+-------------------------------------------------------+--------------+-------------------|
+| Test Steps                  | Expected Results                                      | Status:Flash | Status:JavaScript |
+|-----------------------------+-------------------------------------------------------+--------------+-------------------|
+| Click on the  manual button | A popup is shown with the list of instructions.       | Working Fine | Working Fine      |
+|-----------------------------+-------------------------------------------------------+--------------+-------------------|
+| Click on the data button    | A new window/tab opens with a slideshow of the graphs | Working Fine | Working Fine      |
+|-----------------------------+-------------------------------------------------------+--------------+-------------------|
+
+

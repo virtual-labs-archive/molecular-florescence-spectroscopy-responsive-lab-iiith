@@ -1,0 +1,238 @@
+#+TITLE: Internship Report - VLEAD Summer Internship 2016
+Topic: Experiment Conversion Using JavaScript
+
+* Authors
+
++ Anshuman Karthik, Indian Institute of Technology Madras
++ Harsha Vattem, Indian Institute of Technology, Kharagpur
+
+* Abstract
+
+  To meet the needs of colleges without adequate laboratory facilities, Virtual
+  Labs provides online lab simulations. Many of the labs and associated
+  animations are created using Flash. Some of the labs are built with
+  JavaScript. Using Flash-based labs provides compatibility issues and hence,
+  conversion of these labs is a necessity. In this project, we have converted
+  most of the experiments in the Molecular Absorption Spectroscopy Lab
+  (made by IIIT Hyderabad) using pure Javascript. We have also explored two major
+  tools that could be used for similar lab building to make the entire process
+  easier. We have also come across, but not explored in depth various other
+  online frameworks and tools that can be used to do the same. Lastly, the need
+  for abstraction is and a basic idea of its implementation is explored.   
+
+* Acknowledgements
+
+  We would like to acknowledge the guidance given to us by Professor Venkatesh
+  Chopella of IIIT Hyderabad. He has been key in steering us in the right
+  direction by suggesting paths of exploration as well as helping us understand
+  the relevance of what we were doing. We would also like to thank the mentors at
+  VLEAD for making our life simple and helping us understand basics of Linux and
+  Git.        
+
+* Motivation
+
+  + To realize a method to convert Flash-based experiments to JavaScript.
+  + To explore online tools/frameworks for experiment designing.
+  + To understand the basic requirement for higher levels of abstraction and usability.
+
+* The Pure JavaScript Approach
+
+  Here, we first analyze the method we used, using pure JavaScript.   
+** Methodology 
+
+*** Converting Existing Experiments
+
+   +Most labs are made up of images. Now, using any photo editor,(the version
+    depends on the complexity of the lab) we can deconstruct a lab into various
+    photos. These photos can be treated as objects and various methods can be
+    applied to them, thus rendering the setup a virtual lab. 
+   
+   +Thus, all animations and interactions are done with already made images as supposed to  
+    tailor made ones. This includes rotation, translation and simple property
+    changes of images. 
+    
+*** Constructing New Experiments
+
+   + The main area of focus here is in building new experiments. Now, it can be
+     seen that it can be easy to accumulate a repository of images for a single
+     experiment and then tailor the code to meet the needs of the user. However,
+     this method can also be used to create a basic skeleton for a set of
+     experiments, all falling under the umbrella of a lab.
+
+   + For instance, in our lab, we have recurring beakers, spectrometers and
+     other such apparatus. A simple object relational model can be developed
+     using JavaScript to pander to the needs of the lab. 
+     
+   + This can be expanded to build various lab kits, thus allowing a user to
+     construct his own lab/experiment. For this, a simple drag and drop method
+     can be employed to do so.
+
+   + To build various lab kits, we can employ the idea of a discrete dynamic
+     system, a concept which we were introduced to. This involves understanding
+     various physical systems and their corresponding states and relating them
+     with computational methods.
+    
+   ++ What we have done so far: We have built examples relating simple
+       systems with functions. These include mathematical systems, word based
+       systems and algorithmic everyday examples.
+   
+   ++ The way forward: While building a lab kit, it needs to be understood that
+      many scientific phenomena follow the idea of continuous systems. While
+      building lab kits, computational difference methods and scientific
+      differential methods need to be linked. This needs to be identified as a
+      basic property of every lab/experiment.    
+
+** Where This Approach Succeeds 
+
+    The pros of this approach lie in the fact that:
+    + As supposed to Flash, this isn't frame by frame animation. This
+      effectively implies that a user can perform an experiment in multiple
+      ways, as supposed to a way suggested by the creator. This promotes
+      increased interactivity by allowing the user to formulate his/her own procedure.
+    
+      ++ Where we are in this now:
+         As such, we haven't built any new experiments. However, a significant
+         change can be noticed in the usage of any of the experiments in the
+         given lab. Apparatus can be used in different orders as supposed to in
+         the counterpart Flash experiment. This is a step forward, but many of
+         the components of the lab still require a chronological way of
+         operation.
+    
+      ++ Ways to Move Forward:
+         The main solution here lies in building lab kits. These, when built with
+         higher levels of abstraction, will help in increased interactivity. This
+         will work best when developing the labs with well-defined objects and
+         object relational models. With more abstraction comes a more complicated
+         network of relations. 
+    
+    + Compatibility is a major advantage here. As can easily be seen,
+      JavaScript is compatible with all current browsers, and so is HTML5. This
+      approach thus overcomes compatibility issues.  
+       
+** Drawbacks of the Approach
+
+   + For conversion, working with an image repository can sometimes be somewhat
+     of an inconvenience. This is due to both issues with positioning and
+     animations. Actions such as those need to be coded manually in each case,
+     and general methods and functions can't be applied. 
+   + This also creates issues in developing new experiments. With a higher
+     level of abstraction comes a need for standardization. However,
+     standardizing already existing images that need to be added to a
+     repository is a bit of a challenge as various attributes will be altered
+     in doing so.
+   + This level of abstraction also poses a bigger challenge as specialized
+     interactions between objects cannot all be accounted for. This will then,
+     need to be hard coded again. Grouping experiments of a lab together, will
+     then sometimes be difficult. 
+
+*** Moving Forward
+
+    + Standardization of image sizes is key here. This needs to be done through
+      either thorough searching, or careful photo editing. To avoid this, image
+      size and types can be categorized into further types.
+
+* Associated Tools 
+
+** Motivation
+
+   Understandably, it's easier to work with tools. This provides various
+   advantages, including reusability of code as well as shortening of it.
+
+** p5
+
+*** Introduction
+
+   [[https://p5js.org/][p5.js]] is a drawing framework with similar goals as the Processing language. It
+   helps in convenient implementation of interactivity and animation with the
+   capacity to introduce objects and style them easily.
+
+   
+
+*** Areas of Use
+
+   There are many uses of p5, relevant to the context of creating a lab. These
+   include:
+   + Easier implementation of methods to HTML elements, seeing as they can be
+     created from the script. This includes creating buttons, sliders,etc.
+   + Rotation of objects is much simpler, seeing as direct rotation methods are
+     available. Although JQuery can be used to achieve the same purpose, it
+     should be noted that p5 helps integrate everything into one piece of code,
+     and helps in simplifying it quite a bit.
+   + Drawing simple shapes is possible through p5. This helps in creating
+     schematics of new experiments, after which a graphical interface can be
+     applied.
+   + In various experiments with graphing, p5 provides graphing
+     libraries (developer contributed). These, coupled with animations can help
+     in plotting time dependent graphs were needed.
+   + Use in experiments is possible as well, using multiple [[https://p5js.org/libraries/][user created libraries]].
+   + There exist in built animation functions which run fast loops, thereby
+     making repetition/iteration significantly easier.
+
+*** Drawbacks
+
+   + p5 creates a canvas upon which drawing an animation can be done. This
+     makes interactions with other HTML elements difficult.
+   + It can be overcome by awkward methods of moving your canvas around, which
+     could also lead to blocks in the case of complex animation.
+   + It doesn't shorten the code for some experiments much. However it has user
+     contributed libraries that can help in others, for instance, collision
+     libraries for civil engineering labs.
+
+** Google Web Designer
+
+*** Introduction
+
+   [[https://www.google.com/webdesigner/][Google Web Designer]] is a code generating software for HTML5. It works with
+   drawing objects, making text boxes, etc. It is primarily used for creating
+   ads but can be used to generate other HTML5 content.
+
+*** Areas of Use
+
+   + It makes for convenient creating of divisions, shapes and other various
+     but simple objects. Styling can also be done easily.
+   + It can be used for 3D object manipulation. This, however doesn't have much
+     scope as far as the current labs are considered.
+   + It can make simple animations without having to dive into the source
+     code. Thus it can be used to create simple schematics of *some* experiments.
+
+*** Drawbacks
+
+   + It is in its beta version, and hence runs into various bugs (further
+     described)
+   + There is a lack of documentation thus preventing full implementation of
+     all the features.
+   + It doesn't incorporate functions like sliders and menus, which are common in the
+     experiments of lab.
+   + If a small change in functionality is required, the user is unable to
+     modify and then use the generated code. Thus,specific results cannot be
+     realized.
+   + In some machines, the generated code can't even be accessed, again, a
+     result of it being in beta version.
+   + Certain buttons and features don't have any effect when done in sequence
+     with something else.
+   + It is generally used for advertisements and can only thus perform simple
+     CSS animations.
+   + You can't append existing code to generated code and edit it.
+   + The usage of the generated code is limited to only certain browsers. We
+     ran into problems with Firefox and we found similar complaints about
+     Opera-GWD compatibility.
+   + Code generated runs into some issues when published and opened using
+     Firefox. The code sometimes hangs and the browser becomes unresponsive.
+
+* Conclusion
+
+  We have experimented with multiple methods in an attempt to find an easier
+  way to convert simple animated experiments in Flash to JavaScript, given its
+  universal compatibility. 
+  First, we played around with some JavaScript frameworks that we thought might
+  be useful, most significantly [[http://p5js.org][p5.js]]. We also made a few simple animations
+  using this to understand the framework and its usage better. In the process, we ran into many other
+  libraries, which would be of use in other kinds of situations.
+  We also tried using Google Web Designer, a tool built to make ads in
+  webpages. However, we faced issues with this too, some reasons for that being
+  that the tool is still in beta and does not have proper documentation on its
+  usage.
+  
+  The main path of future progress is in creating lab kits. Special focus needs
+  to be given to the levels of abstraction, thus helping developers as well as
+  users.          

@@ -10,663 +10,654 @@ edit -->
 <html lang="en">
 
 <head>
-<title>FLUORESCENCE VIRTUAL LAB</title>
+  <title>ABSORPTION SPECTROSCOPY VIRTUAL LAB</title>
 </head>
 
 <body>
 
 <div id="lab"> <!-- The Lab Document Container-->
+  
+  <!-- The lab Header contains the logo and the name of the lab, 
+  usually displayed on the top of the page-->
 
-<!-- The lab Header contains the logo and the name of the lab, 
-	usually displayed on the top of the page-->
-
-	<header id="lab-header">
-
-	<div id="experiment-header-logo" class="logo">
+  <header id="lab-header">
+    
+    <div id="experiment-header-logo" class="logo">
 	<!-- Enclose the logo image of your lab or write it in 
 	text-->
 
-	<a href="http://virtual-labs.ac.in/"><div class="imagemap">
-	<img src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" alt="" usemap="#logos" />
+		<a href="http://virtual-labs.ac.in/"><div class="imagemap">
+			<img src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" alt="" usemap="#logos" />
 
+	
+			<map name="logos">
+			
+				<area shape="rect" coords="0,0,505,98" href="http://www.vlab.co.in/" title="Vlab" alt="Vlab" />
+				<area shape="rect" coords="734,0,1022,97" href="http://www.iiit.ac.in/" title="IIIT" alt="IIIT" />
+			
+				<area shape="default" nohref="nohref" title="Default" alt="Default"/>
+			</map>
 
-	<map name="logos">
-
-	<area shape="rect" coords="0,0,505,98" href="http://www.vlab.co.in/" title="Vlab" alt="Vlab" />
-	<area shape="rect" coords="734,0,1022,97" href="http://www.iiit.ac.in/" title="IIIT" alt="IIIT" />
-
-	<area shape="default" nohref="nohref" title="Default" alt="Default"/>
-	</map>
-
+			</div>
+	      
+	     </a>
 	</div>
 
-	</a>
-	</div>
+    <div id="lab-header-heading" class="heading">
+    <!-- Write the name of your lab and link it to the home page
+    of your lab. -->
+      <a href="../index.html">ABSORPTION SPECTROSCOPY VIRTUAL LAB</a>	
+    </div>
 
-	<div id="lab-header-heading" class="heading">
-	<!-- Write the name of your lab and link it to the home page
-	of your lab. -->
-	<a href="../index.html">FLUORESCENCE VIRTUAL LAB</a>	
-	</div>
-
-	<!-- Add any additional element or link you want to add to 
-	the lab header, For example : Help (Enclosing them with 
-			suitable div is recommended)-->
-
-	</header>
+    <!-- Add any additional element or link you want to add to 
+    the lab header, For example : Help (Enclosing them with 
+    suitable div is recommended)-->
+  
+  </header>
 
 
-	<!-- The lab article is the main content area where all the 
-	experiment content sits-->
-	<article id="lab-article">
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="lab-article">
 
 
-	<!-- The lab article has an header, optional navigational 
-	menu, number of sections, an optional sidebar and a closing 
-	footer-->
-	<header id="lab-article-header">
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+    <header id="lab-article-header">
+      
+      <!-- You can add a welcome message or title of the 
+      experiment enclosed in h1 tag here -->
+      <div id="lab-article-heading" class="heading">
+      Determination of unknown concentration of an analyte by using the Beer-Lambert Law
+      </div>
 
-	<!-- You can add a welcome message or title of the 
-	experiment enclosed in h1 tag here -->
-	<div id="lab-article-heading" class="heading">
-	Relationship between the Concentration of a Fluorophore and its Fluorescence Intensity: Determination of Unknown Concentration of an Analyte
-	</div>
-
-	<!-- Add any additional element if required with proper 
-	enclosing-->
-	</header>
-
-
-	<!-- Navigation menu is useful to organize the view of 
-	multiple sections inside the article-->
-	<nav id="lab-article-navigation">
-	<ul id="lab-article-navigation-menu">
-	<!-- The menu will be dynamically generated to contain the 
-	headings of your sections or instead write the menu items 
-	of your choice individually enclosed in <li> tag as shown 
-	below-->
-	</ul>
-	</nav>
+      <!-- Add any additional element if required with proper 
+      enclosing-->
+    </header>
 
 
-	<!-- All the sections of your lab or experiment can be 
-	enclosed together with a div element as shown below-->
-	<div id="lab-article-sections">
+    <!-- Navigation menu is useful to organize the view of 
+    multiple sections inside the article-->
+    <nav id="lab-article-navigation">
+    <ul id="lab-article-navigation-menu">
+      <!-- The menu will be dynamically generated to contain the 
+      headings of your sections or instead write the menu items 
+      of your choice individually enclosed in <li> tag as shown 
+      below-->
+    </ul>
+    </nav>
 
-	<!-- First section of the article-->
-	<section id="lab-article-section-1">
-	<div id="lab-article-section-1-icon" class="icon">
-	<!-- Enclose the icon image for the section. -->
-	<img src="../images/introduction.jpg" />
+    
+    <!-- All the sections of your lab or experiment can be 
+    enclosed together with a div element as shown below-->
+    <div id="lab-article-sections">
+			
+      <!-- First section of the article-->
+      <section id="lab-article-section-1">
+        <div id="lab-article-section-1-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/introduction.jpg" />
 	</div>
 
 
-	<!-- The heading for the section can be enclosed in a 
-	div tag. -->
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
 	<div id="lab-article-section-1-heading" class="heading">
 	Introduction
 	</div>
-
+				
 	<!-- Write the section content inside a paragraph 
-	element, You can also include images with <img> tag -->
+        element, You can also include images with <img> tag -->
 	<div id="lab-article-section-1-content" class="content">
+<p align="JUSTIFY">
+        We know that the spectrophotometer is an instrument that separates electromagnetic radiation into its component wavelengths and selectively measures the intensity of radiation after passing through a sample. The quantitative measurement of light absorption as a function of wavelength can not only establish the identity but can also determine the concentration of an absorbing substance in solution. From the Beer–Lambert law we know that more concentrated solution absorbs more of the light.
+    </p>
+	</div>
+	
+      </section>
+		
 
-	<p align="JUSTIFY">
-	Detection and quantification are two common uses of fluorimetry. Fluorimetry is extremely useful for the determination of concentrations that are too small to be easily determined by spectrophotometry. Because of the low detection limits, fluorescence spectroscopy is routinely used for the quantification of aromatic, or highly unsaturated organic molecules present at trace concentrations, especially in biological and environmental samples. The technique can be extended to a wide variety of non-fluorescent organic and inorganic compounds via derivatization procedure or tagging the analyte with a fluorescent compound. Fluorescence spectrometry has high sensitivity. Sensitivity depends on the fluorescence quantum yield of analyte/fluorophore. For intensely fluorescent compounds, detection limits of 10<sup>-10</sup> to 10<sup>-12</sup> M can be achieved by using commercial spectroflurometers. Sensitivity can be improved by minimizing the blank signals (such as impurity fluorescence and Rayleigh and Raman scatter) and enhancing the intensity of the exciting radiation, the sensitivity of the detector, etc. It should be noted that a few problems like self-quenching, excimer formation, etc. should be avoided in fluorimetry. Now-a-days, the ultimate limit of detection i.e., detection of a single-molecule has been achieved by using some special fluorescence measurement techniques. 
-
-	</p>	</div>
-
-	</section>
-
-
-	<!-- Second section of the article-->
-	<section id="lab-article-section-2">
-
-	<div id="lab-article-section-2-icon" class="icon">
-	<!-- Enclose the icon image for the section. -->
-	<img src="../images/objective.jpg" />
+      <!-- Second section of the article-->
+      <section id="lab-article-section-2">
+        
+        <div id="lab-article-section-2-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/objective.jpg" />
 	</div>
 
 
-	<!-- The heading for the section can be enclosed in a 
-	div tag and shown with a <h2> tag -->
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
 	<div id="lab-article-section-2-heading" class="heading">
-	Objective
+	  Objective
 	</div>
-
+				
 	<!-- Write the section content inside a paragraph 
-	element, You can also include images with <img> tag -->
-	<div id="lab-article-section-2-content" class="content">
-
-
-	<p align="JUSTIFY">
-	To understand the relationship between the fluorescence intensity and the concentration of a fluorophore analyte and to determine the unknown concentration of the analyte by using the relationship.
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-2-content" class="content">
+	<p>
+		Determination of concentration of a solution of unknown strength by applying the Beer-Lambert law.
 	</p>
 	</div>
+	
+      </section>
 
-	</section>
 
-
-	<!-- Second section of the article-->
-	<section id="lab-article-section-3">
-
-	<div id="lab-article-section-3-icon" class="icon">
-	<!-- Enclose the icon image for the section. -->
-	<img src="../images/theory.jpg" />
+	 <!-- Second section of the article-->
+      <section id="lab-article-section-3">
+        
+        <div id="lab-article-section-3-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/theory.jpg" />
 	</div>
 
 
-	<!-- The heading for the section can be enclosed in a 
-	div tag and shown with a <h2> tag -->
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
 	<div id="lab-article-section-3-heading" class="heading">
-	Theory
+	 Theory
 	</div>
-
+				
 	<!-- Write the section content inside a paragraph 
-	element, You can also include images with <img> tag -->
-	<div id="lab-article-section-3-content" class="content">
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-3-content" class="content">
+<p align="JUSTIFY">
+        According to Beer–Lambert law, 
+    </p>
 
-
-	<p align="JUSTIFY">
-	In fluorescence, the luminescent intensity I<sub>F</sub> is proportional to the excited state population (the number of molecules in excited states). The excited state population, in turn, is proportional to the radiation absorbed by the sample. However, all the molecules present at the excited state do not participate in the fluorescence process. Therefore, I<sub>F</sub> is proportional to the fluorescence efficiency or fluorescence quantum yield, &#934;F,  also. If one replaces the number of photons absorbed at the excitation wavelength by the absorbed intensity, I<sub>A</sub>, then 
-	</p>
-	<p>
-	\begin{equation}
-	I_f  \propto &#934;_f I_a, or I_f = k&#934;_f I_a
-	\end{equation}
-
-	where the proportionality factor k depends on several instrumental parameters.
-	</p>
-
-	<p>
-	If I<sub>0</sub> is the incident beam intensity and I<sub>T</sub> is the transmitted beam intensity, then 
-	\begin{equation}
-	I_a = I_0 - I_T
-	\end{equation}
-
-	</p>
-	<p>
-	In fluorescence, the luminescent intensity I<sub>F</sub> is proportional to the excited state population (the number of molecules in excited states). The excited state population, in turn, is proportional to the radiation absorbed by the sample. However, all the molecules present at the excited state do not participate in the fluorescence process. Therefore, I<sub>F</sub> is proportional to the fluorescence efficiency or fluorescence quantum yield, &#934;F,  also. If one replaces the number of photons absorbed at the excitation wavelength by the absorbed intensity, IA, then According to the Beer-Lambert law as applicable to the absorption of radiation by the sample: 
-	</p>
-	<p>
-	\begin{equation}
-	I_T/I_0 = 10^{-&#949;cl} = e^{-&#949;cl}
-	\end{equation}
-
-
-	where IT is the intensity of the transmitted light, &#949; is the molar absorptivity of the analyte, c is the molar concentration of the analyte, and l is the optical pathlength of the sample.
-
-	Therefore,
-	\begin{equation}
-	I_A =I_0 - I_T = I_0 - I_0 .10^{-&#949;cl} = I_0 (1 - e^{-2.3&#949;cl} )
-	\end{equation}
-	and
-	\begin{equation}
-	I_F = k &#934;_F I_0 (1 - e^{-2.3&#949;cl} ) 
-	\end{equation}
-
-	If &#949;cl (i.e. absorbance, A) is small (say, 0.05 or less) in the above equation, expanding the exponential series and neglecting the higher order terms in the series one gets, 
-	\begin{equation}
-	I_F  \approx 2.3 k &#934;_F I_0 &#949;cl.
-	\end{equation}
-	</p>
-
-	<p>
-	Therefore, when the absorbance is small, fluorescence intensity is proportional to the concentration of the fluorophore. That is, there is a linear relationship between fluorescence intensity and the concentration of the fluorophore. One can construct a linear calibration plot of fluorescence intensity (I<sub>F</sub> ) vs. fluorescent analyte concentration (c) which can be used for the determination of an unknown concentration of a fluorescent analyte. This provides a sensitive method for quantitative fluorimetry. 
-	</p>
-	<p>
-	Note that though &#934;<sub>F</sub> is independent of wavelength since &#949; is wavelength-dependent, fluorescence intensity, I<sub>F</sub>, is also wavelength-dependent. If I<sub>F</sub> is measured as a function of the wavelength of exciting light of constant intensity I0, the resulting variation in fluorescence intensity with respect to the excitation light wavelength is called fluorescence excitation spectrum. This fluorescence excitation spectrum, reflect s the variation in &#949;, molar extinction coefficient, as a function of wavelength and therefore essentially reproduce the absorption spectrum of the molecule. 
-
-	</p>
-	<p>
-	Further, the absorbance to be small, the absorptivity and the concentration of the fluorophore must be small (very dilute solution). At higher concentrations, concentration quenching may give rise to nonlinear relationship. Another important point should be noted here. The fluorescence intensity is usually plotted in arbitrary units. In the above equation, the proportionality constant,  k, is an instrumental factor. It depends on many parameters like the geometry of observation (i.e., solid angle through which the light is collected), monochromator transmission efficiency, monochromator slit-width, high voltage of the photo-multiplier, gain of the electronic devices, etc. Therefore, the numerical value of the measured fluorescence intensity has no meaning and the fluorescence spectrum is usually plotted in arbitrary units unlike the absorption spectrum . It is also important to remember that in addition to the above mathematical reason, the fluorescence intensity-concentration linear relationship is valid  over only a limited range of absorbances due to inner filter effects caused by geometrical reasons (i.e., geometry of the sample cell arrangement ) or presence of other chromophores.
-	</p>
-	<p>
-	In this experiment, we shall determine the concentration of quinine in tonic water spectrofluorimetrically with the help of a calibration plot made by using quinine sulfate standard solutions. Quinine is a strongly fluorescent compound in dilute acid solution. It is commonly used as a fluorescence standard. Quinine is also used as an antimalarial drug and a common ingredient in tonic water and soft drinks. Often tonic water contains 40 - 85 ppm quinine. Quinine is a natural product (alkaloid) isolated from the bark of the cinchona tree. 
-	</p>
-
-
-
+    <p align="JUSTIFY">
+        log ( I<sub>o</sub> / I<sub>t</sub>) = A= ε c l
+    </p>
+   
+    <p align="JUSTIFY">
+where <i>I</i><sub><i>o</i></sub><i> </i>and <i>I</i><sub><i>t</i></sub><i> </i>are the incident and transmitted 
+intensities, <i>A </i>=        <b>absorbance </b>and <i>ε</i><i>, a</i> constant<i> </i><b>= absorptivity </b>
+(formerly called the <i>extinction coefficient</i>). If the
+        concentration is measured in <i>mol.L</i><sup><i>−1</i></sup>, the absorptivity is called the 
+        <i>molar absorptivity</i>.
+        where I<sub>o</sub> and I<sub>t</sub> are the incident and transmitted intensities, A = <b>absorbance</b> and ε, a constant = <b>absorptivity</b> (formerly called the extinction coefficient). If the concentration is measured in mol.L<sup>−1</sup>, the absorptivity is called the molar absorptivity.
+    </p>
+    <p align="JUSTIFY">
+    	In the above equation, c can be determined if other quantities are known. Since this is a straight line equation with slope = (ε.l) and zero intercept, ε is determined from the slope of a linear plot of absorbance versus concentration, called a calibration curve or calibration plot. Calibration graph is constructed by plotting absorbance at a given wavelength versus concentration for a series of standard solutions whose concentrations are accurately known. Since the absorptivity is a function of wavelength, often its value at the highest absorbance,  λ<sub>max</sub> (at the peak position i.e., at the wavelength of maximum absorbance) is determined. One should note that the Beer–Lambert law is obeyed by many substances mainly at low to moderate concentrations; therefore, dilute concentrations of the absorbing species should be measured. In practice it is advisable to measure absorbances in the range 0.1&lt; A &lt;1.0. Care must be taken to avoid any kind of chemical associations/dissociations of the absorbing species. Once the calibration plot is obtained, the concentration of the unknown solution can be determined graphically or mathematically from the equation of the calibration curve if the absorbance of the unknown sample at the λ<sub>max</sub> is measured. Therefore, to find an unknown concentration for a sample mathematically, subtract the intercept from the absorbance reading and divide the result by the slope for a sample holder of unit path length. Here is the equation:
+    </p>
+  
+    <p>
+        <i>Unknown Concentration = (Absorbance – Intercept)/Slope</i>
+        .
+    </p>
 	</div>
-
-	</section>
+	
+      </section>
 
 	<section id="lab-article-section-4">
-
-	<div id="lab-article-section-4-icon" class="icon">
-	<!-- Enclose the icon image for the section. -->
-	<img src="../images/procedure.jpg" />
+        
+        <div id="lab-article-section-4-icon" class="icon">
+          <!-- Enclose the icon image for the section. -->
+	  <img src="../images/procedure.jpg" />
 	</div>
 
 
-	<!-- The heading for the section can be enclosed in a 
-	div tag and shown with a <h2> tag -->
+        <!-- The heading for the section can be enclosed in a 
+        div tag and shown with a <h2> tag -->
 	<div id="lab-article-section-4-heading" class="heading">
-	Procedure
+	 Procedure
 	</div>
-
+				
 	<!-- Write the section content inside a paragraph 
-	element, You can also include images with <img> tag -->
-	<div id="lab-article-section-4-content" class="content">
-	<p>
-	<ol>
-	<li>
-	Prepare six standard quinine sulfate solutions of following concentrations: 0.0001, 0.001, 0.01, 0.05, 0.1 and 1 ppm (parts per million) quinine in 0.05 M H<sub>2</sub>SO<sub>4</sub>. These solutions are prepared via dilution from a 10 ppm quinine stock solution in 0.05 M H<sub>2</sub>SO<sub>4</sub>. To prepare the stock solution, first exactly 6 mg of quinine sulfate dihydrate is quantitatively transferred to a 500 mL volumetric flask, dissolved by adding 25 mL of 1 M H<sub>2</sub>SO<sub>4</sub> and finally made up to the mark with deionized water. Quinine sulfate decomposes under light. Therefore, the stock solution should be made fresh for measurements and stored in brown bottles in a cool place. 
-	Here all the solutions, including an <i>unknown concentration solution</i>, are shown on a concentration bar. Note that the supplied unknown sample was made as follows. A 1 mL of tonic water sample (containing an unknown concentration of quinine sulfate) was diluted to the mark with aq. 0.05 M H<sub>2</sub>SO<sub>4</sub> in a 100 mL volumetric flask.
-	</li><li>
-	Carry out the excitation and emission measurements of the solutions as follows.
-	</li><li>
-To choose an appropriate concentration of the solution whose fluorescence has to be measured, click on the pointer below the concentration bar and drag it to the desired value. In real experimental measurements, one should start with the lowest concentration solution first and proceed to next higher concentration and so on. (Why?)  
-	</li><li>
-	Click on the volumetric flask containing the experimental solution to take it to the instrument table.
-	</li><li>
-	Take an all-side-transparent quartz cuvette (path length, 1 cm x 1 cm) by clicking on it.
-	</li><li>
-	Click on the 5 mL-capacity pipette to collect 3 mL of the experimental solution which will be transferred into the quartz cuvette. In real operation, one has to set the volume to 3 mL in the  pipette and an appropriate tip should be attached prior to dipping it in the solution.
-	</li><li>
-	Click on the pipette to draw the solution into it.
-	</li><li>
-	Click on the pipette to take it out of the volumetric flask.
-	</li><li>
-	Click on the pipette again to transfer the solution into the cuvette.
-	</li><li>
-	Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.
-	</li><li>
-	Click on the lid of the sample chamber of the spectrofluorimeter to open it for placing the sample in the instrument.
-	</li><li>
-	To place the cuvette in the sample holder in the chamber, click on the cuvette.
-	</li><li>
-	Click on the lid of the sample chamber to close it.
-	</li><li>
-	To run the Excitation Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor. 
-	</li><li>
-	Select the Excitation Scan Mode on the screen.
-	</li><li>
-	On the screen, enter the Emission wavelength: 450 nm, Excitation Start Wavelength: 270 nm and Excitation End wavelength: 500 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here "medium") also.
-	</li><li>
-	To run the wavelength scan for excitation spectrum, click on 'OK' button on the set-up screen. 
-	</li><li>
-	1. Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data. 
-	</li><li>
-	To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor. 
-	</li><li>
-	Select the Emission Scan Mode on the screen.
-	</li><li>
-	On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 360 nm and Emission End wavelength: 600 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here "medium") also.
-	</li><li>
-	To run the wavelength scan for emission spectrum, click on 'OK' button on the set-up screen. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. 
-	</li><li>
-	2. Click on 'Close' button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data. 
-	</li><li>
-	To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. 
-	</li><li>
-	Click on the lid of the sample chamber to close it.
-	</li><li>
-	Click on 'Reset' button to start over the measurements.
-	</li><li>
-	Select the next higher concentration solution for measurement by clicking on the concentration selection bar and carry out the Emission scan. In real measurements, if one uses the same cuvette for all the measurements, every time one should rinse the cuvette by taking a small portion of the solution to be analyzed prior to filling up the cuvette with the solution.
-	</li><li>
-	Repeat the Emission scan measurements for the rest of the solutions including the unknown concentration solution.
-	</li><li>
-	Collect all data by clicking on the Data tab.
-	</li><li>
-	Tabulate the maximum emission wavelengths for all the concentrations. If the maximum emission wavelengths vary by a few nanometer from sample to sample, then one should note down the intensities at only one fixed wavelength which should be ideally very near to most of the maximum emission wavelengths.
-	</li><li>
-	Construct a calibration plot by plotting the fluorescence intensity values at a given wavelength against the corresponding standard concentrations. Check whether linearity relationship is valid or not. Compare the linear fits first taking only the lowest five concentrations and then taking all six concentrations of quinine sulfate. Choose the appropriate straight line as the calibration line. 
-	</li><li>
-	By using the calibration line, determine (both graphically and mathematically) the concentration of the unknown sample analyzed and then the concentration of the original tonic water sample. 
-	</li>
-	</ol>
-	</p>
-	<br/>
-	<p><b>Table1.</b> Fluorescence intensity values for different concentrations of quinine sulfate solution.</p>
-	<br/>
-	<TABLE WIDTH=604 CELLPADDING=4 CELLSPACING=0>
-	<COL WIDTH=78>
-	<COL WIDTH=201>
-	<COL WIDTH=130>
-	<COL WIDTH=161>
-	<TR VALIGN=TOP>
-	<TD WIDTH=78 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>Sl.
-	No.</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=201 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>Concentration
-	(ppm)</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=130 STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>&#955;<SUB>max</SUB>
-	(nm) </FONT></FONT></FONT>
+        element, You can also include images with <img> tag -->
+        <div id="lab-article-section-4-content" class="content">
+<p align="JUSTIFY">
+<ol>
+<li>
+This method involves measuring the absorbance of the sample solution using a UV-Visible spectrophotometer. One needs to prepare a stock solution and Calibration Standards from this stock solution.
+</li><li>
+Prepare a standard K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7 aqueous solution of strength nearly 3×10-3 M in 0.01 N H2SO4 (for the experiments described here we have used a solution of strength = 3.16×10-3 M. This is used as stock solution.
+</li><li>
+From the above stock solution, prepare five different concentrations of K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7 solutions: say, 0.158 mM, 0.316 mM, 0.474 mM, 0.632 mM, and 0.790 mM.
+</li><li>
+		Switch on the computer and the instrument powers; wait for 30 minutes for ‘warm-up’ of the instrument.
+</li><li>
+		In the instrument one can select light sources (UV and visible), choose the slit width, scan speed and %transmittance or absorbance display, wavelength range of interest, etc.
+</li><li>
+		Take two clean and dry glass (only for visible range scan) or quartz cuvettes with a given path length (say, 1 cm).
+</li><li>
+		Fill up one cuvette with sample blank (aq. 0.01 N H2SO4 in the present case) and the other cuvette with aqueous K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7 solution with lowest concentration. 
+</li><li>
+		Place the sample blank in the reference holder and the sample in the sample holder. 
+</li><li>
+		Run the scan (A or %T versus &lambda;). 
+</li><li>
+		Similarly spectral runs are done for all the other samples starting from the lowest concentrations to next higher concentrations of K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7. Every time one should rinse the cuvette taking a small portion of the solution to be analyzed next.
+</li><li>
+		Spectral run is carried out for the unknown K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7 sample.
+</li><li>
+		Now find out the wavelengths of maximum absorbance (&lambda;<sub>max</sub>), the absorbance at a given &lambda;<sub>max</sub> for all the concentrations of K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7 and make a table containing these data.
+</li><li>
+		Construct a calibration plot by plotting absorbance versus concentration for a given &lambda;<sub>max</sub>. Thus one construct two calibration plots for two peak positions of K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7.
+</li><li>
+		Determine the slopes of the calibration plots and hence the respective values of &lambda;’s.
+</li><li>
+		Determine the concentration of the unknown K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7 solution from two calibration plots.
+</li>
+    </ol>
+    <p>
+    <table width="638" cellpadding="7" cellspacing="1">
+        <colgroup>
+            <col width="56"/>
+            <col width="127"/>
+            <col width="126"/>
+            <col width="151"/>
+            <col width="159"/>
+        </colgroup>
+        <tbody>
+            <tr valign="TOP">
+                <td width="46">
+                    <p align="LEFT">
+                        SNo
+                    </p>
+                </td>
+                <td width="117">
+                    <p align="LEFT">
+                        Concentration K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7 (mM)
+                    </p>
+                </td>
+                <td width="116">
+                    <p align="LEFT">
+                        λ<sub><i>max </i></sub>(nm)
+                    </p>
+                </td>
+                <td width="141">
+                    <p align="LEFT">
+                        Absorbance
+                    </p>
+                    <p align="LEFT">
+                        λ=350 nm
+                    </p>
+                </td>
+                <td width="159">
+                    <p align="LEFT">
+                        Absorbance another wavelength (say,λ<sub><i>max </i></sub>)
+                    </p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="46">
+                    <p align="LEFT">
+                        1
+                    </p>
+                </td>
+                <td width="117">
+                    <p align="LEFT">
+                        0.158
+                    </p>
+                </td>
+                <td width="116">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="141">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="149">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="46">
+                    <p align="LEFT">
+                        2
+                    </p>
+                </td>
+                <td width="117">
+                    <p align="LEFT">
+                        0.316
+                    </p>
+                </td>
+                <td width="116">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="141">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="149">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="46">
+                    <p align="LEFT">
+                        3
+                    </p>
+                </td>
+                <td width="117">
+                    <p align="LEFT">
+                        0.474
+                    </p>
+                </td>
+                <td width="116">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="141">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="149">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="46">
+                    <p align="LEFT">
+                        4
+                    </p>
+                </td>
+                <td width="117">
+                    <p align="LEFT">
+                        0.632
+                    </p>
+                </td>
+                <td width="116">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="141">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="149">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="46">
+                    <p align="LEFT">
+                        5
+                    </p>
+                </td>
+                <td width="117">
+                    <p align="LEFT">
+                        0.790
+                    </p>
+                </td>
+                <td width="116">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="141">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="149">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+            </tr>
+            <tr valign="TOP">
+                <td width="46">
+                    <p align="LEFT">
+                        6
+                    </p>
+                </td>
+                <td width="117">
+                    <p align="LEFT">
+                        Unknown Sample Conc.?
+                    </p>
+                </td>
+                <td width="116">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="141">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+                <td width="149">
+                    <p align="LEFT">
+                        <br/>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</p>
+	</div>
 	
-	</TD>
-	<TD WIDTH=161 STYLE="border: 1px solid #000000; padding: 0.1cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>Intensity
-	at &#955;= 450 nm</FONT></FONT></FONT>
-	</TD>
-	</TR>
-	<TR VALIGN=TOP>
-	<TD WIDTH=78 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>1.</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=201 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=130 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=161 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	</TR>
-	<TR VALIGN=TOP>
-	<TD WIDTH=78 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>2.</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=201 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=130 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=161 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	</TR>
-	<TR VALIGN=TOP>
-	<TD WIDTH=78 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>3.</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=201 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=130 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=161 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	</TR>
-	<TR VALIGN=TOP>
-	<TD WIDTH=78 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>4.</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=201 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=130 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=161 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	</TR>
-	<TR VALIGN=TOP>
-	<TD WIDTH=78 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>5</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=201 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=130 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=161 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	</TR>
-	<TR VALIGN=TOP>
-	<TD WIDTH=78 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>6.</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=201 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=130 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=161 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	</TR>
-	<TR VALIGN=TOP>
-	<TD WIDTH=78 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>7.</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=201 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<FONT COLOR="#000000"><FONT FACE="FreeSerif, serif"><FONT SIZE=3>Unknown
-	= ...............?</FONT></FONT></FONT>
-	</TD>
-	<TD WIDTH=130 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	<TD WIDTH=161 STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
-	<P LANG="en-US" CLASS="western" ALIGN=CENTER><BR>
-	</P>
-	</TD>
-	</TR>
-	</TABLE>
-	<br/>
-	<br/>
-	</div>
+      </section>
+      
+ <section id="lab-article-section-5">
+
+      <div id="lab-article-section-5-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/experiment.jpg" />
+      </div>
 
 
-	</section>
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-5-heading" class="heading">
+      Simulator
+      </div>
 
-	<section id="lab-article-section-5">
-
-	<div id="lab-article-section-5-icon" class="icon">
-	<!-- Enclose the icon image for the section. -->
-	<img src="../images/experiment.jpg" />
-	</div>
-
-
-	<!-- The heading for the section can be enclosed in a 
-	div tag and shown with a <h2> tag -->
-	<div id="lab-article-section-5-heading" class="heading">
-	Simulator
-	</div>
-
-	<!-- Write the section content inside a paragraph 
-	element, You can also include images with <img> tag -->
-	<div id="lab-article-section-5-content" class="content">
-	<p>	
-		<a href="media/7.html" target="_blank">Click here to go to lab</a>
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-5-content" class="content">
+	<p>
+	<a href="./media/7.html" target="_blank">Click here to go to lab</a>
 	</p>
-	</div>
+      </div>
 
-	</section>
+      </section>
 
-	<section id="lab-article-section-6">
+ <section id="lab-article-section-6">
 
-	<div id="lab-article-section-6-icon" class="icon">
-	<!-- Enclose the icon image for the section. -->
-	<img src="../images/quiz.jpg" />
-	</div>
-
-
-	<!-- The heading for the section can be enclosed in a 
-	div tag and shown with a <h2> tag -->
-	<div id="lab-article-section-6-heading" class="heading">
-	Quiz
-	</div>
-
-	<!-- Write the section content inside a paragraph 
-	element, You can also include images with <img> tag -->
-	<div id="lab-article-section-6-content" class="content">
-
-	<h3>
-	Pre-Experiment
-	</h3>
-
-	<ol>
-	<li>
-	How does fluorescence intensity depend on the excitation power? Can the fluorescence sensitivity be increased by working with high excitation powers?
-	</li><li>
-	What should be the fluorescence intensity for sample blank (analyte concentration is 0)?
-	</li><li>
-	Excitation with a laser will yield a better fluorescence intensity than if a lamp were used for excitation . Why?
-	</li><li>
-	The product &#934;F I<sub>0</sub> determines the sensitivity of fluorimetry for the analyte. Justify your answer.
-	</li><li>
-	Consider a case where a fluorophore molecule gets excited more than once. How will this effect (called the photon-burst effect) affect your result?
-	</li><li>
-	Why is it advised that  add acid to water  while diluting concentrated H<sub>2</sub>SO<sub>4</sub>?
-	</li><li>
-Explain how a mass of 0.120 g of quinine sulfate is needed to prepare a quinine stock solution of 100  g/mL concentration. (Given (C<sub>20</sub>H<sub>24</sub>N<sub>2</sub>O<sub>2</sub>)<sub>2</sub>.H<sub>2</sub>SO<sub>4</sub>.2H<sub>2</sub>O), MW= 782.97)
-	</li>
-	</ol>
-
-	<h3>
-	Post-Experiment
-	</h3>
-
-	<ol>
-	<li>
-	In real experimental measurements, one should start with the lowest concentration solution first and proceed to next higher concentration and so on and should rinse the cuvette every time by taking a small portion of the experimental solution prior to filling up the cuvette with the solution. Why?
-	</li><li>
-	Is there evidence of non-linearity in the relationship between the fluorescence intensity and the analyte concentration at high concentrations? What is the most likely source of the non-linearity?
-	</li><li>
-	Will the linearity relationship hold well if photodecomposition of the molecule takes place on excitation?
-	</li><li>
-	How can one verify whether concentration quenching is present or not?
-	</li><li>
-	Why is the fluorescence intensity usually plotted in arbitrary units unlike absorbance in absorption spectrum? What is the unit of absorbance? 
-	</li><li>
-	How many ppb (parts per billion) is 0.0250 ppm (parts per million)?
-	</li><li>
-	Express 0.01 ppm quinine concentration in mol/L unit.  
-	</li>
-
-	</ol>
+      <div id="lab-article-section-6-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+	  <img src="../images/quiz.jpg" />
+      </div>
 
 
-	</div>
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-6-heading" class="heading">
+      Quiz
+      </div>
 
-	</section>
-	<section id="lab-article-section-7">
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-6-content" class="content">
+<h3>
+Pre-Experiment
+</h3>
 
-	<div id="lab-article-section-7-icon" class="icon">
-	<!-- Enclose the icon image for the section. -->
-	<img id="feedback" src="../images/references.jpg" />
-	</div>
+<ol>
+         <li>
+            
+                What is a calibration curve or calibration plot?
+            
+        </li>
+        <li>
+            
+                According to the Beer-Lambert law absorbance is proportional to concentration at each wavelength. In principle, one could choose any wavelength
+                for quantitative estimations of concentration. However, we generally select the wavelength of maximum absorbance for a given sample and use it
+                in our absorbance measurements. Especially, one should avoid the steep portions of the spectrum. Why?
+            
+        </li>
+        <li>
+            
+                Which concentration range - a dilute or a concentrated one - is chosen for accurate determinations of unknown concentrations?
+            
+        </li>
+        <li>
+            
+                One substance has <i>ε</i><i> </i>100 times more the other one. In which substance can one detect very small amounts of material?
+            
+        </li>
+    </ol>
 
+<h3>
+Post-Experiment
+</h3>
 
-	<!-- The heading for the section can be enclosed in a 
-	div tag and shown with a <h2> tag -->
-	<div id="lab-article-section-7-heading" class="heading">
-	References
-	</div>
-
-	<!-- Write the section content inside a paragraph 
-	element, You can also include images with <img> tag -->
-	<div id="lab-article-section-7-content" class="content">
-	<ol>
-	<li>
-	B. Valeur, Molecular Fluorescence: Principles and Applications, 2002, Wiley-VCH, Weinheim.
-	</li><li>
-	J. R. Albani, Principles and Applications of Fluorescence Spectroscopy, 2007, Blackwell Science Science Ltd, Oxford, UK.
-	</li><li>
-	P. Patnaik, Dean s Analytical Chemistry Handbook, 2nd Edition, McGraw-Hill Handbooks.
-	</li><li>
-	F. A. Settle, Handbook of Instrumental Techniques for Analytical Chemistry, 1st Edition, 1997, National Science Foundation, Arlington, Virginia. 
-	</li><li>
-	J. R. Lakowicz, Principles of Fluorescence Spectroscopy, 2nd Ed., Kluwer Academic/Plenum Publishers, New York, London, Moscow, Dordrecht, 1999.
-	</li><li>
-	D. M. Jameson et al. in Basic Concepts in Fluorescence, Fluorescence: Basic Concepts, Principles Aspects and some Anecdotes, Methods Enzymol. 2003, 360, 1.
-	</li><li>
-	P. Atkins and J. D. Paula, Atkin's Physical Chemistry, 9th Edition, Oxford University Press.
-	</li><li>
-	http://www.kutztown.edu/acad/chem/instruments_html/fluorescence.htm.
-	</li>
-	</ol>
-
-	</div>
-
-	</section>
-
-	<section id="lab-article-section-99">
-
-	<div id="lab-article-section-99-icon" class="icon">
-	<!-- Enclose the icon image for the section. -->
-	<a href="../?q=experiments"><img src="../images/experiments.jpg" /><p></p>Experiments</a>
-	</div>
-
-
-	<!-- The heading for the section can be enclosed in a 
-	div tag and shown with a <h2> tag -->
-	<div id="lab-article-section-99-heading" class="heading">
-	</div>
-
-	<!-- Write the section content inside a paragraph 
-	element, You can also include images with <img> tag -->
-	<div id="lab-article-section-99-content" class="content">
-	</div>
-	</section>
-
-	<section id="lab-article-section-100">
-
-	<div id="lab-article-section-100-icon" class="icon">
-	<!-- Enclose the icon image for the section. -->
-	<a href="http://virtual-labs.ac.in/feedback/?lab=ccnsb01"><img id="feedback" src="../images/feedback.jpg" /><p></p>Feedback</a>
-	</div>
+<ol>
+     	<li>
+            
+                Why the accuracy of calibration curve is of absolute importance?
+            
+        </li>
+        <li>
+            
+                What are steps should be taken to ensure the accuracy of calibration curve?
+            
+        </li>
+        <li>
+            
+                Draw two calibration plots for two peak positions of K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7. Which linear fit is better? Find out the correlation coefficients of the
+                two straight lines.
+            
+        </li>
+        <li>
+                What is difference between the values of unknown concentration determined from two calibration plots of K<sub>2</sub>Cr<sub>2</sub>O<sub></sub>7? Justify your answer.
+            
+        </li>
+    </ol>
 
 
-	<!-- The heading for the section can be enclosed in a 
-	div tag and shown with a <h2> tag -->
-	<div id="lab-article-section-100-heading" class="heading">
-	</div>
 
-	<!-- Write the section content inside a paragraph 
-	element, You can also include images with <img> tag -->
-	<div id="lab-article-section-100-content" class="content">
-	</div>
-	</section>
+      </div>
+
+      </section>
+<section id="lab-article-section-7">
+
+      <div id="lab-article-section-7-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+<img id="feedback" src="../images/references.jpg" />
+      </div>
 
 
-	</div>	
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-7-heading" class="heading">
+      References
+      </div>
 
-	<!-- An article can have a sidebar that contain related 
-	links and additional material (it is optional at this 
-			moment)-->
-	<aside id="lab-article-sidebar" class="default">
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-7-content" class="content">
+<ol>
+<li>
+B. Valeur, “Molecular Fluorescence: Principles and Applications”, 2002, WILEY-VCH Verlag GmbH, 69469, Weinheim, Germany.
+</li><li>
+J. R. Lakowicz, “Principles of Fluorescence Spectroscopy”, 2nd Ed., 1999, Kluwer Academic/Plenum Publishers, New York.
+</li><li>
+P. Atkins and J. De Paula,“Physical Chemistry”, W. H. Freeman & Company, Dec 2009. 
+</li><li>
+F. Rouessac and A. Rouessac, “Chemical Analysis: Modern Instrumentation Methods and Techniques”, Second Edition, 2007, John Wiley & Sons Ltd.
+</li><li>
+S. Beck, “Across the Spectrum: Instrumentation for UV/Vis Spectrophotometry”, The Scientist 12[3]:20, Feb. 02, 1998.
+</li><li>
+R. Sjöback, J. Nygren and M. Kubista,“Absorption and fluorescent properties of fluorescein” , SpectrochimicaActa Part A 51, L7 – L21(1995).
+</li><li>
+F. A. Settle (Editor), ‘Handbook of Instrumental Techniques for Analytical Chemistry”, Pearson Education Limited (2004). 
+</li><li>
+D. Harvey, “Modern Analytical Chemistry”, McGraw-Hill Education (2000).
+</li><li>
+T. Owen, “Fundamentals of modern UV-visible spectroscopy”, Primer, Agilent Technologies (2000).
+</li><li>
+“Fundamentals of UV-visible spectroscopy: Workbook”, Publication Number 5980-1398E, a primer from Agilent Technologies (2000). 
+</ol>
+      </div>
+
+      </section>
+      
+      <section id="lab-article-section-99">
+
+      <div id="lab-article-section-99-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="../?q=experiments"><img src="../images/experiments.jpg" /><p></p>Experiments</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-99-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-99-content" class="content">
+      </div>
+      </section>
+      
+      <section id="lab-article-section-100">
+
+      <div id="lab-article-section-100-icon" class="icon">
+      <!-- Enclose the icon image for the section. -->
+     <a href="http://virtual-labs.ac.in/feedback/?lab=ccnsb02"><img id="feedback" src="../images/feedback.jpg" /><p></p>Feedback</a>
+      </div>
+
+
+      <!-- The heading for the section can be enclosed in a 
+      div tag and shown with a <h2> tag -->
+      <div id="lab-article-section-100-heading" class="heading">
+      </div>
+
+      <!-- Write the section content inside a paragraph 
+      element, You can also include images with <img> tag -->
+      <div id="lab-article-section-100-content" class="content">
+      </div>
+      </section>
+
+
+      </div>	
+
+      <!-- An article can have a sidebar that contain related 
+      links and additional material (it is optional at this 
+      moment)-->
+      <aside id="lab-article-sidebar" class="default">
 	<!-- put the content that you want to appear in the 
-	sidebar-->	
-	</aside>
-
-	<!-- Article footer can display related content and 
-	additional links -->						
-	<footer id="lab-article-footer" class="default">
+        sidebar-->	
+      </aside>
+		
+      <!-- Article footer can display related content and 
+      additional links -->						
+      <footer id="lab-article-footer" class="default">
 	<!-- Put the content that you want to appear here-->
-	</footer>
+      </footer>
 
-	</article>
+    </article>
+	
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
 
-	<!-- Links to other labs, about us page can be kept the lab 
-	footer-->
-	<footer id="lab-footer" class="default">
-	<!-- Put the content here-->
-	</footer>
-
-	</div>
-	</body>
-	</html>
+</div>
+</body>
+</html>

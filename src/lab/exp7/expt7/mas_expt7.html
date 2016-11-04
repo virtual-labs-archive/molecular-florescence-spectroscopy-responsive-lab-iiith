@@ -1,0 +1,130 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : Sample Path Length Dependence of Absorbance (Lambert Law) 
+     Author : Rama Shanbhag -->
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <title>mas_7</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="mas_expt7.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="jQueryRotate.js"></script>
+        <script type="text/javascript" src="mas_expt7.js"></script>
+        <script type="text/javascript" src="mas7_animations.js"></script>
+
+        
+    </head>
+    <center>
+    <body id ="main" onload="initial_function()">  
+    <!-- Body is divided into three rows -->
+    <div class= "row">
+        <!-- First row consists of title of the experiment and the reset button -->
+        <h4>Determination of unknown concentration of an analyte by using the Beer-Lambert Law</h4><br/>
+        <center><button onclick = "location.reload()">Reset Experiment</button></center>
+    </div><br/>
+
+    <div class="row">
+    <!-- Second row consists of three columns with one column containing buttons ie manual and data, the other containing concentration scale and another containing shelf with apparatus -->
+        <div class="col-sm-6">
+            <!-- Manual button displays the set of instructions to be followed to perform experiment
+            On clicking this button a box modal appears over the page n displays the instruction -->
+            <!-- <button id="manual_button" style = "background-color: Transparent; border : none; position:absolute; left:70px;"><img src="images/manual_button.png"></button> -->
+            <img id="manual_button" src="images/manual_button.png" onmouseover="this.src='images/hover_manual.png';" onmouseout="this.src='images/manual_button.png'"><br/><br/>
+            <div id="manual" style = "z-index:1200" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- Consists of heading and close option-->
+                        <span class="close">&times</span>
+                        <h2>Manual</h2>
+                    </div>
+
+                     <div class="modal-body" style="text-align:left;">
+                            <p>1. Prepare a standard K2Cr2O7 aqueous solution of strength nearly 3×10-3 M in 0.01 N H2SO4 (for the experiments described here we have used a solution of strength = 3.16×10-3 M. This is used as stock solution.  </p>
+                            <p>2. From the above stock solution, prepare five different concentrations of K2Cr2O7 solutions: say, 0.158 mM, 0.316 mM, 0.474 mM, 0.632 mM, and 0.790 mM.   </p>
+                            <p>3. Switch on the computer and the instrument powers; wait for 30 minutes for ‘warm-up’ of the instrument.   </p>
+                            <p>4. In the instrument one can select light sources (UV and visible), choose the slit width, scan speed and %transmittance or absorbance display, wavelength range of interest, etc.   </p>
+                            <p>5. Take two clean and dry glass (only for visible range scan) or quartz cuvettes with a given path length (say, 1 cm).  </p>
+                            <p>6. Fill up one cuvette with sample blank (aq. 0.01 N H2SO4 in the present case) and the other cuvette with aqueous K2Cr2O7 solution with lowest concentration.  </p>
+                            <p>7. Place the sample blank in the reference holder and the sample in the sample holder.   </p>
+                            <p>8. Run the scan (A or %T versus λ).    </p>
+                            <p>9. Similarly spectral runs are done for all the other samples starting from the lowest concentrations to next higher concentrations of K2Cr2O7. Every time one should rinse the cuvette taking a small portion of the solution to be analyzed next.  </p>
+                            <p>10. Spectral run is carried out for the unknown K2Cr2O7 sample.  </p>
+                            <p>11. Now find out the wavelengths of maximum absorbance (λmax), the absorbance at a given λmax for all the concentrations of K2Cr2O7 and make a table containing these data. </p>
+                            <p>12. Construct a calibration plot by plotting absorbance versus concentration for a given λmax. Thus one construct two calibration plots for two peak positions of K2Cr2O7.  </p>
+                            <p>13. Determine the slopes of the calibration plots and hence the respective values of λ’s. </p>
+                            <p>14. Determine the concentration of the unknown K2Cr2O7 solution from two calibration plots.  </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+            <!-- <button id="data_button" style = "background-color: Transparent; border : none; position:absolute;bottom:0%; left:70px;"><img src="images/data_button.png" ></button> -->
+            <img id="data_button" src="images/data_button.png"  onmousemove="this.src='images/hover_data.png';" onmouseout="this.src='images/data_button.png'">
+
+            <div id = "scale">
+                <img id= "scale_image" src="images/scale.png">
+                <input type="range" id="conc_scale" min="1" max="5" step="1"> 
+                <p id ="solution_name">Concentration of patassium Dichromate</p>
+            </div>
+        </div>
+
+        <div class="col-sm-6"  id = "apparatus">
+            <!-- This column conatins the shelf dropdown box to choose the type of the solution and apparatus-->
+            <img class="" id = "shelf" src="images/only_shelf.png">
+            <select id="solution" >
+                <option value="k2cr2o7" selected>Potassium Dichromate</option>
+                <option value="unknown">Unknown Solution</option>
+            </select>
+            <!-- Every apparatus on the shelf as images -->
+            <img id="flask"  onclick="flask();" src="images/flask.png">
+
+            <img id="pipette"  onclick="pipette();" src="images/pipette.png">
+
+            <img id="beaker"  onclick="beaker();" src="images/beaker.png">
+
+            <img id="cuvette"  onclick="cuvette();" src="images/cuvette.png">
+        </div>
+    </div>
+    <br/><br/><br/>
+
+    <div class="row">
+        <!-- Third row consists of table with various devices on it  -->
+        <div class="col-sm-12" id="table">
+            <img  class=""  id = "table_with_spec" src="images/table_with_spec.png">
+
+            <img class="" id ="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img class="" id ="comp_trans_button" onclick="scan();" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img class="" id ="spectrolid_trans_button" onclick="spectrophotometer();" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <!-- <img id="ref_cuvette" class="" src="images/vertical_button.png"> -->
+            <img id = "reference" src = "images/reference.png" alt ="image">
+            <img id="ref_cuvette" class="">
+            <!-- text that shows the instructions to be followed next -->
+            <div id = "demo" ></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <button id="power_trans_button" onclick = "turnOn();showClock()"><img src="images/vertical_button.png"></button>
+        </div>
+    </div>
+
+    <!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+    <img id="clockScreen"  src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img  id="clockHand"  src="images/hand.png">
+    <!-- Image of the grayed background displayed as a background while scanning the sample -->
+    <img id="scan"  src="images/483.png">
+    <!-- Video that plots a graph for 0.02 concentration sample -->
+    <video id="plot_graph"  ><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <!-- Transparent image button to close the scanning page -->
+    <img  id = "disposegraph"  onclick="disposeGraph();" src="images/vertical_button.png">
+</body>
+</center>
+</html>

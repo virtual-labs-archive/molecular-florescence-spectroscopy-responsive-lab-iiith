@@ -1,0 +1,154 @@
+<!-- Lab : Molecular absorption spectroscopy 
+     Experiment : pH effects on absorption spectra: pKa determination by spectrophotometric method
+     Author : Harsha Vattem -->
+<!DOCTYPE html> 
+<html>     
+  <head>
+
+    <meta charset="utf-8">
+    <title>pH effects on absorption spectra: pKa determination by spectrophotometric method</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mas_expt9.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="jQueryRotate.js"></script>
+    <script type="text/javascript" src="expt9.js"></script>
+    <script type="text/javascript" src="mas9_animations.js"></script>
+    
+  </head>
+  <center>
+  <body id ="main" onload="initial_function()">  
+    <!-- Body is divided into three rows -->
+    <div class= "row">
+        <!-- First row consists of title of the experiment and the reset button -->
+        <h4>pH effects on absorption spectra: pKa determination by spectrophotometric method</h4><br/>
+        <center><button onclick = "location.reload()">Reset Experiment</button></center>
+    </div><br/>
+
+    <div class="row" >
+      <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+      <div class="col-sm-6">
+        <!-- Manual button displays the set of instructions to be followed to perform experiment
+             On clicking this button a box modal appears over the page n displays the instruction -->
+        <!-- <button id="manual_button" style = "background-color: Transparent; border : none; position:absolute; left:25%;"><img src="images/manual_button.png"></button> -->
+        <img id="manual_button" src="images/manual_button.png" onmouseover="this.src='images/hover_manual.png';" onmouseout="this.src='images/manual_button.png'"><br/><br/>
+        
+
+        <div id="manual" style = "z-index:1000" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times</span>
+              <h2>Manual</h2>
+            </div>
+
+            <div class="modal-body" style="text-align:left;font-size:18px;">
+            <p>
+              <ol>
+                  <li>Prepare the following solutions: (i) a 0.5g/L methyl orange solution by dissolving 0.05 g methyl orange in 100 mL distilled water; (ii) a 0.2 M disodium hydrogen orthophosphate (Na<sub>2</sub>HPO<sub>4</sub>) solution by dissolving 5.68 g Na<sub>2</sub>HPO<sub>4</sub> in 200 mL distilled water; and (iii) a 0.1 M citric acid solution by dissolving 9.61 g citric acid in 500 mL distilled water.
+                  </li><li>Prepare eight buffer solutions by mixing varying amounts of the Na<sub>2</sub>HPO<sub>4</sub> solution and the citric acid solution as given in Table 1.
+                  </li><li>Divide each buffer solution into two equal portions of 25 mL volume.
+                  </li><li>Add 0.5 mL of methyl orange solution to one 25 mL portion of each buffer solution. Absorbance measurements of the buffer solutions containing the methyl orange indicator have to be carried out against the other portions of buffer as the reference or sample blank. These sample solutions are shown on a selection scale. 
+                  </li><li>Switch on the computer and the instrument powers; wait for 30 minutes for ‘warm-up’ of the instrument.
+                  </li><li>In the instrument one can select light sources (UV and visible), choose the slit width, scan speed and %transmittance or absorbance display, wavelength range of interest, etc.
+                  </li><li>Take a clean and dry or properly rinsedquartz cuvette with a given path length (say, 1 cm).
+                  </li><li>Fill up one cuvette with sample blank (pure buffer solution) and the other cuvette with corresponding buffer solution containing methyl orange solution.
+                  </li><li>Place the sample blank in the reference holder and the sample in the sample holder.
+                  </li><li>Run the scan (A versus &lambda;) for each samplein the wavelength range from 300 to 650 nm.
+                  </li><li>Now find out the wavelengths of maximum absorbance (&lambda;<sub>max</sub>), corresponding absorbance, the absorbance at <sup>InH<sup>+</sup></sup>&lambda;<sub>max</sub> for all the pH values and make a table containing these data (Table 2).
+                  </li><li>Discuss how &lambda;<sub>max</sub> and corresponding absorbance vary with pH of the solution.
+                  </li><li>Calculate pK<sub>a</sub> for each pH value. Find the average pK<sub>a</sub>.
+                  </li><li>Plot pH vs. log([In]/[InH<sup>+</sup>]). Determine pK<sub>a</sub> from the intersection of the line with the pH axis.
+                  </li><li>Compare the graphically determined pK<sub>a</sub> value with the calculated average pK<sub>a</sub> value.
+                  </li><li>Determine the acid dissociation constant, K<sub>a</sub> for methyl orange.</li> </ol> </p>
+              </ol>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Data button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs for three different path length is opened  -->
+      <!-- <button id="data_button" style = "background-color: Transparent; border:none; position:absolute;bottom:0%; left:25%;"><img src="images/data_button.png" ></button> -->
+      <img id="data_button" src="images/data_button.png"  onmousemove="this.src='images/hover_data.png';" onmouseout="this.src='images/data_button.png'"><br/><br/><br/>
+      <img id ="image_slider" src="images/slider.png" >
+      <input type="range" id="ph_scale" min="0" max="7" step="1" value="0" >
+  </div>
+ 
+  <div class="col-sm-6"  id = "apparatus">
+      <!-- This column conatins the shelf -->
+      <img class="" id = "shelf" src="images/shelf.png">
+      <!-- A transparent button is placed on top of every apparatus on the shelf. -->
+      <img id="flask" class="" onclick="moveFlask();" src="images/buffer.png">
+
+      <img id="pipette2" class="" onclick="movePipette2();" src="images/pipette2.png">
+
+      <img id="pipette1" class="" onclick="movePipette1();" src="images/pipette1.png">
+
+      <img id="beaker" class="" onclick="moveBeaker();" src="images/beaker.png">
+
+      <img id="cuvette" class=""  onclick="moveCuvette();" src="images/cuvette.png">
+
+      <img id="methorange" class="" src="images/orangeflask.png">
+     
+  </div>
+
+</div><br/><br/><br/>
+
+<div class="row">
+        <!-- Third row consists of table with various devices on it  -->
+        <div class="col-sm-12" id="table">
+            <img  class=""  id = "table_with_spec" src="images/table_with_spec.png">
+
+            <img class="" id ="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img class="" id ="comp_trans_button" onclick="scan();" src="images/vertical_button.png">
+            <!-- button to open and close the spectrophotometer lid -->
+            <img class="" id ="spectrolid_trans_button" onclick="spectrophotometer();" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <!-- <img id="ref_cuvette" class="" src="images/vertical_button.png"> -->
+            <img id = "reference" src = "images/reference.png" >
+            <img id="ref_cuvette" class="">
+            <!-- text that shows the instructions to be followed next -->
+            <div id = "demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <button id="power_trans_button" onclick = "turnOn();showClock()"><img src="images/vertical_button.png"></button>
+        </div>
+</div>
+
+<!-- Image of the face of the clock which is displayed on switching on the spectrophotometer -->
+<img class="" id="clockScreen" src="images/clock.png">
+<!-- Image of the hand of the clock -->
+<img class="" id="clockHand"  src="images/hand.png">
+<!-- Image of the greyed background displayed as a background while scanning the sample -->
+<img class="" id="scan"  src="images/483.png">
+<!-- Video that plots a graph for pH 2.2 sample -->
+<video id="ph22_graph" ><source src="images/ph22.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 2.6 sample -->
+<video id="ph26_graph" ><source src="images/ph26.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 3.0 sample -->
+<video id="ph30_graph"  ><source src="images/ph30.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 3.4 sample -->
+<video id="ph34_graph" ><source src="images/ph34.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 3.8 sample -->
+<video id="ph38_graph" ><source src="images/ph38.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 4.2 sample -->
+<video id="ph42_graph" ><source src="images/ph42.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 4.6 sample -->
+<video id="ph46_graph" ><source src="images/ph46.mp4" type="video/mp4"></video>
+<!-- Video that plots a graph for pH 5.2 sample -->
+<video id="ph52_graph" ><source src="images/ph52.mp4" type="video/mp4"></video>
+<!-- Transparent image button to close the scanning page -->
+<img class="" id = "disposegraph" onclick="disposeGraph();" src="images/vertical_button.png">
+</body>
+</center>
+</html>
+
+
+
+
+
+
+
