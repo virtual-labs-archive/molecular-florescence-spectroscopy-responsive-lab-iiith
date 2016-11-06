@@ -253,12 +253,12 @@ function okBtn(){
 function disposeGraph(){
         // After playing the graph plotting video close option is choosen, the background scan image and the video is hidden.
         if(step_no==12){
-            $(".videos, #scan").css("visibility", "hidden");
+            $("#video1, #scan").css("visibility", "hidden");
             document.getElementById('demo').innerHTML = "Step-No 14:To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor.Select the Emission Scan Mode on the screen.";
             step_no++;
         }
         else if(step_no == 15){
-            $(".videos, #scan").css("visibility", "hidden");
+            $("#video2, #scan").css("visibility", "hidden");
             document.getElementById('demo').innerHTML ="Click on Reset button to start over the measurements.";
         }
 }
