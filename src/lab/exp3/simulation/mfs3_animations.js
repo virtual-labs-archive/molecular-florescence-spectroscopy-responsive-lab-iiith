@@ -141,9 +141,9 @@ function moveCuvette(){
 
             }, 3000);
 
-            setTimeout(function(){
-                $("#cuvette").animate({left:'29px', top:'5px', width:'3%'});
-            }, 4000);
+            // setTimeout(function(){
+            //     $("#cuvette").animate({left:'29px', top:'5px', width:'3%'});
+            // }, 4000);
 
             // Change the next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 20: Close the sample chamber lid by clicking on it.";
