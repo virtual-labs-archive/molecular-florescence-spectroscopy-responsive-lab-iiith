@@ -16,40 +16,33 @@
     var type_of_movement;// Indicates upward or downward motion
     var step_no=0;// This variable is used to perform all the actions in the required sequence. Depending on the value of this variable the part of the method is called.
     //variables to display the instructions.
-    var instruction1 = "Step1: Prepare a 4.1 × 10<sup>-6</sup> M fluorescein solution in spectroscopy grade ethanol from a 8.2 × 10<sup>-4</sup> M fluorescein stock solution. Click on the volumetric flask containing the fluorescein solution to take it onto the instrument table.";
  
-// *This method is called when the page is loaded. *
-// first function helps in providing basic functionality to two buttons manual and data and also sets the first set of instructions
-// second function adds click events to elements as soon as the page loads.
-// third function adds mouse events to elements as soon as the page loads.
+/*This method is called when the page is loaded. *
+   First function helps in providing basic functionality to manual button and also sets the first set of instructions.
+   Second function adds click events to elements as soon as the page loads.
+   Third function adds mouse events to elements as soon as the page loads. */
 window.onload = function(){ 
-    initial_function();
-    addclickEvents();
-    mouseEvents();
+        initial_function();
+        addclickEvents();
+        mouseEvents();
 }
 
 function initial_function(){
-        // Intial intrsuction to be followed
-        document.getElementById("demo").innerHTML = instruction1;
-
+        // Intial instruction to be followed
+        document.getElementById("demo").innerHTML = "Step1: Prepare a 4.1 × 10<sup>-6</sup> M fluorescein solution in spectroscopy grade ethanol from a 8.2 × 10<sup>-4</sup> M fluorescein stock solution. Click on the volumetric flask containing the fluorescein solution to take it onto the instrument table.";
         var modal = document.getElementById('manual');
-
         // Get the button that opens the manual modal
         var btn = document.getElementById("manual_button");
-
         // Get the <span> element that closes the manual modal
         var span = document.getElementsByClassName("close")[0];
-
         // When the user clicks the button, open the manual modal 
         btn.onclick = function() {
             modal.style.display = "block";
         }
-
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
         }
-
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
@@ -58,7 +51,7 @@ function initial_function(){
         }
 }
 
-// When user clicks on the Data button it redirects him to the page containing slideshow of two graphs 
+// When user clicks on the Data button it redirects him to the page containing slideshows of the two graphs. 
 function popitup(url) {
         // Opens a new browser window called newwindow. url specifies the URL of the page to open.
         newwindow=window.open(url,'name','height=390,width=350',"_parent");
@@ -71,6 +64,9 @@ function popitup(url) {
 
 //This function is used to add click events to elements
 function addclickEvents(){
+        document.getElementById("reset_btn").addEventListener("click", function() {
+            reload();
+        }, false);
         document.getElementById("data_button").addEventListener("click", function() {
             popitup("slideshow.html");
         }, false);
@@ -122,8 +118,8 @@ function mouseEvents(){
         });
 }
 
-// When the user switches on the spectrofluorimeter this method is called. Here the spectrofluorimeter image is changed 
-// continuously  to give the blinking light effect. The two images that are swapped is stored in images[]
+/*When the user switches on the spectrofluorimeter this method is called. Here the spectrofluorimeter image is changed 
+continuously  to give the blinking light effect. The two images that are swapped is stored in images[]*/
 function turnOn() {
         // Get the image
         img = document.getElementById('table_with_spec');
@@ -138,7 +134,8 @@ function turnOn() {
         setTimeout("turnOn()", 250);
 }
 
-// This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; when this method is called they are amde visible and the clock hand is made to rotate.  
+/*This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
+when this method is called they are made visible and the clock hand is made to rotate.  */
 function showClock(){
         if(step_no==6){
             // Get the images.
@@ -166,8 +163,8 @@ function removeClock() {
         document.getElementById("demo").innerHTML = "Step-No 8: Click on the lid of sample chamber of the spectrofluorimeter to open it for placing the sample in the instrument";
 }
 
-// First time its called to open the spectrofluorimeter
-// Second time its called to close the spectrofluorimeter
+/* First time its called to open the spectrofluorimeter.
+   Second time its called to close the spectrofluorimeter. */
 function spectrofluorimeter(){
         if (step_no == 7){
             // Replace the spectrofluorimeter images with the open spectrofluorimeter images
@@ -188,15 +185,15 @@ function spectrofluorimeter(){
 
 // This method is used to display the elements which are used for data validation.
 function scan(){
-        //displays the data validation elements by clicking on screen.
+        //displays the data validation elements by clicking on the computer screen.
         if(step_no==10){
-            // After the cuvette are inserted into the spectrofluorimeter, when the computer in pressed to scan, appropriate graph video is obtained.
+            //To run the excitation scan mode.
             $(".data_validation, #scan").css("visibility", "visible");
             document.getElementById("demo").innerHTML = "Step-No 12:On the screen enter the Emission wavelength : 515nm, Excitation start wavelength:300nm and Excitation end wavelength: 600nm. One chooses the Excitation slit (nm) and Emission Slit (nm) values (here 2.5nm/2.5nm) and the scan speed value (here 'medium') also.";            
             step_no++;
         }
         else if(step_no==13){
-            //To run the emission scan mode on clicking on the computer screen.
+            //To run the emission scan mode.
             $(".data_validation, #scan").css("visibility", "visible");
             document.getElementById("demo").innerHTML = "Step-No 15:To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor.Select the emission scan mode on the screen.";
             step_no++;        
@@ -205,21 +202,21 @@ function scan(){
 
 //This method is used to select the specific graph from the dropdown menu.
 function selectGraph() {
-    dropdown = document.getElementById("select");
-    dropdown.onchange = function(event){
-       if(dropdown.value=="Emission" && step_no==11){
-         $("#select").html("<option value='Excitation'>Excitation</option><option value='Emission'>Emission</option>");
-         alert("Select Excitation scan mode");
-       }
-       else if(dropdown.value=="Excitation" && step_no==14){
-         $("#select").html("<option value='Emission'>Emission</option><option value='Excitation'>Excitation</option>");
-         alert("Select Emission scan mode");
-       }
-       else if(dropdown.value=="Emission" && step_no==14){
-         document.getElementById('demo').innerHTML = "On the screen, enter the Excitation wavelength: 425 nm, Emission Start Wavelength: 435 nm and Emission End wavelength: 700 nm. Emission Start Wavelength value should be larger than the excitation wavelength. Often the the maximum absorbance wavelength is chosen as the excitation wavelength. The Emission End Wavelength value depends on the sample, instrument, etc. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 2.5 nm/2.5 nm) and the scan speed value (here “medium” ) also.";
-       }
+        dropdown = document.getElementById("select");
+        dropdown.onchange = function(event){
+           if(dropdown.value=="Emission" && step_no==11){
+             $("#select").html("<option value='Excitation'>Excitation</option><option value='Emission'>Emission</option>");
+             alert("Select Excitation scan mode");
+           }
+           else if(dropdown.value=="Excitation" && step_no==14){
+             $("#select").html("<option value='Emission'>Emission</option><option value='Excitation'>Excitation</option>");
+             alert("Select Emission scan mode");
+           }
+           else if(dropdown.value=="Emission" && step_no==14){
+             document.getElementById('demo').innerHTML = "On the screen, enter the Excitation wavelength: 425 nm, Emission Start Wavelength: 435 nm and Emission End wavelength: 700 nm. Emission Start Wavelength value should be larger than the excitation wavelength. Often the the maximum absorbance wavelength is chosen as the excitation wavelength. The Emission End Wavelength value depends on the sample, instrument, etc. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 2.5 nm/2.5 nm) and the scan speed value (here “medium” ) also.";
+           }
 
-    }
+        }
 }
 
 //This method is used to validate the correct data and display particular graph.
@@ -229,7 +226,7 @@ function okBtn(){
         var input3 = document.getElementById("input3").value;
         video1 = document.getElementById("video1");
         video2 = document.getElementById("video2");
-        // dropdown = document.getElementById("select");
+        //validation for the excitation scan mode.
         if(input1 == 515 && input2 == 300 && input3 == 600 && step_no == 11 ){
                 $(".data_validation").css("visibility", "hidden");
                 video1.style.visibility = "visible";
@@ -237,6 +234,7 @@ function okBtn(){
                 video1.play();
                 step_no++;
         }
+        //validation for the emission scan mode.
         else if(input1 == 425 && input2 == 435 && input3 == 700 && step_no == 14 && dropdown.value == "Emission"){
                 $(".data_validation").css("visibility", "hidden");
                 video2.style.visibility = "visible";

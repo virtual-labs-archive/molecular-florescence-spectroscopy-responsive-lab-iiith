@@ -1,5 +1,4 @@
-// This file contains all the functions used in animation of the images in the experiment
-
+// This file contains all the functions which are used to animate the images in the experiment.
 // This function is a general method used to move images from initial position to final position.
 function moveImage(){
         id = setInterval(frame, 5);
@@ -9,9 +8,7 @@ function moveImage(){
                     clearInterval(id);
                  } else {
                     initial_top+=step_top; 
-                    // console.log(initial_top);
                     initial_left+=step_left;
-                    // console.log(initial_left);
                     elem.style.top = initial_top + 'px'; 
                     elem.style.left = initial_left + 'px'; 
 
@@ -33,7 +30,7 @@ function moveImage(){
 
 // This is the function called when flask is clicked. It moves the flask from the shelf to the table.
 function moveFlask(){
-        if(step_no==0){
+        if(step_no==0){	
             // Get image
             elem = document.getElementById("round-bottom-flask"); 
             //Detect thecurrent position of the flask.
@@ -48,24 +45,22 @@ function moveFlask(){
             moveImage();
             // Change to next intsruction to be followed. 
             document.getElementById("demo").innerHTML = "Step-No 2:Take an all-side-transparent quartz cuvette (path length, 1 cm ×1 cm) by clicking on it.";
-            step_no++;
+            step_no++;        
         }
 }
 
-// This is the function called when cuvette is clicked. 
+/*This is the function called when cuvette is clicked. 
 // It moves the cuvette from the shelf to the table when it is clicked for the first time.
-// when it is called for the second time moves the cuvette to the spectroflurimeter lid. 
+// when it is called for the second time it moves the cuvette to the spectroflurimeter lid.*/
 function moveCuvette(){
         if ( step_no == 1){
-            // get the image of the shelf
+            // get the image.
             elem = document.getElementById("cuvette"); 
-            // Move the cuvette from the shelf to the table
-            //elem.style.width = "3%";
-            // Detect the current position of the flask.
+            // Detect the current position of the cuvette.
             initial_top = Math.round($('#cuvette').position().top);
             initial_left = Math.round($('#cuvette').position().left);
             // Initialise all the values for the motion of the images.
-            final_top = 354;
+            final_top = 364;
             step_top = 1;
             step_left = -0.1;
             type_of_movement = 0;
@@ -85,7 +80,7 @@ function moveCuvette(){
             // Initialise all the values for the motion of the images.
             final_top = 221;
             step_top = -0.5;
-            step_left = -1.72;
+            step_left = -1.61;
             type_of_movement = 1;
             // Move it to a position over the spectrofluorimeter.
             moveImage();
@@ -120,15 +115,16 @@ function hideCuvette(){
         document.getElementById("demo").innerHTML = "Step-No 10 : Click the lid of the sample chamber by clicking on the lid";
 }
 
-//This method is called whan the pipette is clicked.
+/*This method is called when the pipette is clicked.
 //when it is clicked for the first time it is moved from the shelf to the flask on the table.
 //When it is called for the second time pipette extracts the solution from the flask.
 //when it is called for the third time pipettte is moved out of the flask to the cuvette.
-//When it is called for the fourth time it tranfers the solution into the cuvette and moves back to the shelf again.
+//When it is called for the fourth time it tranfers the solution into the cuvette and moves back to the shelf again.*/
 function movePipette() {
         if ( step_no == 2){
             // Get image
-            elem = document.getElementById("pipette"); 
+            elem = document.getElementById("pipette");
+            //Rotates the pipette while it is moved to the flask on the table.
             var angle=0;
             var id = setInterval(function(){
             angle+=1;
@@ -143,9 +139,9 @@ function movePipette() {
             // Initialise all the values for the motion of the images.
             final_top = 258;
             step_top = 1;
-            step_left = -0.05;
+            step_left = -0.03;
             type_of_movement = 0;
-            // Move the beaker image to desired position.
+            // Move the pipette image to desired position.
             moveImage();
             // Change to next intsruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 5: Click on the pipette to draw solution into it.";
@@ -153,16 +149,13 @@ function movePipette() {
         }
 
         else if(step_no==3){
-            elem.src = "images/pipette-with-solution1.png";
-            img = document.getElementById("round-bottom-flask");
-            img.src = "images/half-filled-round-bottom-flask.png"
+            $("#round-bottom-flask").attr("src","images/half-filled-round-bottom-flask.png");
+            elem.src = "images/pipette-with-solution.png";
             // Change to next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 5: Click on the pipette to take it out of the volumetric flask.";
-            step_no += 1;
+            step_no ++;
         }
         else if(step_no == 4){
-            initial_top = Math.round($('#pipette').position().top);
-            initial_left = Math.round($('#pipette').position().left);
              $("#pipette").animate({ top: '200px'},"slow")
                           .animate({ left:'320px'}, "slow")
                           .animate({ top: '245px'}, "slow");
@@ -171,11 +164,10 @@ function movePipette() {
             step_no ++;
         }
         else if(step_no == 5){
-            $("#pipette").attr("src", "images/pipette1.png");
             $("#cuvette").attr("src", "images/cuvette-with-solution.png");
-            step_no ++;
+            elem.src = "images/pipette.png";
             setTimeout(movebackPipette, 200);
-          }
+        }
 }
 
 //This function is used to move the pipette back to the shelf.
@@ -191,8 +183,9 @@ function movebackPipette() {
           type_of_movement = 1;
           // Move it to the shelf
           moveImage();
-          document.getElementById('table_with_spec').src = "images/spectro_greenbutton.png";
+          $("#table_with_spec").attr("src", "images/spectro_greenbutton.png");
           document.getElementById("demo").innerHTML = "Step-No 7: To start the fluorescence measurement turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.";
+          step_no++;
 }
 
 
