@@ -15,41 +15,36 @@
     var img,img1;
     var id,id1;
     var type_of_movement;// Indicates upward or downward motion
-    var step_no=0;// This variable is used to perform all the actions in the required sequence. Depending on the value of this variable the part of the method is called.
+    var step_no=0;   /*This variable is used to perform all the actions in the required sequence. 
+                      Depending on the value of this variable the part of the method is called.*/
     var sol_name;
 
-// *This method is called when the page is loaded. *
+/*This method is called when the page is loaded. 
 // first function helps in providing basic functionality to manual button and also sets the first set of instructions
 // second function adds click events to elements as soon as the page loads.
-// third function adds mouse events to elements as soon as the page loads.
+// third function adds mouse events to elements as soon as the page loads. */
 window.onload = function(){ 
     initial_function();
     addclickEvents();
     mouseEvents();
 }
-//It helps in providing basic functionality to two buttons manual and data and also sets the first set of instructions
+//It helps in providing basic functionality to manual button and also sets the first set of instructions.
 function initial_function(){
         // Intial intrsuction to be followed
         document.getElementById("demo").innerHTML = "Step-No 1: Prepare a 1.3×10<sup>-4</sup> M solution of anthracene in cyclohexane and a 2.3×10<sup>-4</sup> M solution of quinine sulfate in aqueous 0.5 M H2SO4. The solution concentrations are chosen such that optical densities are less than 0.1 at the excitation wavelength. Here the solutions are taken in two volumetric flasks. Select a solution from the scale bar above.";
-
         var modal = document.getElementById('manual');
-
         // Get the button that opens the manual modal
         var btn = document.getElementById("manual_button");
-
         // Get the <span> element that closes the manual modal
         var span = document.getElementsByClassName("close")[0];
-
         // When the user clicks the button, open the manual modal 
         btn.onclick = function() {
             modal.style.display = "block";
         }
-
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
         }
-
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
@@ -69,8 +64,11 @@ function popitup(url) {
         return false;
 }
 
-//This function is used to add click events to elements
+//This function is used to add click events to elements.
 function addclickEvents(){
+        document.getElementById("reset_btn").addEventListener("click", function() {
+            location.reload();
+        }, false);
         document.getElementById("data_button").addEventListener("click", function() {
             popitup("slideshow.html");
         }, false);
@@ -128,7 +126,6 @@ function mouseEvents(){
         });
 }
 
-
 //This specifies the solution to be used when the input button is clicked
 function setSolution(){
       sol_name = document.getElementById("slider").value;
@@ -143,8 +140,8 @@ function setSolution(){
       document.getElementById("demo").innerHTML = "Step-No 2: Click on the volumetric flask containing anthracene solution to take it to the instrument table.";
 }
 
-// When the user switches on the spectrophotometer this method is called. Here the spectrophotometer image is changed 
-// continuously  to give the blinking light effect. The two images that are swapped is stored in images[]
+/* When the user switches on the spectrophotometer this method is called. Here the spectrophotometer image is changed 
+   continuously  to give the blinking light effect. The two images that are swapped is stored in images[] */
 function turnOn() {
         // Get the image
         img = document.getElementById('table_with_spec');
@@ -163,8 +160,7 @@ function turnOn() {
         }
 }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-
+//Common function to make the clock visible and rotate it.
 function clck(){
         // Get the images.
         context=document.getElementById('clockScreen');
@@ -183,8 +179,9 @@ function clck(){
         },30);
 
 }
-
-// This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; when this method is called they are amde visible and the clock hand is made to rotate.  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+/* This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
+when this method is called they are amde visible and the clock hand is made to rotate.  */
 function showClock(){
         if(step_no==7){
             clck();
@@ -212,14 +209,13 @@ function removeClock() {
 // First time its called to open the spectrophotometer
 // Second time its called to close the spectrophotometer
 function spectrophotometer(){
-
         if (step_no == 8){
             // Replace the spectrophotometer images with the open spectrophotometer images
             images[0] = "images/spec_open.png";
             images[1] = "images/spec_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 10: Click on the cuvette top place it in the sample holder. One has to use pure solvent as the sample bank or reference in this measurement. Here a double beam spectrophotometer is shown.";
             step_no++;
-            }
+        }
         else if(step_no == 10){
             // Replace the spectrophotometer images with the closed spectrophotmeter images.
             images[0] = "images/spec_close.png";
@@ -240,7 +236,7 @@ function spectrophotometer(){
             $("#ref_cuvette").animate({left:'800px',top:'15px'},"slow", function(){
                 this.remove();
             });
-            $("#quartz_cuvette").animate({left:'290px', top:'330px', width:'6%'});
+            $("#quartz_cuvette").animate({left:'290px', top:'338px'});
             document.getElementById("demo").innerHTML = "Step-No 16:  Close the sample chamber lid by clicking on it. ";
             step_no++;
 
@@ -253,7 +249,7 @@ function spectrophotometer(){
             document.getElementById("demo").innerHTML = "Step-No 17: Click on the pop-up: 'Start Fluorescence measurement'";
             setTimeout( function(){
             $("#popup, #start").css("visibility", "visible");
-          }, 1000);
+            }, 700);
             step_no++;
         }
         else if(step_no == 18){
@@ -277,8 +273,8 @@ function spectrophotometer(){
 // This method is used to play a video which shows constructing graphs based on their sample path length. 
 function scan(){
         if(step_no==11){
-            // After the cuvettes are inserted into the spectrophotometer, when the computer in pressed to scan, depending on the cuvette choosen form with an instruction is displayed.
-            //displays the data validation form by clicking on screen.
+            /*After the cuvettes are inserted into the spectrophotometer, when the computer in pressed to scan,
+             depending on the cuvette choosen form with an instruction is displayed.*/
             $(".data_validation, #instruction_bkgd, #graph_instruction").css("visibility", "visible");
             if(sol_name == 0){
                 graph_instruction.innerHTML = "Step-No 13:On the screen enter the wavelength range of spectral scan.  start: 620 nm End: 260 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A)  or transmittance (%T) mode. Click on the green 'start' button on the measurement set-up screen to run the wavelength scan.";
@@ -287,8 +283,9 @@ function scan(){
             }
         }
         else if(step_no == 21){
-            // After the cuvette are inserted into the spectrofluorimeter, when the computer in pressed to scan, appropriate graph video is obtained.
-            $(".data_validation1, #scan").css("visibility", "visible");
+            /*After the cuvette is inserted into the spectroflurimeter, when the computer in pressed to scan,
+             depending on the cuvette choosen form with an instruction is displayed.*/
+            $(".data_validation1, #popup").css("visibility", "visible");
             document.getElementById("demo").innerHTML = "Step-No 22: On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 360 nm and Emission End wavelength: 650 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here “medium”) also.  To run the wavelength scan for emission spectrum, click on 'OK' button on the set-up screen. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. ";
             step_no++;
         }
@@ -299,10 +296,9 @@ function startBtn(){
         input2 = document.getElementById("input2").value;
         video1 = document.getElementById("video1");
         video2 = document.getElementById("video2");
-        // var context = document.getElementById('scan');
         if(sol_name== 0 &&  input1 == 620 && input2 == 260){
             $(".data_validation").css("visibility", "hidden");
-            $("#scan, #video1").css("visibility", "visible");
+            $("#popup, #video1").css("visibility", "visible");
             document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
             video1.play();
             step_no++;
@@ -310,7 +306,7 @@ function startBtn(){
             
         else if(sol_name == 1 && input1 == 600 && input2 == 260){
             $(".data_validation").css("visibility", "hidden");
-            $("#scan, #video2").css("visibility", "visible");
+            $("#popup, #video2").css("visibility", "visible");
             document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
             video2.play();
             step_no++;
@@ -361,14 +357,15 @@ function okBtn(){
 
 //This method makes the graph hidden once the video is played and close is pressed. 
 function disposeGraph(){
-        // After playing the graph plotting video close option is choosen, the background scan image and the video is mafde hidden.
+        /* After playing the graph plotting video close option is choosen, the background scan image and 
+            the video is mafde hidden. */
         if(step_no == 12){
-            $(".videos, .common").css("visibility", "hidden");
+            $(".videos, .common, #popup").css("visibility", "hidden");
             document.getElementById("demo").innerHTML = "Step-No 15: To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. ";
             step_no++;
         }
         if(step_no == 23){
-            $(".videos, #scan").css("visibility", "hidden");
+            $(".videos, #popup").css("visibility", "hidden");
             document.getElementById("demo").innerHTML = "Collect all data by clicking on the Data tab.";
         }
 }

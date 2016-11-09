@@ -1,4 +1,4 @@
-// This file contains all the functions used in animation of the images in the experiment
+// This file contains all the functions used to animate the images in the experiment.
 
 // This function is a general method used to move images from initial position to final position.
 function moveImage(){
@@ -7,42 +7,36 @@ function moveImage(){
             if(type_of_movement == 0){
                 if (initial_top > final_top) {
                     clearInterval(id);
-                 } else {
+                } else {
                     initial_top+=step_top; 
-                    // console.log(initial_top);
                     initial_left+=step_left;
-                    // console.log(initial_left);
                     elem.style.top = initial_top + 'px'; 
-                    elem.style.left = initial_left + 'px'; 
-
+                    elem.style.left = initial_left + 'px';
                 }
             }
             else if(type_of_movement == 1){
                 if (initial_top < final_top) {
                     clearInterval(id);
-                 } else {
+                } else {
                     initial_top+=step_top; 
                     initial_left+=step_left;
                     elem.style.top = initial_top + 'px'; 
                     elem.style.left = initial_left + 'px'; 
-                    
                 }
             }
         } 
 }
 
-// This is the function called when flask is clicked. 
-// It moves the flask from the shelf to the table.
+// This is the function called when flask is clicked. It moves the flask from the shelf to the table.
 function moveFlask(){
         if(step_no == 0){
-            empty_flask = document.getElementById("round-bottom-flask").src;
-            if(empty_flask == "images/empty-round-bottom-flask.png")
+            if(sol_name == undefined)
             {
               alert("please first select the solvent from the solvent selection bar");
             }
             else{
-              // Get image
-            elem = document.getElementById("round-bottom-flask"); 
+            // Get image
+            elem = document.getElementById("round-bottom-flask");
             //Detect thecurrent position of the flask.
             initial_top = Math.round($('#round-bottom-flask').position().top);
             initial_left = Math.round($('#round-bottom-flask').position().left);
@@ -63,19 +57,20 @@ function moveFlask(){
       }
 }
 
-// This is the function called when cuvette is clicked. 
+/* This is the function called when cuvette is clicked. 
 // It moves the cuvette from the shelf to the table when it is clicked for the first time.
-// When it is called for the second time it is moved to the spectrometer along with reference cuvette and the cuvettes gets hidden.
+// When it is called for the second time it is moved to the spectrometer along with reference cuvette 
+   and the cuvettes gets hidden. */
 function moveCuvette(){
         if ( step_no == 1){
-            // get the image of the shelf
+            // get the image 
             elem = document.getElementById("quartz_cuvette"); 
             // Move the cuvette from the shelf to the table
-            // Detect the current position of the flask.
+            // Detect the current position of the cuvette.
             initial_top = Math.round($('#quartz_cuvette').position().top);
             initial_left = Math.round($('#quartz_cuvette').position().left);
             // Initialise all the values for the motion of the images.
-            final_top = 332;
+            final_top = 338;
             step_top = 1;
             step_left = -0.2;
             type_of_movement = 0;
@@ -95,7 +90,7 @@ function moveCuvette(){
             // Initialise all the values for the motion of the images.
             final_top = 221;
             step_top = -0.5;
-            step_left = -1.90;
+            step_left = -1.88;
             type_of_movement = 1;
             // Move it to a position over the spectrophotometer.
             moveImage();
@@ -111,22 +106,31 @@ function moveCuvette(){
             initial_top = Math.round($('#cuvette').position().top);
             initial_left = Math.round($('#cuvette').position().left);
             // Initialise all the values for the motion of the images.
-            final_top = 332;
+            final_top = 334;
             step_top = 1;
-            step_left = -0.2;
+            step_left = -0.25;
             type_of_movement = 0;
             // Move it to the table.
             moveImage();
         
             setTimeout(function(){
-                $("#quartz_cuvette").animate({top:"317px"},
+                quartz = $("#quartz_cuvette");
+                quartz.animate({top:"317px"},
                     function(){
                         var angle=0;
                         var id = setInterval(function(){
                         angle+=1;
                         if(angle>=40){
                             clearInterval(id);
-                            elem.src="images/cuvette-with-sol2.png";
+                            if(sol_name == 0){
+                                elem.src="images/cuvette-with-sol1.png";
+                                quartz.attr("src", "images/quartz-cuvette.png");
+
+                            }
+                            if(sol_name == 1){
+                                elem.src="images/cuvette-with-sol2.png";
+                                quartz.attr("src", "images/quartz-cuvette.png");
+                            }
                         }
                         $("#quartz_cuvette").rotate(angle);
                         },10); 
@@ -135,15 +139,15 @@ function moveCuvette(){
             ,1500);
 
             setTimeout(function(){
-                $("#quartz_cuvette").rotate(0);
-                $("#quartz_cuvette").animate({top:"328px"});
-                $("#quartz_cuvette").attr("src", "images/quartz-cuvette.png");
-
+                quartz.rotate(0);
+                quartz.animate({top:"331px"});
             }, 3000);
 
-            // setTimeout(function(){
-            //     $("#cuvette").animate({left:'29px', top:'5px', width:'3%'});
-            // }, 4000);
+            setTimeout(function(){
+                $("#cuvette").animate({left:'-142px',top:'288px'},3000,function(){
+                    this.remove();
+                });
+            }, 4000);
 
             // Change the next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 20: Close the sample chamber lid by clicking on it.";
@@ -154,7 +158,6 @@ function moveCuvette(){
 
 // This method is used to move the cuvette downwards into the spectrophotometer.
 function moveDown(){
-        elem.style.width = "4%";
         // Detect the current position of the flask.
         initial_top = Math.round($('#quartz_cuvette').position().top);
         initial_left = Math.round($('#quartz_cuvette').position().left);
@@ -172,7 +175,8 @@ function moveDown(){
 
 // This method is used to move the reference cuvette into the spectrophptometer. 
 function extraCuvette(){
-        // Get the transparent image and replace it with a reference cuvette image and move it down into the spectrophotometer.
+        /*Get the transparent image and replace it with a reference cuvette image and move it down into the
+         spectrophotometer.*/
         $('#ref_cuvette').attr('src', 'images/quartz-cuvette.png'); 
         document.getElementById("reference").style.visibility ="visible";
         elem = document.getElementById("ref_cuvette"); 
@@ -186,24 +190,24 @@ function extraCuvette(){
         type_of_movement = 0;
         // Move it into the spectrophotometer.
         moveImage();
-        // After 800ms make the sample cuvette and the referance cuvette hidden and replace the spectrophotometer with an image that has cuvette within them. 
+        /* After 1000ms make the sample cuvette and the referance cuvette hidden and replace the spectrophotometer with an 
+        image that has cuvette within them. */
         setTimeout(function(){
-            // images[0] = "image-specific/spec_open1.png";
-            // images[1] = "image-specific/spec_open1.png";
             $("#reference").remove();
             $("#quartz_cuvette, #ref_cuvette").hide();
         },1000);
 }
     
-//This method is called whan the pipette is clicked.
+/*This method is called whan the pipette is clicked.
 //when it is clicked for the first time it is moved from the shelf to the flask on the table.
 //When it is called for the second time pipette extracts the solution from the flask.
 //when it is called for the third time pipettte is moved out of the flask to the cuvette.
-//When it is called for the fourth time it tranfers the solution into the cuvette and moves back to the shelf again.
+//When it is called for the fourth time it tranfers the solution into the cuvette and moves back to the shelf again.*/
 function movePipette() {
         if(step_no == 2){
             // Get image
             elem = document.getElementById("pipette"); 
+            //Rotate the pipette from its initial position
             var angle=0;
             var id = setInterval(function(){
             angle+=1;
@@ -212,7 +216,7 @@ function movePipette() {
             }
             $("#pipette").rotate(angle);
             },10);
-            //Detect thecurrent position of the flask.
+            //Detect thecurrent position of the pipette.
             initial_top = Math.round($('#pipette').position().top);
             initial_left = Math.round($('#pipette').position().left);
             // Initialise all the values for the motion of the images.
@@ -225,31 +229,29 @@ function movePipette() {
             // Change to next intsruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 5: Click on the pipette to draw solution into it.";
             step_no++;
-          }
-
+        }
         else if(step_no==3){
             elem.src = "images/pipette-with-solution.png";
-            img = document.getElementById("round-bottom-flask");
             if(sol_name == 0){
-                img.src = "images/half-filled-anthracene_solution.png"
+                $("#round-bottom-flask").attr("src", "images/half-filled-anthracene_solution.png");
             }
             else{
-                img.src = "images/half-filled-quinine-sol.png"
+                $("#round-bottom-flask").attr("src", "images/half-filled-quinine-sol.png");
             }
             // Change to next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 6: Click on the pipette to take it out of the volumetric flask.";
-            step_no += 1;
+            step_no ++;
         }
         else if(step_no == 4){
              $("#pipette").animate({ top: '160px'},"slow")
-                          .animate({ left:'282px'}, "slow")
+                          .animate({ left:'295px'}, "slow")
                           .animate({ top: '220px'}, "slow");
             // Change to next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 7:Click on the pipette again to transfer the solution into the cuvette ";
             step_no ++;
         }
         else if(step_no == 5){
-            $("#pipette").attr("src", "images/pipette.png");
+            elem.src = "images/pipette.png";
             if(sol_name == 0){
                 $("#quartz_cuvette").attr("src", "images/cuvette-with-anthracene-sol.png");
             }
@@ -257,7 +259,7 @@ function movePipette() {
                 $("#quartz_cuvette").attr("src", "images/cuvette-with-quinine-sol.png");
             }
             step_no ++;
-            setTimeout(movebackPipette, 1000);
+            setTimeout(movebackPipette, 500);
           }
 }
 
@@ -277,7 +279,7 @@ function movebackPipette() {
           document.getElementById("demo").innerHTML = "Step-No 8: To start the absorption spectral scan. click on the pop-up 'start Absorption Measurement";
           setTimeout( function(){
             $("#popup, #start").css("visibility", "visible");
-          }, 1000);
+          }, 500);
 }
 
 //This function is used to hide the popup screen.

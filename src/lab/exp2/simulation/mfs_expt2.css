@@ -296,18 +296,18 @@ h3{
     position:absolute;
     z-index:18;
     top:30%;
-    left:20%;
+    left:9%;
     visibility : hidden;
 }
 
 #disposegraph{
     position: absolute;
     z-index: 20;
-    width: 7%;
-    left: 85%;
-    top: 530px;
-    cursor: pointer;
+    width: 8%;
     height: 3%;
+    left: 80%;
+    top: 584px;
+    cursor: pointer;
 }
 
 

@@ -11,7 +11,7 @@ body{
     position: relative;
 }
 
-h4{  
+h3{  
     text-align: center;
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
@@ -121,10 +121,10 @@ h4{
 #round-bottom-flask{
     position:absolute;
     z-index:2; 
-    width:11%; 
     left:13%; 
-    top:18%;
-    height: 58%; 
+    top:15%;
+    width:10%;
+    height:59%;
     cursor:pointer;
 }
 
@@ -148,20 +148,22 @@ h4{
 }
 
 #quartz_cuvette{
-    position: absolute;
-    z-index: 2;
-    top: 45%;
-    left: 62%;
-    cursor: pointer;
-    width: 5.2%;
+    position:absolute;
+    z-index:2;
+    top:48.5%;
+    left:65%;
+    height: 22.5%;
+    width: 3.3%;
+    cursor:pointer;
 }
 
 #cuvette{
     position:absolute;
     z-index:2;
-    top:45.5%;
-    left:70%;
-    height: 25%;
+    top:48.5%;
+    left:71%;
+    height: 22.5%;
+    width: 3.3%;
     cursor:pointer;
 }
 
@@ -274,7 +276,7 @@ h4{
 
 #popup{
     position:absolute;
-    top:68px; 
+    top:82px; 
     left:15px;
     z-index:7;
     visibility: hidden;
@@ -333,7 +335,6 @@ h4{
     visibility: hidden;
 }
 
-
 #instruction_bkgd{
     position: absolute;
     z-index: 12;
@@ -353,14 +354,6 @@ h4{
     text-align: left;
     font-size: 15px;
 }
-
-/*#graph1, #graph2{
-    position:absolute;
-    z-index:15;
-    top:28%;
-    left:8%;
-    visibility : hidden;
-}*/
 
 #disposegraph{
     position: absolute;
