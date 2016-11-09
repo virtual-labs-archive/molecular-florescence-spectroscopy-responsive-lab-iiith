@@ -122,12 +122,12 @@ function moveCuvette(){
                         angle+=1;
                         if(angle>=40){
                             clearInterval(id);
-                            if(sol_name == 0){
+                            if(sol_name == 0||sol_name == 1||sol_name ==2||sol_name == 3){
                                 elem.src="images/cuvette-with-sol1.png";
                                 quartz.attr("src", "images/quartz-cuvette.png");
 
                             }
-                            if(sol_name == 1){
+                            else{
                                 elem.src="images/cuvette-with-sol2.png";
                                 quartz.attr("src", "images/quartz-cuvette.png");
                             }

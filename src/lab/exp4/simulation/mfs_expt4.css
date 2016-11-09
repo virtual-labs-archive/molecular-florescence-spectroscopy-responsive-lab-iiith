@@ -266,20 +266,12 @@ h3{
     z-index: 5;
 }
 
-#scan{
-    position:absolute;
-    z-index: 6; 
-    top:97px; 
-    left:15px;
-    visibility:hidden;
-    width: 94%;
-}
-
 #popup{
     position:absolute;
     top:68px; 
     left:15px;
     z-index:7;
+    height: 93%;
     visibility: hidden;
 }
 
@@ -360,11 +352,11 @@ h3{
 #disposegraph{
     position: absolute;
     z-index: 16;
-    width: 7%;
+    width: 8%;
     left: 81%;
     top: 555px;
     cursor: pointer;
-    height: 3%;
+    height: 4%;
 }
 
 /*fluriscence css*/

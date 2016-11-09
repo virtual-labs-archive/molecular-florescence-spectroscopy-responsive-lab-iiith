@@ -283,24 +283,22 @@ function spectrophotometer(){
 
 }
 
-// This method is used to play a video which shows constructing graphs based on their sample path length. 
+// This method is used to play a video which shows constructing graphs based on their sample path length.
+/*After the cuvettes are inserted into the spectrophotometer/spectroflurimeter, when the computer in pressed to scan,
+  depending on the cuvette choosen form with an instruction is displayed.*/
 function scan(){
         if(step_no==11){
-            /*After the cuvettes are inserted into the spectrophotometer, when the computer in pressed to scan,
-             depending on the cuvette choosen form with an instruction is displayed.*/
-            $(".data_validation, #instruction_bkgd, #graph_instruction").css("visibility", "visible");
             if(sol_name == 0||sol_name ==1||sol_name == 2||sol_name ==3||sol_name == 4){
                 graph_instruction.innerHTML = "Step-No 13:On the screen enter the wavelength range of spectral scan.  start: 430 nm End: 275 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A)  or transmittance (%T) mode. Click on the green 'start' button on the measurement set-up screen to run the wavelength scan.";
             }
+            $(".data_validation, #instruction_bkgd, #graph_instruction").css("visibility", "visible");
         }
         else if(step_no == 21){
-            /*After the cuvette is inserted into the spectroflurimeter, when the computer in pressed to scan,
-             depending on the cuvette choosen form with an instruction is displayed.*/
-            $(".data_validation1, #popup").css("visibility", "visible");
-            step_no++;
             if(sol_name == 0||sol_name ==1||sol_name == 2||sol_name ==3||sol_name == 4){
                 document.getElementById("demo").innerHTML = "Step-No 22: Select the Emission scan mode on the screen. On the screen, enter the Excitation wavelength:360nm, Emission start wavelength: 365nm and Emission end wavelength:600nm.One chooses the Excitation Slit (nm) and Emission slit (nm) values (here 10 nm/10 nm) and the scan speed value (here 'medium') also.";
             }
+            $(".data_validation1, #popup").css("visibility", "visible");
+            step_no++;
         }
 }
 
@@ -309,11 +307,42 @@ function startBtn(){
         input2 = document.getElementById("input2").value;
         video1 = document.getElementById("video1");
         video2 = document.getElementById("video2");
-        if(input1 == 430 && input2 == 275){
+        video3 = document.getElementById("video3");
+        video4 = document.getElementById("video4");
+        video5 = document.getElementById("video5");
+        if(input1 == 430 && input2 == 275 && sol_name == 0){
             $(".data_validation").css("visibility", "hidden");
             $("#popup, #video1").css("visibility", "visible");
             document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
             video1.play();
+            step_no++;
+        }
+        if(input1 == 430 && input2 == 275 && sol_name == 1){
+            $(".data_validation").css("visibility", "hidden");
+            $("#popup, #video2").css("visibility", "visible");
+            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video2.play();
+            step_no++;
+        }
+        if(input1 == 430 && input2 == 275 && sol_name == 2){
+            $(".data_validation").css("visibility", "hidden");
+            $("#popup, #video3").css("visibility", "visible");
+            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video3.play();
+            step_no++;
+        }
+        if(input1 == 430 && input2 == 275 && sol_name == 3){
+            $(".data_validation").css("visibility", "hidden");
+            $("#popup, #video4").css("visibility", "visible");
+            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video4.play();
+            step_no++;
+        }
+        if(input1 == 430 && input2 == 275 && sol_name == 4){
+            $(".data_validation").css("visibility", "hidden");
+            $("#popup, #video5").css("visibility", "visible");
+            document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video5.play();
             step_no++;
         }
         else{
@@ -338,14 +367,45 @@ function okBtn(){
         var input_1 = document.getElementById("input1_data").value;
         var input_2 = document.getElementById("input2_data").value;
         var input_3 = document.getElementById("input3_data").value;
-        video3 = document.getElementById("video3");
-        video4 = document.getElementById("video4");
+        video6 = document.getElementById("video6");
+        video7 = document.getElementById("video7");
+        video8 = document.getElementById("video8");
+        video9 = document.getElementById("video9");
+        video10 = document.getElementById("video10");
         // dropdown = document.getElementById("select");
-        if(input_1 == 350 && input_2 == 360 && input_3 == 650 && step_no == 22 && sol_name == 0){
+        if(input_1 == 360 && input_2 == 365 && input_3 == 600 && step_no == 22 && sol_name == 0){
                 $(".data_validation1").css("visibility", "hidden");
-                video3.style.visibility = "visible";
+                video6.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
-                video3.play();
+                video6.play();
+                step_no++;
+        }
+        if(input_1 == 360 && input_2 == 365 && input_3 == 600 && step_no == 22 && sol_name == 1){
+                $(".data_validation1").css("visibility", "hidden");
+                video7.style.visibility = "visible";
+                document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+                video7.play();
+                step_no++;
+        }
+        if(input_1 == 360 && input_2 == 365 && input_3 == 600 && step_no == 22 && sol_name == 2){
+                $(".data_validation1").css("visibility", "hidden");
+                video8.style.visibility = "visible";
+                document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+                video8.play();
+                step_no++;
+        }
+        if(input_1 == 360 && input_2 == 365 && input_3 == 600 && step_no == 22 && sol_name == 3){
+                $(".data_validation1").css("visibility", "hidden");
+                video9.style.visibility = "visible";
+                document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+                video9.play();
+                step_no++;
+        }
+        if(input_1 == 360 && input_2 == 365 && input_3 == 600 && step_no == 22 && sol_name == 4){
+                $(".data_validation1").css("visibility", "hidden");
+                video10.style.visibility = "visible";
+                document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+                video10.play();
                 step_no++;
         }
         else{
