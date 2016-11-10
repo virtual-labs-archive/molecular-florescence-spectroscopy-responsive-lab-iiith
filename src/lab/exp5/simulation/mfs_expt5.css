@@ -1,0 +1,128 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    
+}
+
+.container{
+    width:1080px; 
+    height:715px; 
+    position: relative;
+}
+
+h3{  
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#reset_btn{
+    margin: auto;
+    display: block;
+}
+
+#shelf{
+    margin:auto;
+    display: block;
+    width: 62%;
+}
+
+#round-bottom-flask{
+    position:absolute;
+    z-index:3; 
+    left:24%; 
+    top:-177%;
+    width:6.5%;
+    height:235%;
+    cursor:pointer;
+}
+
+#pipette{
+    position:absolute;
+    z-index:1; 
+    width:2%; 
+    left:42%; 
+    top:-172%;
+    height: 239%;
+    cursor:pointer;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
+    transform: rotate(-8deg);
+}
+
+#beaker{
+    position: absolute;
+    z-index: 3;
+    left: 54.5%;
+    top: -114%;
+    width: 8%;
+    cursor: pointer;
+}
+
+#sol_beaker{
+    position: absolute;
+    z-index: 2;
+    left: 67.5%;
+    top: -105%;
+    width: 7%;
+}
+
+#table{
+    margin:auto;
+    display: block;
+    width:90%;
+}
+
+#instrument{
+    position: absolute;
+    z-index: 2;
+    top:-54%;
+    width: 37%;
+    left:2%;
+}
+
+#wire{
+    position: absolute;
+    z-index: 1;
+    top:-115%;
+    width: 28%;
+    left:36%;
+}
+
+#stand{
+    position: absolute;
+    z-index: 2;
+    top:-87%;
+    width: 22%;
+    left:46%;
+}
+
+#rod_name{
+    position: absolute;
+    z-index: 2;
+    top:-100%;
+    width: 13%;
+    left:66%;
+}
+
+#demo{
+    position: absolute;
+    top: 60%;
+    left: 17%;
+    max-width: 68%;
+    color: yellow;
+    text-align: left;
+    font-size: 20px;
+}
+
+#power_trans_button{
+    position: absolute; 
+    z-index:2;
+    left: 6%; 
+    top: 64%;
+    width: 1.5%;
+    height: 6%;
+    cursor: pointer; 
+}
+

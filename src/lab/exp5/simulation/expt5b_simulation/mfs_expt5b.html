@@ -1,0 +1,174 @@
+<html>
+<head>
+    <title>mfs_exp5b</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="mfs_expt5b.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../../libraries/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../../libraries/jQueryRotate.js"></script>
+    <script type="text/javascript" src="mfs_expt5b.js"></script>
+    <script type="text/javascript" src="mfs5b_animations.js"></script>
+</head>
+
+<body> 
+<!-- Body is divided into three rows -->
+<div class= "container">
+    <!-- First row consists of title of the experiment and the reset button -->
+    <div class= "row">
+       <h3>Determination of Fluorescence Quantum Yield of a Fluorophore</h3><br/> 
+       <button id="reset_btn" >Reset Experiment</button>  
+    </div>
+    <br/>
+
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
+    <div class="row">
+        <div class="col-sm-6">
+        <!-- Manual image button displays the set of instructions to be followed to perform experiment
+        On clicking this button a box modal appears over the page n displays the instructions -->
+            <img id="manual_button" src="images/manual_button.png"><br/><br/>
+            <div id="manual" style = "z-index:1000" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times</span>
+                        <h2>Manual</h2>
+                    </div>
+
+                    <div class="modal-body" style="text-align:left">
+                        <ol>   
+                          
+                        <li>Prepare a 250 mL solution of 6.4 x 10-4M fluorescein in spectroscopy grade methanol. Here it is shown in a volumetric flask.</li>
+                        <li>Take 100 mL of this solution in a beaker and measure the pH of the solution by using a pH-meter. The pH of the methanol solution used here was ~4. Note that prior to pH measurement the pH-meter should be calibrated with appropriate buffer solutions.</li>
+                        <li>Add a few drops of 1 N NaOH solution to the solution in the beaker to raise the solution pH value to ~6.4.</li>
+                        <li>Run the excitation and emission spectra of both pH 4 and 6.4 solutions of fluorescein in methanol.</li>
+                        <li>To commence the measurements, click on the pop-up: Start Fluorescence Measurement.</li>
+                        <li>Click on the volumetric flask containing pH 4 fluorescein solution to take it onto the experiment table.</li>
+                        <li>Take an all-side-transparent quartz cuvette (path length, 1 cm x1 cm) by clicking on it.</li>
+                        <li>Click on the 5 mL capacity pipette to collect 3 mL of the pH 4 fluorescein solution which will be transferred into the quartz cuvette. In real operation, one has to set the volume to 3 mL in the pipette and an appropriate tip should be attached prior to dipping it in the solution.</li>
+                        <li>Click on the pipette to draw the solution into it.</li>
+                        <li>Click on the pipette to take it out of the volumetric flask.</li>
+                        <li>Click on the pipette again to transfer the solution into the cuvette.</li>
+                        <li>Start fluorescence measurement to run the Excitation and Emission Spectral Scans of the sample on the spectrofluorimeter as follows.</li>
+                        <li>Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.</li>
+                        <li>Click on the lid of the sample chamber of the spectrofluorimeter to open it for placing the sample in the instrument.</li>
+                        <li>To place the cuvette in the sample holder of the chamber, click on the cuvette.</li>
+                        <li>Close the lid of the sample chamber by clicking on the lid.</li>
+                        <li>To run the Excitation Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor.</li>
+                        <li>Select the Excitation Scan Mode on the screen.
+                        On the screen, enter the Emission wavelength: 514 nm, Excitation Start Wavelength: 350 nm and Excitation End wavelength: 600 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 1.5 nm/1.5 nm) and the scan speed value (here very fast ) also.</li>
+                        <li>Click on OK button on the set-up screen to run the wavelength scan for the excitation spectrum.</li>
+                        <li>Click on Close button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.</li>
+                        <li>To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence icon on the computer monitor.</li>
+                        <li>Select the Emission Scan Mode on the screen.
+                        On the screen, enter the Excitation wavelength: 490 nm, Emission Start Wavelength: 500 nm and Emission End wavelength: 600 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 1.5 nm/1.5 nm) and the scan speed value (here very fast ) also.</li>
+                        <li>Click on the OK button on the set-up screen to run the wavelength scan for emission spectrum. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest.</li>
+                        <li>Click on Close button when spectral scan is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.</li>
+                        <li>To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette.</li>
+                        <li>Close the lid of the sample chamber by clicking on it.</li>
+                        <li>Click on Reset button to start over the measurements.</li>
+                        <li>Click on the beaker containing pH 6.4 fluorescein solution to take it onto the experiment table. In real measurements, if one uses the same cuvette for the measurement, one should rinse the cuvette by taking a small portion of the experimental solution to be analyzed prior to filling up the cuvette with the solution. (Why?)</li>
+                        <li>Repeat the Excitation and Emission scans for this solution.<li>
+                        <li>For the Excitation Spectral Scan of the sample: Enter the Emission wavelength: 531 nm, Excitation Start Wavelength: 350 nm and Excitation End wavelength: 600 nm. Excitation Slit(nm) and Emission Slit(nm) values are 1.5 nm/1.5 nm and the scan speed value is set to very fast .</li>
+                        <li>For the Emission Spectral Scan of pH 6.4 fluorescein solution: Enter the Excitation wavelength: 490 nm, Emission Start Wavelength: 500 nm and Emission End wavelength: 600 nm. Excitation Slit(nm) and Emission Slit(nm) values are 1.5 nm/1.5 nm and the scan speed value is set to very fast .</li>
+                        <li>Collect all data by clicking on the Data tab.</li>
+                        <li>Find out the excitation maximum, emission maximum wavelengths and intensities for two different pH solutions of fluorescein.</li>
+                        <li>Calculate the excitation and emission fluorescence maxima in wave-number/cm-1 unit and determine the Stokes shifts (in wave-number unit, cm-1) for variation in pH values.</li>
+                        <li>Discuss your results.</li>
+
+
+	                   </ol>
+                    </div>
+                </div>
+            </div>
+            <!-- Data image button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs is opened  -->
+            <img id="data_button" src="images/data_button.png">
+
+            <div id = "conc_scale">
+                <img  id ="scale_image" src="images/scale_image.png" >
+                <input type="range" id="slider" min="0" max="1" step="1" value="0">
+            </div>
+
+        </div>
+
+
+        <div class="col-sm-6" id ="apparatus">
+            <img  id="shelf" src="images/shelf.png">
+            <img  id="round-bottom-flask"  src="images/empty-round-bottom-flask.png" >
+            <img  id = "solution_name" >
+            <img  id="pipette" src="images/pipette.png" >
+            <img  id="quartz_cuvette" src="images/quartz-cuvette.png" >
+            <img  id="cuvette" src="images/cuvette.png" > 
+        </div>
+    </div><br/><br/><br/>
+
+    <!-- Third row consists of table with various devices on it  -->
+    <div class="row">
+        <div class="col-sm-12" id="table">
+            <img  id = "table_with_spec" src="images/table_with_spec.png">
+            <img  id ="computerimage" src="images/computer.png">
+            <!-- button to scan the sample on the computer-->
+            <img  id ="comp_trans_button" src="images/vertical_button.png">
+            <!-- buttons to open and close the spectrophotometer lid -->
+            <img id ="spectrolid_trans_button" src="images/vertical_button.png">
+            <img id ="spectrolid_trans_button1" src="images/vertical_button.png">
+            <!-- reference cuvette -->
+            <img id = "reference" src = "images/reference.png" >
+            <img id = "ref_cuvette" class="" >
+            <!-- text that shows the instructions to be followed next -->
+            <div id = "demo"></div>
+            <!-- button to switch on and switch off the spectrophotometer -->
+            <img id="power_trans_button" src="images/vertical_button.png">
+        </div>
+    </div>
+
+<!--absorbtion validation-->
+
+    <img id="clockScreen" src="images/clock.png">
+    <!-- Image of the hand of the clock -->
+    <img  id="clockHand"  src="images/hand.png">
+    <!-- Image of the greyed background displayed as a background while scanning the sample 
+    and also this image is shown as a popup screen to start the experiment -->
+    <img id="popup" src="images/transparent.png" >
+    <button id ="start" >Start Absorption measurement</button>
+    <!-- This image is used to enter the input values to display the graph1/graph2-->
+    <img id="input_form" class="data_validation" src="images/inputform1.png">
+    <!--Displays the graph by clicking on start button if the entered values are correct-->
+    <img id="start_btn" class="data_validation" src="images/vertical_button.png" >
+    <!--graph input values -->
+    <input id = "input1" class="data_validation" type="text" >
+    <input id = "input2" class="data_validation" type="text" >    
+    <!-- background image for the graphs instruction -->
+    <img id = "instruction_bkgd" class="common" src="images/graph_instruction.png">
+    <!-- graphs instructions are displayed here....-->
+    <div id = "graph_instruction" class="common"></div>
+    <!-- videos of the solutions concentrations--> 
+    <video id="video1" class="videos" ><source src="videos/graph1.mp4" type="video/mp4"></video>
+    <video id="video2" class="videos"><source src="videos/graph3.mp4" type="video/mp4"></video>
+    <!-- image to close the graph -->
+    <img id = "disposegraph" src="images/vertical_button.png">
+
+
+<!--fluoriscence validation-->
+
+    <!-- This image is used to enter the input values to display the graph1/graph2-->
+    <img id="input_data" class="data_validation1" src="images/inputform.png">
+    <!--Displays the graph by clicking on ok button -->
+    <img id="ok_btn" class="data_validation1" src="images/vertical_button.png" >
+    <!-- dropdown box to select the graphs to display -->
+    <select id="select" class="data_validation1">
+          <option id="Excitation" value="Emission">Emission</option>
+          <option id="Emission" value="Excitation">Excitation</option>
+    </select> 
+    <!--graph input values -->
+    <input id = "input1_data" class="data_validation1" type="text" >
+    <input id = "input2_data" class="data_validation1" type="text" > 
+    <input id = "input3_data" class="data_validation1" type="text" >   
+    <!-- To display the videos on entering the correct input values -->
+    <video id="video3" class="videos" ><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <video id="video4" class="videos" ><source src="videos/graph4.mp4" type="video/mp4"></video>
+</div>
+</body>
+</html>
