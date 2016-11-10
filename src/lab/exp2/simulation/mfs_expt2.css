@@ -209,28 +209,29 @@ h3{
 
 #clockScreen{
     position: absolute;
-    top: 16%;
-    left: 0%;
+    top: 56px;
+    left: 4px;
     visibility: hidden;
     z-index: 4;
-    width:98%;
-    height: 90%;
+    width: 95%;
+    height: 94%;
 }
+
 #clockHand{
     position:absolute; 
-    top:49.21%;
-    left:49.56%; 
+    top:307.50px;
+    left:48.50%; 
     visibility:hidden; 
-    z-index:5;
+    z-index: 5;
 }
 
 #scan{
-    position: absolute;
-    z-index: 6;
-    top: 106px;
-    left: -15px;
-    width: 103%;
+    position:absolute;
+    z-index: 6; 
+    top:97px; 
+    left:15px;
     visibility:hidden;
+    width: 94%;
 }
 
 #input_data{
