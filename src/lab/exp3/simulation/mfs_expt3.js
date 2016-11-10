@@ -72,6 +72,9 @@ function addclickEvents(){
         document.getElementById("data_button").addEventListener("click", function() {
             popitup("slideshow.html");
         }, false);
+        document.getElementById("slider").addEventListener("click", function() {
+            setSolution();
+        }, false);
         document.getElementById("round-bottom-flask").addEventListener("click", function() {
             moveFlask();
         }, false);
@@ -285,9 +288,16 @@ function scan(){
         else if(step_no == 21){
             /*After the cuvette is inserted into the spectroflurimeter, when the computer in pressed to scan,
              depending on the cuvette choosen form with an instruction is displayed.*/
-            $(".data_validation1, #popup").css("visibility", "visible");
-            document.getElementById("demo").innerHTML = "Step-No 22: On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 360 nm and Emission End wavelength: 650 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here “medium”) also.  To run the wavelength scan for emission spectrum, click on 'OK' button on the set-up screen. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. ";
-            step_no++;
+            if(sol_name == 0){ 
+                $(".data_validation1, #popup").css("visibility", "visible");
+                document.getElementById("demo").innerHTML = "Step-No 22: On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 360 nm and Emission End wavelength: 650 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here “medium”) also.  To run the wavelength scan for emission spectrum, click on 'OK' button on the set-up screen. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. ";
+                step_no++;
+            }
+            else if(sol_name == 1){ 
+                $(".data_validation1, #popup").css("visibility", "visible");
+                document.getElementById("demo").innerHTML = "Step-No 22: On the screen, enter the Excitation wavelength: 310 nm, Emission Start Wavelength: 320 nm and Emission End wavelength: 600 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here “medium”) also.  To run the wavelength scan for emission spectrum, click on 'OK' button on the set-up screen. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. ";
+                step_no++;
+            }
         }
 }
 
@@ -295,7 +305,7 @@ function startBtn(){
         input1 = document.getElementById("input1").value;
         input2 = document.getElementById("input2").value;
         video1 = document.getElementById("video1");
-        video2 = document.getElementById("video2");
+        video3 = document.getElementById("video3");
         if(sol_name== 0 &&  input1 == 620 && input2 == 260){
             $(".data_validation").css("visibility", "hidden");
             $("#popup, #video1").css("visibility", "visible");
@@ -306,9 +316,9 @@ function startBtn(){
             
         else if(sol_name == 1 && input1 == 600 && input2 == 260){
             $(".data_validation").css("visibility", "hidden");
-            $("#popup, #video2").css("visibility", "visible");
+            $("#popup, #video3").css("visibility", "visible");
             document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
-            video2.play();
+            video3.play();
             step_no++;
         }
         else{
@@ -333,14 +343,14 @@ function okBtn(){
         var input_1 = document.getElementById("input1_data").value;
         var input_2 = document.getElementById("input2_data").value;
         var input_3 = document.getElementById("input3_data").value;
-        video3 = document.getElementById("video3");
+        video2 = document.getElementById("video2");
         video4 = document.getElementById("video4");
         // dropdown = document.getElementById("select");
         if(input_1 == 350 && input_2 == 360 && input_3 == 650 && step_no == 22 && sol_name == 0){
                 $(".data_validation1").css("visibility", "hidden");
-                video3.style.visibility = "visible";
+                video2.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
-                video3.play();
+                video2.play();
                 step_no++;
         }
         else if(input_1 == 310 && input_2 == 320 && input_3 == 600 && step_no == 22 && sol_name == 1){

@@ -90,7 +90,7 @@ function moveCuvette(){
             // Initialise all the values for the motion of the images.
             final_top = 221;
             step_top = -0.5;
-            step_left = -1.88;
+            step_left = -1.87;
             type_of_movement = 1;
             // Move it to a position over the spectrophotometer.
             moveImage();
@@ -186,7 +186,7 @@ function extraCuvette(){
         // Initialise all the values for the motion of the images.
         final_top = 61;
         step_top = 1;
-        step_left = -2.26;
+        step_left = -2.25;
         type_of_movement = 0;
         // Move it into the spectrophotometer.
         moveImage();
