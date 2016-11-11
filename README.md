@@ -26,9 +26,20 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
 ##### Steps followed in the conversion.
 
 * Get the [SWF files](#glossary) of the flash experiment which needs to be converted to JavaScript from github.
+  -steps to clone the repository
+   cd /home
+   git clone "lab repository"
 
 * Using [JPEXS free Flash Decompiler](https://www.free-decompiler.com/flash/download/) extract all the components of the experiment.
-
+  Steps to install and run JPEXS free Flash decompiler:
+  -First you need to install tha latest version of java on your machine.
+  -Second install decompiler from the above link.
+  -Third go to the directory where the decompiler is installed.
+   cd /home/ffdec_9.0.0
+  -Fourth run the command in the terminal as below to open the decompiler.
+   ./ffdec.sh
+  -Fifth open the .swf files from the decompiler from the open icon which is to the top left in the decompiler to extraxt all the components of the flash file.
+  -Sixth export all the components in your machine by using the "Extact all the components" icon given in the decompiler.
 
 * Identify the components which together form images required.
 
@@ -44,9 +55,11 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
 
 * After every step performed change the instruction which will explain what has to be done next.
 
-* To plot the graph, since the data is not available, capture the screen of graph plotting from the flash experiment and play the video when 'scan' button is pressed. To capture only a part of the screen [QuickTime](http://quicktime.en.softonic.com/) can be used. If data is available then JavaScript frameworks like [Chart.js](http://www.chartjs.org/) can be used.
-
-* Take screenshot of all graphs in a particular experiment. Then slideshow these images in a new window when Data button is clicked.
+* To plot the graph, the videos of the graph has been recorded using a video recorder.
+  Command to install recorder in ubuntu:
+  sudo apt-get install recordmydesktop
+  
+  
 
 ##### Additional scripts necessary 
 
