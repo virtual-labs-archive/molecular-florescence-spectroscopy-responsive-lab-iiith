@@ -1,4 +1,4 @@
-# molecular-absorption-spectroscopy-responsive-lab
+# molecular-Fluroscence-spectroscopy-responsive-lab
 #### Problem statement
 Conversion of experiments in molecular fluroscence spectroscopy responsive lab from flash to JavaScript.
 
