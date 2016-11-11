@@ -31,15 +31,15 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
    git clone "lab repository"
 
 * Using [JPEXS free Flash Decompiler](https://www.free-decompiler.com/flash/download/) extract all the components of the experiment.
-  Steps to install and run JPEXS free Flash decompiler:
-  -First you need to install tha latest version of java on your machine.
-  -Second install decompiler from the above link.
-  -Third go to the directory where the decompiler is installed.
+  **Steps to install and run JPEXS free Flash decompiler:
+  - First you need to install tha latest version of java on your machine.
+  - Second install decompiler from the above link.
+  - Third go to the directory where the decompiler is installed.
    cd /home/ffdec_9.0.0
-  -Fourth run the command in the terminal as below to open the decompiler.
+  - Fourth run the command in the terminal as below to open the decompiler.
    ./ffdec.sh
-  -Fifth open the .swf files from the decompiler from the open icon which is to the top left in the decompiler to extraxt all the components of the flash file.
-  -Sixth export all the components in your machine by using the "Extact all the components" icon given in the decompiler.
+  - Fifth open the .swf files from the decompiler from the open icon which is to the top left in the decompiler to extraxt all the components of the flash file.
+  - Sixth export all the components in your machine by using the "Extact all the components" icon given in the decompiler.
 
 * Identify the components which together form images required.
 
@@ -56,8 +56,8 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
 * After every step performed change the instruction which will explain what has to be done next.
 
 * To plot the graph, the videos of the graph has been recorded using a video recorder.
-  Command to install recorder in ubuntu:
-  sudo apt-get install recordmydesktop
+  ** Command to install recorder in ubuntu:
+  -  sudo apt-get install recordmydesktop
   
   
 
