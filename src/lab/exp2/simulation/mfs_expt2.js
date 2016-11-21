@@ -1,7 +1,7 @@
 // This file contains all general functions used in the experiment
     var images = [];// Two images that are alternated in ordered to get the blinking effect of the spectrofluorimeter
-    images[0] = "images/spec_on_redLight.png";
-    images[1] = "images/spec_on_no_redLight.png";
+    images[0] = "../../common_images/specfluor_on_redLight.png";
+    images[1] = "../../common_images/specfluor_on_no_redLight.png";
     var x = 0;
     var y = 0;
     // Variables necessary to obtain motion of all the images
@@ -105,16 +105,16 @@ function addclickEvents(){
 //This function is used to add mouse events to elements.
 function mouseEvents(){
         document.getElementById("manual_button").addEventListener("mouseover", function(){
-            this.src='images/hover_manual.png';
+            this.src='../../common_images/hover_manual.png';
         });
         document.getElementById("manual_button").addEventListener("mouseout", function(){
-            this.src='images/manual_button.png';
+            this.src='../../common_images/manual_button.png';
         });
         document.getElementById("data_button").addEventListener("mouseover", function(){
-            this.src='images/hover_data.png';
+            this.src='../../common_images/hover_data.png';
         });
         document.getElementById("data_button").addEventListener("mouseout", function(){
-            this.src='images/data_button.png';
+            this.src='../../common_images/data_button.png';
         });
 }
 
