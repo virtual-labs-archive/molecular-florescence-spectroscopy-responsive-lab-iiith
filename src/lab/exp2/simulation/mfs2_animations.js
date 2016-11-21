@@ -80,7 +80,7 @@ function moveCuvette(){
             // Initialise all the values for the motion of the images.
             final_top = 221;
             step_top = -0.5;
-            step_left = -1.61;
+            step_left = -1.64;
             type_of_movement = 1;
             // Move it to a position over the spectrofluorimeter.
             moveImage();
@@ -92,12 +92,11 @@ function moveCuvette(){
 
 // This method is used to move the cuvette downwards into the spectrofluorimeter.
 function moveDown(){
-        elem.style.width = "2.9%";
         // Detect the current position of the flask.
         initial_top = Math.round($('#cuvette').position().top);
         initial_left = Math.round($('#cuvette').position().left);
         // Initialise all the values for the motion of the images.
-        final_top = 300;    
+        final_top = 290;    
         step_top = 1;
         step_left = 0;
         type_of_movement = 0;
@@ -165,7 +164,7 @@ function movePipette() {
         }
         else if(step_no == 5){
             $("#cuvette").attr("src", "images/cuvette-with-solution.png");
-            elem.src = "images/pipette.png";
+            elem.src = "../../common_images/pipette.png";
             setTimeout(movebackPipette, 200);
         }
 }

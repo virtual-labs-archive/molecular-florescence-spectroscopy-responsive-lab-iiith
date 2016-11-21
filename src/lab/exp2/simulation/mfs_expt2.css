@@ -145,15 +145,16 @@ h3{
 #table_with_spec{
     margin:auto;
     display: block;
+    width: 85%;
 }
 
 #comp_trans_button{
     position: absolute; 
     z-index: 2; 
-    width: 13%;
-    height: 26%; 
+    width: 13.5%;
+    height: 27%; 
     left: 48%;
-    top: 10%; 
+    top: 6%; 
     cursor: pointer;
 }
 
@@ -162,7 +163,7 @@ h3{
     z-index:2;
     width: 5%; 
     height: 21%;
-    left: 35.5%; 
+    left: 34.5%; 
     top: 14%;  
     cursor: pointer;
 }
@@ -172,7 +173,7 @@ h3{
     z-index:3;
     width: 4%; 
     height: 18%;
-    left: 36%; 
+    left: 35%; 
     top: 2%;  
     cursor: pointer;
 }
@@ -190,7 +191,7 @@ h3{
 #power_trans_button{
     position: absolute; 
     z-index:2;
-    left: 17%; 
+    left: 15%; 
     top: 42%;
     width: 2%;
     height: 8%;
@@ -199,8 +200,8 @@ h3{
 
 #demo{
     position: absolute;
-    top: 70%;
-    left: 17%;
+    top: 73%;
+    left: 15%;
     max-width: 66%;
     color: yellow;
     text-align:left;
@@ -228,10 +229,11 @@ h3{
 #scan{
     position:absolute;
     z-index: 6; 
-    top:97px; 
+    top:76px; 
     left:15px;
     visibility:hidden;
     width: 94%;
+    height: 95%;
 }
 
 #input_data{
