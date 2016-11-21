@@ -109,8 +109,6 @@ function moveDown(){
 // hides the cuvette and replace the spectrofluorimeter with an image that has cuvette within them. 
 function hideCuvette(){
         $('#cuvette').remove();
-        images[0] = "images/spec_open.png";
-        images[1] = "images/spec_open1.png";
         document.getElementById("demo").innerHTML = "Step-No 10 : Click the lid of the sample chamber by clicking on the lid";
 }
 
@@ -182,7 +180,7 @@ function movebackPipette() {
           type_of_movement = 1;
           // Move it to the shelf
           moveImage();
-          $("#table_with_spec").attr("src", "images/spectro_greenbutton.png");
+          $("#table_with_spec").attr("src", "../../common_images/spectrofluor_greenbutton.png");
           document.getElementById("demo").innerHTML = "Step-No 7: To start the fluorescence measurement turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.";
           step_no++;
 }

@@ -168,15 +168,15 @@ function removeClock() {
 function spectrofluorimeter(){
         if (step_no == 7){
             // Replace the spectrofluorimeter images with the open spectrofluorimeter images
-            images[0] = "images/spec_open.png";
-            images[1] = "images/spec_open1.png";
+            images[0] = "../../common_images/specfluor_open.png";
+            images[1] = "../../common_images/specfluor_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 9: Click on the cuvette to place it in the sample holder of the chamber.";
             step_no++;
             }
         else if(step_no == 9){
             // Replace the spectrofluorimeter images with the closed spectrophotmeter images.
-            images[0] = "images/spec_on_redLight.png";
-            images[1] = "images/spec_on_no_redLight.png";
+            images[0] = "../../common_images/specfluor_on_redLight.png";
+            images[1] = "../../common_images/specfluor_on_no_redLight.png";
             document.getElementById("demo").innerHTML = "Step-No 11: To run the Excitation Spectral Scan, open the measurement set-up screen by clicking on the fluorescence measurement icon on the computer monitor.";
             step_no++;
         }
