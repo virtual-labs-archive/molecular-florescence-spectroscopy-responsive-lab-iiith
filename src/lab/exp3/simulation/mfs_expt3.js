@@ -1,8 +1,8 @@
 // This file contains all general functions used in the experiment
     
     var images = [];// Two images that are alternated in ordered to get the blinking effect of the spectrophotometer
-    images[0] = "images/spec_with_red.png";
-    images[1] = "images/spec_with_red.png";
+    images[0] = "../../common_images/spec_with_red.png";
+    images[1] = "../../common_images/spec_with_red.png";
     var x = 0;
     var y = 0;
     // Variables necessary to obtain motion of all the images
@@ -116,16 +116,16 @@ function addclickEvents(){
 //This function is used to add mouse events to elements.
 function mouseEvents(){
         document.getElementById("manual_button").addEventListener("mouseover", function(){
-            this.src='images/hover_manual.png';
+            this.src='../../common_images/hover_manual.png';
         });
         document.getElementById("manual_button").addEventListener("mouseout", function(){
-            this.src='images/manual_button.png';
+            this.src='../../common_images/manual_button.png';
         });
         document.getElementById("data_button").addEventListener("mouseover", function(){
-            this.src='images/hover_data.png';
+            this.src='../../common_images/hover_data.png';
         });
         document.getElementById("data_button").addEventListener("mouseout", function(){
-            this.src='images/data_button.png';
+            this.src='../../common_images/data_button.png';
         });
 }
 
@@ -158,8 +158,8 @@ function turnOn() {
         // Call turnOn() method every 250ms 
         setTimeout("turnOn()", 250)
         if(step_no == 17){
-            images[0] = "images/spec_on_no_redLight.png";
-            images[1] = "images/spec_on_redLight.png";
+            images[0] = "../../common_images/specfluor_on_no_redLight.png";
+            images[1] = "../../common_images/specfluor_on_redLight.png";
         }
 }
 
@@ -184,7 +184,7 @@ function clck(){
 }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 /* This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
-when this method is called they are amde visible and the clock hand is made to rotate.  */
+when this method is called they are made visible and the clock hand is made to rotate.  */
 function showClock(){
         if(step_no==7){
             clck();
@@ -214,22 +214,22 @@ function removeClock() {
 function spectrophotometer(){
         if (step_no == 8){
             // Replace the spectrophotometer images with the open spectrophotometer images
-            images[0] = "images/spec_open.png";
-            images[1] = "images/spec_open1.png";
+            images[0] = "../../common_images/spec_open.png";
+            images[1] = "../../common_images/spec_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 10: Click on the cuvette top place it in the sample holder. One has to use pure solvent as the sample bank or reference in this measurement. Here a double beam spectrophotometer is shown.";
             step_no++;
         }
         else if(step_no == 10){
             // Replace the spectrophotometer images with the closed spectrophotmeter images.
-            images[0] = "images/spec_close.png";
-            images[1] = "images/spec_close1.png";
+            images[0] = "../../common_images/spec_close.png";
+            images[1] = "../../common_images/spec_close1.png";
             document.getElementById("demo").innerHTML = "Step-No 12:  Open the measurement set-up screen by clicking on the absorption measurement icon on the computer monitor. ";
             step_no++;
         }
         else if(step_no == 13){
             // Replace the spectrophotometer images with the open spectrophotometer images
-            images[0] = "images/spec_open.png";
-            images[1] = "images/spec_open1.png";
+            images[0] = "../../common_images/spec_open.png";
+            images[1] = "../../common_images/spec_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 15: To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. ";
             step_no++;
         }
@@ -246,8 +246,8 @@ function spectrophotometer(){
         }
         else if(step_no == 15){
             // Replace the spectrophotometer images with the closed spectrophotmeter images.
-            images[0] = "images/spec_close.png";
-            images[1] = "images/spec_close1.png";
+            images[0] = "../../common_images/spec_close.png";
+            images[1] = "../../common_images/spec_close1.png";
             document.getElementById('start').innerHTML = "Start Fluorescence measurement";
             document.getElementById("demo").innerHTML = "Step-No 17: Click on the pop-up: 'Start Fluorescence measurement'";
             setTimeout( function(){
@@ -258,15 +258,17 @@ function spectrophotometer(){
         else if(step_no == 18){
             // click on the lid for placing the sample in the cell-holder.
             // Replace the spectroflourimeter images with the open spectrophotometer images
-            images[0] = "images/specfluro_open.png";
-            images[1] = "images/specfluro_open1.png";
+            images[0] = "../../common_images/specfluor_open.png";
+            images[1] = "../../common_images/specfluor_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 20: Click on the spectrophotometric quartz cuvette to transfer its content into an all-side-transparent quartz cuvette of path length 1 cm ×1 cm for the fluorescence measurement.";
             step_no++;
         }
         else if(step_no == 20){
             // Replace the spectrophotometer images with the closed spectrophotmeter images.
-            images[0] = "images/specfluro_close.png";
-            images[1] = "images/specfluro_close1.png";
+            // images[0] = "../../common_images/specfluor_close.png";
+            // images[1] = "../../common_images/specfluor_close1.png";
+            images[0] = "../../common_images/spec_fluormeter.png";
+            images[1] = "../../common_images/spec_fluormeter.png";
             document.getElementById("demo").innerHTML = "Step-No 21:  Open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor.";
             step_no++;
         }
@@ -368,7 +370,7 @@ function okBtn(){
 //This method makes the graph hidden once the video is played and close is pressed. 
 function disposeGraph(){
         /* After playing the graph plotting video close option is choosen, the background scan image and 
-            the video is mafde hidden. */
+            the video is made hidden. */
         if(step_no == 12){
             $(".videos, .common, #popup").css("visibility", "hidden");
             document.getElementById("demo").innerHTML = "Step-No 15: To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. ";
