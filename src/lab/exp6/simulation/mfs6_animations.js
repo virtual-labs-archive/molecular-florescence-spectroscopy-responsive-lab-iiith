@@ -29,7 +29,7 @@ function moveImage(){
 
 // This is the function called when flask is clicked. It moves the flask from the shelf to the table.
 function moveFlask(){
-        if(step_no == 0){
+    if(step_no == 0){
             if(sol_name == undefined)
             {
               alert("please first select the solvent from the solvent selection bar");
@@ -54,7 +54,7 @@ function moveFlask(){
             document.getElementById("demo").innerHTML = "Step-No 3:Click on the quartz cuvette (path length 1x1cm) to take it to the instrument table. Quartz cuvettes for spectrophotometric measurements are transparent only on two opposite sides, unlke the  all-side transparent quartz cuvettes used for flourescence measurements.";
             step_no++;
           }
-      }
+    }
 }
 
 /*This is the function called when cuvette is clicked. 
@@ -184,8 +184,6 @@ function extraCuvette(){
         moveImage();
         // After 800ms make the sample cuvette and the referance cuvette hidden and replace the spectrophotometer with an image that has cuvette within them. 
         setTimeout(function(){
-            // images[0] = "image-specific/spec_open1.png";
-            // images[1] = "image-specific/spec_open1.png";
             $("#reference").remove();
             $("#quartz_cuvette, #ref_cuvette").hide();
         },1000);
@@ -225,10 +223,8 @@ function movePipette() {
           }
 
         else if(step_no==3){
-            if(sol_name == 0||sol_name == 1||sol_name == 2||sol_name == 3){
-                $("#round-bottom-flask").attr("src", "images/half-filled-sol.png");
-                elem.src = "images/pipette-with-solution.png";
-            }
+            $("#round-bottom-flask").attr("src", "images/half-filled-sol.png");
+            elem.src = "images/pipette-with-solution.png";
             // Change to next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 6: Click on the pipette to take it out of the volumetric flask.";
             step_no ++;
@@ -242,10 +238,8 @@ function movePipette() {
             step_no ++;
         }
         else if(step_no == 5){
-            if(sol_name == 0||sol_name == 1||sol_name == 2||sol_name == 3){
-                $("#quartz_cuvette").attr("src", "images/cuvette-with-sol.png");
-                elem.src = "images/pipette.png";
-            }
+            $("#quartz_cuvette").attr("src", "images/cuvette-with-sol.png");
+            elem.src = "images/pipette.png";
             step_no ++;
             setTimeout(movebackPipette, 500);
         }
