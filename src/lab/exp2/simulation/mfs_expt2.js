@@ -16,7 +16,7 @@
     var type_of_movement;// Indicates upward or downward motion
     var step_no=0;// This variable is used to perform all the actions in the required sequence. Depending on the value of this variable the part of the method is called.
     //variables to display the instructions.
- 
+    count = 0;
 /*This method is called when the page is loaded. *
    First function helps in providing basic functionality to manual button and also sets the first set of instructions.
    Second function adds click events to elements as soon as the page loads.
@@ -137,7 +137,7 @@ function turnOn() {
 /*This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
 when this method is called they are made visible and the clock hand is made to rotate.  */
 function showClock(){
-        if(step_no==6){
+        if(step_no==6 && count == 6){
             // Get the images.
             var context=document.getElementById('clockScreen');
             var hand =document.getElementById('clockHand');
@@ -161,19 +161,21 @@ function removeClock() {
         $('#clockHand, #clockScreen').remove();
         //Change to next intsruction to be followed.
         document.getElementById("demo").innerHTML = "Step-No 8: Click on the lid of sample chamber of the spectrofluorimeter to open it for placing the sample in the instrument";
+        count++;
 }
 
 /* First time its called to open the spectrofluorimeter.
    Second time its called to close the spectrofluorimeter. */
 function spectrofluorimeter(){
-        if (step_no == 7){
+        if (step_no == 7 && count == 7){
             // Replace the spectrofluorimeter images with the open spectrofluorimeter images
             images[0] = "../../common_images/specfluor_open.png";
             images[1] = "../../common_images/specfluor_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 9: Click on the cuvette to place it in the sample holder of the chamber.";
             step_no++;
+            count++;
             }
-        else if(step_no == 9){
+        else if(step_no == 9 && count == 9){
             // Replace the spectrofluorimeter images with the closed spectrophotmeter images.
             images[0] = "../../common_images/specfluor_on_redLight.png";
             images[1] = "../../common_images/specfluor_on_no_redLight.png";
