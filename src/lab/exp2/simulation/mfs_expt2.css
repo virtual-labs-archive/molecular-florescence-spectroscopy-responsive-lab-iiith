@@ -127,7 +127,6 @@ h3{
     width:3.5%; 
     left:41%; 
     top:9%;  
-    cursor:pointer;
     -ms-transform: rotate(-8deg); /* IE 9 */
     -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
     transform: rotate(-8deg);
@@ -139,7 +138,6 @@ h3{
     width: 3.2%;
     left: 65%;
     top: 48%;
-    cursor: pointer;
 }
 
 #table_with_spec{
@@ -155,7 +153,6 @@ h3{
     height: 27%; 
     left: 48%;
     top: 6%; 
-    cursor: pointer;
 }
 
 #spectrolid_trans_button{
@@ -165,7 +162,6 @@ h3{
     height: 21%;
     left: 34.5%; 
     top: 14%;  
-    cursor: pointer;
 }
 
 #spectrolid_trans_button1{
@@ -175,7 +171,6 @@ h3{
     height: 18%;
     left: 35%; 
     top: 2%;  
-    cursor: pointer;
 }
 
 #reference{
@@ -184,7 +179,6 @@ h3{
     width: 15%; 
     left: 40%; 
     top: 0%; 
-    cursor: pointer;
     visibility: hidden;
 }
 
@@ -194,8 +188,7 @@ h3{
     left: 15%; 
     top: 42%;
     width: 2%;
-    height: 8%;
-    cursor: pointer; 
+    height: 8%; 
 }
 
 #demo{
@@ -254,7 +247,6 @@ h3{
     width: 9%;
     height: 5%;
     visibility : hidden;
-    cursor: pointer;
 }
 #select{
     position: absolute;
@@ -310,7 +302,6 @@ h3{
     height: 3%;
     left: 80%;
     top: 584px;
-    cursor: pointer;
 }
 
 

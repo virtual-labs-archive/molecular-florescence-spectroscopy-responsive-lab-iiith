@@ -20,8 +20,10 @@
 <div class="container">
     <!-- First row consists of title of the experiment and the reset button -->
     <div class= "row">
-        <h3>Principle of Absorption, Florescence and Phosphorescence</h3><br/>
-        <button id="reset_btn" onclick = "location.reload()">Reset Experiment</button>
+        <div class="col-sm-12">
+            <h3>Principle of Absorption, Florescence and Phosphorescence</h3><br/>
+            <button id="reset_btn" onclick = "location.reload()">Reset Experiment</button>
+        </div>
     </div><br/>
     
     <div class="row">
@@ -124,8 +126,7 @@
     <video id="video1" class="videos" ><source src="videos/graph1.mp4" type="video/mp4"></video>
     <video id="video2" class="videos" ><source src="videos/graph2.mp4" type="video/mp4"></video>
     <!-- To close the graphs video -->
-    <img class="" id = "disposegraph" src="../../common_images/vertical_button.png">
-    <input id="input" type="text" value="0" style="visibility:hidden;">
+    <img id = "disposegraph" src="../../common_images/vertical_button.png">
 </div>
 </body>
 

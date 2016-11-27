@@ -14,9 +14,10 @@
     var img,img1;
     var id,id1;
     var type_of_movement;// Indicates upward or downward motion
-    var step_no=0;// This variable is used to perform all the actions in the required sequence. Depending on the value of this variable the part of the method is called.
-    //variables to display the instructions.
-    count = 0;
+    var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
+                     Depending on the value of this variable the part of the method is called.*/
+    var count = 0; /* This variable is used to perform the animations of the objects without distortions */
+
 /*This method is called when the page is loaded. *
    First function helps in providing basic functionality to manual button and also sets the first set of instructions.
    Second function adds click events to elements as soon as the page loads.
@@ -161,28 +162,28 @@ function removeClock() {
         $('#clockHand, #clockScreen').remove();
         //Change to next intsruction to be followed.
         document.getElementById("demo").innerHTML = "Step-No 8: Click on the lid of sample chamber of the spectrofluorimeter to open it for placing the sample in the instrument";
-        count++;
+        cursorPointers('power_trans_button', 'spectrolid_trans_button');
 }
 
 /* First time its called to open the spectrofluorimeter.
    Second time its called to close the spectrofluorimeter. */
 function spectrofluorimeter(){
-        if (step_no == 7 && count == 7){
+        if (step_no == 7){
             // Replace the spectrofluorimeter images with the open spectrofluorimeter images
             images[0] = "../../common_images/specfluor_open.png";
             images[1] = "../../common_images/specfluor_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 9: Click on the cuvette to place it in the sample holder of the chamber.";
+            cursorPointers('spectrolid_trans_button', 'cuvette');
             step_no++;
-            count++;
-            }
-        else if(step_no == 9 && count == 9){
+        }
+        else if(step_no == 9 && count == 8){
             // Replace the spectrofluorimeter images with the closed spectrophotmeter images.
             images[0] = "../../common_images/specfluor_on_redLight.png";
             images[1] = "../../common_images/specfluor_on_no_redLight.png";
             document.getElementById("demo").innerHTML = "Step-No 11: To run the Excitation Spectral Scan, open the measurement set-up screen by clicking on the fluorescence measurement icon on the computer monitor.";
+            cursorPointers('spectrolid_trans_button1','comp_trans_button');
             step_no++;
         }
-
 }
 
 // This method is used to display the elements which are used for data validation.
@@ -200,6 +201,7 @@ function scan(){
             document.getElementById("demo").innerHTML = "Step-No 15:To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor.Select the emission scan mode on the screen.";
             step_no++;        
         }
+    cursorPointers('comp_trans_button', 'ok_btn');
 }
 
 //This method is used to select the specific graph from the dropdown menu.
@@ -235,6 +237,7 @@ function okBtn(){
                 document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
                 video1.play();
                 step_no++;
+                cursorPointers('ok_btn', 'disposegraph');
         }
         //validation for the emission scan mode.
         else if(input1 == 425 && input2 == 435 && input3 == 700 && step_no == 14 && dropdown.value == "Emission"){
@@ -243,22 +246,25 @@ function okBtn(){
                 document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
                 video2.play();
                 step_no++;
+                cursorPointers('ok_btn', 'disposegraph');
         }
         else{
                 alert("Select Scanmode, EXWL,EM Start WL and EM End WL values");
         }
 }
 
-// This method makes the graph hidden once the video is played nad close is pressed. 
+// This method makes the graph hidden once the video is played and close is pressed. 
 function disposeGraph(){
         // After playing the graph plotting video close option is choosen, the background scan image and the video is hidden.
         if(step_no==12){
             $("#video1, #scan").css("visibility", "hidden");
             document.getElementById('demo').innerHTML = "Step-No 14:To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor.Select the Emission Scan Mode on the screen.";
+            cursorPointers('disposegraph', 'comp_trans_button');
             step_no++;
         }
         else if(step_no == 15){
             $("#video2, #scan").css("visibility", "hidden");
             document.getElementById('demo').innerHTML ="Click on Reset button to start over the measurements.";
+            document.getElementById('disposegraph').style.cursor = 'default';
         }
 }
