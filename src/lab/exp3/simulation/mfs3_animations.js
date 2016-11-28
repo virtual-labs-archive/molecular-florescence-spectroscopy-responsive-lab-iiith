@@ -155,7 +155,7 @@ function moveCuvette(){
             }, 3000);
 
             setTimeout(function(){
-                $("#cuvette").animate({left:'-142px',top:'288px'},3000,function(){
+                $("#cuvette").animate({left:'-151px',top:'278px'},3000,function(){
                     this.remove();
                     count++;
                 });
@@ -207,6 +207,7 @@ function extraCuvette(){
         setTimeout(function(){
             $("#reference").remove();
             $("#quartz_cuvette, #ref_cuvette").hide();
+            count++;
         },800);
 }
     

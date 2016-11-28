@@ -1,6 +1,5 @@
 <html>
 <head>
-    <title>mfs_exp4</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../libraries/bootstrap-3.3.7-dist/css/bootstrap.min.css">
@@ -10,6 +9,7 @@
     <script src="../../libraries/jQueryRotate.js"></script>
     <script type="text/javascript" src="mfs_expt4.js"></script>
     <script type="text/javascript" src="mfs4_animations.js"></script>
+    <title>Demonstration of Solvent Effects on Fluorescence Spectra of a Fluorophore</title>
 </head>
 
 <body> 
@@ -17,8 +17,10 @@
 <div class= "container">
     <!-- First row consists of title of the experiment and the reset button -->
     <div class= "row">
-       <h3>Demonstration of Solvent Effects on Fluorescence Spectra of a Fluorophore</h3><br/> 
-       <button id="reset_btn" onclick="reload()">Reset Experiment</button>  
+        <div class="col-sm-12">
+            <h3>Demonstration of Solvent Effects on Fluorescence Spectra of a Fluorophore</h3><br/> 
+            <button id="reset_btn" onclick="reload()">Reset Experiment</button>
+        </div> 
     </div>
     <br/>
 
@@ -27,7 +29,7 @@
         <div class="col-sm-6">
         <!-- Manual image button displays the set of instructions to be followed to perform experiment
         On clicking this button a box modal appears over the page n displays the instructions -->
-            <img id="manual_button" src="images/manual_button.png"><br/><br/>
+            <img id="manual_button" src="../../common_images/manual_button.png"><br/><br/>
             <div id="manual" style = "z-index:1000" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
@@ -85,7 +87,7 @@
             </div>
             <!-- Data image button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
             On clicking this button a new page displaying the graphs is opened  -->
-            <img id="data_button" src="images/data_button.png">
+            <img id="data_button" src="../../common_images/data_button.png">
 
             <div id = "conc_scale">
                 <img  id ="scale_image" src="images/scale_image.png" >
@@ -96,48 +98,48 @@
 
 
         <div class="col-sm-6" id ="apparatus">
-            <img  id="shelf" src="images/shelf.png">
-            <img  id="round-bottom-flask"  src="images/empty-round-bottom-flask.png" >
+            <img  id="shelf" src="../../common_images/shelf.png">
+            <img  id="round-bottom-flask"  src="../../common_images/empty-round-bottom-flask.png" >
             <img  id = "solution_name" >
             <img  id="pipette" src="images/pipette.png" >
-            <img  id="quartz_cuvette" src="images/quartz-cuvette.png" >
-            <img  id="cuvette" src="images/cuvette.png" > 
+            <img  id="quartz_cuvette" src="../../common_images/quartz-cuvette.png" >
+            <img  id="cuvette" src="../../common_images/cuvette.png" > 
         </div>
     </div><br/><br/><br/>
 
     <!-- Third row consists of table with various devices on it  -->
     <div class="row">
         <div class="col-sm-12" id="table">
-            <img  id = "table_with_spec" src="images/table_with_spec.png">
-            <img  id ="computerimage" src="images/computer.png">
+            <img  id = "table_with_spec" src="../../common_images/table_with_spec.png">
+            <img  id ="computerimage" src="../../common_images/computer.png">
             <!-- button to scan the sample on the computer-->
-            <img  id ="comp_trans_button" src="images/vertical_button.png">
+            <img  id ="comp_trans_button" src="../../common_images/vertical_button.png">
             <!-- buttons to open and close the spectrophotometer lid -->
-            <img id ="spectrolid_trans_button" src="images/vertical_button.png">
-            <img id ="spectrolid_trans_button1" src="images/vertical_button.png">
+            <img id ="spectrolid_trans_button" src="../../common_images/vertical_button.png">
+            <img id ="spectrolid_trans_button1" src="../../common_images/vertical_button.png">
             <!-- reference cuvette -->
-            <img id = "reference" src = "images/reference.png" >
-            <img id = "ref_cuvette" class="" >
+            <img id = "reference" src = "../../common_images/reference.png" >
+            <img id = "ref_cuvette" >
             <!-- text that shows the instructions to be followed next -->
             <div id = "demo"></div>
             <!-- button to switch on and switch off the spectrophotometer -->
-            <img id="power_trans_button" src="images/vertical_button.png">
+            <img id="power_trans_button" src="../../common_images/vertical_button.png">
         </div>
     </div>
 
 <!--absorbtion validation-->
 
-    <img id="clockScreen" src="images/clock.png">
+    <img id="clockScreen" src="../../common_images/clock.png">
     <!-- Image of the hand of the clock -->
-    <img  id="clockHand"  src="images/hand.png">
+    <img  id="clockHand"  src="../../common_images/hand.png">
     <!-- Image of the greyed background displayed as a background while scanning the sample and 
     this image shown as a popup screen to start the experiment -->
-    <img id="popup" src="images/transparent.png" >
+    <img id="popup" src="../../common_images/transparent.png" >
     <button id ="start" >Start Absorption measurement</button>
     <!-- This image is used to enter the input values to display the graph1/graph2-->
-    <img id="input_form" class="data_validation" src="images/inputform1.png">
+    <img id="input_form" class="data_validation" src="../../common_images/inputform1.png">
     <!--Displays the graph by clicking on start button if the entered values are correct-->
-    <img id="start_btn" class="data_validation" src="images/vertical_button.png" >
+    <img id="start_btn" class="data_validation" src="../../common_images/vertical_button.png" >
     <!--graph input values -->
     <input id = "input1" class="data_validation" type="text" >
     <input id = "input2" class="data_validation" type="text" >    
@@ -152,15 +154,15 @@
     <video id="video4" class="videos"><source src="videos/graph7.mp4" type="video/mp4"></video>
     <video id="video5" class="videos" ><source src="videos/graph9.mp4" type="video/mp4"></video>
     <!-- image to close the graph -->
-    <img id = "disposegraph" src="images/vertical_button.png">
+    <img id = "disposegraph" src="../../common_images/vertical_button.png">
 
 
 <!--fluoriscence validation-->
 
     <!-- This image is used to enter the input values to display the graph1/graph2-->
-    <img id="input_data" class="data_validation1" src="images/inputform.png">
+    <img id="input_data" class="data_validation1" src="../../common_images/inputform2.png">
     <!--Displays the graph by clicking on ok button -->
-    <img id="ok_btn" class="data_validation1" src="images/vertical_button.png" >
+    <img id="ok_btn" class="data_validation1" src="../../common_images/vertical_button.png" >
     <!-- dropdown box to select the graphs to display -->
     <select id="select" class="data_validation1">
           <option id="Excitation" value="Emission">Emission</option>
