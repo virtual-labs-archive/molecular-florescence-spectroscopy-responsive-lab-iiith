@@ -15,10 +15,11 @@
     var img,img1;
     var id,id1;
     var type_of_movement;// Indicates upward or downward motion
-    var step_no=0;   /*This variable is used to perform all the actions in the required sequence. 
-                      Depending on the value of this variable the part of the method is called.*/
     var sol_name;
-
+    var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
+                     Depending on the value of this variable the part of the method is called.*/
+    var count = 0; /* This variable is used to perform the animations of the objects without distortions */
+    
 /*This method is called when the page is loaded. 
 // first function helps in providing basic functionality to manual button and also sets the first set of instructions
 // second function adds click events to elements as soon as the page loads.
@@ -140,7 +141,7 @@ function setSolution(){
         document.getElementById("solution_name").src = "images/quinine.png";
         document.getElementById("round-bottom-flask").src = "images/quinine_sol.png"   
       }
-      document.getElementById("demo").innerHTML = "Step-No 2: Click on the volumetric flask containing anthracene solution to take it to the instrument table.";
+document.getElementById("demo").innerHTML = "Step-No 2: Click on the volumetric flask containing anthracene solution to take it to the instrument table.";
 }
 
 /* When the user switches on the spectrophotometer this method is called. Here the spectrophotometer image is changed 
@@ -157,7 +158,7 @@ function turnOn() {
         }
         // Call turnOn() method every 250ms 
         setTimeout("turnOn()", 250)
-        if(step_no == 17){
+        if(step_no == 18){
             images[0] = "../../common_images/specfluor_on_no_redLight.png";
             images[1] = "../../common_images/specfluor_on_redLight.png";
         }
@@ -192,7 +193,7 @@ function showClock(){
             //After 10 secs dispose clock
             setTimeout("removeClock()",5350);
         }
-        else if(step_no==17){
+        else if(step_no==18){
             clck();
             document.getElementById("demo").innerHTML = "Step-No 19: Open the lid of the sample chamber of the spectroflourimeter by clicking on the lid for placing the sample in the cell-holder."
             //After 10 secs dispose clock
@@ -202,10 +203,11 @@ function showClock(){
 
 // After 30 seconds of display of the timer the visibility of clock is changed back to hidden.
 function removeClock() {
-        if(step_no == 7||step_no == 17){
+        if(step_no == 7||step_no == 18){
             context.style.visibility='hidden';
             hand.style.visibility="hidden";
             step_no++;
+            cursorPointers('power_trans_button', 'spectrolid_trans_button');
         }
 }
 
@@ -218,33 +220,37 @@ function spectrophotometer(){
             images[1] = "../../common_images/spec_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 10: Click on the cuvette top place it in the sample holder. One has to use pure solvent as the sample bank or reference in this measurement. Here a double beam spectrophotometer is shown.";
             step_no++;
+            cursorPointers('spectrolid_trans_button', 'quartz_cuvette');
         }
-        else if(step_no == 10){
+        else if(step_no == 10 && count == 9){
             // Replace the spectrophotometer images with the closed spectrophotmeter images.
             images[0] = "../../common_images/spec_close.png";
             images[1] = "../../common_images/spec_close1.png";
             document.getElementById("demo").innerHTML = "Step-No 12:  Open the measurement set-up screen by clicking on the absorption measurement icon on the computer monitor. ";
             step_no++;
+            cursorPointers('spectrolid_trans_button1', 'comp_trans_button');
         }
-        else if(step_no == 13){
+        else if(step_no == 14){
             // Replace the spectrophotometer images with the open spectrophotometer images
             images[0] = "../../common_images/spec_open.png";
             images[1] = "../../common_images/spec_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 15: To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. ";
             step_no++;
         }
-        else if(step_no == 14){
+        else if(step_no == 15){
             //on click cuvettes comes out of spectrometer.One cuvette is removed and the other cuvette is placed on table.
             $("#ref_cuvette, #quartz_cuvette").show()
             $("#ref_cuvette").animate({left:'800px',top:'15px'},"slow", function(){
                 this.remove();
             });
-            $("#quartz_cuvette").animate({left:'290px', top:'338px'});
+            $("#quartz_cuvette").animate({left:'290px', top:'338px'}, function(){
+                count++;
+            });
             document.getElementById("demo").innerHTML = "Step-No 16:  Close the sample chamber lid by clicking on it. ";
             step_no++;
-
+            cursorPointers('spectrolid_trans_button','spectrolid_trans_button1');
         }
-        else if(step_no == 15){
+        else if(step_no == 16 && count == 10){
             // Replace the spectrophotometer images with the closed spectrophotmeter images.
             images[0] = "../../common_images/spec_close.png";
             images[1] = "../../common_images/spec_close1.png";
@@ -254,23 +260,24 @@ function spectrophotometer(){
             $("#popup, #start").css("visibility", "visible");
             }, 700);
             step_no++;
+            cursorPointers('spectrolid_trans_button1', 'start');
         }
-        else if(step_no == 18){
+        else if(step_no == 19){
             // click on the lid for placing the sample in the cell-holder.
             // Replace the spectroflourimeter images with the open spectrophotometer images
             images[0] = "../../common_images/specfluor_open.png";
             images[1] = "../../common_images/specfluor_open1.png";
             document.getElementById("demo").innerHTML = "Step-No 20: Click on the spectrophotometric quartz cuvette to transfer its content into an all-side-transparent quartz cuvette of path length 1 cm ×1 cm for the fluorescence measurement.";
             step_no++;
+            cursorPointers('spectrolid_trans_button', 'quartz_cuvette');
         }
-        else if(step_no == 20){
+        else if(step_no == 21 && count == 12){
             // Replace the spectrophotometer images with the closed spectrophotmeter images.
-            // images[0] = "../../common_images/specfluor_close.png";
-            // images[1] = "../../common_images/specfluor_close1.png";
             images[0] = "../../common_images/spec_fluormeter.png";
             images[1] = "../../common_images/spec_fluormeter.png";
             document.getElementById("demo").innerHTML = "Step-No 21:  Open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor.";
             step_no++;
+            cursorPointers('spectrolid_trans_button1', 'comp_trans_button');
         }
 
 }
@@ -283,11 +290,14 @@ function scan(){
             $(".data_validation, #instruction_bkgd, #graph_instruction").css("visibility", "visible");
             if(sol_name == 0){
                 graph_instruction.innerHTML = "Step-No 13:On the screen enter the wavelength range of spectral scan.  start: 620 nm End: 260 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A)  or transmittance (%T) mode. Click on the green 'start' button on the measurement set-up screen to run the wavelength scan.";
+                step_no++;
             }else if(sol_name ==1){
                 graph_instruction.innerHTML = "Step-No 13:On the  absorption measurement screen enter the wavelength range:Start:600nm End:260nm.";
+                step_no++;            
             }
+        cursorPointers('comp_trans_button', 'start_btn');
         }
-        else if(step_no == 21){
+        else if(step_no == 22){
             /*After the cuvette is inserted into the spectroflurimeter, when the computer in pressed to scan,
              depending on the cuvette choosen form with an instruction is displayed.*/
             if(sol_name == 0){ 
@@ -300,6 +310,7 @@ function scan(){
                 document.getElementById("demo").innerHTML = "Step-No 22: On the screen, enter the Excitation wavelength: 310 nm, Emission Start Wavelength: 320 nm and Emission End wavelength: 600 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here “medium”) also.  To run the wavelength scan for emission spectrum, click on 'OK' button on the set-up screen. One has to be sure that the solvent blank does not fluoresce in the wavelength range of interest. ";
                 step_no++;
             }
+        cursorPointers('comp_trans_button', 'ok_btn');
         }
 }
 
@@ -307,21 +318,23 @@ function startBtn(){
         input1 = document.getElementById("input1").value;
         input2 = document.getElementById("input2").value;
         video1 = document.getElementById("video1");
-        video3 = document.getElementById("video3");
+        video2 = document.getElementById("video2");
         if(sol_name== 0 &&  input1 == 620 && input2 == 260){
             $(".data_validation").css("visibility", "hidden");
             $("#popup, #video1").css("visibility", "visible");
             document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
             video1.play();
             step_no++;
+            cursorPointers('start_btn', 'disposegraph');
         }
             
         else if(sol_name == 1 && input1 == 600 && input2 == 260){
             $(".data_validation").css("visibility", "hidden");
-            $("#popup, #video3").css("visibility", "visible");
+            $("#popup, #video2").css("visibility", "visible");
             document.getElementById("graph_instruction").innerHTML = "Step-No 14:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
-            video3.play();
+            video2.play();
             step_no++;
+            cursorPointers('start_btn', 'disposegraph');
         }
         else{
             alert("Enter start and end values and click start button on top of the window");
@@ -332,7 +345,7 @@ function startBtn(){
 function selectGraph() {
     dropdown = document.getElementById("select");
     dropdown.onchange = function(event){
-       if(dropdown.value=="Excitation" && step_no==22){
+       if(dropdown.value=="Excitation" && step_no==23){
          $("#select").html("<option value='Emission'>Emission</option><option value='Excitation'>Excitation</option>");
          alert("Select Emission scan mode");
        }
@@ -345,22 +358,24 @@ function okBtn(){
         var input_1 = document.getElementById("input1_data").value;
         var input_2 = document.getElementById("input2_data").value;
         var input_3 = document.getElementById("input3_data").value;
-        video2 = document.getElementById("video2");
+        video3 = document.getElementById("video3");
         video4 = document.getElementById("video4");
         // dropdown = document.getElementById("select");
-        if(input_1 == 350 && input_2 == 360 && input_3 == 650 && step_no == 22 && sol_name == 0){
+        if(input_1 == 350 && input_2 == 360 && input_3 == 650 && sol_name == 0){
                 $(".data_validation1").css("visibility", "hidden");
-                video2.style.visibility = "visible";
+                video3.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
-                video2.play();
+                video3.play();
                 step_no++;
+                cursorPointers('ok_btn', 'disposegraph');
         }
-        else if(input_1 == 310 && input_2 == 320 && input_3 == 600 && step_no == 22 && sol_name == 1){
+        else if(input_1 == 310 && input_2 == 320 && input_3 == 600 && sol_name == 1){
                 $(".data_validation1").css("visibility", "hidden");
                 video4.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
                 video4.play();
-                step_no++
+                step_no++;
+                cursorPointers('ok_btn', 'disposegraph');
         }
         else{
                 alert("Select Scanmode, EXWL,EM Start WL and EM End WL values");
@@ -371,13 +386,15 @@ function okBtn(){
 function disposeGraph(){
         /* After playing the graph plotting video close option is choosen, the background scan image and 
             the video is made hidden. */
-        if(step_no == 12){
+        if(step_no == 13){
             $(".videos, .common, #popup").css("visibility", "hidden");
             document.getElementById("demo").innerHTML = "Step-No 15: To take the cuvette out of the sample chamber, first click on the sample chamber lid to open it and then on the cuvette. ";
             step_no++;
+            cursorPointers('disposegraph', 'spectrolid_trans_button');
         }
-        if(step_no == 23){
+        if(step_no == 24){
             $(".videos, #popup").css("visibility", "hidden");
             document.getElementById("demo").innerHTML = "Collect all data by clicking on the Data tab.";
+            document.getElementById('disposegraph').style.cursor = 'default';
         }
 }

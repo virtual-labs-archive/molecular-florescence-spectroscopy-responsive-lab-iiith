@@ -7,6 +7,7 @@ function moveImage(){
             if(type_of_movement == 0){
                 if (initial_top > final_top) {
                     clearInterval(id);
+                    count++;
                 } else {
                     initial_top+=step_top; 
                     initial_left+=step_left;
@@ -17,6 +18,7 @@ function moveImage(){
             else if(type_of_movement == 1){
                 if (initial_top < final_top) {
                     clearInterval(id);
+                    count++;
                 } else {
                     initial_top+=step_top; 
                     initial_left+=step_left;
@@ -25,6 +27,12 @@ function moveImage(){
                 }
             }
         } 
+}
+
+//To disable and enable the cursor pointers on elements.
+function cursorPointers(id1, id2){
+    document.getElementById(id1).style.cursor = "default";
+    document.getElementById(id2).style.cursor = "pointer";
 }
 
 // This is the function called when flask is clicked. It moves the flask from the shelf to the table.
@@ -53,8 +61,9 @@ function moveFlask(){
             document.getElementById("slider").style.opacity = "0.4";   
             document.getElementById("demo").innerHTML = "Step-No 3:Click on the quartz cuvette (path length 1x1cm) to take it to the instrument table. Quartz cuvettes for spectrophotometric measurements are transparent only on two opposite sides, unlke the  all-side transparent quartz cuvettes used for flourescence measurements.";
             step_no++;
+            cursorPointers('round-bottom-flask', 'quartz_cuvette');
           }
-      }
+       }
 }
 
 /* This is the function called when cuvette is clicked. 
@@ -62,7 +71,7 @@ function moveFlask(){
 // When it is called for the second time it is moved to the spectrometer along with reference cuvette 
    and the cuvettes gets hidden. */
 function moveCuvette(){
-        if ( step_no == 1){
+        if ( step_no == 1 && count == 1){
             // get the image 
             elem = document.getElementById("quartz_cuvette"); 
             // Move the cuvette from the shelf to the table
@@ -79,6 +88,7 @@ function moveCuvette(){
             // Change the next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 4: click on the 5mL capacity pipette to collect 3mL of the expeimental solution which will be transferred into the quartz cuvette. In real operation, one has to set the volume to 3mL in the pipette and an appropriate tip should be attatched prior to dipping it in the solution";
             step_no++;
+            cursorPointers('quartz_cuvette', 'pipette');
         }
         else if(step_no == 9){
             // Depending on the cuvette choosen get images accordingly.
@@ -97,8 +107,9 @@ function moveCuvette(){
             // After 1200ms call moveDown() method.
             setTimeout("moveDown()",1500);
             step_no++;
+            cursorPointers('quartz_cuvette', 'spectrolid_trans_button1');
         }
-        else if(step_no == 19){
+        else if(step_no == 20){
             // get the image of the shelf
             elem = document.getElementById("cuvette"); 
             // Move the cuvette from the shelf to the table
@@ -127,7 +138,7 @@ function moveCuvette(){
                                 quartz.attr("src", "../../common_images/quartz-cuvette.png");
 
                             }
-                            if(sol_name == 1){
+                            else if(sol_name == 1){
                                 elem.src="images/cuvette-with-sol2.png";
                                 quartz.attr("src", "../../common_images/quartz-cuvette.png");
                             }
@@ -146,13 +157,14 @@ function moveCuvette(){
             setTimeout(function(){
                 $("#cuvette").animate({left:'-142px',top:'288px'},3000,function(){
                     this.remove();
+                    count++;
                 });
             }, 4000);
 
             // Change the next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 20: Close the sample chamber lid by clicking on it.";
             step_no++;
-            
+            cursorPointers('quartz_cuvette', 'spectrolid_trans_button1');
         }
 }
 
@@ -195,7 +207,7 @@ function extraCuvette(){
         setTimeout(function(){
             $("#reference").remove();
             $("#quartz_cuvette, #ref_cuvette").hide();
-        },1000);
+        },800);
 }
     
 /*This method is called whan the pipette is clicked.
@@ -204,7 +216,7 @@ function extraCuvette(){
 //when it is called for the third time pipettte is moved out of the flask to the cuvette.
 //When it is called for the fourth time it tranfers the solution into the cuvette and moves back to the shelf again.*/
 function movePipette() {
-        if(step_no == 2){
+        if(step_no == 2 && count == 2){
             // Get image
             elem = document.getElementById("pipette"); 
             //Rotate the pipette from its initial position
@@ -230,7 +242,7 @@ function movePipette() {
             document.getElementById("demo").innerHTML = "Step-No 5: Click on the pipette to draw solution into it.";
             step_no++;
         }
-        else if(step_no==3){
+        else if(step_no==3 && count == 3){
             elem.src = "images/pipette-with-solution.png";
             if(sol_name == 0){
                 $("#round-bottom-flask").attr("src", "images/half-filled-anthracene_solution.png");
@@ -241,16 +253,20 @@ function movePipette() {
             // Change to next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 6: Click on the pipette to take it out of the volumetric flask.";
             step_no ++;
+            setTimeout(function(){ 
+                count++; }, 500);
         }
-        else if(step_no == 4){
+        else if(step_no == 4 && count == 4){
              $("#pipette").animate({ top: '160px'},"slow")
                           .animate({ left:'295px'}, "slow")
                           .animate({ top: '220px'}, "slow");
             // Change to next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 7:Click on the pipette again to transfer the solution into the cuvette ";
             step_no ++;
+            setTimeout(function(){ 
+                count++; }, 1000);
         }
-        else if(step_no == 5){
+        else if(step_no == 5 && count == 5){
             elem.src = "../../common_images/pipette.png";
             if(sol_name == 0){
                 $("#quartz_cuvette").attr("src", "images/quartz_cuv-with-anthracene-sol.png");
@@ -259,8 +275,10 @@ function movePipette() {
                 $("#quartz_cuvette").attr("src", "images/quartz_cuv-with-quinine-sol.png");
             }
             step_no ++;
-            setTimeout(movebackPipette, 500);
-          }
+            setTimeout(function(){ 
+                movebackPipette();
+            }, 200);
+        }
 }
 
 //This function is used to move the pipette back to the shelf. 
@@ -280,6 +298,16 @@ function movebackPipette() {
           setTimeout( function(){
             $("#popup, #start").css("visibility", "visible");
           }, 500);
+          cursorPointers('pipette', 'start');
+}
+
+function changeParameters(){
+    $('#table_with_spec').css({"width":"85%"});
+    $("#demo").css({"top":"75%"});
+    $("#comp_trans_button").css({"left":"48%", "top":"7%"});
+    $("#power_trans_button").css({"left":"15.3%", "top":"41%"});
+    $("#spectrolid_trans_button").css({"top":"13%"});
+    $("#spectrolid_trans_button1").css({"left":"34%", "top":"-3%", "width":"5%"});
 }
 
 //This function is used to hide the popup screen.
@@ -288,15 +316,16 @@ function hideInstruction() {
       if(step_no == 6){
             document.getElementById("demo").innerHTML = 'Step-No 9: Turn on the spectrophotometer by clicking on the power button. In real operation it takes approx.30 min for initialization of the instrument.'
             step_no++;
+            cursorPointers('start', 'power_trans_button');
       }
-      else if( step_no == 16){
+      else if( step_no == 17){
             $("#computerimage").remove();
-            document.getElementById('table_with_spec').style.width="85%";
-            images[0] = "../../common_images/spec_flourmeter.png";
-            images[1] = "../../common_images/spec_flourmeter.png";
+            images[0] = "../../common_images/spec_fluormeter.png";
+            images[1] = "../../common_images/spec_fluormeter.png";
+            changeParameters();
             document.getElementById("demo").innerHTML = "Step-No 18: Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument. ";
-            document.getElementById("demo").style.top = "75%";
             step_no++;
+            cursorPointers('start', 'power_trans_button');
       }
 }
 
