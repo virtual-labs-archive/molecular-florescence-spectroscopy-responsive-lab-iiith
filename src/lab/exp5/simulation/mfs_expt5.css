@@ -25,7 +25,7 @@ h3{
 #shelf{
     margin:auto;
     display: block;
-    width: 62%;
+    width: 59%;
 }
 
 #round-bottom-flask{
@@ -33,19 +33,18 @@ h3{
     z-index:3; 
     left:24%; 
     top:-177%;
-    width:6.5%;
+    width:7.5%;
     height:235%;
     cursor:pointer;
 }
 
 #pipette{
     position:absolute;
-    z-index:1; 
+    z-index:4; 
     width:2%; 
-    left:42%; 
+    left:41%; 
     top:-172%;
     height: 239%;
-    cursor:pointer;
     -ms-transform: rotate(-8deg); /* IE 9 */
     -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
     transform: rotate(-8deg);
@@ -53,60 +52,60 @@ h3{
 
 #beaker{
     position: absolute;
-    z-index: 3;
-    left: 54.5%;
-    top: -114%;
-    width: 8%;
-    cursor: pointer;
+    z-index: 4;
+    left: 52.5%;
+    top: -136%;
+    width: 7.6%;
 }
 
 #sol_beaker{
     position: absolute;
-    z-index: 2;
+    z-index: 4;
     left: 67.5%;
-    top: -105%;
-    width: 7%;
+    top: -95%;
+    width: 6%;
 }
 
 #table{
     margin:auto;
     display: block;
-    width:90%;
+    width:100%;
 }
 
 #instrument{
     position: absolute;
     z-index: 2;
-    top:-54%;
+    top:-48%;
     width: 37%;
     left:2%;
 }
 
 #wire{
     position: absolute;
-    z-index: 1;
-    top:-115%;
-    width: 28%;
-    left:36%;
+    z-index: 3;
+    top:-79%;
+    width: 24%;
+    left:37%;
+    height: 85%;
 }
 
 #stand{
     position: absolute;
-    z-index: 2;
-    top:-87%;
-    width: 22%;
-    left:46%;
+    z-index: 3;
+    top:-53%;
+    width: 17.5%;
+    left:46.8%;
 }
 
 #rod_name{
     position: absolute;
     z-index: 2;
-    top:-100%;
+    top:-73%;
     width: 13%;
     left:66%;
 }
 
-#demo{
+#instruction{
     position: absolute;
     top: 60%;
     left: 17%;
@@ -120,9 +119,51 @@ h3{
     position: absolute; 
     z-index:2;
     left: 6%; 
-    top: 64%;
+    top: 53%;
     width: 1.5%;
     height: 6%;
-    cursor: pointer; 
 }
 
+#arrow1{
+    position: absolute;
+    top: 42%;
+    width: 4%;
+    left: 0%;
+    visibility: hidden;
+}
+
+#arrow2{
+    position: absolute;
+    top: 43%;
+    width: 4.5%;
+    left: 62%;
+    visibility: hidden;
+}
+
+#arrow3{
+    position: absolute;
+    top: 68%;
+    width: 4.5%;
+    left: 62%;
+    z-index: 4;
+    visibility: hidden;
+}
+
+#drop{
+    position: absolute;
+    top: 61%;
+    width: 1.2%;
+    left: 57.3%;
+    z-index: 3;
+    visibility: hidden;
+}
+
+#start_exp{
+   position: absolute;
+   top: 16%;
+   width: 93%;
+   height: 100%;
+   left: 3.3%;
+   z-index: 10;
+   visibility: hidden; 
+}
