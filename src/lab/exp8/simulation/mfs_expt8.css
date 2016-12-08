@@ -141,7 +141,6 @@ h3{
     width:4%; 
     left:41%; 
     top:6%;  
-    cursor:pointer;
     -ms-transform: rotate(-8deg); /* IE 9 */
     -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
     transform: rotate(-8deg);
@@ -154,7 +153,6 @@ h3{
     left:65%;
     height: 22.5%;
     width: 3.3%;
-    cursor:pointer;
 }
 
 #cuvette{
@@ -164,7 +162,6 @@ h3{
     left:71%;
     height: 22.5%;
     width: 3.3%;
-    cursor:pointer;
 }
 
 #table_with_spec{
@@ -187,7 +184,6 @@ h3{
     height: 26%; 
     left: 49%;
     top: 10%; 
-    cursor: pointer;
 }
 
 #spectrolid_trans_button{
@@ -197,7 +193,6 @@ h3{
     height: 18%;
     left: 35%; 
     top: 20%;  
-    cursor: pointer;
 }
 
 #spectrolid_trans_button1{
@@ -207,7 +202,6 @@ h3{
     height: 18%;
     left: 36%; 
     top: 4%;  
-    cursor: pointer;
 }
 
 #reference{
@@ -216,7 +210,6 @@ h3{
     width: 15%;
     left: 54%;
     top: -14%;
-    cursor: pointer;
     visibility: hidden;
 }
 
@@ -225,17 +218,15 @@ h3{
     z-index: 1;
     left: 583px;
     top: -6%;
-    cursor: pointer;
 }
 
 #power_trans_button{
     position: absolute; 
-    z-index:2;
+    z-index:19;
     left: 17.3%; 
     top: 44%;
     width: 1.8%;
     height: 7.5%;
-    cursor: pointer; 
 }
 
 #demo{
@@ -303,7 +294,6 @@ h3{
     width: 3%;
     height: 5%;
     visibility : hidden;
-    cursor: pointer;
 }
 
 #input1{
@@ -353,7 +343,6 @@ h3{
     height: 3%;
     left: 13%;
     top: 512px;
-    cursor: pointer;
 }
 
 /*fluriscence css*/
@@ -376,8 +365,8 @@ h3{
     width: 9%;
     height: 5%;
     visibility : hidden;
-    cursor: pointer;
 }
+
 #select{
     position: absolute;
     top:24%;
