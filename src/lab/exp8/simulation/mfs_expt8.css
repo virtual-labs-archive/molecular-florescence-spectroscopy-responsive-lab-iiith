@@ -222,7 +222,7 @@ h3{
 
 #power_trans_button{
     position: absolute; 
-    z-index:19;
+    z-index:1;
     left: 17.3%; 
     top: 44%;
     width: 1.8%;
@@ -236,6 +236,8 @@ h3{
     max-width: 68%;
     color: yellow;
     text-align: left;
+    height: 25%;
+    overflow-y: scroll;
 }
 
 #clockScreen{

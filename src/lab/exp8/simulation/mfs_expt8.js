@@ -68,7 +68,7 @@ function popitup(url) {
 //This function is used to add click events to elements.
 function addclickEvents(){
         document.getElementById("reset_btn").addEventListener("click", function() {
-            location.reload();
+            window.location.reload();
         }, false);
         document.getElementById("data_button").addEventListener("click", function() {
             popitup("slideshow.html");
@@ -95,7 +95,7 @@ function addclickEvents(){
             spectrophotometer();
         }, false);
         document.getElementById("power_trans_button").addEventListener("click", function() {
-            turnOn(); showClock();
+            changeImage(); showClock();
         }, false);
         document.getElementById("start").addEventListener("click", function() {
             hideInstruction();
@@ -135,17 +135,21 @@ function setSolution(){
       sol_name = document.getElementById("slider").value;
       if(sol_name == 0){
         document.getElementById("solution_name").src = "images/sol_name1.png";
-        document.getElementById("round-bottom-flask").src = "images/flask-with-sol.png"
       }
       else if(sol_name == 1){
-        document.getElementById("solution_name").src = "images/sol_name2.png";
-        document.getElementById("round-bottom-flask").src = "images/flask-with-sol.png"   
+        document.getElementById("solution_name").src = "images/sol_name2.png";   
       }
+      document.getElementById("round-bottom-flask").src = "images/flask-with-sol.png";
       document.getElementById("demo").innerHTML = "Step-No 2: Click on the volumetric flask containing rhodamine B solution to take it to the instrument table. ";
 }
 
-/* When the user switches on the spectrophotometer this method is called. Here the spectrophotometer image is changed 
-   continuously  to give the blinking light effect. The two images that are swapped is stored in images[] */
+// Call turnOn() method every 250ms 
+function changeImage() {
+    setInterval("turnOn()", 250);
+}
+
+/* When the user switches on the spectrophotometer this method is called. Here the spectrophotometer image 
+is changed continuously  to give the blinking light effect. The two images that are swapped is stored in images[] */
 function turnOn() {
         // Get the image
         img = document.getElementById('table_with_spec');
@@ -156,8 +160,6 @@ function turnOn() {
         if(x >= images.length){
             x = 0;
         }
-        // Call turnOn() method every 250ms 
-        setTimeout("turnOn()", 250)
         if(step_no == 18){
             images[0] = "../../common_images/specfluor_on_no_redLight.png";
             images[1] = "../../common_images/specfluor_on_redLight.png";
