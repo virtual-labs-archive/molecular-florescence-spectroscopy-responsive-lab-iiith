@@ -11,7 +11,7 @@ body{
     position: relative;
 }
 
-h4{  
+h3{  
     text-align: center;
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
@@ -22,26 +22,12 @@ h4{
     display: block;
 }
 
-#data_buttons{
-    position: absolute;
-    top:126px;
-}
-
-#manual_button{
+#manual_button, #data_button{
     position:absolute; 
-    left: 70px;
+    left: 8%;
     cursor: pointer;
-    top: 23%;
-
 }
 
-#data_button{
-    position:absolute; 
-    left: 69px;
-    cursor: pointer;
-    top: 29%;
-
-}
 .modal {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
@@ -115,59 +101,40 @@ h4{
         to {opacity: 1}
     }
 
+#scale_image{
+    position: absolute;
+    width: 320px;
+    left: 208px;
+    top: -4px;
+}
+
+#slider{
+    position: absolute;
+    left: 220px;
+    width: 301px;
+    top: 31px;
+}
+
 #apparatus{
     float:right;
-}
-
-#solution{
-    position:absolute;
-    z-index:1099; 
-    left:8%; 
-    top:5%;
-}
-
-#scale{
-    position: absolute;
-    z-index: 1;
-    left: 24%;
-    top: 20%;
-
-}
-
-#conc_scale{
-    position: absolute;
-    z-index: 1;
-    left: 2%;
-    top: 35%;
-    width: 85%;
-
-}
-
-#scale_image{
-    /*position: absolute;*/
-    z-index: 1;
-    left: 2%;
-    top: 2%;
-    width: 90%;
 }
 
 #round-bottom-flask{
     position:absolute;
     z-index:2; 
-    width:16%; 
-    left:13%; 
-    top:20%; 
+    width:12%; 
+    height: 56%;
+    left:15%; 
+    top:22%; 
     cursor:pointer;
 }
-
 
 #pipette{
     position:absolute;
     z-index:1; 
-    width:4%; 
-    left:45%; 
-    top:9%;  
-    cursor:pointer;
+    width:4.5%; 
+    left:47%; 
+    top:7%;  
     -ms-transform: rotate(-8deg); /* IE 9 */
     -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
     transform: rotate(-8deg);
@@ -176,25 +143,24 @@ h4{
 #cuvette{
     position: absolute;
     z-index: 2;
-    width: 4%;
-    left: 72%;
+    width: 4.2%;
+    left: 74%;
     top: 48%;
-    cursor: pointer;
 }
 
 #table_with_spec{
     margin:auto;
     display: block;
+    width: 85%;
 }
 
 #comp_trans_button{
     position: absolute; 
     z-index: 2; 
-    width: 13%;
-    height: 26%; 
+    width: 13.5%;
+    height: 27%; 
     left: 48%;
-    top: 10%; 
-    cursor: pointer;
+    top: 6%; 
 }
 
 #spectrolid_trans_button{
@@ -202,9 +168,8 @@ h4{
     z-index:2;
     width: 5%; 
     height: 21%;
-    left: 35.5%; 
+    left: 34.5%; 
     top: 14%;  
-    cursor: pointer;
 }
 
 #spectrolid_trans_button1{
@@ -212,9 +177,8 @@ h4{
     z-index:3;
     width: 4%; 
     height: 18%;
-    left: 36%; 
+    left: 35%; 
     top: 2%;  
-    cursor: pointer;
 }
 
 #reference{
@@ -223,24 +187,22 @@ h4{
     width: 15%; 
     left: 40%; 
     top: 0%; 
-    cursor: pointer;
     visibility: hidden;
 }
 
 #power_trans_button{
     position: absolute; 
     z-index:2;
-    left: 17%; 
+    left: 15%; 
     top: 42%;
     width: 2%;
-    height: 8%;
-    cursor: pointer; 
+    height: 8%; 
 }
 
 #demo{
     position: absolute;
-    top: 70%;
-    left: 17%;
+    top: 73%;
+    left: 15%;
     max-width: 66%;
     color: yellow;
     text-align:left;
@@ -249,35 +211,33 @@ h4{
 
 #clockScreen{
     position: absolute;
-    top: 8%;
-    left: 0%;
+    top: 56px;
+    left: 4px;
     visibility: hidden;
     z-index: 4;
-    width:98%;
+    width: 95%;
     height: 94%;
 }
+
 #clockHand{
     position:absolute; 
-    top:43.18%;
-    left:49.75%; 
+    top:307.50px;
+    left:48.50%; 
     visibility:hidden; 
-    z-index:5;
+    z-index: 5;
 }
 
 #scan{
-    position: absolute;
-    z-index: 6;
-    top: 106px;
-    left: -15px;
-    width: 103%;
+    position:absolute;
+    z-index: 6; 
+    top:76px; 
+    left:15px;
     visibility:hidden;
-    /*filter:opacity(40%);*/
-   /* opacity: 0.4;
-    filter: alpha(opacity=10);*/ /* For IE8 and earlier */
-
+    width: 94%;
+    height: 95%;
 }
 
-#input_data{
+#mfs_form2{
     position: absolute;
     z-index: 8;
     top: 15%;
@@ -295,7 +255,6 @@ h4{
     width: 9%;
     height: 5%;
     visibility : hidden;
-    cursor: pointer;
 }
 #select{
     position: absolute;
@@ -336,22 +295,21 @@ h4{
     visibility: hidden;
 }
 
-.videos{
+.video{
     position:absolute;
     z-index:18;
     top:30%;
-    left:20%;
+    left:9%;
     visibility : hidden;
 }
 
 #disposegraph{
     position: absolute;
     z-index: 20;
-    width: 7%;
-    left: 95%;
-    top: 555px;
-    cursor: pointer;
+    width: 8%;
     height: 3%;
+    left: 80%;
+    top: 584px;
 }
 
 

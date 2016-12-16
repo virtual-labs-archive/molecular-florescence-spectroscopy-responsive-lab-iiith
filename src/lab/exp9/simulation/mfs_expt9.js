@@ -1,7 +1,7 @@
 // This file contains all general functions used in the experiment
     var images = [];// Two images that are alternated in ordered to get the blinking effect of the spectrofluorimeter
-    images[0] = "images/spec_on_redLight.png";
-    images[1] = "images/spec_on_no_redLight.png";
+    images[0] = "../../common_images/specfluor_on_redLight.png";
+    images[1] = "../../common_images/specfluor_on_no_redLight.png";
     var x = 0;
     var y = 0;
     // Variables necessary to obtain motion of all the images
@@ -13,52 +13,60 @@
     var elem;
     var img,img1;
     var id,id1;
+    // variables used in graph validation
+    var dropdown; //To select the scan mode from the dropdown menu.
+    var input1;
+    var input2;
+    var input3;
+    var video1;
+    var video2;
+    var video3;
+    var video4;
+    var video5;
+    var video6;
+    var turnon; // It is used to store the spectrometer table images.
     var type_of_movement;// Indicates upward or downward motion
-    var step_no=0;// This variable is used to perform all the actions in the required sequence. Depending on the value of this variable the part of the method is called.
-    //variables to display the instructions.
-    var instruction1 = "step1: Prepare a 3 x 10-4 M solution of anthracene in the presence of following concentrations of N,N-diethylaniline in spectroscopic grade toluene. (i) 0 M; (ii) 5 x 10-3 M; (iii) 2.5 x 10-2 M and (iv) 0.10 M. Here the solutions are shown on the concentration selection bar.";
- 
-// *This method is called when the page is loaded. *
-// first function helps in providing basic functionality to two buttons manual and data and also sets the first set of instructions
-// second function adds click events to elements as soon as the page loads.
-// third function adds mouse events to elements as soon as the page loads.
+    var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
+                     Depending on the value of this variable the part of the method is called.*/
+    var count = 0; /* This variable is used to perform the actions on the objects without distortions.
+                      i.e., It make sures that one or more actions are not performed at a time. */ 
+
+/*This method is called when the page is loaded. *
+   First function helps in providing basic functionality to manual button and also sets the 
+   first set of instructions.
+   Second function adds click events to elements as soon as the page loads.
+   Third function adds mouse events to elements as soon as the page loads. */
 window.onload = function(){ 
-    initial_function();
-    addclickEvents();
-    mouseEvents();
+        initial_function();
+        addclickEvents();
+        mouseEvents();
 }
 
 function initial_function(){
-        // Intial intrsuction to be followed
-        document.getElementById("demo").innerHTML = instruction1;
-
+        // Intial instruction to be followed
+        document.getElementById("demo").innerHTML = "Step-No 1:From the above two solutions, prepare six sets of solutions with the following volume compositions: each set containing 3 mL of 1.0 × 10-5 M anthracene solution and 0 µL, 7.5 mL, 37.5 µL, 75 µL, 112.5 µL and 150 µL of 1.0 M pyridinium chloride solutions, respectively. Here these solutions are given on a scale bar for selection.";
         var modal = document.getElementById('manual');
-
         // Get the button that opens the manual modal
         var btn = document.getElementById("manual_button");
-
         // Get the <span> element that closes the manual modal
         var span = document.getElementsByClassName("close")[0];
-
         // When the user clicks the button, open the manual modal 
         btn.onclick = function() {
             modal.style.display = "block";
-        }
-
+        };
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
-        }
-
+        };
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-        }
+        };
 }
 
-// When user clicks on the Data button it redirects him to the page containing slideshow of two graphs 
+// When user clicks on the Data button it redirects him to the page containing slideshows of the two graphs. 
 function popitup(url) {
         // Opens a new browser window called newwindow. url specifies the URL of the page to open.
         newwindow=window.open(url,'name','height=390,width=350',"_parent");
@@ -71,6 +79,12 @@ function popitup(url) {
 
 //This function is used to add click events to elements
 function addclickEvents(){
+        document.getElementById("reset_btn").addEventListener("click", function() {
+            window.location.reload();
+        }, false);
+        document.getElementById("slider").addEventListener("click", function() {
+            setSolution();
+        }, false);
         document.getElementById("data_button").addEventListener("click", function() {
             popitup("slideshow.html");
         }, false);
@@ -93,7 +107,7 @@ function addclickEvents(){
             spectrofluorimeter();
         }, false);
         document.getElementById("power_trans_button").addEventListener("click", function() {
-            turnOn(); showClock();
+            changeImage(); showClock();
         }, false);
         document.getElementById("ok_btn").addEventListener("click", function() {
             okBtn();
@@ -109,38 +123,49 @@ function addclickEvents(){
 //This function is used to add mouse events to elements.
 function mouseEvents(){
         document.getElementById("manual_button").addEventListener("mouseover", function(){
-            this.src='images/hover_manual.png';
+            this.src='../../common_images/hover_manual.png';
         });
         document.getElementById("manual_button").addEventListener("mouseout", function(){
-            this.src='images/manual_button.png';
+            this.src='../../common_images/manual_button.png';
         });
         document.getElementById("data_button").addEventListener("mouseover", function(){
-            this.src='images/hover_data.png';
+            this.src='../../common_images/hover_data.png';
         });
         document.getElementById("data_button").addEventListener("mouseout", function(){
-            this.src='images/data_button.png';
+            this.src='../../common_images/data_button.png';
         });
 }
 
-// When the user switches on the spectrofluorimeter this method is called. Here the spectrofluorimeter image is changed 
-// continuously  to give the blinking light effect. The two images that are swapped is stored in images[]
+//This method is used to select the solution from the solvent selection bar by clicking on slider.
+function setSolution(){
+    document.getElementById('round-bottom-flask').src = "images/flask-with-solution.png";
+    document.getElementById('demo').innerHTML ="Step-No 2:Click on the volumetric flask containing the solution to take it to the instrument table.";
+}
+
+// Call turnOn() method every 250ms
+function changeImage() { 
+    setInterval("turnOn()", 250);
+}
+
+/*When the user switches on the spectrofluorimeter this method is called. Here the spectrofluorimeter 
+image is changed continuously  to give the blinking light effect. The two images that are swapped is 
+stored in images[]*/
 function turnOn() {
         // Get the image
-        img = document.getElementById('table_with_spec');
+        turnon = document.getElementById('table_with_spec');
         // Change the source of the image 
-        img.src = images[x];
+        turnon.src = images[x];
         //increment x;
         x++;
         if(x >= images.length){
             x = 0;
         }
-        // Call turnOn() method every 250ms 
-        setTimeout("turnOn()", 250);
 }
 
-// This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; when this method is called they are amde visible and the clock hand is made to rotate.  
+/*This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
+when this method is called they are made visible and the clock hand is made to rotate.  */
 function showClock(){
-        if(step_no==6){
+        if(step_no==6 && count == 6){
             // Get the images.
             var context=document.getElementById('clockScreen');
             var hand =document.getElementById('clockHand');
@@ -156,7 +181,6 @@ function showClock(){
             step_no++;
             //After 10 secs dispose clock
             setTimeout("removeClock()",3000);
-            document.getElementById("demo").innerHTML = "Step-No 8: For placing the sample in the instrument, open the lid of the sample chamber of the spectrofluorimeter by clicking on the lid. "
         }
 }
 
@@ -164,113 +188,125 @@ function showClock(){
 function removeClock() {
         $('#clockHand, #clockScreen').remove();
         //Change to next intsruction to be followed.
-        document.getElementById("demo").innerHTML = "Step-No:9 To place the cuvette in the sample holder of the instrument, click on the cuvette.";
-
-        
+        document.getElementById("demo").innerHTML = "Step-No 8: Click on the lid of sample chamber of the spectrofluorimeter to open it for placing the sample in the instrument";
+        cursorPointers('power_trans_button', 'spectrolid_trans_button');
 }
 
-// First time its called to open the spectrofluorimeter
-// Second time its called to close the spectrofluorimeter
+/* First time its called to open the spectrofluorimeter.
+   Second time its called to close the spectrofluorimeter. */
 function spectrofluorimeter(){
         if (step_no == 7){
             // Replace the spectrofluorimeter images with the open spectrofluorimeter images
-            images[0] = "images/spec_open.png";
-            images[1] = "images/spec_open1.png";
-            document.getElementById("demo").innerHTML = "Step-No 10: Close the lid of the sample chamber by clicking on the lid.";
-            step_no++;
-            }
-        else if(step_no == 9){
-            // Replace the spectrofluorimeter images with the closed spectrophotmeter images.
-            images[0] = "images/spec_on_redLight.png";
-            images[1] = "images/spec_on_no_redLight.png";
-            document.getElementById("demo").innerHTML = "Step-No 11: Open the instrument set-up screen by clicking on the fluorescence icon on the computer monitor.";
+            images[0] = "../../common_images/specfluor_open.png";
+            images[1] = "../../common_images/specfluor_open1.png";
+            document.getElementById("demo").innerHTML = "Step-No 9: Click on the cuvette to place it in the sample holder of the chamber.";
+            cursorPointers('spectrolid_trans_button', 'cuvette');
             step_no++;
         }
-
+        else if(step_no == 9 && count == 8){
+            // Replace the spectrofluorimeter images with the closed spectrophotmeter images.
+            images[0] = "../../common_images/specfluor_on_redLight.png";
+            images[1] = "../../common_images/specfluor_on_no_redLight.png";
+            document.getElementById("demo").innerHTML = "Step-No 11: To run the Excitation Spectral Scan, open the measurement set-up screen by clicking on the fluorescence measurement icon on the computer monitor.";
+            cursorPointers('spectrolid_trans_button1','comp_trans_button');
+            step_no++;
+        }
 }
 
-// // This method is used to display the elements which are used for data validation.
-// function scan(){
-//         //displays the data validation elements by clicking on screen.
-//         if(step_no==10){
-//             // After the cuvette are inserted into the spectrofluorimeter, when the computer in pressed to scan, appropriate graph video is obtained.
-//             $(".data_validation, #scan").css("visibility", "visible");
-//             document.getElementById("demo").innerHTML = "Step-No 12 : Select the Emission Scan Mode on the screen. On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 360 nm and Emission End wavelength: 570 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 2.5 nm/2.5 nm) and the scan speed value (here medium ) also.";            
-//             step_no++;
-//         }
-//         // else if(step_no==13){
-//         //     //To run the emission scan mode on clicking on the computer screen.
-//         //     $(".data_validation, #scan").css("visibility", "visible");
-//         //     document.getElementById("demo").innerHTML = "Step-No 15:To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor.Select the emission scan mode on the screen.";
-//         //     step_no++;        
-//         // }
-// }
-
+// This method is used to display the elements which are used for data validation.
+function scan(){
+    //displays the data validation elements by clicking on the computer screen.
+    if(step_no==10){
+        //To run the excitation scan mode.
+        $(".data_validation, #scan").css("visibility", "visible");
+        document.getElementById("demo").innerHTML = "Step-No 12:On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 355 nm and Emission End wavelength: 475 nm. One chooses the Excitation Slit and Emission Slit values (here 2 nm/0.5 nm) and the scan speed value (here “medium”) also.";            
+        step_no++;
+    }
+    cursorPointers('comp_trans_button', 'ok_btn');
+}   
+    
 //This method is used to select the specific graph from the dropdown menu.
 function selectGraph() {
     dropdown = document.getElementById("select");
     dropdown.onchange = function(event){
-       if(dropdown.value=="Emission" && step_no==11){
-         $("#select").html("<option value='Excitation'>Excitation</option><option value='Emission'>Emission</option>");
-         alert("Select Excitation scan mode");
-       }
-       else if(dropdown.value=="Excitation" && step_no==14){
+       if(dropdown.value=="Excitation" && step_no==11){
          $("#select").html("<option value='Emission'>Emission</option><option value='Excitation'>Excitation</option>");
          alert("Select Emission scan mode");
        }
-       else if(dropdown.value=="Emission" && step_no==14){
-         document.getElementById('demo').innerHTML = "On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 355 nm and Emission End wavelength: 475 nm. Emission Start Wavelength value should be larger than the excitation wavelength. Often the the maximum absorbance wavelength is chosen as the excitation wavelength. The Emission End Wavelength value depends on the sample, instrument, etc. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 2.5 nm/2.5 nm) and the scan speed value (here “medium” ) also.";
-       }
-
-    }
+   }
 }
 
 //This method is used to validate the correct data and display particular graph.
 function okBtn(){
-        var input1 = document.getElementById("input1").value;
-        var input2 = document.getElementById("input2").value;
-        var input3 = document.getElementById("input3").value;
+        dropdown = document.getElementById("select");
+        input1 = document.getElementById("input1").value;
+        input2 = document.getElementById("input2").value;
+        input3 = document.getElementById("input3").value;
         video1 = document.getElementById("video1");
         video2 = document.getElementById("video2");
-        // dropdown = document.getElementById("select");
-        if(input1 == 350 && input2 == 355 && input3 == 475 && step_no == 11 ){
-                $(".data_validation").css("visibility", "hidden");
-                video1.style.visibility = "visible";
-                document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
-                video1.play();
-                step_no++;
+        video3 = document.getElementById("video3");
+        video4 = document.getElementById("video4");
+        video5 = document.getElementById("video5");
+        video6 = document.getElementById("video6");
+        //validation for the emission scan mode.
+        if(solution == 0 && input1 == 350 && input2 == 355 && input3 == 475){
+            $(".data_validation" ).css("visibility", "hidden");
+            video1.style.visibility = "visible";
+            document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video1.play();
+            step_no++;
+            cursorPointers('ok_btn', 'disposegraph');
         }
-        else if(input1 == 425 && input2 == 435 && input3 == 700 && step_no == 14 && dropdown.value == "Emission"){
-                $(".data_validation").css("visibility", "hidden");
-                video2.style.visibility = "visible";
-                document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
-                video2.play();
-                step_no++;
+        else if(solution == 1 && input1 == 350 && input2 == 355 && input3 == 475){
+            $(".data_validation" ).css("visibility", "hidden");
+            video2.style.visibility = "visible";
+            document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video2.play();
+            step_no++;
+            cursorPointers('ok_btn', 'disposegraph');
+        }
+        else if(solution == 2 && input1 == 350 && input2 == 355 && input3 == 475){
+            $(".data_validation" ).css("visibility", "hidden");
+            video3.style.visibility = "visible";
+            document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video3.play();
+            step_no++;
+            cursorPointers('ok_btn', 'disposegraph');
+        }
+        else if(solution == 3 && input1 == 350 && input2 == 355 && input3 == 475){
+            $(".data_validation" ).css("visibility", "hidden");
+            video4.style.visibility = "visible";
+            document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video4.play();
+            step_no++;
+            cursorPointers('ok_btn', 'disposegraph');
+        }
+        else if(solution == 4 && input1 == 350 && input2 == 355 && input3 == 475){
+            $(".data_validation" ).css("visibility", "hidden");
+            video5.style.visibility = "visible";
+            document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video5.play();
+            step_no++;
+            cursorPointers('ok_btn', 'disposegraph');
+        }
+        else if(solution == 5 && input1 == 350 && input2 == 355 && input3 == 475){
+            $(".data_validation" ).css("visibility", "hidden");
+            video6.style.visibility = "visible";
+            document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
+            video6.play();
+            step_no++;
+            cursorPointers('ok_btn', 'disposegraph');
         }
         else{
-                alert("Select Scanmode, EXWL,EM Start WL and EM End WL values");
+            alert("Select Scanmode, EXWL,EM Start WL and EM End WL values");
         }
 }
 
-// This method makes the graph hidden once the video is played nad close is pressed. 
+// This method makes the graph hidden once the video is played and close is pressed. 
 function disposeGraph(){
-        // After playing the graph plotting video close option is choosen, the background scan image and the video is hidden.
-        if(step_no==13){
-            $("#video1, #scan").css("visibility", "hidden");
-            document.getElementById('demo').innerHTML = "Step-No 14: Click on Reset button to start over the measurements.";
-            step_no++;
-        }
-        else if(step_no == 14){
-            $("#video2, #scan").css("visibility", "hidden");
-            document.getElementById('demo').innerHTML ="Click on Reset button to start over the measurements.";
-        }
-        else if(step_no == 14){
-            $("#video3, #scan").css("visibility", "hidden");
-            document.getElementById('demo').innerHTML ="Click on Reset button to start over the measurements.";
-        }
-        else if(step_no == 14){
-            $("#video4, #scan").css("visibility", "hidden");
-            document.getElementById('demo').innerHTML ="Click on Reset button to start over the measurements.";
-        }
-        
+    if(step_no == 13){
+        $(".video, #scan").css("visibility", "hidden");
+        document.getElementById('demo').innerHTML ="Click on Reset button to start over the measurements.";
+        document.getElementById('disposegraph').style.cursor = 'default';
+    }
 }
