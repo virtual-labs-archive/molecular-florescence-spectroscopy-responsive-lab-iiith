@@ -16,9 +16,11 @@
     var id,id1;
     var type_of_movement;// Indicates upward or downward motion
     var sol_name;
+    var dropdown; // To select the scan mode from the drop down menu.
     var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
                      Depending on the value of this variable the part of the method is called.*/
-    var count = 0; /* This variable is used to perform the animations of the objects without distortions */
+    var count = 0; /* This variable is used to perform the actions on the objects without distortions.
+                      i.e., It make sures that one or more actions are not performed at a time. */
     
 /*This method is called when the page is loaded. 
 // first function helps in providing basic functionality to manual button and also sets the first set of instructions
@@ -95,7 +97,7 @@ function addclickEvents(){
             spectrophotometer();
         }, false);
         document.getElementById("power_trans_button").addEventListener("click", function() {
-            turnOn(); showClock();
+            changeImage(); showClock();
         }, false);
         document.getElementById("start").addEventListener("click", function() {
             hideInstruction();
@@ -144,8 +146,13 @@ function setSolution(){
 document.getElementById("demo").innerHTML = "Step-No 2: Click on the volumetric flask containing anthracene solution to take it to the instrument table.";
 }
 
-/* When the user switches on the spectrophotometer this method is called. Here the spectrophotometer image is changed 
-   continuously  to give the blinking light effect. The two images that are swapped is stored in images[] */
+// Call turnOn() method every 250ms
+function changeImage() { 
+    setInterval("turnOn()", 250)
+}
+
+/* When the user switches on the spectrophotometer this method is called. Here the spectrophotometer 
+image is changed continuously  to give the blinking light effect. The two images that are swapped is stored in images[] */
 function turnOn() {
         // Get the image
         img = document.getElementById('table_with_spec');
@@ -156,8 +163,6 @@ function turnOn() {
         if(x >= images.length){
             x = 0;
         }
-        // Call turnOn() method every 250ms 
-        setTimeout("turnOn()", 250)
         if(step_no == 18){
             images[0] = "../../common_images/specfluor_on_no_redLight.png";
             images[1] = "../../common_images/specfluor_on_redLight.png";
@@ -314,6 +319,7 @@ function scan(){
         }
 }
 
+//This method is used to validate the data to display the absorption graphs for different samples.
 function startBtn(){
         input1 = document.getElementById("input1").value;
         input2 = document.getElementById("input2").value;

@@ -13,13 +13,24 @@
     var elem;
     var img,img1;
     var id,id1;
+    // variables used in graph validation
+    var dropdown; //To select the scan mode from the dropdown menu.
+    var input1;
+    var input2;
+    var input3;
+    var video1;
+    var video2;
+
+    var turnon; // It is used to store the spectrometer table images.
     var type_of_movement;// Indicates upward or downward motion
     var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
                      Depending on the value of this variable the part of the method is called.*/
-    var count = 0; /* This variable is used to perform the animations of the objects without distortions */
+    var count = 0; /* This variable is used to perform the actions on the objects without distortions.
+                      i.e., It make sures that one or more actions are not performed at a time. */ 
 
 /*This method is called when the page is loaded. *
-   First function helps in providing basic functionality to manual button and also sets the first set of instructions.
+   First function helps in providing basic functionality to manual button and also sets the 
+   first set of instructions.
    Second function adds click events to elements as soon as the page loads.
    Third function adds mouse events to elements as soon as the page loads. */
 window.onload = function(){ 
@@ -66,7 +77,7 @@ function popitup(url) {
 //This function is used to add click events to elements
 function addclickEvents(){
         document.getElementById("reset_btn").addEventListener("click", function() {
-            reload();
+            window.location.reload();
         }, false);
         document.getElementById("data_button").addEventListener("click", function() {
             popitup("slideshow.html");
@@ -90,7 +101,7 @@ function addclickEvents(){
             spectrofluorimeter();
         }, false);
         document.getElementById("power_trans_button").addEventListener("click", function() {
-            turnOn(); showClock();
+            changeImage(); showClock();
         }, false);
         document.getElementById("ok_btn").addEventListener("click", function() {
             okBtn();
@@ -119,20 +130,24 @@ function mouseEvents(){
         });
 }
 
-/*When the user switches on the spectrofluorimeter this method is called. Here the spectrofluorimeter image is changed 
-continuously  to give the blinking light effect. The two images that are swapped is stored in images[]*/
+// Call turnOn() method every 250ms
+function changeImage() { 
+    setInterval("turnOn()", 250);
+}
+
+/*When the user switches on the spectrofluorimeter this method is called. Here the spectrofluorimeter 
+image is changed continuously  to give the blinking light effect. The two images that are swapped is 
+stored in images[]*/
 function turnOn() {
         // Get the image
-        img = document.getElementById('table_with_spec');
+        turnon = document.getElementById('table_with_spec');
         // Change the source of the image 
-        img.src = images[x];
+        turnon.src = images[x];
         //increment x;
         x++;
         if(x >= images.length){
             x = 0;
         }
-        // Call turnOn() method every 250ms 
-        setTimeout("turnOn()", 250);
 }
 
 /*This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
@@ -176,7 +191,7 @@ function spectrofluorimeter(){
             cursorPointers('spectrolid_trans_button', 'cuvette');
             step_no++;
         }
-        else if(step_no == 9 && count == 8){
+        else if(step_no == 9 && count == 9){
             // Replace the spectrofluorimeter images with the closed spectrophotmeter images.
             images[0] = "../../common_images/specfluor_on_redLight.png";
             images[1] = "../../common_images/specfluor_on_no_redLight.png";
@@ -191,13 +206,13 @@ function scan(){
         //displays the data validation elements by clicking on the computer screen.
         if(step_no==10){
             //To run the excitation scan mode.
-            $(".data_validation, #scan").css("visibility", "visible");
+            $(".data_validation, #mfs_form1, #scan").css("visibility", "visible");
             document.getElementById("demo").innerHTML = "Step-No 12:On the screen enter the Emission wavelength : 515nm, Excitation start wavelength:300nm and Excitation end wavelength: 600nm. One chooses the Excitation slit (nm) and Emission Slit (nm) values (here 2.5nm/2.5nm) and the scan speed value (here 'medium') also.";            
             step_no++;
         }
         else if(step_no==13){
             //To run the emission scan mode.
-            $(".data_validation, #scan").css("visibility", "visible");
+            $(".data_validation, #mfs_form2, #scan").css("visibility", "visible");
             document.getElementById("demo").innerHTML = "Step-No 15:To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor.Select the emission scan mode on the screen.";
             step_no++;        
         }
@@ -225,14 +240,15 @@ function selectGraph() {
 
 //This method is used to validate the correct data and display particular graph.
 function okBtn(){
-        var input1 = document.getElementById("input1").value;
-        var input2 = document.getElementById("input2").value;
-        var input3 = document.getElementById("input3").value;
+        dropdown = document.getElementById("select");
+        input1 = document.getElementById("input1").value;
+        input2 = document.getElementById("input2").value;
+        input3 = document.getElementById("input3").value;
         video1 = document.getElementById("video1");
         video2 = document.getElementById("video2");
         //validation for the excitation scan mode.
-        if(input1 == 515 && input2 == 300 && input3 == 600 && step_no == 11 ){
-                $(".data_validation").css("visibility", "hidden");
+        if(input1 == 515 && input2 == 300 && input3 == 600 && step_no == 11){
+                $(".data_validation, #mfs_form1" ).css("visibility", "hidden");
                 video1.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
                 video1.play();
@@ -241,7 +257,7 @@ function okBtn(){
         }
         //validation for the emission scan mode.
         else if(input1 == 425 && input2 == 435 && input3 == 700 && step_no == 14 && dropdown.value == "Emission"){
-                $(".data_validation").css("visibility", "hidden");
+                $(".data_validation, #mfs_form2").css("visibility", "hidden");
                 video2.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
                 video2.play();

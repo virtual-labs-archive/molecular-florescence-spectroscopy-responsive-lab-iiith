@@ -173,7 +173,7 @@ function moveDown(){
         initial_top = Math.round($('#quartz_cuvette').position().top);
         initial_left = Math.round($('#quartz_cuvette').position().left);
         // Initialise all the values for the motion of the images.
-        final_top = 288;
+        final_top = 280;
         step_top = 4;
         step_left = 0;
         type_of_movement = 0;
@@ -188,7 +188,7 @@ function moveDown(){
 function extraCuvette(){
         /*Get the transparent image and replace it with a reference cuvette image and move it down into the
          spectrophotometer.*/
-        $('#ref_cuvette').attr('src', '../../common_images/quartz-cuvette.png'); 
+        document.getElementById("ref_cuvette").style.visibility ="visible";
         document.getElementById("reference").style.visibility ="visible";
         elem = document.getElementById("ref_cuvette"); 
         // Detect the current position of the flask.

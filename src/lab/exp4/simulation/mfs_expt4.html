@@ -19,7 +19,7 @@
     <div class= "row">
         <div class="col-sm-12">
             <h3>Demonstration of Solvent Effects on Fluorescence Spectra of a Fluorophore</h3><br/> 
-            <button id="reset_btn" onclick="reload()">Reset Experiment</button>
+            <button id="reset_btn">Reset Experiment</button>
         </div> 
     </div>
     <br/>
@@ -119,7 +119,7 @@
             <img id ="spectrolid_trans_button1" src="../../common_images/vertical_button.png">
             <!-- reference cuvette -->
             <img id = "reference" src = "../../common_images/reference.png" >
-            <img id = "ref_cuvette" >
+            <img id = "ref_cuvette" src= '../../common_images/quartz-cuvette.png'>
             <!-- text that shows the instructions to be followed next -->
             <div id = "demo"></div>
             <!-- button to switch on and switch off the spectrophotometer -->
@@ -160,13 +160,13 @@
 <!--fluoriscence validation-->
 
     <!-- This image is used to enter the input values to display the graph1/graph2-->
-    <img id="input_data" class="data_validation1" src="../../common_images/inputform2.png">
+    <img id="input_data" class="data_validation1" src="../../common_images/mfs_form2.png">
     <!--Displays the graph by clicking on ok button -->
     <img id="ok_btn" class="data_validation1" src="../../common_images/vertical_button.png" >
     <!-- dropdown box to select the graphs to display -->
     <select id="select" class="data_validation1">
-          <option id="Excitation" value="Emission">Emission</option>
-          <option id="Emission" value="Excitation">Excitation</option>
+          <option value="Emission">Emission</option>
+          <option value="Excitation">Excitation</option>
     </select> 
     <!--graph input values -->
     <input id = "input1_data" class="data_validation1" type="text" >

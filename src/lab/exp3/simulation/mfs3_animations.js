@@ -1,5 +1,4 @@
 // This file contains all the functions used to animate the images in the experiment.
-
 // This function is a general method used to move images from initial position to final position.
 function moveImage(){
         id = setInterval(frame, 5);
@@ -146,8 +145,7 @@ function moveCuvette(){
                         $("#quartz_cuvette").rotate(angle);
                         },10); 
                     });
-            }
-            ,1500);
+            },1500);
 
             setTimeout(function(){
                 quartz.rotate(0);
@@ -159,7 +157,7 @@ function moveCuvette(){
                     this.remove();
                     count++;
                 });
-            }, 4000);
+            }, 4500);
 
             // Change the next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 20: Close the sample chamber lid by clicking on it.";
@@ -189,7 +187,7 @@ function moveDown(){
 function extraCuvette(){
         /*Get the transparent image and replace it with a reference cuvette image and move it down into the
          spectrophotometer.*/
-        $('#ref_cuvette').attr('src', '../../common_images/quartz-cuvette.png'); 
+        document.getElementById("ref_cuvette").style.visibility = "visible"; 
         document.getElementById("reference").style.visibility ="visible";
         elem = document.getElementById("ref_cuvette");
         // Detect the current position of the flask.

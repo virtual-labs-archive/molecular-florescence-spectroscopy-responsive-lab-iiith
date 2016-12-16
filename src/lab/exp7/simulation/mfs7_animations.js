@@ -114,20 +114,21 @@ function moveDown(){
         initial_top = Math.round($('#cuvette').position().top);
         initial_left = Math.round($('#cuvette').position().left);
         // Initialise all the values for the motion of the images.
-        final_top = 290;    
+        final_top = 270;    
         step_top = 1;
         step_left = 0;
         type_of_movement = 0;
         // Move it into the spectrofluorimeter.
         moveImage();
         // Call hideCuvette() method which moves the cuvette into the spectrofluorimeter.
-        setTimeout("hideCuvette()",500);
+        setTimeout("hideCuvette()",1000);
 }
 
 // hides the cuvette and replace the spectrofluorimeter with an image that has cuvette within them. 
 function hideCuvette(){
         $('#cuvette').remove();
         document.getElementById("demo").innerHTML = "Step-No 10 : Click the lid of the sample chamber by clicking on the lid";
+        count++;
 }
 
 /*This method is called when the pipette is clicked.

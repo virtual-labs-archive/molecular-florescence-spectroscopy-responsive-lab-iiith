@@ -219,6 +219,9 @@ h3{
     z-index: 1;
     left: 583px;
     top: -6%;
+    width: 1.8%;
+    height: 9.5%;
+    visibility: hidden;
 }
 
 #power_trans_button{

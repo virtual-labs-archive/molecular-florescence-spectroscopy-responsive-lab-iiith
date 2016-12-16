@@ -14,10 +14,13 @@
     var img,img1;
     var id,id1;
     var type_of_movement;// Indicates upward or downward motion
+    var turnon; // it is used to store the spectrometer table images.
     var sol_name;
+    var dropdown; // To select the scan mode from the dropdown menu.
     var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
                      Depending on the value of this variable the part of the method is called.*/
-    var count = 0; /* This variable is used to perform the animations of the objects without distortions */
+    var count = 0; /* This variable is used to perform the actions on the objects without distortions.
+                      i.e., It make sures that one or more actions are not performed at a time. */ 
 
 /*This method is called when the page is loaded. *
    First function helps in providing basic functionality to manual button and also sets the first set of instructions.
@@ -94,7 +97,7 @@ function addclickEvents(){
             spectrofluorimeter();
         }, false);
         document.getElementById("power_trans_button").addEventListener("click", function() {
-            turnOn(); showClock();
+            changeImage(); showClock();
         }, false);
         document.getElementById("ok_btn").addEventListener("click", function() {
             okBtn();
@@ -126,32 +129,18 @@ function mouseEvents(){
 //This specifies the solution to be used when the input button is clicked
 function setSolution(){
       sol_name = document.getElementById("slider").value;
-      if(sol_name == 0){
-        document.getElementById("round-bottom-flask").src = "images/flask-with-solution.png"
-      }
-      else if(sol_name == 1){
-        document.getElementById("round-bottom-flask").src = "images/flask-with-solution.png"   
-      }
-      else if(sol_name == 2){
-        document.getElementById("round-bottom-flask").src = "images/flask-with-solution.png"   
-      }
-      else if(sol_name == 3){
-        document.getElementById("round-bottom-flask").src = "images/flask-with-solution.png"   
-      }
-      else if(sol_name == 4){
-        document.getElementById("round-bottom-flask").src = "images/flask-with-solution.png"   
-      }
-      else if(sol_name == 5){
-        document.getElementById("round-bottom-flask").src = "images/flask-with-solution.png"   
-      }
-      else if(sol_name == 6){
-        document.getElementById("round-bottom-flask").src = "images/flask-with-solution.png"   
-      }
-document.getElementById("demo").innerHTML = "Step-No 2: Click on the volumetric flask containing anthracene solution to take it to the instrument table.";
+      document.getElementById("round-bottom-flask").src = "images/flask-with-solution.png"
+      document.getElementById("demo").innerHTML = "Step-No 2: Click on the volumetric flask containing anthracene solution to take it to the instrument table.";
 }
 
-/*When the user switches on the spectrofluorimeter this method is called. Here the spectrofluorimeter image is changed 
-continuously  to give the blinking light effect. The two images that are swapped is stored in images[]*/
+// Call turnOn() method every 250ms
+function changeImage(){
+    setInterval("turnOn()", 250);
+}
+
+/*When the user switches on the spectrofluorimeter this method is called. Here the spectrofluorimeter image 
+is changed continuously  to give the blinking light effect. The two images that are swapped is stored in 
+images[]*/
 function turnOn() {
         // Get the image
         img = document.getElementById('table_with_spec');
@@ -162,8 +151,6 @@ function turnOn() {
         if(x >= images.length){
             x = 0;
         }
-        // Call turnOn() method every 250ms 
-        setTimeout("turnOn()", 250);
 }
 
 /*This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
@@ -207,11 +194,16 @@ function spectrofluorimeter(){
             cursorPointers('spectrolid_trans_button', 'cuvette');
             step_no++;
         }
-        else if(step_no == 9 && count == 8){
+        else if(step_no == 9 && count == 9){
             // Replace the spectrofluorimeter images with the closed spectrophotmeter images.
             images[0] = "../../common_images/specfluor_on_redLight.png";
             images[1] = "../../common_images/specfluor_on_no_redLight.png";
-            document.getElementById("demo").innerHTML = "Step-No 11: To run the Excitation Spectral Scan, open the measurement set-up screen by clicking on the fluorescence measurement icon on the computer monitor.";
+            if(sol_name == 0){
+                document.getElementById("demo").innerHTML = "Step-No 11: To run the Excitation Spectral Scan, open the measurement set-up screen by clicking on the fluorescence measurement icon on the computer monitor."; 
+            }
+            else{
+                document.getElementById('demo').innerHTML = "Step-No 11:  To run the Emission Spectral Scan of the sample, open the instrument set-up screen by clicking on the fluorescence measurement icon on the computer monitor."
+            }
             cursorPointers('spectrolid_trans_button1','comp_trans_button');
             step_no++;
         }
@@ -222,22 +214,22 @@ function scan(){
         //displays the data validation elements by clicking on the computer screen.
         if(step_no==10 && sol_name == 0){
             //To run the excitation scan mode.
-            $(".data_validation, #scan").css("visibility", "visible");
+            $(".data_validation, #mfs_form1, #scan").css("visibility", "visible");
             document.getElementById("demo").innerHTML = "Step-No 12: Select the Excitation Scan Mode on the screen. On the screen, enter the Emission wavelength: 450 nm, Excitation Start Wavelength: 270 nm and Excitation End wavelength: 500 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here 'medium') also. ";            
             step_no++;
         }
         else if(step_no==13){
             //To run the emission scan mode.
-            $(".data_validation, #scan").css("visibility", "visible");
+            $(".data_validation, #mfs_form2, #scan").css("visibility", "visible");
             document.getElementById("demo").innerHTML = "Step-No 15: Select the Emission Scan Mode on the screen.On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 360 nm and Emission End wavelength: 600 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here 'medium') also. ";
             step_no++;        
         }
-        else if(step_no == 10 && sol_name == 1||2||3||4||5){
-            $(".data_validation, #scan").css("visibility", "visible");
+        else if(step_no == 10 && sol_name == 1||2||3||4||5||6||7){
+            $(".data_validation, #mfs_form2, #scan").css("visibility", "visible");
             document.getElementById("demo").innerHTML = "Step-No 12:On the screen, enter the Excitation wavelength: 350 nm, Emission Start Wavelength: 360 nm and Emission End wavelength: 600 nm. One chooses the Excitation Slit(nm) and Emission Slit(nm) values (here 5 nm/5 nm) and the scan speed value (here 'medium') also.";            
             step_no++;
         }
-cursorPointers('comp_trans_button', 'ok_btn');
+        cursorPointers('comp_trans_button', 'ok_btn');
 }
 
 //This method is used to select the specific graph from the dropdown menu.
@@ -252,7 +244,7 @@ function selectGraph() {
                 $("#select").html("<option value='Emission'>Emission</option><option value='Excitation'>Excitation</option>");
                 alert("Select Emission scan mode");
            }
-           else if(dropdown.value=="Excitation" && step_no==11 && sol_name == 1||2||3||4||5){
+           else if(dropdown.value=="Excitation" && step_no==11 && sol_name == 1||2||3||4||5||6||7){
                  $("#select").html("<option value='Emission'>Emission</option><option value='Excitation'>Excitation</option>");
                  alert("Select Emission scan mode");
            }
@@ -262,7 +254,6 @@ function selectGraph() {
 
 //Common instructions to be executed for a graph.
 function graphValidation_steps(){
-    $(".data_validation").css("visibility", "hidden");
     cursorPointers('ok_btn', 'disposegraph');
     document.getElementById("demo").innerHTML = "Step-No 13:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
     step_no++;
@@ -270,6 +261,7 @@ function graphValidation_steps(){
 
 //This method is used to validate the correct data and display particular graph.
 function okBtn(){
+        dropdown = document.getElementById("select");
         var input1 = document.getElementById("input1").value;
         var input2 = document.getElementById("input2").value;
         var input3 = document.getElementById("input3").value;
@@ -285,44 +277,53 @@ function okBtn(){
         //validation for the excitation scan mode.
         if(sol_name== 0 && input1 == 450 && input2 == 270 && input3 == 500 && step_no == 11){
                 graphValidation_steps();
+                $(".data_validation, #mfs_form1").css("visibility", "hidden");
                 video1.style.visibility = "visible";
                 video1.play();
         }
         else if(sol_name== 0 && input1 == 350 && input2 == 360 && input3 == 600 && step_no == 14 && dropdown.value == "Emission"){
+                $(".data_validation, #mfs_form2").css("visibility", "hidden");
                 graphValidation_steps();
                 video2.style.visibility = "visible";
                 video2.play();
         }
         else if(sol_name== 1 && input1 == 350 && input2 == 360 && input3 == 600 && dropdown.value == "Emission"){
+                $(".data_validation, #mfs_form2").css("visibility", "hidden");
                 graphValidation_steps();
                 video3.style.visibility = "visible";
                 video3.play();
         }
         else if(sol_name== 2 && input1 == 350 && input2 == 360 && input3 == 600 && dropdown.value == "Emission"){
-                 graphValidation_steps();
+                $(".data_validation, #mfs_form2").css("visibility", "hidden");
+                graphValidation_steps();
                 video4.style.visibility = "visible";
                 video4.play();
         }
         else if(sol_name== 3 && input1 == 350 && input2 == 360 && input3 == 600 && dropdown.value == "Emission"){
+                $(".data_validation, #mfs_form2").css("visibility", "hidden");
                 graphValidation_steps();
                 video5.style.visibility = "visible";
                 video5.play();
         }
         else if(sol_name== 4 && input1 == 350 && input2 == 360 && input3 == 600 && dropdown.value == "Emission"){
+                $(".data_validation, #mfs_form2").css("visibility", "hidden");
                 graphValidation_steps();
                 video6.style.visibility = "visible";
                 video6.play();
         }
         else if(sol_name== 5 && input1 == 350 && input2 == 360 && input3 == 600 && dropdown.value == "Emission" ){
+                $(".data_validation, #mfs_form2").css("visibility", "hidden");
                 graphValidation_steps();
                 video7.style.visibility = "visible";
                 video7.play();
         }
         else if(sol_name== 6 && input1 == 350 && input2 == 360 && input3 == 600 && dropdown.value == "Emission"){
+                $(".data_validation, #mfs_form2").css("visibility", "hidden");
                 graphValidation_steps();
                 video8.style.visibility = "visible";
                 video8.play();
         }
+        
         else{
                 alert("Select Scanmode, EXWL,EM Start WL and EM End WL values");
         }

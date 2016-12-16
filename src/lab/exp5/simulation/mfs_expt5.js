@@ -95,7 +95,7 @@ function commonInstructions(id, image){
     //On clicking the pipette changes phmeter image after 2 seconds.
     setTimeout(function(){
         document.getElementById(id).src = image;
-    }, 2000);
+    }, 1000);
     step_no++;
 }
 //This method is used to move the flask.
@@ -194,7 +194,6 @@ function moveRod(){
         // Removes the element
         $("#arrow2").remove();
         cursorPointers('wire', 'sol_beaker');
-        $('#wire').animate({height: '10%'});
         //Change the next instruction to be followed.
         document.getElementById("instruction").innerHTML = "Step No 7: Click on the NaOH beaker to take it to the experiment table;"
         step_no++;

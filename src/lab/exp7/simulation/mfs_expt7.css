@@ -210,7 +210,9 @@ h3{
     max-width: 71%;
     color: yellow;
     text-align:left;
-    font-size: 76%;
+    font-size: 100%;
+    height: 25%;
+    overflow-y: scroll;
 }
 
 #clockScreen{
@@ -241,7 +243,7 @@ h3{
     height: 95%;
 }
 
-#input_data{
+#mfs_form1, #mfs_form2{
     position: absolute;
     z-index: 8;
     top: 15%;

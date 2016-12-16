@@ -21,13 +21,13 @@
     <!-- First row consists of title of the experiment and the reset button -->
     <div class= "row">
         <div class="col-sm-12">
-            <h4>Relationship between the Concentration of a Fluorophore and its Fluorescence Intensity: Determination of Unknown Concentration of an Analyte</h4><br/>
-            <center><button id="reset_btn" onclick = "location.reload()">Reset Experiment</button></center>
+            <h3>Relationship between the Concentration of a Fluorophore and its Fluorescence Intensity: Determination of Unknown Concentration of an Analyte</h3><br/>
+            <button id="reset_btn">Reset Experiment</button>
         </div>
     </div><br/>
     
+    <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
     <div class="row">
-       <!-- Second row consists of two columns with one column containing buttons ie manual and data and the other containing shelf with apparatus -->
         <div class="col-sm-6" id="data_buttons">
         <!-- Manual image button displays the set of instructions to be followed to perform experiment
         On clicking this button a box modal appears over the page n displays the instruction -->
@@ -119,13 +119,14 @@
     <!-- Image of the greyed background displayed as a background while scanning the sample -->
     <img id="scan" src="../../common_images/transparent.png">
     <!-- This image is used to enter the input values to display the graph1/graph2-->
-    <img id="input_data" class="data_validation" src="../../common_images/inputform2.png">
+    <img id="mfs_form1" src="../../common_images/mfs_form1.png">
+    <img id="mfs_form2" src="../../common_images/mfs_form2.png">
     <!--Displays the graph by clicking on ok button -->
     <img id="ok_btn" class="data_validation" src="../../common_images/vertical_button.png" >
     <!-- dropdown box to select the graphs to display -->
     <select id="select" class="data_validation">
-          <option id="Excitation" value="Excitation">Excitation</option>
-          <option id="Emission" value="Emission">Emission</option>
+          <option value="Excitation">Excitation</option>
+          <option value="Emission">Emission</option>
     </select> 
     <!--graph input values -->
     <input id = "input1" class="data_validation" type="text" >
@@ -139,6 +140,7 @@
     <video id="video5" class="videos" ><source src="videos/graph5.mp4" type="video/mp4"></video>
     <video id="video6" class="videos" ><source src="videos/graph6.mp4" type="video/mp4"></video>
     <video id="video7" class="videos" ><source src="videos/graph7.mp4" type="video/mp4"></video>
+    <video id="video8" class="videos" ><source src="videos/graph8.mp4" type="video/mp4"></video>
     <!-- To close the graphs video -->
     <img id = "disposegraph" src="../../common_images/vertical_button.png">
 </div>

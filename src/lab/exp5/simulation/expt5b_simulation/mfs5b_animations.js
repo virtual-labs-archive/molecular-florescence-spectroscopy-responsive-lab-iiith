@@ -131,6 +131,7 @@ function moveDown(){
 function hideCuvette(){
         $('#cuvette').remove();
         document.getElementById("demo").innerHTML = "Step-No 11 : Click the lid of the sample chamber by clicking on the lid";
+        count++;
 }
     
 /*This method is called whan the pipette is clicked.
@@ -199,7 +200,7 @@ function movePipette() {
                 elem.src = "../../../common_images/pipette.png";
                 $("#cuvette").attr("src", "images/cuv-with-ph5sol.png");
             }
-            step_no ++;
+            step_no++;
             setTimeout(function(){ 
                 movebackPipette();
             }, 200);
@@ -207,7 +208,6 @@ function movePipette() {
 }
 
 //This function is used to move the pipette back to the shelf. 
-//This function is used to move the pipette back to the shelf.
 function movebackPipette() {
           elem = document.getElementById("pipette");
           // Detect the current position of the pipette.

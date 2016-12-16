@@ -236,7 +236,7 @@ h3{
     height: 95%;
 }
 
-#input_data{
+#mfs_form1, #mfs_form2{
     position: absolute;
     z-index: 8;
     top: 15%;
@@ -307,8 +307,8 @@ h3{
     z-index: 20;
     width: 8%;
     height: 3%;
-    left: 80%;
-    top: 584px;
+    left: 82%;
+    top: 573px;
 }
 
 
