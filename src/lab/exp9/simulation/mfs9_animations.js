@@ -1,32 +1,32 @@
 // This file contains all the functions which are used to animate the images in the experiment.
 // This function is a general method used to move images from initial position to final position.
 function moveImage(){
-        id = setInterval(frame, 5);
-        function frame() {
-            if(type_of_movement == 0){
-                if (initial_top > final_top) {
-                    clearInterval(id);
-                    count++;
-                } else {
-                    initial_top+=step_top; 
-                    initial_left+=step_left;
-                    elem.style.top = initial_top + 'px'; 
-                    elem.style.left = initial_left + 'px'; 
-                }
+    id = setInterval(frame, 5);
+    function frame() {
+        if(type_of_movement == 0){
+            if (initial_top > final_top) {
+                clearInterval(id);
+                count++;
+            } else {
+                initial_top+=step_top; 
+                initial_left+=step_left;
+                elem.style.top = initial_top + 'px'; 
+                elem.style.left = initial_left + 'px'; 
             }
-            else if(type_of_movement == 1){
-                if (initial_top < final_top) {
-                    clearInterval(id);
-                    count++;
-                } else {
-                    initial_top+=step_top; 
-                    initial_left+=step_left;
-                    elem.style.top = initial_top + 'px'; 
-                    elem.style.left = initial_left + 'px'; 
-                    
-                }
+        }
+        else if(type_of_movement == 1){
+            if (initial_top < final_top) {
+                clearInterval(id);
+                count++;
+            } else {
+                initial_top+=step_top; 
+                initial_left+=step_left;
+                elem.style.top = initial_top + 'px'; 
+                elem.style.left = initial_left + 'px'; 
+                
             }
-        } 
+        }
+    } 
 }
 
 //To disable and enable the cursor pointers on elements.
@@ -38,9 +38,8 @@ function cursorPointers(id1, id2){
 // This is the function called when flask is clicked. It moves the flask from the shelf to the table.
 function moveFlask(){
     if(step_no==0){ 
-        solution = document.getElementById('slider').value;
-        if(solution==undefined){
-            alert("Please first select the solvent from the selection bar.")
+        if(conc_value==undefined){
+            alert("Please first select the concentration from the selection bar.")
         }
         else{
             // Get image
@@ -51,7 +50,7 @@ function moveFlask(){
             // Initialise all the values for the motion of the images.
             final_top = 310;
             step_top = 1;
-            step_left = 0.4;
+            step_left = 0.5;
             type_of_movement = 0;
             // Move the flask image to desired position.
             moveImage();
@@ -67,42 +66,42 @@ function moveFlask(){
 // It moves the cuvette from the shelf to the table when it is clicked for the first time.
 // when it is called for the second time it moves the cuvette to the spectroflurimeter lid.*/
 function moveCuvette(){
-        if ( step_no == 1 && count == 1){
-            // get the image.
-            elem = document.getElementById("cuvette");
-            // Detect the current position of the cuvette.
-            initial_top = Math.round($('#cuvette').position().top);
-            initial_left = Math.round($('#cuvette').position().left);
-            // Initialise all the values for the motion of the images.
-            final_top = 364;
-            step_top = 1;
-            step_left = -0.1;
-            type_of_movement = 0;
-            // Move it to the table.
-            moveImage();
-            // Change the next instruction to be followed.
-            document.getElementById("demo").innerHTML = "Step-No 3:Click on the 5 mL‑capacity pipette to take 2 mL of 10-5 M anthracene solution for the measurement. In real operation, one has to set the volume to 2 mL in the pipette and an appropriate tip should be attached prior to dipping it in the solution.";
-            step_no++;
-            cursorPointers('cuvette', 'pipette');
-        }
-        else if(step_no == 8){
-            // Depending on the cuvette choosen get images accordingly.
-            elem = document.getElementById("cuvette"); 
-            // Detect the current position of the flask.
-            initial_top = Math.round($('#cuvette').position().top);
-            initial_left = Math.round($('#cuvette').position().left);
-            // Initialise all the values for the motion of the images.
-            final_top = 221;
-            step_top = -0.5;
-            step_left = -1.64;
-            type_of_movement = 1;
-            // Move it to a position over the spectrofluorimeter.
-            moveImage();
-            // After 1200ms call moveDown() method.
-            setTimeout("moveDown()",1500);
-            step_no++;
-            cursorPointers('cuvette', 'spectrolid_trans_button1');
-        }
+    if (step_no == 1 && count == 1){
+        // get the image.
+        elem = document.getElementById("cuvette");
+        // Detect the current position of the cuvette.
+        initial_top = Math.round($('#cuvette').position().top);
+        initial_left = Math.round($('#cuvette').position().left);
+        // Initialise all the values for the motion of the images.
+        final_top = 370;
+        step_top = 1;
+        step_left = -0.27;
+        type_of_movement = 0;
+        // Move it to the table.
+        moveImage();
+        // Change the next instruction to be followed.
+        document.getElementById("demo").innerHTML = "Step-No 3:Click on the 5 mL‑capacity pipette to take 2 mL of 10-5 M anthracene solution for the measurement. In real operation, one has to set the volume to 2 mL in the pipette and an appropriate tip should be attached prior to dipping it in the solution.";
+        step_no++;
+        cursorPointers('cuvette', 'pipette');
+    }
+    else if(step_no == 8){
+        // Depending on the cuvette choosen get images accordingly.
+        elem = document.getElementById("cuvette"); 
+        // Detect the current position of the flask.
+        initial_top = Math.round($('#cuvette').position().top);
+        initial_left = Math.round($('#cuvette').position().left);
+        // Initialise all the values for the motion of the images.
+        final_top = 221;
+        step_top = -0.5;
+        step_left = -1.62;
+        type_of_movement = 1;
+        // Move it to a position over the spectrofluorimeter.
+        moveImage();
+        // After 1200ms call moveDown() method.
+        setTimeout("moveDown()",2500);
+        step_no++;
+        cursorPointers('cuvette', 'spectrolid_trans_button1');
+    }
 }
 
 // This method is used to move the cuvette downwards into the spectrofluorimeter.
@@ -111,7 +110,7 @@ function moveDown(){
         initial_top = Math.round($('#cuvette').position().top);
         initial_left = Math.round($('#cuvette').position().left);
         // Initialise all the values for the motion of the images.
-        final_top = 290;    
+        final_top = 300;    
         step_top = 1;
         step_left = 0;
         type_of_movement = 0;
@@ -134,7 +133,7 @@ function hideCuvette(){
 //when it is called for the third time pipettte is moved out of the flask to the cuvette.
 //When it is called for the fourth time it tranfers the solution into the cuvette and moves back to the shelf again.*/
 function movePipette() {
-        if ( step_no == 2 && count == 2){
+        if (step_no == 2 && count == 2){
             // Get image
             elem = document.getElementById("pipette");
             //Rotates the pipette while it is moved to the flask on the table.
@@ -146,13 +145,13 @@ function movePipette() {
             }
             $("#pipette").rotate(angle);
             },10);
-            //Detect thecurrent position of the flask.
+            //Detect the current position of the pipette.
             initial_top = Math.round($('#pipette').position().top);
             initial_left = Math.round($('#pipette').position().left);
             // Initialise all the values for the motion of the images.
-            final_top = 258;
+            final_top = 240;
             step_top = 1;
-            step_left = -0.03;
+            step_left = -0.05;
             type_of_movement = 0;
             // Move the pipette image to desired position.
             moveImage();
@@ -172,8 +171,8 @@ function movePipette() {
         }
         else if(step_no == 4 && count == 4){
              $("#pipette").animate({ top: '200px'},"slow")
-                          .animate({ left:'320px'}, "slow")
-                          .animate({ top: '245px'}, "slow");
+                          .animate({ left:'330px'}, "slow")
+                          .animate({ top: '235px'}, "slow");
             // Change to next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 6:Click on the pipette again to transfer the solution into the cuvette ";
             step_no ++;
@@ -197,7 +196,7 @@ function movebackPipette() {
           initial_top = Math.round($('#pipette').position().top);
           initial_left = Math.round($('#pipette').position().left);
           // Initialise all the values for the motion of the images.
-          final_top = 23;
+          final_top = 12;
           step_top = -1;
           step_left = -.40;
           type_of_movement = 1;
