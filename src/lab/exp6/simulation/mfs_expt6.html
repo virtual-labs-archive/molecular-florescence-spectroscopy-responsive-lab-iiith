@@ -17,8 +17,10 @@
 <div class= "container">
     <!-- First row consists of title of the experiment and the reset button -->
     <div class= "row">
-       <h3>Effects of Fluorophore Concentration on Fluorescence Spectra: Inner Filter Effects</h3><br/> 
-       <button id="reset_btn">Reset Experiment</button>  
+        <div class="col-sm-12">
+            <h3>Effects of Fluorophore Concentration on Fluorescence Spectra: Inner Filter Effects</h3><br/> 
+            <button id="reset_btn">Reset Experiment</button>
+        </div> 
     </div>
     <br/>
 
@@ -76,25 +78,25 @@
                             <li>Collect all data by clicking on the Data tab.</li>
                             <li> Find out the absorption-emission overlapping region for 10<sup>-6</sup>M anthracene. Determine the Stokes Shift. </li>
                             <li> Discuss how the maximum emission wavelengths and the intensities of the shortest wavelength emission bands of anthracene change with increasing concentration of anthracene. </li>
-	                   </ol>
+                       </ol>
                     </div>
                 </div>
             </div>
-            <!-- Data image button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths.On clicking this button a new page displaying the graphs is opened  -->
+            <!-- Data image button displays the graphs obtained on plotting absorbance against wavelength for different sample path lengths
+            On clicking this button a new page displaying the graphs is opened  -->
             <img id="data_button" src="../../common_images/data_button.png">
 
-            <!-- Concentration selection bar -->
             <div id = "conc_scale">
                 <img  id ="scale_image" src="images/scale_image.png" >
-                <input type="range" id="slider" min="0" max="3" step="1" value="0" onclick="setSolution()">
+                <input type="range" id="slider" min="0" max="3" step="1" value="0">
             </div>
 
         </div>
 
+
         <div class="col-sm-6" id ="apparatus">
             <img  id="shelf" src="images/shelf.png">
             <img  id="round-bottom-flask"  src="../../common_images/empty-round-bottom-flask.png" >
-            <img  id = "solution_name" >
             <img  id="pipette" src="../../common_images/pipette.png" >
             <img  id="quartz_cuvette" src="../../common_images/quartz-cuvette.png" >
             <img  id="cuvette" src="../../common_images/cuvette.png" > 
@@ -113,7 +115,7 @@
             <img id ="spectrolid_trans_button1" src="../../common_images/vertical_button.png">
             <!-- reference cuvette -->
             <img id = "reference" src = "../../common_images/reference.png" >
-            <img id = "ref_cuvette" >
+            <img id = "ref_cuvette" src= '../../common_images/quartz-cuvette.png'>
             <!-- text that shows the instructions to be followed next -->
             <div id = "demo"></div>
             <!-- button to switch on and switch off the spectrophotometer -->
@@ -121,17 +123,16 @@
         </div>
     </div>
 
+<!--absorbtion validation-->
+
     <img id="clockScreen" src="../../common_images/clock.png">
     <!-- Image of the hand of the clock -->
     <img  id="clockHand"  src="../../common_images/hand.png">
-    <!-- Image of the greyed background displayed as a background while scanning the sample
-    and also shown as a popup screen to start the experiment -->
-    <img id="popup" class="common" src="../../common_images/transparent.png" >
+    <!-- Image of the greyed background displayed as a background while scanning the sample and 
+    this image shown as a popup screen to start the experiment -->
+    <img id="popup" src="../../common_images/transparent.png" >
     <button id ="start" >Start Absorption measurement</button>
-
-<!--absorbtion validation to display the appropriate graph-->
-
-    <!-- This image is used to enter the input values to display the graphs-->
+    <!-- This image is used to enter the input values to display the graph1/graph2-->
     <img id="input_form" class="data_validation" src="../../common_images/inputform1.png">
     <!--Displays the graph by clicking on start button if the entered values are correct-->
     <img id="start_btn" class="data_validation" src="../../common_images/vertical_button.png" >
@@ -148,26 +149,26 @@
     <img id = "disposegraph" src="../../common_images/vertical_button.png">
 
 
-<!--fluoriscence validation to display the appropriate graph-->
+<!--fluoriscence validation-->
 
-    <!-- This image is used to enter the input values to display the graphs-->
-    <img id="input_data" class="data_validation1" src="../../common_images/inputform2.png">
+    <!-- This image is used to enter the input values to display the graph1/graph2-->
+    <img id="input_data" class="data_validation1" src="../../common_images/mfs_form2.png">
     <!--Displays the graph by clicking on ok button -->
     <img id="ok_btn" class="data_validation1" src="../../common_images/vertical_button.png" >
     <!-- dropdown box to select the graphs to display -->
     <select id="select" class="data_validation1">
-          <option id="Emission" value="Excitation">Excitation</option>
-          <option id="Excitation" value="Emission">Emission</option>
+          <option value="Emission">Emission</option>
+          <option value="Excitation">Excitation</option>
     </select> 
     <!--graph input values -->
     <input id = "input1_data" class="data_validation1" type="text" >
     <input id = "input2_data" class="data_validation1" type="text" > 
     <input id = "input3_data" class="data_validation1" type="text" >   
     <!-- To display the videos on entering the correct input values -->
-    <video id="video2" class="videos"><source src="videos/graph2.mp4" type="video/mp4"></video>
+    <video id="video2" class="videos" ><source src="videos/graph2.mp4" type="video/mp4"></video>
     <video id="video3" class="videos" ><source src="videos/graph3.mp4" type="video/mp4"></video>
     <video id="video4" class="videos" ><source src="videos/graph4.mp4" type="video/mp4"></video>
-    <video id="video5" class="videos"><source src="videos/graph5.mp4" type="video/mp4"></video>
+    <video id="video5" class="videos" ><source src="videos/graph5.mp4" type="video/mp4"></video>
 </div>
 </body>
 </html>

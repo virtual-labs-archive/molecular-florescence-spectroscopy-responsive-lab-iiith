@@ -19,14 +19,6 @@
 
 <div class="container"><br><br>
   <div id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li class="item1 active"></li>
-      <li class="item2"></li>
-      <li class="item3"></li>
-      <li class="item4"></li>
-      <li class="item5"></li>
-    </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
@@ -67,24 +59,6 @@
 $(document).ready(function(){
     // Activate Carousel
     $("#myCarousel").carousel("pause");
-
-    // Enable Carousel Indicators
-    $(".item1").click(function(){
-        $("#myCarousel").carousel(0);
-    });
-    $(".item2").click(function(){
-        $("#myCarousel").carousel(1);
-    });
-    $(".item3").click(function(){
-        $("#myCarousel").carousel(2);
-    });
-    $(".item4").click(function(){
-        $("#myCarousel").carousel(3);
-    });
-    $(".item5").click(function(){
-        $("#myCarousel").carousel(4);
-    });
-    
     // Enable Carousel Controls
     $(".left").click(function(){
         $("#myCarousel").carousel("prev");

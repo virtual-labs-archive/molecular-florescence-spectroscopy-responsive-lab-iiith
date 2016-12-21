@@ -2,7 +2,6 @@ body{
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    
 }
 
 .container{
@@ -24,7 +23,7 @@ h3{
 
 #manual_button, #data_button{
     position:absolute; 
-    left: 100px;
+    left: 60px;
     cursor: pointer;
 }
 
@@ -103,15 +102,15 @@ h3{
 
 #scale_image{
     position: absolute;
-    left: 260px;
-    top:0px;
+    left: 257px;
+    top:4px;
 }
 
 #slider{
     position: absolute;
-    left:280px;
-    width: 227px;
-    top:21px;
+    left:275px;
+    width: 234px;
+    top:25px;
 }
 
 #apparatus{
@@ -122,29 +121,22 @@ h3{
     position:absolute;
     z-index:2; 
     left:13%; 
-    top:18%;
+    top:15%;
     width:10%;
     height:59%;
     cursor:pointer;
-}
-
-#solution_name{
-    position:absolute;
-    z-index:2; 
-    left:4%; 
-    top:99%; 
 }
 
 #pipette{
     position:absolute;
     z-index:1; 
     width:4%; 
-    left:41%; 
-    top:6%;  
-    cursor:pointer;
-    -ms-transform: rotate(-8deg); /* IE 9 */
-    -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
-    transform: rotate(-8deg);
+    height:78%;
+    left:42%; 
+    top: 4%;  
+    -ms-transform: rotate(-27deg); /* IE 9 */
+    -webkit-transform: rotate(-27deg); /* Chrome, Safari, Opera */
+    transform: rotate(-27deg);
 }
 
 #quartz_cuvette{
@@ -154,7 +146,6 @@ h3{
     left:65%;
     height: 22.5%;
     width: 3.3%;
-    cursor:pointer;
 }
 
 #cuvette{
@@ -164,7 +155,6 @@ h3{
     left:71%;
     height: 22.5%;
     width: 3.3%;
-    cursor:pointer;
 }
 
 #table_with_spec{
@@ -187,7 +177,6 @@ h3{
     height: 26%; 
     left: 49%;
     top: 10%; 
-    cursor: pointer;
 }
 
 #spectrolid_trans_button{
@@ -197,7 +186,6 @@ h3{
     height: 18%;
     left: 35%; 
     top: 20%;  
-    cursor: pointer;
 }
 
 #spectrolid_trans_button1{
@@ -207,7 +195,6 @@ h3{
     height: 18%;
     left: 36%; 
     top: 4%;  
-    cursor: pointer;
 }
 
 #reference{
@@ -216,7 +203,6 @@ h3{
     width: 15%;
     left: 54%;
     top: -14%;
-    cursor: pointer;
     visibility: hidden;
 }
 
@@ -225,7 +211,9 @@ h3{
     z-index: 1;
     left: 583px;
     top: -6%;
-    cursor: pointer;
+    width: 1.8%;
+    height: 9.5%;
+    visibility: hidden;
 }
 
 #power_trans_button{
@@ -235,7 +223,6 @@ h3{
     top: 44%;
     width: 1.8%;
     height: 7.5%;
-    cursor: pointer; 
 }
 
 #demo{
@@ -270,6 +257,7 @@ h3{
     top:68px; 
     left:15px;
     z-index:7;
+    height: 93%;
     visibility: hidden;
 }
 
@@ -303,7 +291,6 @@ h3{
     width: 3%;
     height: 5%;
     visibility : hidden;
-    cursor: pointer;
 }
 
 #input1{
@@ -329,7 +316,7 @@ h3{
 
 #instruction_bkgd{
     position: absolute;
-    z-index: 12;
+    z-index: 16;
     top: 80%;
     left: 4%;
     width: 90%;
@@ -338,7 +325,7 @@ h3{
 
 #graph_instruction{
     position: absolute;
-    z-index: 13;
+    z-index: 17;
     top: 84%;
     left: 11%;
     color: yellow;
@@ -349,12 +336,11 @@ h3{
 
 #disposegraph{
     position: absolute;
-    z-index: 16;
-    width: 7%;
-    left: 81%;
-    top: 555px;
-    cursor: pointer;
-    height: 3%;
+    z-index: 18;
+    width: 8%;
+    left: 9%;
+    top: 29%;
+    height: 4%;
 }
 
 /*fluriscence css*/
@@ -377,7 +363,6 @@ h3{
     width: 9%;
     height: 5%;
     visibility : hidden;
-    cursor: pointer;
 }
 #select{
     position: absolute;

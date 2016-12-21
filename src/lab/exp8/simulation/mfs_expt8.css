@@ -321,9 +321,10 @@ h3{
 #instruction_bkgd{
     position: absolute;
     z-index: 16;
-    top: 80%;
+    top: 81%;
     left: 9%;
     width: 85%;
+    height: 19%;
     visibility: hidden;
 }
 

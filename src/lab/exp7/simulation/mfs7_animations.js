@@ -97,7 +97,7 @@ function moveCuvette(){
             // Initialise all the values for the motion of the images.
             final_top = 190;
             step_top = -0.5;
-            step_left = -1.72;
+            step_left = -1.74;
             type_of_movement = 1;
             // Move it to a position over the spectrofluorimeter.
             moveImage();
@@ -175,7 +175,7 @@ function movePipette() {
         }
         else if(step_no == 4 && count == 4){
              $("#pipette").animate({ top: '200px'},"slow")
-                          .animate({ left:'320px'}, "slow")
+                          .animate({ left:'322px'}, "slow")
                           .animate({ top: '210px'}, "slow");
             // Change to next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 6:Click on the pipette again to transfer the solution into the cuvette ";

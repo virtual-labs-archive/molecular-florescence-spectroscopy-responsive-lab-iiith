@@ -15,8 +15,16 @@
     var img,img1;
     var id,id1;
     var type_of_movement;// Indicates upward or downward motion
-    var sol_name;
-    var dropdown;
+    var sol_name;// Used to store the solution name.
+    // variables used for the graph validation.
+    var input1;
+    var input2;
+    var input3;
+    var video1;
+    var video2;
+    var video3;
+    var video4;
+    var dropdown; // stores the dropdown menu value.
     var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
                      Depending on the value of this variable the part of the method is called.*/
     var count = 0; /* This variable is used to perform the animations of the objects without distortions */
@@ -42,17 +50,17 @@ function initial_function(){
         // When the user clicks the button, open the manual modal 
         btn.onclick = function() {
             modal.style.display = "block";
-        }
+        };
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
-        }
+        };
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-        }
+        };
 }
 
 // When user clicks on the Data button it redirects him to the page containing slideshow of two graphs 
@@ -257,12 +265,13 @@ function selectGraph() {
 
 //This method is used to validate the correct data and display particular graph.
 function okBtn(){
-        dropdown = document.getElementById("select");
         var input1 = document.getElementById("input1").value;
         var input2 = document.getElementById("input2").value;
         var input3 = document.getElementById("input3").value;
-        video1 = document.getElementById("video1");
-        video2 = document.getElementById("video2");
+        var video1 = document.getElementById("video1");
+        var video2 = document.getElementById("video2");
+        var video3 = document.getElementById("video3");
+        var video4 = document.getElementById("video4");
         //validation for the excitation scan mode.
         if(sol_name == 0 && input1 == 514 && input2 == 350 && input3 == 600 && step_no == 11){
                 $(".data_validation, #mfs_form1" ).css("visibility", "hidden");

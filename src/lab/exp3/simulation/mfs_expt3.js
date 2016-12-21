@@ -15,8 +15,11 @@
     var img,img1;
     var id,id1;
     var type_of_movement;// Indicates upward or downward motion
-    var sol_name;
-    var dropdown; // To select the scan mode from the drop down menu.
+    var sol_name; // used to store the solution name
+    // variables used for graph validation
+    var dropdown; // To select the scan mode from the drop down menu
+    var input1, input2, input3;
+    var video1, video2, video3, video4;
     var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
                      Depending on the value of this variable the part of the method is called.*/
     var count = 0; /* This variable is used to perform the actions on the objects without distortions.
@@ -43,17 +46,17 @@ function initial_function(){
         // When the user clicks the button, open the manual modal 
         btn.onclick = function() {
             modal.style.display = "block";
-        }
+        };
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
             modal.style.display = "none";
-        }
+        };
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
-        }
+        };
 }
 
 // When user clicks on the Data button it redirects him to the page containing slideshow of two graphs 
@@ -294,10 +297,10 @@ function scan(){
              depending on the cuvette choosen form with an instruction is displayed.*/
             $(".data_validation, #instruction_bkgd, #graph_instruction").css("visibility", "visible");
             if(sol_name == 0){
-                graph_instruction.innerHTML = "Step-No 13:On the screen enter the wavelength range of spectral scan.  start: 620 nm End: 260 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A)  or transmittance (%T) mode. Click on the green 'start' button on the measurement set-up screen to run the wavelength scan.";
+                document.getElementById('graph_instruction').innerHTML = "Step-No 13:On the screen enter the wavelength range of spectral scan.  start: 620 nm End: 260 nm. In real operation, the wavelength range of incident light for the sample is chosen and the wavelength scan is run via the accompanied computer software. One can run the scan in absorbance (A)  or transmittance (%T) mode. Click on the green 'start' button on the measurement set-up screen to run the wavelength scan.";
                 step_no++;
             }else if(sol_name ==1){
-                graph_instruction.innerHTML = "Step-No 13:On the  absorption measurement screen enter the wavelength range:Start:600nm End:260nm.";
+                document.getElementById('graph_instruction').innerHTML = "Step-No 13:On the  absorption measurement screen enter the wavelength range:Start:600nm End:260nm.";
                 step_no++;            
             }
         cursorPointers('comp_trans_button', 'start_btn');
@@ -321,10 +324,10 @@ function scan(){
 
 //This method is used to validate the data to display the absorption graphs for different samples.
 function startBtn(){
-        input1 = document.getElementById("input1").value;
-        input2 = document.getElementById("input2").value;
-        video1 = document.getElementById("video1");
-        video2 = document.getElementById("video2");
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        var video1 = document.getElementById("video1");
+        var video2 = document.getElementById("video2");
         if(sol_name== 0 &&  input1 == 620 && input2 == 260){
             $(".data_validation").css("visibility", "hidden");
             $("#popup, #video1").css("visibility", "visible");
@@ -351,7 +354,7 @@ function startBtn(){
 function selectGraph() {
     dropdown = document.getElementById("select");
     dropdown.onchange = function(event){
-       if(dropdown.value=="Excitation" && step_no==23){
+       if(dropdown.value=="Excitation"){
          $("#select").html("<option value='Emission'>Emission</option><option value='Excitation'>Excitation</option>");
          alert("Select Emission scan mode");
        }
@@ -361,13 +364,13 @@ function selectGraph() {
 
 //This method is used to validate the correct data and display particular graph.
 function okBtn(){
-        var input_1 = document.getElementById("input1_data").value;
-        var input_2 = document.getElementById("input2_data").value;
-        var input_3 = document.getElementById("input3_data").value;
-        video3 = document.getElementById("video3");
-        video4 = document.getElementById("video4");
+        var input1 = document.getElementById("input1_data").value;
+        var input2 = document.getElementById("input2_data").value;
+        var input3 = document.getElementById("input3_data").value;
+        var video3 = document.getElementById("video3");
+        var video4 = document.getElementById("video4");
         // dropdown = document.getElementById("select");
-        if(input_1 == 350 && input_2 == 360 && input_3 == 650 && sol_name == 0){
+        if(sol_name == 0 && input1 == 350 && input2 == 360 && input3 == 650){
                 $(".data_validation1").css("visibility", "hidden");
                 video3.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
@@ -375,7 +378,7 @@ function okBtn(){
                 step_no++;
                 cursorPointers('ok_btn', 'disposegraph');
         }
-        else if(input_1 == 310 && input_2 == 320 && input_3 == 600 && sol_name == 1){
+        else if(sol_name == 1 && input1 == 310 && input2 == 320 && input3 == 600){
                 $(".data_validation1").css("visibility", "hidden");
                 video4.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";

@@ -15,8 +15,12 @@
     var id,id1;
     var type_of_movement;// Indicates upward or downward motion
     var turnon; // it is used to store the spectrometer table images.
-    var sol_name;
+    var sol_name; // Used to store the solution name
+    // Variables used for graph validation
     var dropdown; // To select the scan mode from the dropdown menu.
+    var input1, input2, input3;
+    var video1,video2, video3, video4,
+    video5, video6, video7, video8;
     var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
                      Depending on the value of this variable the part of the method is called.*/
     var count = 0; /* This variable is used to perform the actions on the objects without distortions.

@@ -140,6 +140,7 @@ function moveFlask(){
 //This method is use to move the beaker.
 //First condition is to move the beaker from the shelf to the table.
 //Second condition is to move the beaker to the ph meter stand.
+//third condition is to make the image visible
 function moveBeaker1(){
     if(step_no == 1 && count ==1){
         animateElements('#beaker', '+='+590, '+='+26);
@@ -197,6 +198,8 @@ function moveRod(){
         //Change the next instruction to be followed.
         document.getElementById("instruction").innerHTML = "Step No 7: Click on the NaOH beaker to take it to the experiment table;"
         step_no++;
+        document.getElementById('wire').style.visibility = "hidden";
+        document.getElementById('short_wire').style.visibility = "visible";
         count++;
     }
 }

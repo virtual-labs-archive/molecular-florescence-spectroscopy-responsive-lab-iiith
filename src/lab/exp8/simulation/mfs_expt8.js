@@ -15,7 +15,11 @@
     var img,img1;
     var id,id1;
     var type_of_movement;// Indicates upward or downward motion
-    var sol_name;
+    var sol_name; //Used to store the solution name
+    // Variables used for graph validation
+    var input1, input2, input3;
+    var video1, video2, video3, video4;
+    var dropdown; // To select the scan mode from the dropdown menu
     var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
                      Depending on the value of this variable the part of the method is called.*/
     var count = 0; /* This variable is used to perform the animations of the objects without distortions */
@@ -309,10 +313,10 @@ function scan(){
 }
 
 function startBtn(){
-        input1 = document.getElementById("input1").value;
-        input2 = document.getElementById("input2").value;
-        video1 = document.getElementById("video1");
-        video2 = document.getElementById("video2");
+        var input1 = document.getElementById("input1").value;
+        var input2 = document.getElementById("input2").value;
+        var video1 = document.getElementById("video1");
+        var video2 = document.getElementById("video2");
         if(sol_name== 0 &&  input1 == 580 && input2 == 460){
             $(".data_validation").css("visibility", "hidden");
             $("#popup, #video1").css("visibility", "visible");
@@ -339,7 +343,7 @@ function startBtn(){
 function selectGraph() {
     dropdown = document.getElementById("select");
     dropdown.onchange = function(event){
-       if(dropdown.value=="Excitation" && step_no==23){
+       if(dropdown.value=="Excitation"){
          $("#select").html("<option value='Emission'>Emission</option><option value='Excitation'>Excitation</option>");
          alert("Select Emission scan mode");
        }
@@ -349,12 +353,12 @@ function selectGraph() {
 
 //This method is used to validate the correct data and display particular graph.
 function okBtn(){
-        var input_1 = document.getElementById("input1_data").value;
-        var input_2 = document.getElementById("input2_data").value;
-        var input_3 = document.getElementById("input3_data").value;
-        video3 = document.getElementById("video3");
-        video4 = document.getElementById("video4");
-        if(input_1 == 535 && input_2 == 500 && input_3 == 680 && sol_name == 0){
+        var input1 = document.getElementById("input1_data").value;
+        var input2 = document.getElementById("input2_data").value;
+        var input3 = document.getElementById("input3_data").value;
+        var video3 = document.getElementById("video3");
+        var video4 = document.getElementById("video4");
+        if(sol_name == 0 && input1 == 535 && input2 == 500 && input3 == 680){
                 $(".data_validation1").css("visibility", "hidden");
                 video3.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";
@@ -362,7 +366,7 @@ function okBtn(){
                 step_no++;
                 cursorPointers('ok_btn', 'disposegraph');
         }
-        else if(input_1 == 535 && input_2 == 500 && input_3 == 680 && sol_name == 1){
+        else if(sol_name == 1 && input1 == 535 && input2 == 500 && input3 == 680){
                 $(".data_validation1").css("visibility", "hidden");
                 video4.style.visibility = "visible";
                 document.getElementById("demo").innerHTML = "Step-No 23:Click on the close button when the spectral scal is complete. In real operation, the scan data are stored in the computer. The instrument stores data and therefore asks for the Sample File name. One enters a file name to save the data.";

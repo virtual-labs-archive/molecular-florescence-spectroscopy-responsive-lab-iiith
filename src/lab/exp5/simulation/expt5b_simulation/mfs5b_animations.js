@@ -86,7 +86,7 @@ function moveCuvette(){
             // Move it to the table.
             moveImage();
             // Change the next instruction to be followed.
-            document.getElementById("demo").innerHTML = "Step-No 4:  Click on the 5 mL capacity pipette to collect 3 mL of the pH 4 fluorescein solution which will be transferred into the quartz cuvette. In real operation, one has to set the volume to 3 mL in the pipette and an appropriate tip should be attached prior to dipping it in the solution.";
+            document.getElementById("demo").innerHTML = "Step-No 4:  Click on the 5 mL capacity pipette to collect 3 mL of the pH 4/pH 6.4 fluorescein solution which will be transferred into the quartz cuvette. In real operation, one has to set the volume to 3 mL in the pipette and an appropriate tip should be attached prior to dipping it in the solution.";
             cursorPointers('cuvette', 'pipette');
             step_no++;
         }

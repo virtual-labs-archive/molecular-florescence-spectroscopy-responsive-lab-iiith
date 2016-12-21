@@ -16,13 +16,8 @@
     var conc_value; // value stored after clicking a slider.
     // variables used in graph validation
     var dropdown; //To select the scan mode from the dropdown menu.
-    var input1;
-    var input2;
-    var input3;
-    var video1;
-    var video2;
-    var video3;
-    var video4;
+    var input1, input2, input3;
+    var video1, video2, video3, video4;
     var turnon; // It is used to store the spectrometer table images.
     var type_of_movement;// Indicates upward or downward motion
     var step_no=0; /*This variable is used to perform all the actions in the required sequence. 
@@ -229,7 +224,7 @@ function scan(){
 function selectGraph() {
     dropdown = document.getElementById("select");
     dropdown.onchange = function(event){
-       if(dropdown.value=="Excitation" && step_no==11){
+       if(dropdown.value=="Excitation"){
          $("#select").html("<option value='Emission'>Emission</option><option value='Excitation'>Excitation</option>");
          alert("Select Emission scan mode");
        }
@@ -246,14 +241,13 @@ function commonInstructions(){
 
 //This method is used to validate the correct data and display particular graph.
 function okBtn(){
-    //dropdown = document.getElementById("select");
-    input1 = document.getElementById("input1").value;
-    input2 = document.getElementById("input2").value;
-    input3 = document.getElementById("input3").value;
-    video1 = document.getElementById("video1");
-    video2 = document.getElementById("video2");
-    video3 = document.getElementById("video3");
-    video4 = document.getElementById("video4");
+    var input1 = document.getElementById("input1").value;
+    var input2 = document.getElementById("input2").value;
+    var input3 = document.getElementById("input3").value;
+    var video1 = document.getElementById("video1");
+    var video2 = document.getElementById("video2");
+    var video3 = document.getElementById("video3");
+    var video4 = document.getElementById("video4");
     //validation for the emission scan mode.
     if(conc_value == 0 && input1 == 350 && input2 == 360 && input3 == 570){
         commonInstructions()

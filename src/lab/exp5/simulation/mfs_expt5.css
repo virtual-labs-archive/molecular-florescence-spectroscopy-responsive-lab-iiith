@@ -89,14 +89,15 @@ h3{
     height: 85%;
 }
 
-/*#short_wire{
+#short_wire{
     position: absolute;
     z-index: 3;
-    top:-79%;
+    top:-67%;
     width: 24%;
-    left:37%;
-    height: 85%;
-}*/
+    left:37.3%;
+    height: 102%;
+    visibility: hidden;
+}
 
 #stand{
     position: absolute;
