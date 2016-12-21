@@ -26,34 +26,29 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
 ##### Steps followed in the conversion.
 
 * Get the [SWF files](#glossary) of the flash experiment which needs to be converted to JavaScript from github.
-  -steps to clone the repository
-   cd /home
-   git clone "lab repository"
 
 * Using [JPEXS free Flash Decompiler](https://www.free-decompiler.com/flash/download/) extract all the components of the experiment.
   **Steps to install and run JPEXS free Flash decompiler:
-  - First you need to install tha latest version of java on your machine.
+  - First you need to install the latest version of java on your machine.
   - Second install decompiler from the above link.
   - Third go to the directory where the decompiler is installed.
-   cd /home/ffdec_9.0.0
+    cd /home/ffdec_9.0.0
   - Fourth run the command in the terminal as below to open the decompiler.
    ./ffdec.sh
-  - Fifth open the .swf files from the decompiler from the open icon which is to the top left in the decompiler to extraxt all the components of the flash file.
+  - Fifth open the .swf files from the decompiler from the open icon which is to the top left in the decompiler to extract all the components of the flash file.
   - Sixth export all the components in your machine by using the "Extact all the components" icon given in the decompiler.
 
 * Identify the components which together form images required.
 
 * Combine these images using photoshop or any other photo editors available. Make sure all images are in PNG format.
 
-* Position all these images in their appropriate positions in HTML and CSS code.
+* Used the extracted images in html code to develop the simulations UI.
 
 * Define functions for each of the apparatus which redirect to other functions according to the need of the experiment.
 
 * Define one common function for upward and downward movement of any image which takes in final position initial position and the element to be moved. This function will work only for linear motions along straight line since position of the image is being changed every moment.
 
 * For other kind of animations like pouring liquid from one apparatus to other, checkout the [sprite sheets](http://kwiksher.com/tutorials_kwik/tutorial-sprites/) obtained after extraction of SWF files and identify the animations needed. Convert the [svg](#glossary) images of that sprite sheet to png images using [online convertors](http://image.online-convert.com/convert-to-png) available. Then change these images continously to obtain the required animations.
-
-* After every step performed change the instruction which will explain what has to be done next.
 
 * To plot the graph, the videos of the graph has been recorded using a video recorder.
   ** Command to install recorder in ubuntu:
