@@ -95,4 +95,5 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
 
 
 #### Conclusion
+	This is the conclusion...
 Inspite of Flash being a popular interactive media platform for building web pages, it needs to be converted to JavaScript inorder to make it Free and open-source. Currently the tools available for conversion are not sophisticated enough to convert more complex animations involved in the experiments. Hence for time being conversion using pure Javascript and HTML5 is the best option though it is not the efficient method. 
