@@ -32,9 +32,9 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
   - First you need to install the latest version of java on your machine.
   - Second install decompiler from the above link.
   - Third go to the directory where the decompiler is installed.
-    cd /home/ffdec_9.0.0
+    - cd /home/ffdec_9.0.0
   - Fourth run the command in the terminal as below to open the decompiler.
-   ./ffdec.sh
+    - ./ffdec.sh
   - Fifth open the .swf files from the decompiler from the open icon which is to the top left in the decompiler to extract all the components of the flash file.
   - Sixth export all the components in your machine by using the "Extact all the components" icon given in the decompiler.
 
@@ -90,5 +90,4 @@ Another advantage of JavaScript is that the code to make an animation flutter ac
 
 
 #### Conclusion
-	This is the conclusion...
 Inspite of Flash being a popular interactive media platform for building web pages, it needs to be converted to JavaScript inorder to make it Free and open-source. Currently the tools available for conversion are not sophisticated enough to convert more complex animations involved in the experiments. Hence for time being conversion using pure Javascript and HTML5 is the best option though it is not the efficient method. 
