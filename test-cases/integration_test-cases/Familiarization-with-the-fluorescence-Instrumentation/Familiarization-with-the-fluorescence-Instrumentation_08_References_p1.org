@@ -27,13 +27,13 @@
 * Test Steps
 
   +  Click on the "Further Reading" link
-  +  Check whether all the reference links given in the references page are assigned and navigating to the concerned
+  +  Check whether all the reference links given in the References page are assigned and navigating to the concerned
      page or not.
 
 * Expected result
 
   +  Further Readings section should be displayed on the screen.
-  +  All the reference links given in the reference page should assigned and navigating to the concerned
+  +  All the reference links given in the References page should assigned and navigating to the concerned
      page .
 
 * Review/comments
