@@ -1,0 +1,41 @@
+#+Title: Test case
+#+Date: 06 Jan 2017
+#+Author: SravanthiB
+
+* Environment
+
+  +  OS: Windows 7, Linux
+  +  Browsers: Firefox,Chrome
+  +  Bandwidth : 100Mbps
+  +  Hardware Configuration:8GBRAM,
+  +  Processor:i5
+
+* Objective
+
+  +  To check the functionality of the links in Further Readings page
+     of "Introduction to the fluorescence spectroscopy principle" experiment
+
+* Pre conditions
+
+  +  Refer to first test case [[https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith/blob/master/test-cases/integration_test-cases/Introduction-to-the-fluorescence-spectroscopy-principle/Introduction-to-the-fluorescence-spectroscopy-principle_01_Usability_smk.org][Introduction-to-the-fluorescence-spectroscopy-principle_01_Usability_smk.org]]
+
+
+* Post conditions
+
+  +  Nil
+
+* Test Steps
+
+  +  Click on the "Further Reading" link
+  +  Check whether all the reference links given in the further
+     reading page are assigned and navigating to the concerned
+     page or not.
+
+* Expected result
+
+  +  Further Readings section should be displayed on the screen.
+  +  All the reference links given in the further
+     reading page should assigned and navigating to the concerned
+     page .
+
+* Review/comments
