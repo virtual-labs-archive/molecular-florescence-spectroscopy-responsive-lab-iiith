@@ -31,7 +31,7 @@
 
 * Expected result
 
-  +  Feedback section should be displayed on the screen.
+  +  Further Readings section should be displayed on the screen.
   +  Content should be present with no distortions, spelling mistakes
      and Junk characters
   +  The Link should navigate to the feedback form  page. 
