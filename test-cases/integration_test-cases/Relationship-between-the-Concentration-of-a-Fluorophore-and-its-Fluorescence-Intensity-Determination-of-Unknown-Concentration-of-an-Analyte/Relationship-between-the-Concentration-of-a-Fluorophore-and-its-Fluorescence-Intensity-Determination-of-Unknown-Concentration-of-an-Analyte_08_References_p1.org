@@ -1,0 +1,39 @@
+#+Title: Test case
+#+Date: 10 Jan 2017
+#+Author: SravanthiB
+
+* Environment
+
+  +  OS: Windows 7, Linux
+  +  Browsers: Firefox,Chrome
+  +  Bandwidth : 100Mbps
+  +  Hardware Configuration:8GBRAM,
+  +  Processor:i5
+
+* Objective
+
+  +  To check the functionality of the links in References page
+     of "Relationship between the Concentration of a Fluorophore and its Fluorescence Intensity: Determination of Unknown Concentration of an Analyte" experiment
+
+* Pre conditions
+
+  +  Refer to first test case [[Relationship-between-the-Concentration-of-a-Fluorophore-and-its-Fluorescence-Intensity-Determination-of-Unknown-Concentration-of-an-Analyte_01_Usability_smk.org][Relationship-between-the-Concentration-of-a-Fluorophore-and-its-Fluorescence-Intensity-Determination-of-Unknown-Concentration-of-an-Analyte_01_Usability_smk.org]]
+
+* Post conditions
+
+  +  Nil
+
+* Test Steps
+
+  +  Click on the "References" link
+  +  Check whether all the reference links given in the References
+     page are assigned and are navigating to the concerned
+     page or not.
+
+* Expected result
+
+  +  References section should be displayed on the screen.
+  +  All the reference links given in the References page should assigned and navigating to the concerned
+     page.
+
+* Review/comments
