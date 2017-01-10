@@ -1,0 +1,36 @@
+#+Title: Test case
+#+Date: 10 Jan 2017
+#+Author: SravanthiB
+
+* Environment
+
+  +  OS: Windows 7, Linux
+  +  Browsers: Firefox,Chrome
+  +  Bandwidth : 100Mbps
+  +  Hardware Configuration:8GBRAM,
+  +  Processor:i5
+
+* Objective
+
+   + To be able to simulate the "Fluorescence Quenching and Stern-Volmer Plot: Estimation of the Quenching Constant from Stern-Volmer Plot" experiment
+     
+* Pre conditions
+
+  +  Refer to first test case [[https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith/blob/master/test-cases/integration_test-cases/Fluorescence-Quenching-and-Stern-Volmer-Plot-Estimation-of-the-Quenching-Constant-from-Stern-Volmer-Plot/Fluorescence-Quenching-and-Stern-Volmer-Plot-Estimation-of-the-Quenching-Constant-from-Stern-Volmer-Plot_01_Usability_smk.org][Fluorescence-Quenching-and-Stern-Volmer-Plot-Estimation-of-the-Quenching-Constant-from-Stern-Volmer-Plot_01_Usability_smk.org]]
+
+* Post conditions
+
+  +  Nil
+     
+* Test Steps
+
+  +  Click on the "Fluorescence Quenching and Stern-Volmer Plot: Estimation of the Quenching Constant from Stern-Volmer Plot" link.
+  +  Check if there are any distortions, spelling mistakes and junk
+     characters in the Simulation page.
+
+* Expected result
+
+  + The home page of "Fluorescence Quenching and Stern-Volmer Plot: Estimation of the Quenching Constant from Stern-Volmer Plot" experiment should be displayed on the screen.
+  + The Home page should be present with no distortions, spelling mistakes and Junk characters.
+
+* Review/comments
