@@ -25,7 +25,7 @@
 * Test Steps
 
   +  Click on the "Click here to go to lab" link
-  +  Check the functionality of the "Slider bar".
+  +  Check the functionality of the "Selection bar".
 
 * Expected result
 
@@ -34,9 +34,9 @@
      using the slider with ease. 
   3. A warning message should be appear when the user try to select
      the flask with out choosing the solution first.
-  3. Once the Volumetric flask is selected, the slider bar should
+  4. Once the Volumetric flask is selected, the slider bar should
      be hidden. 
-  4. The user should be able to use the slider bar again when he/she try
+  5. The user should be able to use the slider bar again when he/she try
      to reset the experiment. 
 
 * Review/comments
