@@ -12,11 +12,11 @@
 
 * Objective
 
-  +  To view the Objective of "Demonstration of Solvent Effects on Fluorescence Spectra of a Fluorophore" experiment.
+  +  To view the Objective of "Demonstration of pH Effect on Fluorescence Excitation and Emission Spectra of a Fluorophore" experiment.
 
 * Pre conditions
 
-  +  Refer to first test case [[https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith/blob/master/test-cases/integration_test-cases/Demonstration-of-Solvent-Effects-on-Fluorescence-Spectra-of-a-Fluorophore/Demonstration-of-Solvent-Effects-on-Fluorescence-Spectra-of-a-Fluorophore_01_Usability_smk.org][Demonstration-of-Solvent-Effects-on-Fluorescence-Spectra-of-a-Fluorophore_01_Usability_smk.org]]
+  +  Refer to first test case [[https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith/blob/master/test-cases/integration_test-cases/Demonstration-of-pH-Effect-on-Fluorescence-Excitation-and-Emission-Spectra-of-a-Fluorophore/Demonstration-of-pH-Effect-on-Fluorescence-Excitation-and-Emission-Spectra-of-a-Fluorophore_01_Usability_smk.org][Demonstration-of-pH-Effect-on-Fluorescence-Excitation-and-Emission-Spectra-of-a-Fluorophore_01_Usability_smk.org]]
 
 * Post conditions
 

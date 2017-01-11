@@ -1,5 +1,5 @@
 #+Title: Test Case
-#+Date: 11 Jan 2017
+#+Date: 10 Jan 2017
 #+Author: Sravanthi. B
 
 * Environment
@@ -25,12 +25,13 @@
 * Test Steps
 
   +  Click on the "Click here to go to lab" link
-  +  Check the functionality of the "Graphs"
+  +  Check the functionality of the "spectrofluorimeter"
+  +  Check the functionality of the buttons, lid and lights of the spectrofluorimeter.
 
 * Expected result
 
   1. A new tab with the experiment should be opened. 
-  2. On click of the monitor, the user should be able to navigated to a new tab with
-     the output displaying in graphical representation by entering the appropriate values.
+  2. The spectrofluorimeter should only be operated on click of "Start
+     absorption measurement" button. 
 
 * Review/comments

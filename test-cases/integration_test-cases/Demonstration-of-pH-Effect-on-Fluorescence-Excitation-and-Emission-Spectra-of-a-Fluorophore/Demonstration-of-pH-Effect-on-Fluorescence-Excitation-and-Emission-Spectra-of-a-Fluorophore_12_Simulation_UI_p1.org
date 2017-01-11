@@ -1,0 +1,36 @@
+#+Title: Test Case
+#+Date: 11 Jan 2017
+#+Author: Sravanthi. B
+
+* Environment
+
+  +  OS: Windows 7, Linux
+  +  Browsers: Firefox,Chrome
+  +  Bandwidth : 100Mbps
+  +  Hardware Configuration:8GBRAM,
+  +  Processor:i5
+
+* Objective
+
+  +  To view the Objective of "Demonstration of pH Effect on Fluorescence Excitation and Emission Spectra of a Fluorophore" experiment.
+
+* Pre conditions
+
+  +  Refer to first test case [[https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith/blob/master/test-cases/integration_test-cases/Demonstration-of-pH-Effect-on-Fluorescence-Excitation-and-Emission-Spectra-of-a-Fluorophore/Demonstration-of-pH-Effect-on-Fluorescence-Excitation-and-Emission-Spectra-of-a-Fluorophore_01_Usability_smk.org][Demonstration-of-pH-Effect-on-Fluorescence-Excitation-and-Emission-Spectra-of-a-Fluorophore_01_Usability_smk.org]]
+
+* Post conditions
+
+  +  Nil
+
+* Test Steps
+
+  +  Click on the "Click here to go to lab" link
+  +  Check the functionality of the "UI buttons" and "Animations"
+
+* Expected result
+
+  1. A new tab with the experiment should be opened. 
+  2. Functionality of the "Reset Experiment", "Manual", "Data" and
+     "Switches" button should work according to the peocess. 
+
+* Review/comments
