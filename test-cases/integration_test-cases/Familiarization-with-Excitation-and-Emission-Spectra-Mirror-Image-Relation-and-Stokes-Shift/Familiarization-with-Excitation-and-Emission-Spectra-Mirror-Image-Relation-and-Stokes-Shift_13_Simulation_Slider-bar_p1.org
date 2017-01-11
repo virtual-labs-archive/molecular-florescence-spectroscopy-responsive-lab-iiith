@@ -1,0 +1,40 @@
+#+Title: Test Case
+#+Date: 11 Jan 2017
+#+Author: Sravanthi. B
+
+* Environment
+
+  +  OS: Windows 7, Linux
+  +  Browsers: Firefox,Chrome
+  +  Bandwidth : 100Mbps
+  +  Hardware Configuration:8GBRAM,
+  +  Processor:i5
+
+* Objective
+
+  +  To view the Objective of "Familiarization with Excitation and Emission Spectra, Mirror Image Relation and Stokes Shift" experiment.
+
+* Pre conditions
+
+  +  Refer to first test case [[https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith/blob/master/test-cases/integration_test-cases/Familiarization-with-Excitation-and-Emission-Spectra-Mirror-Image-Relation-and-Stokes-Shift/Familiarization-with-Excitation-and-Emission-Spectra-Mirror-Image-Relation-and-Stokes-Shift_01_Usability_smk.org][Familiarization-with-Excitation-and-Emission-Spectra-Mirror-Image-Relation-and-Stokes-Shift_01_Usability_smk.org]]
+
+* Post conditions
+
+  +  Nil
+
+* Test Steps
+
+  +  Click on the "Click here to go to lab" link
+  +  Check the functionality of the "Slider bar".
+
+* Expected result
+
+  1. A new tab with the experiment should be opened. 
+  2. The user should be able to select the solution of his choice
+     using the slider with ease. 
+  3. Once the Volumetric flask is selected, the slider bar should
+     become hidden. 
+  4. The user should be able to use the slider bar again when he/she wants
+     to reset the experiment. 
+
+* Review/comments

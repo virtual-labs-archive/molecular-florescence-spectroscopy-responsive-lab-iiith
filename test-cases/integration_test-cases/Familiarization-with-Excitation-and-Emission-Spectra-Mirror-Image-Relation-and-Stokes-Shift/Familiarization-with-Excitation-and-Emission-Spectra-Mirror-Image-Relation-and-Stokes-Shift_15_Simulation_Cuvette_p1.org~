@@ -1,0 +1,39 @@
+#+Title: Test Case
+#+Date: 11 Jan 2017
+#+Author: Sravanthi. B
+
+* Environment
+
+  +  OS: Windows 7, Linux
+  +  Browsers: Firefox,Chrome
+  +  Bandwidth : 100Mbps
+  +  Hardware Configuration:8GBRAM,
+  +  Processor:i5
+
+* Objective
+
+  +  To view the Objective of "Familiarization with Excitation and Emission Spectra, Mirror Image Relation and Stokes Shift" experiment.
+
+* Pre conditions
+
+  +  Refer to first test case [[https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith/blob/master/test-cases/integration_test-cases/Familiarization-with-Excitation-and-Emission-Spectra-Mirror-Image-Relation-and-Stokes-Shift/Familiarization-with-Excitation-and-Emission-Spectra-Mirror-Image-Relation-and-Stokes-Shift_01_Usability_smk.org][Familiarization-with-Excitation-and-Emission-Spectra-Mirror-Image-Relation-and-Stokes-Shift_01_Usability_smk.org]]
+
+* Post conditions
+
+  +  Nil
+
+* Test Steps
+
+  +  Click on the "Click here to go to lab" link
+  +  Check the functionality of the "Cuvette"
+
+* Expected result
+
+  1. A new tab with the experiment should be opened. 
+  2. When the user clicks on the cuvette, the cuvette should be moved from
+     shelf to the experiment desk with out any distortions.
+  3. On click the cuvette should be inserted in the spectofluorimeter
+     with out any distortions.
+  
+
+* Review/comments
