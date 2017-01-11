@@ -1,6 +1,6 @@
-#+Title: Test case
-#+Date: 06 Jan 2017
-#+Author: SravanthiB
+#+Title: Test Case
+#+Date: 11 Jan 2017
+#+Author: Sravanthi. B
 
 * Environment
 
@@ -12,13 +12,11 @@
 
 * Objective
 
-  +  To check the functionality of the links in References page
-     of "Demonstration of Solvent Effects on Fluorescence Spectra of a Fluorophore" experiment
+  +  To view the Objective of "Demonstration of Solvent Effects on Fluorescence Spectra of a Fluorophore" experiment.
 
 * Pre conditions
 
   +  Refer to first test case [[https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith/blob/master/test-cases/integration_test-cases/Demonstration-of-Solvent-Effects-on-Fluorescence-Spectra-of-a-Fluorophore/Demonstration-of-Solvent-Effects-on-Fluorescence-Spectra-of-a-Fluorophore_01_Usability_smk.org][Demonstration-of-Solvent-Effects-on-Fluorescence-Spectra-of-a-Fluorophore_01_Usability_smk.org]]
-
 
 * Post conditions
 
@@ -26,15 +24,13 @@
 
 * Test Steps
 
-  +  Click on the "References" link
-  +  Check whether all the reference links given in the References
-     page are assigned and are navigating to the concerned
-     page or not.
+  +  Click on the "Click here to go to lab" link
+  +  Check the functionality of the "UI buttons"
 
 * Expected result
 
-  +  References section should be displayed on the screen.
-  +  All the reference links given in the References page should assigned and navigating to the concerned
-     page .
+  1. A new tab with the experiment should be opened. 
+  2. Functionality of the "Manual", "Data" and "Reset Experiment"
+     buttons should work accordingly.
 
 * Review/comments
