@@ -30,7 +30,7 @@
 * Expected result
 
   1. A new tab with the experiment should be opened. 
-  2. The user should be able to select the solution/concentration of his choice
+  2. The user should be able to select the solution of his choice
      using the slider with ease. 
   3. Once the Volumetric flask is selected, the slider bar should
      be hidden. 
