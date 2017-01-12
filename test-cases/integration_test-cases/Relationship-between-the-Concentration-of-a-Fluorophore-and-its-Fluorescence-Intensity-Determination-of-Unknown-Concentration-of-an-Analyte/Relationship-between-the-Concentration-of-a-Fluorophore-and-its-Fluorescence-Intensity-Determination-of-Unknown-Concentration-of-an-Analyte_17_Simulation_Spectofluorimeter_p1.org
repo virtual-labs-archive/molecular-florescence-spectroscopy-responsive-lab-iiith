@@ -1,0 +1,37 @@
+#+Title: Test Case
+#+Date: 12 Jan 2017
+#+Author: Sravanthi. B
+
+* Environment
+
+  +  OS: Windows 7, Linux
+  +  Browsers: Firefox,Chrome
+  +  Bandwidth : 100Mbps
+  +  Hardware Configuration:8GBRAM,
+  +  Processor:i5
+
+* Objective
+
+  +  To view the Objective of "Relationship between the Concentration of a Fluorophore and its Fluorescence Intensity: Determination of Unknown Concentration of an Analyte" experiment.
+
+* Pre conditions
+
+  +  Refer to first test case [[https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith/blob/master/test-cases/integration_test-cases/Relationship-between-the-Concentration-of-a-Fluorophore-and-its-Fluorescence-Intensity-Determination-of-Unknown-Concentration-of-an-Analyte/Relationship-between-the-Concentration-of-a-Fluorophore-and-its-Fluorescence-Intensity-Determination-of-Unknown-Concentration-of-an-Analyte_01_Usability_smk.org][Relationship-between-the-Concentration-of-a-Fluorophore-and-its-Fluorescence-Intensity-Determination-of-Unknown-Concentration-of-an-Analyte_01_Usability_smk.org]]
+
+* Post conditions
+
+  +  Nil
+
+* Test Steps
+
+  +  Click on the "Click here to go to lab" link
+  +  Check the functionality of the "spectofluorimeter"
+  +  Check the functionality of the buttons, lid and lights of the spectrofluorimeter.
+
+* Expected result
+
+  1. A new tab with the experiment should be opened. 
+  2. The spectofluorimeter should only be operated on click of "Start
+     absorption measurement" button. 
+
+* Review/comments
