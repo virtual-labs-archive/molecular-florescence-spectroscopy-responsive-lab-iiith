@@ -12,7 +12,7 @@
 
 * Objective
 
-  +  To check the functionality of the links in Further Readings page
+  +  To check the functionality of the links in Refences page
      of "Introduction to the fluorescence spectroscopy principle" experiment
 
 * Pre conditions
