@@ -25,13 +25,13 @@
 * Test Steps
 
   +  Click on the "Click here to go to lab" link
-  +  Check the functionality of the "spectofluorimeter"
+  +  Check the functionality of the "spectrophotometer"
   +  Check the functionality of the buttons, lid and lights of the spectrofluorimeter.
 
 * Expected result
 
   1. A new tab with the experiment should be opened. 
-  2. The spectofluorimeter should only be operated on click of "Start
+  2. The spectrophotometer should only be operated on click of "Start
      absorption measurement" button. 
 
 * Review/comments
