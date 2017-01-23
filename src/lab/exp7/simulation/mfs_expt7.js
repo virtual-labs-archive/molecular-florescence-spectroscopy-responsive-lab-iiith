@@ -74,7 +74,7 @@ function popitup(url) {
 //This function is used to add click events to elements
 function addclickEvents(){
         document.getElementById("reset_btn").addEventListener("click", function() {
-            reload();
+            window.location.reload();
         }, false);
         document.getElementById("data_button").addEventListener("click", function() {
             popitup("slideshow.html");
@@ -146,6 +146,9 @@ function changeImage(){
 is changed continuously  to give the blinking light effect. The two images that are swapped is stored in 
 images[]*/
 function turnOn() {
+        /* Make the power button hidden, once the button is clicked to ensure that the spectrofluorimeter runs 
+        only for one click. */
+        document.getElementById('power_trans_button').style.visibility = 'hidden';
         // Get the image
         img = document.getElementById('table_with_spec');
         // Change the source of the image 

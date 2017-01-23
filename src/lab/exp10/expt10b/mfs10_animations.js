@@ -42,6 +42,10 @@ function moveFlask(){
             alert("Please first select the concentration from the selection bar.")
         }
         else{
+            /* After the flask is moved on to the table, make the slider disabled and decrease the opacity
+             value to make it look lighter.  */
+            document.getElementById('slider').disabled = true;
+            document.getElementById('slider').style.opacity = "0.4";
             // Get image
             elem = document.getElementById("round-bottom-flask"); 
             //Detect thecurrent position of the flask.
@@ -205,6 +209,8 @@ function movebackPipette() {
           $("#table_with_spec").attr("src", "../../common_images/spectrofluor_greenbutton.png");
           document.getElementById("demo").innerHTML = "Step-No 7: To start the fluorescence measurement turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.";
           cursorPointers('pipette', 'power_trans_button');
+          // Make the hidden power button to visible to run the spectrofluorimeter.  
+          document.getElementById('power_trans_button').style.visibility = 'visible';
 }
 
 

@@ -196,6 +196,7 @@ h3{
     top: 42%;
     width: 2%;
     height: 8%; 
+    visibility: hidden;
 }
 
 #demo{
