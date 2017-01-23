@@ -19,6 +19,7 @@ h3{
 #reset_btn{
     margin: auto;
     display: block;
+    cursor: default;
 }
 
 #manual_button, #data_button{
@@ -217,6 +218,7 @@ h3{
     z-index: 1;
     left: 583px;
     top: -6%;
+    width: 1.8%;
 }
 
 #power_trans_button{

@@ -200,6 +200,8 @@ function movebackPipette() {
           $("#table_with_spec").attr("src", "../../common_images/spectrofluor_greenbutton.png");
           document.getElementById("demo").innerHTML = "Step-No 7: To start the fluorescence measurement turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument.";
           cursorPointers('pipette', 'power_trans_button');
+          // Make the hidden power button to visible to run the spectrofluorimeter.  
+          document.getElementById('power_trans_button').style.visibility = 'visible';
 }
 
 

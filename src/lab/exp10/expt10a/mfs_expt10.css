@@ -19,6 +19,7 @@ h3{
 #reset_btn{
     margin: auto;
     display: block;
+    cursor: default;
 }
 
 #manual_button, #data_button{

@@ -20,7 +20,7 @@ function initial_function(){
 //This function is used to add click events to elements.
 function addclickEvents(){
     document.getElementById("reset_btn").addEventListener("click", function() {
-        location.reload();
+        window.location.reload();
     }, false);
     document.getElementById("round-bottom-flask").addEventListener("click", function() {
         moveFlask();

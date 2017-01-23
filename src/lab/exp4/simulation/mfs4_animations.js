@@ -313,13 +313,16 @@ function changeParameters(){
 
 //This function is used to hide the popup screen.
 function hideInstruction() {
-      $("#popup, #start").css("visibility", "hidden");
-      if(step_no == 6){
+       $("#popup, #start").css("visibility", "hidden");
+       // Make the hidden power button to visible to run the spectrofluorimeter.  
+       document.getElementById('power_trans_button').style.visibility = 'visible';
+       
+       if(step_no == 6){
             document.getElementById("demo").innerHTML = 'Step-No 9: Turn on the spectrophotometer by clicking on the power button. In real operation it takes approx.30 min for initialization of the instrument.'
             step_no++;
             cursorPointers('start', 'power_trans_button');
-      }
-      else if( step_no == 17){
+       }
+       else if( step_no == 17){
             $("#computerimage").remove();
             images[0] = "../../common_images/spec_fluormeter.png";
             images[1] = "../../common_images/spec_fluormeter.png";
@@ -327,7 +330,7 @@ function hideInstruction() {
             document.getElementById("demo").innerHTML = "Step-No 18: Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument. ";
             step_no++;
             cursorPointers('start', 'power_trans_button');
-      }
+        }
 }
 
 

@@ -179,10 +179,6 @@ function turnOn() {
         if(x >= images.length){
             x = 0;
         }
-        if(step_no == 18){
-            images[0] = "../../common_images/specfluor_on_no_redLight.png";
-            images[1] = "../../common_images/specfluor_on_redLight.png";
-        }
 }
 
 //Common function to make the clock visible and rotate it.
@@ -208,6 +204,10 @@ function clck(){
 /* This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
 when this method is called they are amde visible and the clock hand is made to rotate.  */
 function showClock(){
+        /* Make the power button hidden, once the button is clicked to ensure that the spectrofluorimeter 
+        runs only for one click. */
+        document.getElementById('power_trans_button').style.visibility = 'hidden';
+
         if(step_no==7){
             clck();
             document.getElementById("demo").innerHTML = "Step-No 9: Click on the lid of the sample chamber of the spectrophotometer by clicking on the lid for placing the sample in the cell holder;"
@@ -215,6 +215,9 @@ function showClock(){
             setTimeout("removeClock()",5350);
         }
         else if(step_no==18){
+            // continuously change the spectrofluorimeter images
+            images[0] = "../../common_images/specfluor_on_no_redLight.png";
+            images[1] = "../../common_images/specfluor_on_redLight.png";
             clck();
             document.getElementById("demo").innerHTML = "Step-No 19: Open the lid of the sample chamber of the spectroflourimeter by clicking on the lid for placing the sample in the cell-holder."
             //After 10 secs dispose clock

@@ -223,6 +223,8 @@ function movebackPipette() {
           $("#table_with_spec").attr("src", "../../../common_images/spectrofluor_greenbutton.png");
           document.getElementById("demo").innerHTML = "Step-No 8:Start fluorescence measurement to run the Excitation and Emission Spectral Scans of the sample on the spectrofluorimeter as follows.Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument. ";
           cursorPointers('pipette', 'power_trans_button');
+          // Make the hidden power button to visible to run the spectrofluorimeter.  
+          document.getElementById('power_trans_button').style.visibility = 'visible';
 }
 
 

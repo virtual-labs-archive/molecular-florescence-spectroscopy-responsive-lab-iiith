@@ -304,12 +304,12 @@ function changeParameters(){
 //This function is used to hide the popup screen.
 function hideInstruction() {
       $("#popup, #start").css("visibility", "hidden");
+      // Make the hidden power button to visible to run the spectrofluorimeter.  
+      document.getElementById('power_trans_button').style.visibility = 'visible';
       if(sol_name==0 && step_no == 6){
             document.getElementById("demo").innerHTML = 'Turn on the spectrophotometer by clicking on the power button. In real operation it takes approx.30 min for initialization of the instrument.'
             step_no++;
             cursorPointers('start', 'power_trans_button'); 
-            // Make the hidden power button to visible to run the spectrofluorimeter.  
-            document.getElementById('power_trans_button').style.visibility = 'visible';
       }
       else if(step_no ==6 ||step_no == 17){
             $("#computerimage").remove();

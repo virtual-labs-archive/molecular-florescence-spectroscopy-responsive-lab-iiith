@@ -150,11 +150,11 @@ function moveCuvette(){
             }, 3000);
 
             setTimeout(function(){
-                $("#cuvette").animate({left:'-150px',top:'284px'},3000,function(){
+                $("#cuvette").animate({left:'-152px',top:'280px'},3000,function(){
                     this.remove();
                     count++;
                 });
-            }, 4000);
+            }, 4500);
 
             // Change the next instruction to be followed.
             document.getElementById("demo").innerHTML = "Step-No 20: Close the sample chamber lid by clicking on it.";
@@ -169,8 +169,8 @@ function moveDown(){
         initial_top = Math.round($('#quartz_cuvette').position().top);
         initial_left = Math.round($('#quartz_cuvette').position().left);
         // Initialise all the values for the motion of the images.
-        final_top = 288;
-        step_top = 4;
+        final_top = 282;
+        step_top = 3;
         step_left = 0;
         type_of_movement = 0;
         // Move it into the spectrophotometer.
@@ -180,7 +180,7 @@ function moveDown(){
         document.getElementById("demo").innerHTML = "Step-No 11: close the chamber by clicking on lid;"
 }
 
-// This method is used to move the reference cuvette into the spectrophptometer. 
+// This method is used to move the reference cuvette into the spectrophotometer. 
 function extraCuvette(){
         /*Get the transparent image and replace it with a reference cuvette image and move it down into the
          spectrophotometer.*/
@@ -193,7 +193,7 @@ function extraCuvette(){
         // Initialise all the values for the motion of the images.
         final_top = 61;
         step_top = 1;
-        step_left = -2.26;
+        step_left = -2.25;
         type_of_movement = 0;
         // Move it into the spectrophotometer.
         moveImage();
@@ -302,15 +302,16 @@ function changeParameters(){
 
 //This function is used to hide the popup screen.
 function hideInstruction() {
-      $("#popup, #start").css("visibility", "hidden");
-      if(step_no == 6){
+       // Make the hidden power button to visible to run the spectrofluorimeter.  
+       document.getElementById('power_trans_button').style.visibility = 'visible';
+       $("#popup, #start").css("visibility", "hidden");
+
+       if(step_no == 6){
             document.getElementById("demo").innerHTML = 'Step-No 9: Turn on the spectrophotometer by clicking on the power button. In real operation it takes approx.30 min for initialization of the instrument.'
             cursorPointers('start', 'power_trans_button');
-            // Make the hidden power button to visible to run the spectrofluorimeter.  
-            document.getElementById('power_trans_button').style.visibility = 'visible';
             step_no++;
-      }
-      else if( step_no == 17){
+       }
+       else if( step_no == 17){
             $("#computerimage").remove();
             images[0] = "../../common_images/spec_fluormeter.png";
             images[1] = "../../common_images/spec_fluormeter.png";
@@ -318,7 +319,7 @@ function hideInstruction() {
             document.getElementById("demo").innerHTML = "Step-No 18: Turn on the spectrofluorimeter by clicking on the power button. In real operation, it takes approx. 30 min for initialization of the instrument. ";
             step_no++;
             cursorPointers('start', 'power_trans_button');
-      }
+       }
 }
 
 

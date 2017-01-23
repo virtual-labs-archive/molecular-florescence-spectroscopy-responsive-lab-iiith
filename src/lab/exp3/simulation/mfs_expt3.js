@@ -157,6 +157,7 @@ function changeImage() {
 /* When the user switches on the spectrophotometer this method is called. Here the spectrophotometer 
 image is changed continuously  to give the blinking light effect. The two images that are swapped is stored in images[] */
 function turnOn() {
+        
         // Get the image
         img = document.getElementById('table_with_spec');
         // Change the source of the image 
@@ -165,10 +166,6 @@ function turnOn() {
         x++;
         if(x >= images.length){
             x = 0;
-        }
-        if(step_no == 18){
-            images[0] = "../../common_images/specfluor_on_no_redLight.png";
-            images[1] = "../../common_images/specfluor_on_redLight.png";
         }
 }
 
@@ -195,6 +192,10 @@ function clck(){
 /* This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
 when this method is called they are made visible and the clock hand is made to rotate.  */
 function showClock(){
+        /* Make the power button hidden, once the button is clicked to ensure that the spectrofluorimeter 
+        runs only for one click. */
+        document.getElementById('power_trans_button').style.visibility = 'hidden';
+        
         if(step_no==7){
             clck();
             document.getElementById("demo").innerHTML = "Step-No 9: Click on the lid of the sample chamber of the spectrophotometer by clicking on the lid for placing the sample in the cell holder;"
@@ -202,6 +203,9 @@ function showClock(){
             setTimeout("removeClock()",5350);
         }
         else if(step_no==18){
+            // continuously change the spectrofluorimeter images
+            images[0] = "../../common_images/specfluor_on_no_redLight.png";
+            images[1] = "../../common_images/specfluor_on_redLight.png";
             clck();
             document.getElementById("demo").innerHTML = "Step-No 19: Open the lid of the sample chamber of the spectroflourimeter by clicking on the lid for placing the sample in the cell-holder."
             //After 10 secs dispose clock

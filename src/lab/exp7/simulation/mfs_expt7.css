@@ -2,7 +2,6 @@ body{
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
-    
 }
 
 .container{
@@ -20,6 +19,7 @@ h3{
 #reset_btn{
     margin: auto;
     display: block;
+    cursor: default;
 }
 
 #data_buttons{

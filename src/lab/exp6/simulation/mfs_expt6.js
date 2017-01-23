@@ -150,9 +150,6 @@ function changeImage() {
 /* When the user switches on the spectrophotometer this method is called. Here the spectrophotometer image is 
 changed continuously  to give the blinking light effect. The two images that are swapped is stored in images[] */
 function turnOn() {
-        /* Make the power button hidden, once the button is clicked to ensure that the spectrofluorimeter runs 
-        only for one click. */
-        document.getElementById('power_trans_button').style.visibility = 'hidden';
         // Get the image
         img = document.getElementById('table_with_spec');
         // Change the source of the image 
@@ -162,10 +159,10 @@ function turnOn() {
         if(x >= images.length){
             x = 0;
         }
-        if(step_no==7 || step_no == 18){
-            images[0] = "../../common_images/specfluor_on_no_redLight.png";
-            images[1] = "../../common_images/specfluor_on_redLight.png";
-        }
+        // if(step_no==7 || step_no == 18){
+        //     images[0] = "../../common_images/specfluor_on_no_redLight.png";
+        //     images[1] = "../../common_images/specfluor_on_redLight.png";
+        // }
 }
 
 //Common function to make the clock visible and rotate it.
@@ -191,6 +188,14 @@ function clck(){
 /* This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
 when this method is called they are amde visible and the clock hand is made to rotate.  */
 function showClock(){
+        // Continuously change the spectrofluorimeter images
+        images[0] = "../../common_images/specfluor_on_no_redLight.png";
+        images[1] = "../../common_images/specfluor_on_redLight.png";
+
+        /* Make the power button hidden, once the button is clicked to ensure that the spectrofluorimeter 
+        runs only for one click. */
+        document.getElementById('power_trans_button').style.visibility = 'hidden';
+        
         if(sol_name== 0 && step_no==7){
             clck();
             document.getElementById("demo").innerHTML = "Click on the lid of the sample chamber of the spectrophotometer by clicking on the lid for placing the sample in the cell holder;"
