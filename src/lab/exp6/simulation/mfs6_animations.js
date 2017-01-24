@@ -61,8 +61,8 @@ function moveFlask(){
             document.getElementById("demo").innerHTML = "Click on the quartz cuvette (path length 1x1cm) to take it to the instrument table. Quartz cuvettes for spectrophotometric measurements are transparent only on two opposite sides, unlke the  all-side transparent quartz cuvettes used for flourescence measurements.";
             step_no++;
             cursorPointers('round-bottom-flask', 'quartz_cuvette');
-          }
-      }
+           }
+        }
 }
 
 /* This is the function called when cuvette is clicked. 

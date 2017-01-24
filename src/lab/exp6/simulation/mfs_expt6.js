@@ -35,6 +35,7 @@ window.onload = function(){
     addclickEvents();
     mouseEvents();
 }
+
 //It helps in providing basic functionality to manual button and also sets the first set of instructions.
 function initial_function(){
         // Intial intrsuction to be followed
@@ -159,10 +160,6 @@ function turnOn() {
         if(x >= images.length){
             x = 0;
         }
-        // if(step_no==7 || step_no == 18){
-        //     images[0] = "../../common_images/specfluor_on_no_redLight.png";
-        //     images[1] = "../../common_images/specfluor_on_redLight.png";
-        // }
 }
 
 //Common function to make the clock visible and rotate it.
@@ -188,14 +185,6 @@ function clck(){
 /* This method displays a timer which runs for 30 seconds. There exists two images which are hidden initailly; 
 when this method is called they are amde visible and the clock hand is made to rotate.  */
 function showClock(){
-        // Continuously change the spectrofluorimeter images
-        images[0] = "../../common_images/specfluor_on_no_redLight.png";
-        images[1] = "../../common_images/specfluor_on_redLight.png";
-
-        /* Make the power button hidden, once the button is clicked to ensure that the spectrofluorimeter 
-        runs only for one click. */
-        document.getElementById('power_trans_button').style.visibility = 'hidden';
-        
         if(sol_name== 0 && step_no==7){
             clck();
             document.getElementById("demo").innerHTML = "Click on the lid of the sample chamber of the spectrophotometer by clicking on the lid for placing the sample in the cell holder;"
@@ -203,6 +192,9 @@ function showClock(){
             setTimeout("removeClock()",5350);
         }
         else if(step_no == 7 || step_no==18){
+            //Continuously change the spectroflourimeter images to get the blinking effect
+            images[0] = "../../common_images/specfluor_on_no_redLight.png";
+            images[1] = "../../common_images/specfluor_on_redLight.png";
             clck();
             document.getElementById("demo").innerHTML = "Open the lid of the sample chamber of the spectroflourimeter by clicking on the lid for placing the sample in the cell-holder."
             //After 10 secs dispose clock
@@ -231,7 +223,7 @@ function spectrophotometer(){
             step_no++;
             cursorPointers('spectrolid_trans_button', 'quartz_cuvette');
         }
-        else if(sol_name == 0 && step_no == 10 && count == 10){
+        else if(sol_name == 0 && step_no == 10){
             // Replace the spectrophotometer images with the closed spectrophotmeter images.
             images[0] = "../../common_images/spec_close.png";
             images[1] = "../../common_images/spec_close1.png";
