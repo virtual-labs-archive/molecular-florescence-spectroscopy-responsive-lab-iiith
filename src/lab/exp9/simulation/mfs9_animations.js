@@ -39,7 +39,7 @@ function cursorPointers(id1, id2){
 function moveFlask(){
     if(step_no==0){ 
         if(conc_value==undefined){
-            alert("Please first select the concentration from the selection bar.")
+            alert("First select the concentration from the selection bar.")
         }
         else{
             // Get image

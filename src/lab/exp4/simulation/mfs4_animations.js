@@ -39,7 +39,7 @@ function moveFlask(){
         if(step_no == 0){
             if(sol_name == undefined)
             {
-              alert("please first select the solvent from the solvent selection bar");
+              alert("First select the solvent from the solvent selection bar");
             }
             else{
             // Get image
