@@ -49,8 +49,11 @@ h3{
     .modal-content {
         position: fixed;
         bottom: 0;
+	margin-left:-50.5%;
         background-color: #fefefe;
         width: 100%;
+	left: 50%;
+	height:100%;
         -webkit-animation-name: slideIn;
         -webkit-animation-duration: 0.4s;
         animation-name: slideIn;
@@ -78,7 +81,8 @@ h3{
         color: white;
     }
 
-    .modal-body {padding: 2px 16px;}
+    .modal-body {
+    padding: 2px 16px;}
 
     /* Add Animation */
     @-webkit-keyframes slideIn {
